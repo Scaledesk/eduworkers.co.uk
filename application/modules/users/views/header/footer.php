@@ -61,12 +61,12 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
           <div class="col-lg-4 col-sm-3">
             <section class="footer-section">
               <h3 class="footer-title">QUICK CONTACT</h3>
-              <form class="form">
+              <form class="form" ation="<?php echo base_url().'users/contact'; ?>" method="post">
                 <div class="form-group">
-                  <input class="form-control" type="text" placeholder="Your Name">
-                  <input class="form-control" type="email" placeholder="Email address">
-                  <textarea class="form-control" rows="7" placeholder="Message"></textarea>
-                  <button class="btn btn-primary btn-effect">SEND MESSSAGE</button>
+                  <input class="form-control" type="text"  name="name" placeholder="Your Name">
+                  <input class="form-control" type="email" name="email" placeholder="Email address">
+                  <textarea class="form-control" rows="7"  name="message" placeholder="Message"></textarea>
+                  <button type="submit" class="btn btn-primary btn-effect">SEND MESSSAGE</button> 
                 </div>
               </form>
             </section>
