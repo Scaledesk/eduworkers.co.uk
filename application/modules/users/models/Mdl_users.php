@@ -164,6 +164,15 @@ class Mdl_users extends CI_Model
                 break;
 
             }
+             case'update_profile':{
+                $this->setUserName(func_get_arg(1));
+                $this->setUserFname(func_get_arg(2));
+                $this->setPassword(func_get_arg(3));
+
+
+                break;
+
+            }
             default:
                 break;
         }
@@ -279,6 +288,20 @@ class Mdl_users extends CI_Model
                 $this->_validate(func_get_arg(0));
                 return true;
                 break;
+                 case 'update_profile':
+                $this->_validate('update_profile');
+                $data = [
+                    'eduworkers_users_username' => $this->user_name,
+                    'eduworkers_users_userfname' => $this->user_fname
+                   
+                ];
+                 $this->db->where('eduworkers_users_id',$this->session->userdata['user_data']['user_id']);
+
+                if ($this->db->update('eduworkers_users', $data)) {
+                    return true;
+                }
+                return false;
+                break;
             default:
                 break;
         }
@@ -342,6 +365,11 @@ class Mdl_users extends CI_Model
             case'get_email': {
                 $this->setUserName($this->security->xss_clean($this->getUserName()));
                 $this->setToken($this->security->xss_clean($this->getToken()));
+            }
+                break;
+                 case'update_profile': {
+                $this->setUserName($this->security->xss_clean($this->getUserName()));
+                $this->setUserFname($this->security->xss_clean($this->getUserFname()));
             }
                 break;
             default:

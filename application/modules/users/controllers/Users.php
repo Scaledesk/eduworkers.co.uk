@@ -328,7 +328,7 @@ public function login()
 
             if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
            $data=$this->input->post();
-           $this->Mdl_users->setData('update_profile',$data[''],$data['']);
+           $this->Mdl_users->setData('update_profile',$data['email'],$data['fname']);
 
          }
                 else{
