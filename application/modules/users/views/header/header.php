@@ -56,7 +56,7 @@
                 </div>
                 <div id="navbar-collapse-1" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="index.html">Home &nbsp;</a>
+                    <li class="dropdown"><a href="<?php echo  base_url();?>">Home &nbsp;</a>
 
                     </li>
                     <li class="dropdown"> <a href="#">Services&nbsp;<i class="fa fa-angle-down"></i></a>
