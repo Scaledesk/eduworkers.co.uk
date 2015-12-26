@@ -102,8 +102,16 @@ public function login()
                 $this->Mdl_users->setData('setSessionData',$data['email']);
                 $user_data=$this->Mdl_users->getUserData();
                 $this->_setSessionData('authorize',$user_data);
-                setInformUser('success','Login successfully');
-                redirect(base_url('users'));
+
+                /*echo $user_data['user_role_name'];die;*/
+                   if($user_data['user_role_name']=='admin'){
+                    setInformUser('success','Login successfully');
+                    redirect(base_url('admin'));
+                   } else{
+                    setInformUser('success','Login successfully');
+                    redirect(base_url('users'));
+                   }
+                
                 /*$this->load->view('header/header');
                 $this->load->view('dashboard');*/
               //  redirect('testapp');
