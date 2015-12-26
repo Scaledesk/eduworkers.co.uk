@@ -61,7 +61,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
           <div class="col-lg-4 col-sm-3">
             <section class="footer-section">
               <h3 class="footer-title">QUICK CONTACT</h3>
-              <form class="form" ation="<?php echo base_url().'users/contact'; ?>" method="post">
+              <form class="form" action=" <?php echo base_url().'users/contact'; ?>" method="post">
                 <div class="form-group">
                   <input class="form-control" type="text"  name="name" placeholder="Your Name">
                   <input class="form-control" type="email" name="email" placeholder="Email address">

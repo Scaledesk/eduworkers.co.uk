@@ -352,29 +352,28 @@ public function login()
 
      public  function contact()
     {
-    if(islogin()){
+   
     $data=$this->input->post();
     $name=$data['name'];
     $email=$data['email'];
     $query=$data['message'];
-   /* print_r($data);die;*/
+  
         $admin_mail='nkscoder@gmail.com';
-        $email= $this->Mdl_users->getUserName();
-        $name= $this->Mdl_users->getFname();
-        $query= $this->Mdl_users->getContactQuery();
-
-        $this->email->from('nitesh@weboforce.in', 'Edu Workers');
+       $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        
         $this->email->to($admin_mail);
-        /*$this->email->to($this->Mdl_users->getUserName());*/
-
+     
         $this->email->subject('Notifiction');
         $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">'. $name.'<br/>'.$email.'<br/>'.$query.'</div>');
 
-        return $this->email->send()?true:false;
-    }
-    else{
-        redirect(base_url('users')); 
-    }
+      if($this->email->send()){
+         setInformUser('success',"Send Query successfully");
+        redirect(base_url('users'));
+      }else{
+         setInformUser('error',"Some Error Occurred.");
+        redirect(base_url('users'));
+      }
+    
 }
 
 

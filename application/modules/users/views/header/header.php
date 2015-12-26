@@ -34,8 +34,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <a class="header-logo" href="index.html"><img class="header-logo__img" src="<?php echo  asset_url();?>/img/final_logo.png" alt="Logo"></a>
-            <a href="index.html"><img class="img-crop text-center" src="<?php echo  asset_url();?>/img/final-logo-edit.png" alt=""></a>
+            <a class="header-logo" href="<?php echo  base_url();?>"><img class="header-logo__img" src="<?php echo  asset_url();?>/img/final_logo.png" alt="Logo"></a>
+            <a href="<?php echo  base_url();?>"><img class="img-crop text-center" src="<?php echo  asset_url();?>/img/final-logo-edit.png" alt=""></a>
             <div class="header-inner">
               <div class="header-search">
                 <div class="navbar-search">
