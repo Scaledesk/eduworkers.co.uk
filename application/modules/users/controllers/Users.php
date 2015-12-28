@@ -20,6 +20,19 @@ class Users extends MX_Controller{
      */
     public function index(){
 
+      if (islogin()) {
+         /*redirect(base_url('users/dashboard'));*/
+         if (isAdmin()) {
+             redirect(base_url('admin'));
+         }
+         else{
+             $this->load->view('header/header');
+             $this->load->view('index');
+             $this->load->view('header/footer');
+         }
+      }
+        else{ 
+     
         if($this->_logged_in()){
             if($this->_getRole()=='guest'){
                 //show their dashboard
@@ -49,13 +62,36 @@ class Users extends MX_Controller{
             $this->load->view('header/header');
              $this->load->view('index');
              $this->load->view('header/footer');
+            /* redirect('users/dashboard');*/
         }
     }
+ }
 
     /**
      * check if user if someone is logged in or not
      * @return bool
      */
+ /*public function dashboard(){
+      if (islogin()) {
+
+        if(isAdmin()){
+           redirect(base_url('admin')); 
+        }
+     else  {
+            
+         }
+
+         
+      }
+      else{
+             $this->load->view('header/header');
+             $this->load->view('index');
+             $this->load->view('header/footer');
+      }
+ }
+
+
+*/
 
     private function _logged_in()
     {

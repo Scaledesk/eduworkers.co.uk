@@ -1,5 +1,5 @@
  <!--footer start-->
-      <footer class="site-footer">
+      <footer class="site-footer navbar-fixed-bottom">
           <div class="text-center">
               2014 - Alvarez.is
               <a href="form_component.html#" class="go-top">

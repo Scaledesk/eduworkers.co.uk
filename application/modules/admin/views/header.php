@@ -239,6 +239,7 @@
                           <span>Components</span>
                       </a>
                       <ul class="sub">
+                          <li><a  href="<?php echo  base_url().'Email_settings' ?>">Smtp Setting</a></li>
                           <li><a  href="calendar.html">Calendar</a></li>
                           <li><a  href="gallery.html">Gallery</a></li>
                           <li><a  href="todo_list.html">Todo List</a></li>
