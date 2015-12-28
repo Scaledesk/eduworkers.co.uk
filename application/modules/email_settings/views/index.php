@@ -57,7 +57,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                       </form>
                   </div>
                 </div><!-- col-lg-12-->         
-            </div><!-- /row -->
+            </div>     <!-- /row -->
 
 </section>
 </section>
