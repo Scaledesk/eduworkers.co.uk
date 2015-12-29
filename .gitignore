@@ -22,3 +22,13 @@
 
 # sftp configuration file
 sftp-config.json
+
+# Mac DS store file
+*.DS_Store
+__MACOSX
+*/.DS_Store
+.DS_Store
+.Trashes
+
+# temp files
+*~
