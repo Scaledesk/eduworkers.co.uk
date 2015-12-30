@@ -22,22 +22,22 @@
               <div class="width"></div>
               <div class="row">
                 <div class="col-xs-3 ">
-                  <a href="#"><img src="assets/media/us_flag.png" width=90 height=70 alt=""/>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/media/us_flag.png" width=90 height=70 alt=""/>
                   <label class="text-center">United States</label>
                   </a>
                 </div>
                 <div class="col-xs-3 ">
-                  <a href="#"><img src="assets/media/uk_flag.png" width=90 height=70 alt=""/>
+                  <a href="#"><img src="<?php echo base_url(); ?>assets/media/uk_flag.png" width=90 height=70 alt=""/>
                   <label class="text-center">United Kingdom</label>
                   </a>
                 </div>
                <div class="col-xs-3 ">
-                 <a href="#"><img src="assets/media/Australia_flag.png" width=90 height=70 alt=""/>
+                 <a href="#"><img src="<?php echo base_url(); ?>assets/media/Australia_flag.png" width=90 height=70 alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
                 <div class="col-xs-3 ">
-                 <a href="#"><img src="assets/media/world-map.png" width=90 height=70 alt=""/>
+                 <a href="#"><img src="<?php echo base_url(); ?>assets/media/world-map.png" width=90 height=70 alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
@@ -53,7 +53,7 @@
                       
                       
                        <div class="row">
-                         
+                          <form action="<?php echo base_url().'users/order'; ?>"method="post">
                            <div class="col-xs-6">
                               <h2>Choose Your Product</h2>
                            
@@ -64,7 +64,7 @@
                         <input value="0" type="text" class="jelect-input">
                         <div class="jelect-current">Essay Writing Service</div>
 
-                        <select name="select" class="form-control"id="services"   onchange="loadamount(this)" >
+                        <select name="services" class="form-control"id="services"   onchange="loadamount(this)" >
                           <option >Engineering Assignments</option>
                            <option>Engineering Projects</option>
                             <option>Essay Writing</option>
@@ -109,7 +109,7 @@
                       <div class="jelect">
                         <input value="0" type="text" class="jelect-input">
                         <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                          <select class="form-control" id="subjects" name="categorie" onchange="loadamount(this)">
+                          <select class="form-control" id="subjects" name="subjects" onchange="loadamount(this)">
                             <option>Categorie 1</option>
                             <option>Categorie 1</option>
                             <option>Categorie 1</option> 
@@ -131,7 +131,7 @@
                           <li class="jelect-option">Categorie 2</li>
                           <li class="jelect-option">Categorie 3</li>
                         </ul> -->
-                        <select class="form-control" id="grade" name="categorie" onchange="loadamount(this)">
+                        <select class="form-control" id="grade" name="grade" onchange="loadamount(this)">
                             <option>Categorie 1</option>
                             <option>Categorie 1</option>
                             <option>Categorie 1</option> 
@@ -148,7 +148,7 @@
                           <li class="jelect-option">Categorie 2</li>
                           <li class="jelect-option">Categorie 3</li>
                         </ul> -->
-                        <select class="form-control" id="length" name="categorie" onchange="loadamount(this)">
+                        <select class="form-control" id="length" name="lenght" onchange="loadamount(this)">
                             <option>1000</option>
                             <option>2000</option>
                             <option>3000</option> 
@@ -160,7 +160,7 @@
                       <div class="jelect">
                         <input value="0" type="text" class="jelect-input">
                         <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                        <select class="form-control" id="date" name="categorie" onchange="loadamount(this)">
+                        <select class="form-control" id="date" name="date" onchange="loadamount(this)">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -204,7 +204,7 @@
                       </div>
                     </div>
                   </div>
- 
+<!--  
               <h1>About You</h1>
               <div class="width"></div>
               <div class="row">
@@ -253,7 +253,7 @@
                   </div>
                 </div>
               </div>
-
+ -->
 </div>
   </div>
              
@@ -264,7 +264,7 @@
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
                           <div class="col-xs-6">
-                            <select class="form-control" id="currency"onchange="loadamount(this)">
+                            <select class="form-control" id="currency" name="currency" onchange="loadamount(this)">
                               <option>GBP&nbsp;&#8356;</option>
                               <option>USD&nbsp;&#36;</option>
                               <option>AUD&nbsp;&#36;</option>
@@ -277,7 +277,7 @@
                           <div id="total">
                             
                           </div>
-                            <input type="text" name="total" id="total" data-json="">
+                            <input type="text" name="total" id="total" value="" />
                             
                           </div>
 
@@ -286,8 +286,12 @@
                         <span>Estimated Delivery Date &nbsp;&nbsp;<a href="#">Find out more</span></a>
                         <p style="color: #C8C8C8;">23 December -25 December</p>
                         <div class="text-center">
-                      <a class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price" href="#">Next Step Order-Details</a></div> </div>
                         
+
+                            <button class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price">Next Step Order-Details</button></div> </div>
+                       
+                        </form>
+                      
                         </div>
                       </div>
 
@@ -317,21 +321,27 @@
                 
                 var date=document.getElementById("date");
                 var date1 = date.options[date.selectedIndex].value;
+               
 
+     
                 var services=document.getElementById("services");
                 var services1 = services.options[services.selectedIndex].value;
+               
 
                 var subjects=document.getElementById("subjects");
                 var subjects1 = subjects.options[subjects.selectedIndex].value;
+
 
                 var grade=document.getElementById("grade");
                  var grade1 = grade.options[grade.selectedIndex].value;
 
                 var length=document.getElementById("length");
                  var length1 = length.options[length.selectedIndex].value;
+               
 
                 var currency=document.getElementById("currency");
                 var currency1 = currency.options[currency.selectedIndex].value;
+
                 /*alert(currency1);*/
                 /* alert(obj.value);*/
 
@@ -348,7 +358,8 @@
                    /* console.log(amount);*/
                      /* document.getElementById("demo").innerHTML 
                     console.log($('#total'));*/
-                    document.getElementById("total").innerHTML=amount; 
+                    document.getElementById("total").innerHTML=amount;
+                   /* document.getElementById("total").value = amount; */
                     /*$('#total').value(amount);*/
                     //$('#available_amount').value=a; //jquery selector (get element by id)
                      //alert(a);
@@ -368,3 +379,5 @@
                 document.getElementById('total_amount').value=add_amount+available_amount;
               }*/
 </script>
+
+

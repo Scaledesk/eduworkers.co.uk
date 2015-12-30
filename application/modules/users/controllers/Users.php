@@ -424,11 +424,19 @@ public function login()
 
 public function order(){
 
-if (islogin()) {
+
        
  if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
+    print_r($this->input->post());
+    die;
+            if (islogin()) {
 
+              }
+            else{
 
+                 setInformUser('error',"Please login at first.");
+                redirect(base_url('users/login'));
+            }  
    }
     else{
 
@@ -437,12 +445,7 @@ if (islogin()) {
         $this->load->view('header/footer');
     }
 
-    }
-    else{
-
-         setInformUser('error',"Please login at first.");
-        redirect(base_url('users'));
-    }    
+     
 }
 
 public function doOrder(){
