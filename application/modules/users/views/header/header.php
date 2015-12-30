@@ -69,7 +69,7 @@
                         <li><a href="#">Dissertation Writing</a></li>
                       </ul>
                     </li>
-                    <li class="active-custom"> <a href="order_now.html">Order Now</a>
+                    <li class="active-custom"> <a href="<?php echo base_url().'users/order'; ?>">Order Now</a>
 
                     </li>
                     <!-- <li class="dropdown"> <a href="javascript:void(0);">Guarantees</a>

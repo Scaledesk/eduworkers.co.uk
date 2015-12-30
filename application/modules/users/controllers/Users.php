@@ -446,36 +446,61 @@ if (islogin()) {
 }
 
 public function doOrder(){
-    $data=$this->input->post();
-    print_r($data);
-    die;
-  $pl=0.075;
-  $date=1;
-  $words=1000;
+     $date=$this->input->post('date');
+     $grade=$this->input->post('grade');
+     $subjects=$this->input->post('subjects');
+     $words=$this->input->post('length');
+     $currency=$this->input->post('currency');
 
+   /* echo json_encode($date);*/
+  
+   
+     $pl=0.075;
+   /*
+    if ($value==1 or $value==2 or $value==3 or $value==4 or $value==5 or $value==6 or $value==7 or $value==8 or $value==9 or $value==10) {
+        $date=$value;
+      }
+     elseif ($value==1000 or $value==2000 or $value==3000 or $value==4000 or $value==5000 ) {
+         $words=$value;
+     }
+    */
 
-   if ($pl==0.075 and $date==1 and $words==1000) {
-        $total=$pl*$date* $words;
+   if ($date==1 and $words==1000) {
+     
+      $pl2=2.5;
+        $total=$pl* $words*$pl2;
         echo json_encode($total);
    }
-  elseif ($pl==0.075 and $date==2 and $words==1000) {
-      $total=$pl*$date* $words;
+  elseif ($date==2 and $words==1000) {
+     
+       $pl2=1.75;
+      $total=$pl* $words*$pl2;
         echo json_encode($total);
   }
-elseif ($pl==0.075 and $date==3 and $words==1000) {
-      $total=$pl*$date* $words;
+elseif ($date==3 and $words==1000) {
+    
+      $pl2=1.5;
+      $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($pl==0.075 and $date==4 and $words==1000) {
-      $total=$pl*$date* $words;
+  }elseif ($date==4 and $words==1000) {
+     
+      $pl2=1.35;
+      $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($pl==0.075 and $date==5 and $words==1000) {
-      $total=$pl*$date* $words;
+  }elseif ($date==5 and $words==1000) {
+     
+      $pl2=1.20;
+      $total=$pl*$words*$pl2;
         echo json_encode($total);
-  }elseif ($pl==0.075 and $date==6 and $words==1000) {
-      $total=$pl*$date* $words;
+  }elseif ($words==1000 and $date==6 or $date==7 or $date==8 or $date==9) {
+    
+      $pl2=1.15;
+      $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($pl==0.075 and $date==10 and $words==1000) {
-      $total=$pl*$date* $words;
+  }elseif ($date==10 and $words==1000) {
+    
+      $pl2=1;
+      $total=$pl* $words*$pl2;
         echo json_encode($total);
   }
 
