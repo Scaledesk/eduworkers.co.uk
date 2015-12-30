@@ -37,7 +37,7 @@ class Email_settings extends MX_Controller{
         }
         }else{
             setInformUser('error','You don\'t have the permission [\'access email settings \'].');
-            redirect('users');
+            redirect(base_url('users'));
         }
     }
 }

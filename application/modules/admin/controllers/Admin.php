@@ -18,7 +18,12 @@ class Admin extends MX_Controller{
      * this is the index method the landing page for all operations
      */
     public function index(){
-        $this->load->view('header');
-        $this->load->view('footer');
+        if (isAdmin()) {
+            $this->load->view('header');
+           $this->load->view('footer');
+        }
+       else {
+          redirect(base_url('users'));
+       }
     }
 }

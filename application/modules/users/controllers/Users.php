@@ -421,4 +421,63 @@ public function login()
 }
 
 
+
+public function order(){
+
+if (islogin()) {
+       
+ if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
+
+
+   }
+    else{
+
+        $this->load->view('header/header');
+        $this->load->view('order');
+        $this->load->view('header/footer');
+    }
+
+    }
+    else{
+
+         setInformUser('error',"Please login at first.");
+        redirect(base_url('users'));
+    }    
+}
+
+public function doOrder(){
+    $data=$this->input->post();
+    print_r($data);
+    die;
+  $pl=0.075;
+  $date=1;
+  $words=1000;
+
+
+   if ($pl==0.075 and $date==1 and $words==1000) {
+        $total=$pl*$date* $words;
+        echo json_encode($total);
+   }
+  elseif ($pl==0.075 and $date==2 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }
+elseif ($pl==0.075 and $date==3 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }elseif ($pl==0.075 and $date==4 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }elseif ($pl==0.075 and $date==5 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }elseif ($pl==0.075 and $date==6 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }elseif ($pl==0.075 and $date==10 and $words==1000) {
+      $total=$pl*$date* $words;
+        echo json_encode($total);
+  }
+
+}
 }
