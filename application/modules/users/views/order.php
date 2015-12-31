@@ -274,10 +274,10 @@
                             
                           </div>
                           <div class="col-xs-6">
-                          <div id="total">
+                          <div id="divtotal">
                             
                           </div>
-                            <input type="text" name="total" id="total" value="" />
+                            <input type="text" name="total" id="totalamount" value="" />
                             
                           </div>
 
@@ -358,8 +358,12 @@
                    /* console.log(amount);*/
                      /* document.getElementById("demo").innerHTML 
                     console.log($('#total'));*/
-                    document.getElementById("total").innerHTML=amount;
-                   /* document.getElementById("total").value = amount; */
+                    document.getElementById("divtotal").innerHTML=amount;
+                    document.getElementById('totalamount').value = amount;
+                    /* $("total").val(data);*/
+
+                     /*$("total").val(data);*/
+                   /* document.getElementById("total").val(amount); */
                     /*$('#total').value(amount);*/
                     //$('#available_amount').value=a; //jquery selector (get element by id)
                      //alert(a);
@@ -371,7 +375,7 @@
                   }
                   });
               }
-
+  
               /*function tAmount(obj)
               {
                 var add_amount=parseInt(obj.value);

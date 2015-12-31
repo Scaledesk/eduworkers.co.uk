@@ -143,7 +143,11 @@ public function login()
                    if($user_data['user_role_name']=='admin'){
                     setInformUser('success','Login successfully');
                     redirect(base_url('admin'));
-                   } else{
+                   } else if ($this->session->userdata('user_products')) {
+
+                       redirect(base_url('users/order_details'));
+                       
+                   }{
                     setInformUser('success','Login successfully');
                     redirect(base_url('users'));
                    }
@@ -190,6 +194,12 @@ public function login()
             case 'authorize':   $this->session->set_userdata('authorize',true);
                 $this->session->set_userdata('user_data',func_get_arg(1));
                 break;
+
+               case 'products':
+                    
+                $this->session->set_userdata('user_products',func_get_arg(1));
+                break;
+
             default: break;
         }
     }
@@ -420,17 +430,30 @@ public function login()
     
 }
 
+public function order_details(){
 
+print_r($this->session->userdata('user_products'));
+die;
+    $this->load->view('header/header');
+    $this->load->view('order_details');
+    $this->load->view('header/footer');
+
+}
 
 public function order(){
 
 
+/*print_r($this->session->userdata('user_products'));
+die;*/
        
  if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
-    print_r($this->input->post());
-    die;
-            if (islogin()) {
 
+
+     $this->_setSessionData('products',$this->input->post());
+ 
+        if (islogin()) {
+
+                 redirect(base_url('users/order_details'));
               }
             else{
 
