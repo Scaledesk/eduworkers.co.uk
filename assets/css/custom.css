@@ -210,7 +210,7 @@
 .bg_custom-2{
 	background-color: #f7f7f7;
 	/*margin: 10px 0 30px;*/
-	padding: 50px 0 !important;
+	padding: 0 0 40px !important;
 	margin: 0 !important
 }
 
@@ -254,7 +254,7 @@
   display: block;
   /*border: 1px solid #000000;*/
   color: #aaa;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+  
 }
 
 .tabs-below > .nav-tabs {
@@ -291,13 +291,13 @@
 
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
-  min-width: 200px;
+/*  min-width: 280px;
   margin-right: 0;
-  margin-bottom: 3px;
+  margin-bottom: 3px;*/
 }
 
 .tabs-left > .nav-tabs {
-  float: left;
+  /*float: left;*/
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }
@@ -308,6 +308,7 @@
      -moz-border-radius: 4px 0 0 4px;
           border-radius: 4px 0 0 4px;
           border: 1px solid #aaa;
+          font-size: 16px;
 }
 
 .tabs-left > .nav-tabs > li > a:hover,
@@ -346,9 +347,10 @@
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
-/*.custom_bg_color{
-	background-color: #364759 !important;
-}*/
+.custom_bg_color{
+	padding: 0 !important;
+
+}
 /*
 .custom-bg-class{
 	background-color: #364759 !important;
@@ -363,16 +365,24 @@
 
 .edu-profile-heading{
 	font-size: 40px;
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-bottom: 30px;
 	color: #777;
+
 
 }
 .edu-side-box{
 	/*background-color: #2d3e50;*/
 	border-radius: 5px;
 }
+.edu-custom{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+	text-align: center !important;
 
+}
+.edu-half{
+	margin: 30px 0;
+}
 .edu_active{
 	font-weight: bold;
 	
