@@ -531,4 +531,11 @@ elseif ($date==3 and $words==1000) {
   }
 
 }
+
+public function profiles(){
+
+    $this->load->view('header/header');
+     $this->load->view('profile');
+      $this->load->view('header/footer');
+}
 }
