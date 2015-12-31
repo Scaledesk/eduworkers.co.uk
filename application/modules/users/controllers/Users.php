@@ -388,10 +388,10 @@ public function login()
                 else{
 
                     $data['profile']=$this->Mdl_users->getProfile();
-                    print_r( $data['profile']);
-                    die;
+                   /* print_r( $data['profile']);
+                    die;*/
                     $this->load->view('header/header');
-                    $this->load->view('profile');
+                    $this->load->view('profile',$data);
                     $this->load->view('header/footer');
 
                 }
@@ -532,10 +532,5 @@ elseif ($date==3 and $words==1000) {
 
 }
 
-public function profiles(){
 
-    $this->load->view('header/header');
-     $this->load->view('profile');
-      $this->load->view('header/footer');
-}
 }

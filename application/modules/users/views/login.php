@@ -38,7 +38,9 @@
                         <div class=" sign_up_text">
 
                           Don't have a Account ? &nbsp;
-                           <a href="<?php echo base_url().'users/signup'; ?>"> <span>Sign up</span></a>
+                           <a href="<?php echo base_url().'users/signup'; ?>"> <span>Sign up</span></a><br/>
+
+                           <a href="<?php echo base_url().'users/forgotMail'; ?>"> <span>Forget Password</span></a>
                         </div>
                         </div>
 

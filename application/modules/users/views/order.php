@@ -65,10 +65,25 @@
                         <div class="jelect-current">Essay Writing Service</div>
 
                         <select name="services" class="form-control"id="services"   onchange="loadamount(this)" >
-                          <option >Engineering Assignments</option>
-                           <option>Engineering Projects</option>
-                            <option>Essay Writing</option>
-                             <option>DIssertation Writing</option> 
+                          <option >Essay Writing Service</option>
+                           <option>Dissertation writing service</option>
+                            <option>Engineering Assignment</option>
+                             <option>Exam Revision</option> 
+                             <option>Marking and Proofreading service</option>
+                             <option>Dissertation proposal</option>
+                             <option>Literature review</option>
+                             <option>Coursework</option>
+                             <option>Assignment</option>
+                             <option>Dissertation topic with titles</option>
+                             <option>Legal Practice Course (LPC) Coursework</option>
+                             <option>Bar Professional Training Course (BPTC) Coursework</option>
+                             <option>Powerpoint presentation</option>
+                             <option>Report</option>
+                             <option>Reflective Practice</option>
+                             <option>Portfolio</option>
+                             <option>PhD Thesis</option>
+
+
 
                         </select>
 
@@ -110,9 +125,71 @@
                         <input value="0" type="text" class="jelect-input">
                         <div tabindex="0" role="button" class="jelect-current">All Categories</div>
                           <select class="form-control" id="subjects" name="subjects" onchange="loadamount(this)">
-                            <option>Categorie 1</option>
-                            <option>Categorie 1</option>
-                            <option>Categorie 1</option> 
+                            <option>Accounting</option>
+                            <option>Aeronautics Engineering</option>
+                            <option>Law</option> 
+                            <option>Finance</option>
+                            <option>Electrical Engineering</option>
+                            <option>International Law</option>
+                            <option>Human Resource</option>
+                            <option>Electronics Engineering </option>
+                            <option>Islamic Law</option>
+                            <option>Marketing</option>
+                            <option>Computer Engineering</option>
+                            <option>Law and legal Studies</option>
+                            <option>Operations</option>
+                            <option>Mechanical Engineering </option>
+                            <option>Philosophy of Law</option>
+                            <option>Economics</option>
+                            <option>Automotive Engineering </option>
+                            <option>Intellectual Property Law</option>
+                            <option>Tourism </option>
+                            <option>Civil Engineering  </option>
+                            <option>European Law</option>
+                            <option>E-commerce</option>
+                            <option>FEA Analsys </option>
+                            <option>Civil litigation Law</option>
+                            <option>Total Quality Managment </option>
+                            <option>2D and 3D Modelling/Drawings  </option>
+                            <option>Commercial Law</option>
+                            <option>International Business </option>
+                            <option>CFD Analysis </option>
+                            <option>Commercial property law</option>
+                            <option>Information Technology</option>
+                            <option>Engineering Simulation </option>
+                            <option>Company law</option>
+                            <option>Business Management</option>
+                            <option>Hyperworks </option>
+                            <option>Business Law</option>
+                            <option>Foreign Investment</option>
+                            <option>Ansys </option>
+                            <option>Partnership law</option>
+                            <option>Psychology </option>
+                            <option>AutoCAD  </option>
+                            <option>comparative/conflict of law</option>
+                            <option>Portfolio Management </option>
+                            <option>Solidworks  </option>
+                            <option>Construction Law</option>
+                            <option>Mass Communication</option>
+                            <option>Material Selection  </option>
+                            <option>Contract Law</option>
+                            <option>Research Methodology</option>
+                            <option>Mathematics</option>
+                            <option>Criminal Law</option>
+                            <option>Information Systems</option>
+                            <option>Engineering Calculations </option>
+                            <option>Employment law</option>
+                            <option>Calculations </option>
+                            <option>Property Law</option>
+                            <option>Geological Engineering</option>
+                            <option>Environment  </option>
+                            <option>Biology  </option>
+                            <option>Biotechnology</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
                           </select>
                         <!-- <ul class="jelect-options">
                           <li class="jelect-option jelect-option_state_active">Categorie 1</li>
@@ -355,12 +432,13 @@
                  */ 'success' : function(data){
                    /* alert(data);*/
                     var amount=data;
+                    
                    /* console.log(amount);*/
                      /* document.getElementById("demo").innerHTML 
                     console.log($('#total'));*/
-                    document.getElementById("divtotal").innerHTML=amount;
-                    document.getElementById('totalamount').value = amount;
-                    /* $("total").val(data);*/
+                    // document.getElementById("divtotal").innerHTML=amount;
+                    // document.getElementById('totalamount').value = amount;
+                     $("#totalamount").val(amount);
 
                      /*$("total").val(data);*/
                    /* document.getElementById("total").val(amount); */
