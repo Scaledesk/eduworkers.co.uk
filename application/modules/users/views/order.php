@@ -209,9 +209,9 @@
                           <li class="jelect-option">Categorie 3</li>
                         </ul> -->
                         <select class="form-control" id="grade" name="grade" onchange="loadamount(this)">
-                            <option>Categorie 1</option>
-                            <option>Categorie 1</option>
-                            <option>Categorie 1</option> 
+                            <option>gcse A</option>  
+                            <option>A grade A</option>
+                            <option>gcse B</option> 
                           </select>
                       </div>
                       </div>
@@ -354,7 +354,7 @@
                           <div id="divtotal">
                             
                           </div>
-                            <input type="text" name="total" id="totalamount" value="" />
+                            <input type="text" name="total" id="totalamount" value="" style ="color:#000;"/>
                             
                           </div>
 
@@ -419,10 +419,11 @@
                 var currency=document.getElementById("currency");
                 var currency1 = currency.options[currency.selectedIndex].value;
 
-                /*alert(currency1);*/
+               /* alert(grade1);*/
                 /* alert(obj.value);*/
 
                 var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"currency":currency1,"date":date1};
+                /* alert(dd);*/
                    $.ajax({
                   'url' : "<?php echo base_url().'users/doOrder'; ?>",
                   'type' : 'POST',  //the way you want to send data to your URL
@@ -430,7 +431,7 @@
                   'data':dd,
                  /* 'data' : {'date' :date1, 'services' :services1, 'subjects' :subjects1, 'grade' :grade1, 'length' :length1, 'currency' :currency1},
                  */ 'success' : function(data){
-                   /* alert(data);*/
+                    /*alert(data);*/
                     var amount=data;
                     
                    /* console.log(amount);*/
@@ -448,8 +449,8 @@
                   },
                    'error': function(data){
                      /* console.log(data);*/
-                      alert(data);
-                      alert('kjdshfoisdfjksdfsd');
+                     /* alert(data);*/
+                      alert('Some Error Occurred');
                   }
                   });
               }

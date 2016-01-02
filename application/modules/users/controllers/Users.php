@@ -472,24 +472,19 @@ die;*/
 }
 
 public function doOrder(){
+
      $date=$this->input->post('date');
      $grade=$this->input->post('grade');
      $subjects=$this->input->post('subjects');
      $words=$this->input->post('length');
      $currency=$this->input->post('currency');
+/*echo json_encode($date);*/
+/* echo json_encode($grade);*/
+/* die;*/
 
-   /* echo json_encode($date);*/
-  
-   
+ if($grade=='gcse A'){
      $pl=0.075;
-   /*
-    if ($value==1 or $value==2 or $value==3 or $value==4 or $value==5 or $value==6 or $value==7 or $value==8 or $value==9 or $value==10) {
-        $date=$value;
-      }
-     elseif ($value==1000 or $value==2000 or $value==3000 or $value==4000 or $value==5000 ) {
-         $words=$value;
-     }
-    */
+  
 
    if ($date==1 and $words==1000) {
      
@@ -529,8 +524,184 @@ elseif ($date==3 and $words==1000) {
       $total=$pl* $words*$pl2;
         echo json_encode($total);
   }
+}
+else if ($grade=='gcse B' or $grade=='nvq') {
+ 
+         $pl=0.0714;
+         $pl2=1;
+     
+      
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+
+else if ($grade=='merit') {
+ 
+         $pl=0.075;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+
+else if ($grade=='A grade A') {
+ 
+         $pl=0.075;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+else if ($grade=='A grade A') { 
+ 
+         $pl=0.0786;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+ else if ($grade=='diploma pass') {
+ 
+         $pl=0.075;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  
+  else if ($grade=='diploma merit') {
+ 
+         $pl=0.093;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  
+    
+    else if ($grade=='Undergraduate 2:2') {
+ 
+         $pl=0.082;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  
+    else if ($grade=='Undergraduate 2:1' or $grade=='postgraduate Diploma 2:2') {
+ 
+         $pl=0.093;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  
+
+
+   else if ($grade=='postgraduate Diploma 2:1'  or $grade=='Masters 2:1' ) {
+ 
+         $pl=0.129;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   } 
+   else if ($grade=='Masters 2:2') {
+ 
+         $pl=0.093;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  
+   else if ($grade=='Mphil Pass' or $grade=='PhD' ) {
+ 
+         $pl=0.5358;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+   else if ($grade=='GDL Pass') {
+ 
+         $pl=0.0822;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   } 
+     else if ($grade=='GDL commendation') {
+ 
+         $pl=0.093;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  else if ($grade=='LPC Pass') {
+ 
+         $pl=0.0858;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  else if ($grade=='LPC Pass 1') {
+ 
+         $pl=0.1326;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  else if ($grade=='BPTC Competent') {
+ 
+         $pl=0.1428;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }  else if ($grade=='BPTC very Competent') {
+ 
+         $pl=0.1716;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   } 
+   else if ($grade=='Presentation') {
+ 
+         $pl=15;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+   else if ($grade=='Undergraduate Dissertation/project') {
+ 
+         $pl=0.095;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+   else if ($grade=='Postgraduate Dissertation/project') {
+ 
+         $pl=0.12;
+         $pl2=1;   
+        $total=$pl* $words*$pl2;
+        echo json_encode($total);
+   }
+}
+
+
+
+
+public function products_query(){
+
+   if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
+            $ci=CI::get_instance();
+            $config['upload_path']          = 'uploads/';
+            $config['allowed_types']        = 'txt|pptx|docx|pdf';
+            $config['max_size']             = 2000;
+            $config['encrypt_name'] = TRUE;
+            $this->upload->initialize($config);
+            if ( ! $ci->upload->do_upload('name'))
+            {
+                $error = array('error' => $ci->upload->display_errors());
+                setInformUser('error', $error['error'].' please import  file formate only');
+               
+             }
+           else{
+               $data = array('upload_data' => $ci->upload->data());
+               $file=$data['upload_data']['file_name'];
+               if($this->Mdl_users->products_query($file)){
+                 setInformUser('success', ' please import  file formate only');
+               }else{
+                 setInformUser('error','Some error Occurred');
+               }
+               }
+                
+}
 
 }
+
 
 
 }

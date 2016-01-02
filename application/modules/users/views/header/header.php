@@ -94,7 +94,7 @@
                      <?php if($this->session->userdata('user_data')!=''){  ?>
                     <li><a href="#" class="edu_active">Hi <?php echo $this->session->userdata['user_data']['user_fname']; ?>&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
                       <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Setting</a> </li>
+                        <li><a href="<?php echo base_url().'users/profile'; ?>">Setting</a> </li>
                         <li><a href="<?php echo base_url().'users/logout' ;?>">Logout</a> </li>
                       </ul>
                     </li>
