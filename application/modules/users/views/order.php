@@ -212,6 +212,7 @@
                             <option>gcse A</option>  
                             <option>A grade A</option>
                             <option>gcse B</option> 
+                            <option>BPTC Competent</option>
                           </select>
                       </div>
                       </div>

@@ -13,7 +13,7 @@
                         <div class="caption">
                             <h4 class="pull-right">$<?php echo $product['price']; ?> USD</h4>
                             <h4><a href="javascript:void(0);"><?php echo $product['name']; ?></a></h4>
-                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.codexworld.com">CodexWorld</a>.</p>
+                            <p>See more snippets like this online store item at <a target="_blank" href="<?php echo base_url(); ?>">EDU Workers</a>.</p>
                         </div>
                         <div class="ratings">
                             <a href="<?php echo base_url().'payment/buy/'.$product['id']; ?>"><img src="<?php echo base_url(); ?>assets/images/x-click-but01.gif" style="width: 70px;"></a>
