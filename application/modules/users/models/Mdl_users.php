@@ -536,4 +536,13 @@ class Mdl_users extends CI_Model
 
         return $this->db->where('eduworkers_users_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_users')->result_array();
     }
+
+
+
+    public function uploadFiles($data= array()){
+
+        print_r($data);die;
+
+
+    }
 }

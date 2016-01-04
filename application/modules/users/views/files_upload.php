@@ -1,11 +1,13 @@
 
 
-<!-- Loader -->
 
+
+
+<!-- Loader -->
 <!-- Loader end -->
 
 <div class="layout-theme animated-css" data-header="sticky" data-header-top="200"> 
-      
+       <?php echo form_open_multipart('users/do_upload');?>
       <section class="section-default bg_custom">
         <div class="container">
           <div class="row">
@@ -20,15 +22,15 @@
               <div class="section-1">
                 <h2>Title & Instructions</h2>
                 <p>Please provide the details about the specifics of your order, including the instructions and the title of the work. </p>
-               <?php echo form_open_multipart('users/do_upload');?>
+
                 <div class="first_input">
 
                 <lable>Title</lable>
                 </div>
-                <textarea class="form-control" rows="7" name="title" placeholder="Message" style="height: 50px;"></textarea>
+                <textarea class="form-control" rows="7" placeholder="Message" style="height: 50px;"></textarea>
                 <lable>Instructions</lable>
 
-                <textarea class="form-control" rows="7" name="message" placeholder="Message"></textarea>
+                <textarea class="form-control" rows="7" placeholder="Message"></textarea>
 
                 
              
@@ -77,14 +79,16 @@
               <div class="section-1">
                 <h3>Please upload your file(s) here</h3>
                 <p>*Upload Instructions : Only Doc/PDF/PPT Files allowed. Max File Size allowed : 2 MB.   </p>
-                <input type="file" name="images[]" multiple="" size="20" />
-
                   
       <div class="row" > 
           
           <div class="col-md-12 upload_progress_bar"> 
               
-              Upload Progress bar here 
+             <div class="progress">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+    <span class="sr-only">60% Complete (warning)</span>
+  </div>
+</div>
           
           </div>
                   
@@ -92,11 +96,16 @@
          <div class="row">
              
              <div class="col-md-4">
+                             
+             <label class="btn btn-primary btn-effect"> 
+                 
+                  <input type="file" name="images[]" multiple onchange="this.form.submit()" />
+                 
+                 Upload File 
+             
+             </label>
+             
             
-
-
-            <button type="submit"> <a class="btn btn-primary btn-effect" href="#">Upload</a></button>
-             </form>
              </div>
              
              <div class="col-md-8">
@@ -138,6 +147,5 @@
       
       </section>
       <!-- end section-default -->
-      
+      </form>
       </div>
-      

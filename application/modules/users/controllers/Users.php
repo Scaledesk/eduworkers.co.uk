@@ -735,7 +735,7 @@ function do_upload() {
     }
 
 
-     if($this->Mdl_users->uploadFiles($name_array[])){
+     if($this->Mdl_users->uploadFiles($name_array)){
 
        
 
