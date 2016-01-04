@@ -728,15 +728,27 @@ function do_upload() {
 
         $this->upload->initialize ( $this->set_upload_options () );
         $this->upload->do_upload ('images');
-        $data = $this->upload->data();
+         $data = $this->upload->data();
         $name_array[] = $data['file_name'];
-        /*echo "";*/
+
+
     }
-    echo "<pre/>";
-    print_r($name_array); print_r($name_display); die;
+
+
+     if($this->Mdl_users->uploadFiles($name_array[])){
+
+       
+
+      
+       }
+        else {
+
+          echo "Some Error Occurred";
+        }
+    
 }
     else{
-      echo "string";
+      echo "10 Files Only uploads";
 
     }
    
