@@ -1,84 +1,4 @@
 
-<div class="layout-theme animated-css" data-header="sticky" data-header-top="200"> 
-  
-
-  
-  <div id="wrapper"> 
-    
-   
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12"> <a class="header-logo" href="javascript:void(0);"><img class="header-logo__img" src="assets/img/final_logo.png" alt="Logo"></a><a href="index.html"><img class="img-crop text-center"src="assets/img/final-logo-edit.png"  alt=""></a>
-            <div class="header-inner">
-              <div class="header-search">
-                <div class="navbar-search">
-                  <form id="search-global-form">
-                    <div class="input-group">
-                      <input type="text" placeholder="Type your search..." class="form-control" autocomplete="off" name="s" id="search" value="">
-                      <span class="input-group-btn">
-                      <button type="reset" class="btn search-close" id="search-close"><i class="fa fa-times"></i></button>
-                      </span> </div>
-                  </form>
-                </div>
-              </div>
-              <a id="search-open" href="#fakelink"><i class="icon stroke icon-Search"></i></a><!--  <a class="header-cart" href="/"> <i class="icon stroke icon-ShoppingCart"></i></a> -->
-              <nav class="navbar yamm">
-                <div class="navbar-header hidden-md  hidden-lg  hidden-sm ">
-                  <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                </div>
-                <div id="navbar-collapse-1" class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="index.html">Home &nbsp;</a>
-                      
-                    </li>
-                    <li class="dropdown"> <a href="#">Services&nbsp;<i class="fa fa-angle-down"></i></a>
-                      <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Engineering Assignments</a>
-                          
-                        </li>
-                        <li><a href="#">Engineering Projects</a></li>
-                        <li><a href="#">Essay Writing</a></li>
-                        <li><a href="#">Dissertation Writing</a></li>
-                      </ul>
-                    </li>
-                    <li class="active-custom"> <a href="order_now.html">Order Now</a>
-                     
-                    </li>
-                    <!-- <li class="dropdown"> <a href="javascript:void(0);">Guarantees</a>
-                     
-                    </li> -->
-                    <li><a href="#">WRITERS&nbsp;<i class="fa fa-angle-down"></i></a>
-                     <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">How we recruit</a> </li>
-                        <li><a href="#">Career as a writer</a> </li>
-                      </ul></li>
-                       <li class="dropdown"> <a href="javascript:void(0);">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
-                     
-                    </li>
-                    <li><a href="#">Contact&nbsp;<i class="fa fa-angle-down"></i><!-- <span class="nav-subtitle">say us hi</span> --></a>
-                     <ul role="menu" class="dropdown-menu">
-                        <!-- <li><a href="#">Check for the </a> </li> -->
-                        <li><a href="#">info@eduworkers.co.uk</a> </li>
-                      </ul></li>
-                       <li> <a href="login.html">My Account</a></li>
-                  </ul>
-                </div>
-              </nav>
-              <!--end navbar --> 
-              
-            </div>
-            <!-- end header-inner --> 
-          </div>
-          <!-- end col  --> 
-        </div>
-        <!-- end row  --> 
-      </div>
-      <!-- end container--> 
-    </header>
-    <!-- end header -->
-    
-    
       
       <section class="edu_payment_section">
         <div class="container">
@@ -100,7 +20,8 @@
               <div class="payment_option_paypal">
               <h1>Pay by PayPal</h1>
               <p>We take online card payments via PayPal, but you do not require an account with PayPal in order to pay with your credit or debit card.</p>
-              <button class=" btn btn-warning btn-effect footer-btn">Pay Using Paypal</button>
+              <button class=" btn btn-warning btn-effect footer-btn">
+              <a href="<?php echo base_url().'payment'; ?>">Pay Using Paypal</a></button>
             </div>
             </div>
 

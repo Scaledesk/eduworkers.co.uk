@@ -7,8 +7,9 @@
 <!-- Loader end -->
 
 <div class="layout-theme animated-css" data-header="sticky" data-header-top="200"> 
-       <?php echo form_open_multipart('users/do_upload');?>
+       
       <section class="section-default bg_custom">
+       <?php echo form_open_multipart('users/do_upload');?>
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -18,6 +19,7 @@
               <!-- end posts-wrap --> 
             </div>
           </div>
+
             <div class="col-md-8">
               <div class="section-1">
                 <h2>Title & Instructions</h2>
@@ -51,10 +53,10 @@
                               <option>EUR&nbsp;&#128;</option>
                               
                             </select>
-                            
+                            s
                           </div>
                           <div class="col-xs-6">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" value="<?php echo $this->session->userdata('user_products')['total']; ?>">
                             
                           </div>
 
@@ -62,7 +64,7 @@
 
                         
                         <div class="text-center">
-                      <a class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price" href="#">Place Order</a></div> </div>
+                      <button type="submit"  class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price" >Place Order </button></div> </div>
                         
                         </div>
                       </div>
@@ -99,11 +101,13 @@
                              
              <label class="btn btn-primary btn-effect"> 
                  
-                  <input type="file" name="images[]" multiple onchange="this.form.submit()" />
+                  <input type="file" name="images[]" multiple  />
                  
                  Upload File 
              
              </label>
+
+             
              
             
              </div>
@@ -144,8 +148,8 @@
         </div>
         <!-- end container --> 
 
-      
+        </form>
       </section>
       <!-- end section-default -->
-      </form>
+    
       </div>

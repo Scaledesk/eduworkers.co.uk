@@ -198,8 +198,11 @@ public function login()
                case 'products':
                     
                 $this->session->set_userdata('user_products',func_get_arg(1));
+                break; 
+                case 'order':
+                    
+                $this->session->set_userdata('user_order',func_get_arg(1));
                 break;
-
             default: break;
         }
     }
@@ -430,7 +433,7 @@ public function login()
     
 }
 
-public function order_details(){
+/*public function order_details(){
 
 print_r($this->session->userdata('user_products'));
 die;
@@ -438,7 +441,7 @@ die;
     $this->load->view('order_details');
     $this->load->view('header/footer');
 
-}
+}*/
 
 public function order(){
 
@@ -453,7 +456,7 @@ die;*/
  
         if (islogin()) {
 
-                 redirect(base_url('users/order_details'));
+                 redirect(base_url('users/do_upload'));
               }
             else{
 
@@ -708,9 +711,14 @@ public function products_query(){
 
 
 function do_upload() {
+  if(islogin()){
    if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
     $files = $_FILES;
+    $order['title']=$this->input->post('title');
+    $order['message']=$this->input->post('message');
 
+  $this->_setSessionData('order',$order);
+     
     $cpt = count ( $_FILES ['images'] ['name'] );
     $name_array = array();
      $name_display = array();
@@ -737,8 +745,8 @@ function do_upload() {
 
      if($this->Mdl_users->uploadFiles($name_array)){
 
-       
-
+        
+        redirect(base_url('users/orderSummary'));
       
        }
         else {
@@ -758,16 +766,37 @@ else{
   $this->load->view('files_upload');
   $this->load->view('header/footer');
 }
+}else{
+
+  redirect(base_url('users'));
+}
 
 }
 private function set_upload_options() {
     // upload an image options
     $config = array ();
     $config ['upload_path'] = 'uploads/';
-    $config ['allowed_types'] = 'gif|jpg|png';
+    $config ['allowed_types'] = 'doc|pdf|ppt'; 
     $config ['encrypt_name'] = TRUE;
 
     return $config;
+}
+
+
+
+public function orderSummary(){
+/*echo "string";
+die;*/
+if (islogin()) {
+
+$this->load->view('header/header');
+  $this->load->view('payment');
+  $this->load->view('header/footer');
+
+}
+else{
+   redirect(base_url('users'));
+}
 }
 
 }

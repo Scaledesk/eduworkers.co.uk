@@ -541,8 +541,22 @@ class Mdl_users extends CI_Model
 
     public function uploadFiles($data= array()){
 
-        print_r($data);die;
+       
 
+        foreach ($data as $row) {
 
+            $data=['eduworkers_temp_files_buyer_id' => $this->session->userdata['user_data']['user_id'],
+
+                    'eduworkers_temp_files_name' => $row
+                   
+            ];
+             $a= $this->db->insert('eduworkers_temp_files',$data);
+        }
+     if($this->db->affected_rows()){
+        return true;
+     }
+     else{
+        return false;
+     }
     }
 }
