@@ -704,44 +704,7 @@ public function products_query(){
 
 
 
-public function upload(){
 
-
-  $name_array = array();
-$count = count($_FILES['userfile']['size']);
- /*echo $count; die;*/
-foreach($_FILES as $key=>$value)
-for($s=0; $s<=$count-1; $s++) {
-$_FILES['userfile']['name']=$value['name'][$s];
-$_FILES['userfile']['type']    = $value['type'][$s];
-$_FILES['userfile']['tmp_name'] = $value['tmp_name'][$s];
-$_FILES['userfile']['error']       = $value['error'][$s];
-$_FILES['userfile']['size']    = $value['size'][$s];  
-    $config['upload_path'] = 'uploads/';
-$config['allowed_types'] = 'gif|jpg|png';
-$config['max_size'] = '100';
-$config['max_width']  = '1024';
-$config['max_height']  = '768';
-/* echo $config['upload_path'] ; die;*/
-$this->upload->initialize($config);
-$this->load->library('upload', $config);
-$this->upload->do_upload();
-$data = $this->upload->data();
-/*echo "<pre/>";
- print_r($data); die;*/
-$name_array[] = $data['file_name'];
- 
-}
-echo "<pre/>";
- print_r($data); die;
-$names= implode(',', $name_array);
-/* $this->load->database();
-$db_data = array('id'=> NULL,
-'name'=> $names);
-$this->db->insert('testtable',$db_data);
-*/ print_r($name_array);
-
-}
 
 
 function do_upload() {
@@ -749,12 +712,14 @@ function do_upload() {
     $files = $_FILES;
 
     $cpt = count ( $_FILES ['images'] ['name'] );
-
+    $name_array = array();
+     $name_display = array();
   if ($cpt<10) {
-  echo  $cpt;
- die;
+  /*echo  $cpt;
+ die;*/
     for($i = 0; $i < $cpt; $i ++) {
 
+        $name_display[] = $files ['images'] ['name'] [$i];
         $_FILES ['images'] ['name'] = $files ['images'] ['name'] [$i];
         $_FILES ['images'] ['type'] = $files ['images'] ['type'] [$i];
         $_FILES ['images'] ['tmp_name'] = $files ['images'] ['tmp_name'] [$i];
@@ -763,8 +728,12 @@ function do_upload() {
 
         $this->upload->initialize ( $this->set_upload_options () );
         $this->upload->do_upload ('images');
-        echo "";
+        $data = $this->upload->data();
+        $name_array[] = $data['file_name'];
+        /*echo "";*/
     }
+    echo "<pre/>";
+    print_r($name_array); print_r($name_display); die;
 }
     else{
       echo "string";
