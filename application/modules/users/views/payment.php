@@ -21,7 +21,7 @@
               <h1>Pay by PayPal</h1>
               <p>We take online card payments via PayPal, but you do not require an account with PayPal in order to pay with your credit or debit card.</p>
               <button class=" btn btn-warning btn-effect footer-btn">
-              <a href="<?php echo base_url().'payment'; ?>">Pay Using Paypal</a></button>
+              <a href="<?php echo base_url().'payment/buy'; ?>">Pay Using Paypal</a></button>
             </div>
             </div>
 

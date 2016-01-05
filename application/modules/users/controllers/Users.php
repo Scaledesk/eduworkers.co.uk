@@ -145,7 +145,7 @@ public function login()
                     redirect(base_url('admin'));
                    } else if ($this->session->userdata('user_products')) {
 
-                       redirect(base_url('users/order_details'));
+                       redirect(base_url('users/do_upload'));
                        
                    }{
                     setInformUser('success','Login successfully');
@@ -718,6 +718,10 @@ function do_upload() {
     $order['message']=$this->input->post('message');
 
   $this->_setSessionData('order',$order);
+
+
+/*print_r($this->session->userdata('user_order'));
+die*/
      
     $cpt = count ( $_FILES ['images'] ['name'] );
     $name_array = array();
@@ -727,7 +731,7 @@ function do_upload() {
  die;*/
     for($i = 0; $i < $cpt; $i ++) {
 
-        $name_display[] = $files ['images'] ['name'] [$i];
+        /*$name_display[] = $files ['images'] ['name'] [$i];*/
         $_FILES ['images'] ['name'] = $files ['images'] ['name'] [$i];
         $_FILES ['images'] ['type'] = $files ['images'] ['type'] [$i];
         $_FILES ['images'] ['tmp_name'] = $files ['images'] ['tmp_name'] [$i];
@@ -735,7 +739,13 @@ function do_upload() {
         $_FILES ['images'] ['size'] = $files ['images'] ['size'] [$i];
 
         $this->upload->initialize ( $this->set_upload_options () );
-        $this->upload->do_upload ('images');
+        if(!$this->upload->do_upload ('images'))
+        {
+         
+        
+          redirect(base_url('users/order'));
+        }
+        
          $data = $this->upload->data();
         $name_array[] = $data['file_name'];
 
@@ -776,7 +786,7 @@ private function set_upload_options() {
     // upload an image options
     $config = array ();
     $config ['upload_path'] = 'uploads/';
-    $config ['allowed_types'] = 'doc|pdf|ppt'; 
+    $config ['allowed_types'] = 'docx|pdf|ppt'; 
     $config ['encrypt_name'] = TRUE;
 
     return $config;
@@ -785,7 +795,9 @@ private function set_upload_options() {
 
 
 public function orderSummary(){
-/*echo "string";
+
+/*print_r($this->session->userdata('user_order'));
+print_r($this->session->userdata('user_products'));
 die;*/
 if (islogin()) {
 

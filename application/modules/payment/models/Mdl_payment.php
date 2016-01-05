@@ -20,4 +20,9 @@ class Mdl_payment extends CI_Model{
 		$insert = $this->db->insert('payments',$data);
 		return $insert?true:false;
 	}
+
+
+
+
+
 }

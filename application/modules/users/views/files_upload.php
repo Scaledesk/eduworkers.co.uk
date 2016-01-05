@@ -29,10 +29,10 @@
 
                 <lable>Title</lable>
                 </div>
-                <textarea class="form-control" rows="7" placeholder="Message" style="height: 50px;"></textarea>
+                <textarea class="form-control" rows="7" name="title" placeholder="Message" style="height: 50px;"></textarea>
                 <lable>Instructions</lable>
 
-                <textarea class="form-control" rows="7" placeholder="Message"></textarea>
+                <textarea class="form-control" rows="7" name="message" placeholder="Message"></textarea>
 
                 
              
@@ -53,7 +53,7 @@
                               <option>EUR&nbsp;&#128;</option>
                               
                             </select>
-                            s
+                            
                           </div>
                           <div class="col-xs-6">
                             <input type="text" class="form-control" value="<?php echo $this->session->userdata('user_products')['total']; ?>">

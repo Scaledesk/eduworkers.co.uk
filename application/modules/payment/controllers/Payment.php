@@ -26,6 +26,8 @@ class Payment extends CI_Controller
 		$data['currency_code'] = $paypalInfo["cc"];
 		$data['status'] = $paypalInfo["st"];
 		
+		
+
 		//pass the transaction data to view
         $this->load->view('paypal/success', $data);
 	 }
@@ -55,7 +57,15 @@ class Payment extends CI_Controller
 			$this->Mdl_payment->insertTransaction($data);
 		}
     }
-    function buy($id){
+    function buy(){
+
+
+/*    	print_r($this->session->userdata('user_order'));
+print_r($this->session->userdata('user_products'));*/
+$product_name=$this->session->userdata['user_products']['services'];
+$prics=$this->session->userdata['user_products']['total'];
+$product_id=1;
+/*die;*/
 		//Set variables for paypal form
 		$paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; //test PayPal api url
 		$paypalID = 'info@codexworld.com'; //business email
@@ -63,18 +73,18 @@ class Payment extends CI_Controller
 		$cancelURL = base_url().'payment/cancel'; //payment cancel url
 		$notifyURL = base_url().'payment/ipn'; //ipn url
 		//get particular product data
-		$product = $this->Mdl_payment->getRows($id);
-		$userID = 1; //current user id
+		
+		$userID =  $this->session->userdata['user_data']['user_id'];//current user id
 		$logo = base_url().'assets/images/codexworld-logo.png';
 		
 		$this->paypal_lib->add_field('business', $paypalID);
 		$this->paypal_lib->add_field('return', $returnURL);
 		$this->paypal_lib->add_field('cancel_return', $cancelURL);
 		$this->paypal_lib->add_field('notify_url', $notifyURL);
-		$this->paypal_lib->add_field('item_name', $product['name']);
+		$this->paypal_lib->add_field('item_name', $product_name);
 		$this->paypal_lib->add_field('custom', $userID);
-		$this->paypal_lib->add_field('item_number',  $product['id']);
-		$this->paypal_lib->add_field('amount',  $product['price']);		
+		$this->paypal_lib->add_field('item_number',  $product_id);
+		$this->paypal_lib->add_field('amount',  $prics);		
 		$this->paypal_lib->image($logo);
 		
 		$this->paypal_lib->paypal_auto_form();
