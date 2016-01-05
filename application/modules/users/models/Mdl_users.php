@@ -559,4 +559,57 @@ class Mdl_users extends CI_Model
         return false;
      }
     }
+
+
+public function payment(){
+$data['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_temp_files')->result_array();
+
+
+ foreach ($data['data_files'] as $row) {
+
+/*echo $row['eduworkers_temp_files_name'];die;*/
+            $data1=['eduworkers_products_files_buyer_id' => $this->session->userdata['user_data']['user_id'],
+
+                    'eduworkers_products_files_name' => $row['eduworkers_temp_files_name']
+                   
+            ];
+
+              $this->db->insert('eduworkers_products_files',$data1);
+
+              $this->db->where('eduworkers_temp_files_name',$row['eduworkers_temp_files_name']);  
+              $this->db->delete('eduworkers_temp_files'); 
+
+        }
+   
+  
+    $data=[
+    'eduworkers_products_users_id'=> $this->session->userdata['user_data']['user_id'],
+    'eduworkers_products_services'=>$this->session->userdata['user_products']['services'],
+    'eduworkers_products_subjects'=>$this->session->userdata['user_products']['subjects'],
+    'eduworkers_products_length'=>$this->session->userdata['user_products']['lenght'],
+    'eduworkers_products_delivery_date'=>$this->session->userdata['user_products']['date'],
+    'eduworkers_products_grade'=>$this->session->userdata['user_products']['grade'],
+    'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
+    'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
+    'eduworkers_products_message'=>$this->session->userdata['user_order']['message']
+   
+    ];
+    if($this->db->insert('eduworkers_products',$data)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+public function table(){
+
+    if($this->db->select('eduworkers_temp')){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
 }

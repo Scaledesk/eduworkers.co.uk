@@ -722,10 +722,11 @@ function do_upload() {
 
 /*print_r($this->session->userdata('user_order'));
 die*/
-     
+     $ci=CI::get_instance();
     $cpt = count ( $_FILES ['images'] ['name'] );
     $name_array = array();
      $name_display = array();
+     if(!empty($_FILES ['images'] ['name'])){
   if ($cpt<10) {
   /*echo  $cpt;
  die;*/
@@ -741,9 +742,11 @@ die*/
         $this->upload->initialize ( $this->set_upload_options () );
         if(!$this->upload->do_upload ('images'))
         {
-         
+          $error = array('error' => $ci->upload->display_errors());
+           setInformUser('error', $error['error'].' please uploads  file formate only');
+               
         
-          redirect(base_url('users/order'));
+          redirect(base_url('users/do_upload'));
         }
         
          $data = $this->upload->data();
@@ -769,6 +772,11 @@ die*/
       echo "10 Files Only uploads";
 
     }
+
+  }else{
+
+    redirect(base_url('users/orderSummary'));
+  }
    
 }
 else{
@@ -810,5 +818,29 @@ else{
    redirect(base_url('users'));
 }
 }
+
+
+public function payment(){
+
+  if($this->Mdl_users->payment()){
+   redirect(base_url('users'));
+    setInformUser('success',' successfully Payment');
+  }
+  else{
+     redirect(base_url('users'));
+      setInformUser('error', 'Some error Occurred ');
+  }
+}
+
+
+public function table(){
+   if($this->Mdl_users->table()){
+  echo "successfully ";
+  }
+  else{
+    echo "error";
+  }
+}
+
 
 }

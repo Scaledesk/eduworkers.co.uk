@@ -29,7 +29,7 @@
               <div class="payment_option_transfer">
               <h1>Pay by Bank Transfer</h1>
               <p>Please note that, in using this option, we will only start your order when payment has cleared which will take up to 3-5 hours or 3-5 days if paying via international bank transfer..</p>
-              <button class=" btn btn-warning btn-effect footer-btn">Pay By Bank Transfer</button>
+              <button class=" btn btn-warning btn-effect footer-btn"><a href="<?php echo base_url().'users/payment'; ?>">Pay By Bank Transfer</a></button>
             </div>
             </div>
             </div>
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="col-md-9">
-                       <div class="edu_service_details_2">256</div>
+                       <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['total']; ?></div>
                     </div>
 
                     
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="col-md-9">
-                      <div class="edu_service_details_2">256</div>
+                      <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['total']; ?></div>
                     </div>
 
                     <div class="col-md-3">
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="col-md-9">
-                      <div class="edu_service_details_2">Undergraduate 2:1 (60-69%)</div>
+                      <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['grade']; ?></div>
                     </div>
 
                     <div class="col-md-3">
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="col-md-9">
-                      <div class="edu_service_details_2">1000 Words (Estimated 2-3 pages)</div>
+                      <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['lenght']; ?> Words (Estimated 2-3 pages)</div>
                     </div>
 
                     <div class="col-md-3">
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="col-md-9">
-                      <div class="edu_service_details_2">7 Days <br> <span> <p> The delivery time starts as soon as your writer begins work. Please note that until you receive confirmation that your writer has started work we can not guarantee the delivery time of your order.</p></span></div>
+                      <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['date']; ?>Days <br> <span> <p> The delivery time starts as soon as your writer begins work. Please note that until you receive confirmation that your writer has started work we can not guarantee the delivery time of your order.</p></span></div>
                     </div>
 
                     <div class="col-md-3">
@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="col-md-9">
-                    <div class="edu_service_details_2"> Fashion</div>
+                    <div class="edu_service_details_2"> <?php echo $this->session->userdata('user_products')['subjects']; ?></div>
                     </div>
 
                     <div class="col-md-3">
