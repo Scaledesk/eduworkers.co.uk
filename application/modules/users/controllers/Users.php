@@ -177,7 +177,7 @@ public function login()
         if($this->Mdl_users->register('normal_registration')){
             
             if($this->sendMail()){
-                echo $this->Mdl_users->insertToken();
+                $this->Mdl_users->insertToken();
                  setInformUser('success','your account successfully created and  Active link on your Email');
                 redirect(base_url('users'));
             }else{
@@ -842,5 +842,28 @@ public function table(){
   }
 }
 
+
+
+public function updatePassword(){
+  if (islogin()) {
+   
+ if (strtolower($_SERVER(REQUEST_METHOD))=='post') {
+   $data=$this->input->post();
+   $this->Mdl_users->setData('updatePassword',$data['old_password'],$data['new_password']);
+   $this->Mdl_users->updatePassword();
+
+ }else{
+
+  $this->load->view('header/header');
+  $this->load->view();
+  $this->load->view('header/footer');
+ }
+
+
+
+  }else{
+    redirect(base_url('users'));
+  }
+}
 
 }

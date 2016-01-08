@@ -161,13 +161,22 @@ class Mdl_users extends CI_Model
                 $this->setPassword(func_get_arg(1));
 
 
-                break;
+                break; 
 
             }
              case'update_profile':{
                 $this->setUserName(func_get_arg(1));
                 $this->setUserFname(func_get_arg(2));
                 $this->setPassword(func_get_arg(3));
+
+
+                break;
+
+            }
+            case'updatePassword':{
+                $this->setPassword(func_get_arg(1));
+                $this->setNewPassword(func_get_arg(2));
+                
 
 
                 break;
@@ -332,11 +341,15 @@ class Mdl_users extends CI_Model
     }
 
     /**
-     * @param mixed $password
+     * @param mixed $password 
      */
     public function setPassword($password)
     {
         $this->password = $password;
+    }
+     public function setNewPassword($new_password)
+    {
+        $this->new_password = $new_password;
     }
 
     /**
@@ -460,7 +473,10 @@ class Mdl_users extends CI_Model
     {
         return $this->password;
     }
-
+  public function getNewPassword()
+    {
+        return $this->new_password;
+    }
     /**
      * @return mixed
      */
@@ -486,17 +502,17 @@ class Mdl_users extends CI_Model
 
         $this->db->where('eduworkers_users_token',$this->getToken())->update('eduworkers_users',['eduworkers_users_status'=>'1']);
        if($this->db->affected_rows()){
-            $this->db->where('eduworkers_users_token',$this->getToken())->update('eduworkers_users',[
-               'eduworkers_users_token'=>NULL]);
+
+            $this->db->where('eduworkers_users_token',$this->getToken())->update('eduworkers_users',['eduworkers_users_token'=>NULL]);
            return true;
+
        }else{
 
 
            return false;
        }
 
-
-
+ 
 
     }
     public function isActive(){
@@ -609,6 +625,32 @@ public function table(){
     }else{
         return false;
     }
+}
+
+
+
+
+public function updatePassword(){
+
+if($data = $this->db->where(array('eduworkers_users_username' =>$this->session->userdata['user_data']['user_id']))->select('eduworkers_users_password')->get('eduworkers_users')->result_array()) {
+if (password_verify($this->password, $data[0]['eduworkers_users_password'])){
+ $this->setNewPassword(password_hash($this->new_password, PASSWORD_DEFAULT));
+
+  $data=['eduworkers_users_password'=>$this->new_password] ;     
+  
+ $this->db->where('eduworkers_users_id',$this->session->userdata['user_data']['user_id'])->update('eduworkers_users');
+
+  if ($this->db->affected_rows('eduworkers_users')) {
+     return true;
+}else{
+    return false;
+}
+  
+            
+  }else {return false;}
+
+}else {return false;}
+
 }
 
 

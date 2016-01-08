@@ -20,6 +20,7 @@ class Admin extends MX_Controller{
     public function index(){
         if (isAdmin()) {
             $this->load->view('header');
+            $this->load->view('table');
            $this->load->view('footer');
         }
        else {
