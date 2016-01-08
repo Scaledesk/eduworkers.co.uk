@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
   <title>Eduworkers, - Essay and Dissertation Writing Service</title>
-  <link href="favicon.png" type="image/x-icon" rel="shortcut icon">
+  <link href="<?php echo  asset_url();?>img/favicon.png" type="image/x-icon" rel="shortcut icon">
   <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet">
   <!-- SWITCHER -->
   <link href="<?php echo  asset_url();?>plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all">

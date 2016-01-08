@@ -12,11 +12,11 @@
                       
                         <div class="form-group form-group-icon-left">
                             <!-- <label>Username or email</label> -->
-                            <input class="custom-input_class" name="email" placeholder="Your Email" type="text" />
+                            <input class="custom-input_class" name="email"  required placeholder="Your Email" type="email" />
                         </div>
                         <div class="form-group form-group-icon-left">
                             <!-- <label>Password</label> -->
-                            <input class="custom-input_class" type="password" name="password" placeholder="Password" />
+                            <input class="custom-input_class" type="password" required name="password" placeholder="Password" />
                         </div>
                         <div class="gap"></div>
                         <input class="btn btn-primary custom-button_class" type="submit" name="login" value="Login In" />
