@@ -157,16 +157,16 @@ public function login()
             }else{
                 //set flash message that his username and password do not match try again.
                 setInformUser('error','your Username and password do not match');
-                redirect(base_url('users'));
+                redirect(base_url('users/login'));
             }
         }else{
             setInformUser('error','Your Account in not activated. Kindly verify your email to logon.');
-            redirect(base_url('users'));
+            redirect(base_url('users/login'));
         }
       }
       else{
             setInformUser('error','Your email not register.Please at first  register email .');
-            redirect(base_url('users'));
+            redirect(base_url('users/login'));
         }
 
     }
