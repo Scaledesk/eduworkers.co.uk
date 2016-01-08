@@ -99,18 +99,7 @@ class Mdl_users extends CI_Model
                 $this->setPassword(func_get_arg(2));
                 break;
             case "setSessionData": {
-                if ($data = $this->db->where(array('eduworkers_users_permissions_username' => func_get_arg(1)))->get('eduworkers_users_permissions')->result_array()) {
-                    $this->setUserId($data[0]['eduworkers_users_permissions_user_id']);
-                    $this->setUserName($data[0]['eduworkers_users_permissions_username']);
-                    $this->setRoleId($data[0]['eduworkers_users_permissions_user_role_id']);
-                    $this->setRolesName($data[0]['eduworkers_users_permissions_user_role']);
-                   /* print_r($data); die;*/
-                    foreach ($data as $row) {
-                        array_push($this->permissions_name, $row['eduworkers_users_permissions_user_permission']);
-                    }
-                    $this->getUserData();
-                    break;
-                } else {
+                
                     $data = $this->db->where(array('eduworkers_users_username' => func_get_arg(1)))->select('eduworkers_users_username,eduworkers_users_id,eduworkers_users_roles_id,eduworkers_users_userfname')->get('eduworkers_users')->result_array();
                     /*print_r($data); die;*/
                     $this->setUserID($data[0]['eduworkers_users_id']);
@@ -121,8 +110,8 @@ class Mdl_users extends CI_Model
                     $this->setRolesName($role_name[0]['eduworkers_roles_name']);
                     $this->permissions_name = array();
                    /* echo $this->getUserFname(); die;*/
-                }
-            }
+                
+                 }
                 break;
             case "facebook_login": {
                 $this->setUserName(func_get_arg(1));
