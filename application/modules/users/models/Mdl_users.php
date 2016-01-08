@@ -515,21 +515,19 @@ class Mdl_users extends CI_Model
  
 
     }
-    public function isActive(){
-       /* return $this->db->where('eduworkers_users_username',$this->getUserName())->select(array('eduworkers_users_status'))->get('eduworkers_users')->result_array()[0]['eduworkers_users_status']?true:false;
-   */
 
-    $query=$this->db->where('eduworkers_users_username',$this->getUserName())->select(array('eduworkers_users_status'))->get('eduworkers_users');
-  
-   $query=$this->db->where('eduworkers_users_username',$this->getUserName())->select(array('eduworkers_users_status'))->get('eduworkers_users')->result_array()[0]['eduworkers_users_status'];
-       if(!empty($query)){
-        /* echo $query;
-         die;
-*/
+
+   
+    public function isActive(){
+    
+    $query=$this->db->where('eduworkers_users_username',$this->getUserName())->select(array('eduworkers_users_status'))->get('eduworkers_users')->result_array();
+
+ 
+       if(!empty($this->db->where('eduworkers_users_username',$this->getUserName())->select(array('eduworkers_users_status'))->get('eduworkers_users')->result_array()[0]['eduworkers_users_status'])){
+        
            return true;
        }else{
-       /* echo $query;
-        die;*/
+       
         return false;
        }
 
