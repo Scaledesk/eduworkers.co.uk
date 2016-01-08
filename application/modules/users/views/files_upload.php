@@ -29,10 +29,10 @@
 
                 <lable>Title</lable>
                 </div>
-                <textarea class="form-control" rows="7" name="title" placeholder="Message" style="height: 50px;"></textarea>
+                <textarea class="form-control" rows="7" required name="title" placeholder="Message" style="height: 50px;"></textarea>
                 <lable>Instructions</lable>
 
-                <textarea class="form-control" rows="7" name="message" placeholder="Message"></textarea>
+                <textarea class="form-control" rows="7" required name="message" placeholder="Message"></textarea>
 
                 
              

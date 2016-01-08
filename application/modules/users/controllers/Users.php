@@ -171,9 +171,7 @@ public function login()
 
     }
 
-    /**
-     *register the user
-     */
+   
     private function _register($data)
     {
         $role=10;
@@ -189,7 +187,7 @@ public function login()
                
                 redirect(base_url('users'));
             }
-        };
+        }
     }
 
     private function _setSessionData()
@@ -724,16 +722,17 @@ function do_upload() {
   $this->_setSessionData('order',$order);
 
 
-/*print_r($this->session->userdata('user_order'));
-die*/
+ if(empty($_FILES ['images'] ['name'])){
+
+
+
      $ci=CI::get_instance();
     $cpt = count ( $_FILES ['images'] ['name'] );
     $name_array = array();
      $name_display = array();
-     if(!empty($_FILES ['images'] ['name'])){
+    
   if ($cpt<10) {
-  /*echo  $cpt;
- die;*/
+
     for($i = 0; $i < $cpt; $i ++) {
 
         /*$name_display[] = $files ['images'] ['name'] [$i];*/
