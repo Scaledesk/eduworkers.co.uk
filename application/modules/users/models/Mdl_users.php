@@ -332,6 +332,15 @@ class Mdl_users extends CI_Model
         return false;
     }
 }
+
+
+public function hasUser(){
+ if ($this->db->where(array('eduworkers_users_username' => $this->user_name))->select('eduworkers_users_username')->get('eduworkers_users')->result_array()) {
+             return true;
+     
+    }return false;
+
+}
     /**
      * @param mixed $user_name
      */

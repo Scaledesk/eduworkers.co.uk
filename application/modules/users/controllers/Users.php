@@ -133,6 +133,7 @@ public function login()
     private function _login($data)
     {
         $this->Mdl_users->setData('checkUser',$data['email'],$data['password']);
+        if(hasUser()){
         if(isAccountActive()){
             if($this->Mdl_users->checkUser()){
                 $this->Mdl_users->setData('setSessionData',$data['email']);
@@ -152,9 +153,7 @@ public function login()
                     redirect(base_url('users'));
                    }
                 
-                /*$this->load->view('header/header');
-                $this->load->view('dashboard');*/
-              //  redirect('testapp');
+               
             }else{
                 //set flash message that his username and password do not match try again.
                 setInformUser('error','your Username and password do not match');
@@ -162,6 +161,11 @@ public function login()
             }
         }else{
             setInformUser('error','Your Account in not activated. Kindly verify your email to logon.');
+            redirect(base_url('users'));
+        }
+      }
+      else{
+            setInformUser('error','Your email not register.Please at first  register email .');
             redirect(base_url('users'));
         }
 

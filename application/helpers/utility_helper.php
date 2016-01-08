@@ -5,6 +5,7 @@
  * Date: 11/9/15
  * Time: 5:51 PM
  */
+
 function islogin(){
     $ci=CI::get_instance();
     if ($ci->session->has_userdata('user_data')){
@@ -106,4 +107,11 @@ function isGuest(){
         return strtolower($ci->session->userdata('user_data')['user_role_name'])=='guest'?true :false;
     }
     return false;
+}
+
+
+function hasUser(){
+    $ci=CI::get_instance();
+    $ci->load->Model('users/Mdl_users');
+    return $ci->Mdl_users->hasUser()?true:false;
 }
