@@ -24,6 +24,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 */config/database.php
 */.htaccess
 *.htaccess
+.htaccess
 
 # cache files for sublime text
 *.tmlanguage.cache
