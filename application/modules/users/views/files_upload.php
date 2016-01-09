@@ -101,7 +101,7 @@
                              
              <label class="btn btn-primary btn-effect"> 
                  
-                  <input type="file" name="images[]" multiple  />
+                  <input type="file" name="userfile[]" multiple  />
                  
                  Upload File 
              

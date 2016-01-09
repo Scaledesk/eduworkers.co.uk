@@ -389,8 +389,240 @@
 	
 }
 
-input[type="file"]
-{
-    display: none;
+.edu_payment_section{
+	background-color: #f7f7f7;
+	padding-bottom: 30px;
 }
+
+.edu_payment_title{
+	font-size: 35px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	word-spacing: 5px;
+	border-bottom: 1px solid #000 !important;
+	margin-top: 40px;
+
+}
+
+.edu_payment_title span{
+	background-color: #f7f7f7;
+	padding:  20px!important;
+
+}
+
+.edu_payment_title_2{
+	font-size: 35px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	word-spacing: 5px;
+	margin: 50px 0;
+	border-bottom: 1px solid #000 !important;
+}
+.edu_payment_title_2  span{
+	background-color: #f7f7f7;
+	padding: 20px;
+
+}
+
+.edu_subheading{
+	font-size: 25px;
+	margin: 40px 0;
+
+}
+
+
+
+.payment_option_card{
+	background-color: #042D57;
+	padding: 20px;
+}
+
+.payment_option_paypal{
+	background-color: #042D57;
+	padding: 20px;
+}
+
+.payment_option_transfer{
+	background-color: #042D57;
+	padding: 20px;
+}
+
+
+
+.payment_option_card > h1 {
+	color: #fff;
+}
+.payment_option_card > p {
+	color: #fff;
+}
+
+.payment_option_paypal > h1 {
+	color: #fff;
+}
+
+.payment_option_paypal > p {
+	color: #fff;
+}
+
+.payment_option_transfer > h1{
+	color: #fff;
+}
+
+.payment_option_transfer > p{
+	color: #fff;
+}
+
+.edu_subheading_2{
+	font-size: 30px;
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+
+.edu_service_details_1{
+	font-weight: bolder;
+	font-size: 15px;
+
+}
+
+.edu_service_details_2{
+	font-size: 15px;
+}
+.section_for_order_details{
+	border-bottom: 1px solid #000;
+}
+
+.other_half ul li:last-of-type{
+	margin-bottom: 20px !important;
+
+}
+.edu_service_details_2 span p{
+	background-color: orange;
+	padding: 3px;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.border_style:before{
+	border-bottom: 1px solid #000;
+
+}
+
+
+
+.service_main_heading{
+	text-align: center;
+	padding: 40px 0 0 0;
+	font-size: 35px;
+	font-weight: bold;
+}
+.service_main_subheading{
+	text-align: center;
+	padding: 20px 0;
+}
+
+.service_main_heading_2{
+	text-align: center;
+	padding: 20px 0;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.edu_list_group{
+	border-radius: 2px;
+	background-color: #F7F7F7;
+	overflow: hidden;
+
+}
+
+.edu_service_custom_links{
+	border-bottom: 1px solid #aaa;
+	padding: 10px;
+	
+
+}
+
+.edu_service_custom_links a{
+	text-decoration: none;
+
+}
+
+.edu_service_custom_links:last-child{
+	border-bottom: none;
+}
+/*.edu_service_custom_links:hover{
+	background-color: #aaa;
+}*/
+
+
+.edu_payment_section  p{
+	font-size: 16px;
+	text-align: center;
+}
+.edu_service_customs{
+	color: #fff;
+	padding: 80px 0;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+
+.service_help_box{
+	background-color: rgba(0, 0, 0, 0.28);
+	padding: 50px;
+	
+}
+
+.service_help_box > span{
+	text-align: center;
+	font-size: 22px;
+	color: #3B99D7;
+	
+}
+
+
+.service_help_box >a{
+	text-decoration: none !important;
+	color: #fff;	
+}
+.service_help_box:hover{
+	background-color: #f6c640;
+	color: #fff !important;	
+	transition: all .3s;
+}
+
+
+.edu_services_section_2{
+	padding-top: 50px !important;
+}
+
+.edu_service_section{
+	background-color: #fff;
+	padding-bottom: 50px;
+}
+
+.edu_single_page_image{
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+.edu_payment_success{
+	color: lightgreen;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.edu_single_section{
+	padding-bottom: 60px;
+
+}
+.edu_single_page_image > h4{
+	
+}
+
+
+
 

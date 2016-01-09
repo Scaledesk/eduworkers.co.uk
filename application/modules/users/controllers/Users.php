@@ -722,12 +722,23 @@ function do_upload() {
   $this->_setSessionData('order',$order);
 
 
- if(empty($_FILES ['images'] ['name'])){
+  $filesn=$_FILES ['userfile'] ['name']; 
+
+  $filesn=array_filter($filesn,'strlen');
+  /*print_r($files);
+  die;*/
+    $cpt = count ( $_FILES ['userfile'] ['name'] );
+ 
 
 
+ if(!empty($filesn)){
+
+/* echo $cpt;
+  print_r($files);
+  die;*/
 
      $ci=CI::get_instance();
-    $cpt = count ( $_FILES ['images'] ['name'] );
+    
     $name_array = array();
      $name_display = array();
     
@@ -735,16 +746,22 @@ function do_upload() {
 
     for($i = 0; $i < $cpt; $i ++) {
 
-        /*$name_display[] = $files ['images'] ['name'] [$i];*/
-        $_FILES ['images'] ['name'] = $files ['images'] ['name'] [$i];
-        $_FILES ['images'] ['type'] = $files ['images'] ['type'] [$i];
-        $_FILES ['images'] ['tmp_name'] = $files ['images'] ['tmp_name'] [$i];
-        $_FILES ['images'] ['error'] = $files ['images'] ['error'] [$i];
-        $_FILES ['images'] ['size'] = $files ['images'] ['size'] [$i];
+       $_FILES['userfile']['name']= $files['userfile']['name'][$i];
+        $_FILES['userfile']['type']= $files['userfile']['type'][$i];
+        $_FILES['userfile']['tmp_name']= $files['userfile']['tmp_name'][$i];
+        $_FILES['userfile']['error']= $files['userfile']['error'][$i];
+        $_FILES['userfile']['size']= $files['userfile']['size'][$i];    
 
-        $this->upload->initialize ( $this->set_upload_options () );
-        if(!$this->upload->do_upload ('images'))
+        $this->upload->initialize($this->set_upload_options());
+
+        if(!$this->upload->do_upload ('userfile'))
         {
+        
+         $data = $this->upload->data();
+
+       /*cho  $name_array[] = $data['file_name'];
+die;*/
+
           $error = array('error' => $ci->upload->display_errors());
            setInformUser('error', $error['error'].' please uploads  file formate only');
                
@@ -755,13 +772,13 @@ function do_upload() {
          $data = $this->upload->data();
         $name_array[] = $data['file_name'];
 
-
+/*print_r($name_array);die;*/
     }
 
 
      if($this->Mdl_users->uploadFiles($name_array)){
-
-        
+/*echo "string";
+        print_r($name_array);die;*/
         redirect(base_url('users/orderSummary'));
       
        }
@@ -797,7 +814,8 @@ private function set_upload_options() {
     // upload an image options
     $config = array ();
     $config ['upload_path'] = 'uploads/';
-    $config ['allowed_types'] = 'docx|pdf|ppt'; 
+    $config ['allowed_types'] = 'docx|pdf|ppt|doc|pptx'; 
+     $config['max_size']      = 2000;
     $config ['encrypt_name'] = TRUE;
 
     return $config;
@@ -868,5 +886,21 @@ public function updatePassword(){
     redirect(base_url('users'));
   }
 }
+
+
+public function services (){
+
+   $this->load->view('header/header');
+  $this->load->view('services');
+  $this->load->view('header/footer');
+}
+
+public function singleServices (){
+
+   $this->load->view('header/header');
+  $this->load->view('single_services');
+  $this->load->view('header/footer');
+}
+
 
 }
