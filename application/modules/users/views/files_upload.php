@@ -56,7 +56,7 @@
                             
                           </div>
                           <div class="col-xs-6">
-                            <input type="text" class="form-control" value="<?php echo $this->session->userdata('user_products')['total']; ?>">
+                            <input type="text" readonly class="form-control" value="<?php echo $this->session->userdata('user_products')['total']; ?>">
                             
                           </div>
 

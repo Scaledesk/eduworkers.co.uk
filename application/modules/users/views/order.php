@@ -63,7 +63,8 @@
                     
                       
 
-                        <select name="services" class="form-control"id="services"   onchange="loadamount(this)" >
+                        <select name="services" class="form-control"id="services" required  onchange="loadamount(this)" >
+                         <option value="" >Select</option>
                           <option >Essay Writing Service</option>
                            <option>Dissertation writing service</option>
                             <option>Engineering Assignment</option>
@@ -116,7 +117,8 @@
                 <div class="col-md-8">
                       <div class="custom_class">
                       
-                          <select class="form-control" id="subjects" name="subjects" onchange="loadamount(this)">
+                          <select class="form-control" id="subjects" required name="subjects" onchange="loadamount(this)">
+                           <option value="" >Select</option>
                             <option>Accounting</option>
                             <option>Aeronautics Engineering</option>
                             <option>Law</option> 
@@ -195,7 +197,8 @@
                       <div class="col-md-8">
                       <div class="custom_class">
                     
-                        <select class="form-control" id="grade" name="grade" onchange="loadamount(this)">
+                        <select class="form-control" id="grade" required name="grade" onchange="loadamount(this)">
+                            <option value="" >Select</option>
                             <option>gcse A</option>  
                             <option>A grade A</option>
                             <option>gcse B</option> 
@@ -213,7 +216,8 @@
                      
                      <div class="col-md-8">
                       <div class="custom_class">
-                        <select class="form-control" id="length" name="lenght" onchange="loadamount(this)">
+                        <select class="form-control" id="length" required name="lenght" onchange="loadamount(this)">
+                           <option value="" >Select</option>
                             <option>1000</option>
                             <option>2000</option>
                             <option>3000</option> 
@@ -230,6 +234,7 @@
                         <div class="col-md-8">
                         <div class="custom_class">
                         <select class="form-control" id="date" name="date" onchange="loadamount(this)">
+                          <option value="" >Select</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -261,7 +266,8 @@
                   
                 </div>
                 <div class="col-md-8">
-                       <select class="form-control">
+                       <select class="form-control" >
+                         <option value="" >Select</option>
                           <option>Categorie 1</option>
                           <option>Categorie 2</option>
                           <option>Categorie 3</option>
