@@ -6,9 +6,9 @@
           <div class="sp-slides">
             <div class="sp-slide"> <img class="sp-image" src="assets\media\main-slider\1.jpg" data-src="assets/media/main-slider/1.jpg" data-retina="assets/media/main-slider/1.jpg"
               alt="img">
-              <div class="item-wrap sp-layer  sp-padding" data-horizontal="700" data-vertical="1" data-show-transition="left" data-hide-transition="up"
+              <div class="item-wrap sp-layer  sp-padding" data-horizontal="200" data-vertical="30" data-show-transition="left" data-hide-transition="up"
               data-show-delay="400" data-hide-delay="200">
-                <div class="main-slider__inner text-center">
+                <div class="main-slider__inner">
                   <div class="main-slider__title">Stuck with Engineering Assignemnt and project</div>
                   <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
                   <a class="main-slider__btn btn btn-warning btn-effect" href="#">GET QUOTE</a> </div>

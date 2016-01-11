@@ -293,7 +293,7 @@
                           <div id="divtotal">
                             
                           </div>
-                            <input class="form-control" type="text" name="total" id="totalamount" value="" style ="color:#000;"/>
+                            <input class="form-control" readonly type="text" name="total" id="totalamount" value="" style ="color:#000;"/>
                             
                           </div>
 
