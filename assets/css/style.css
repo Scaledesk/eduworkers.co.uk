@@ -26,3 +26,8 @@
     padding: 9px;
     color: #333;
 }
+
+.flags_edu .img-responsive{
+    height: 70px !important;
+    color: aqua;
+}

@@ -20,24 +20,24 @@
               <img src="assets/media/uk_flag.png" alt=""/>
               <img src="assets/media/australia.jpeg" alt=""/> -->
               <div class="width"></div>
-              <div class="row">
-                <div class="col-xs-3 ">
-                  <a href="#"><img src="<?php echo base_url(); ?>assets/media/us_flag.png" width=90 height=70 alt=""/>
+              <div class="row flags_edu">
+                <div class="col-md-3 col-sm-3 col-xs-6 ">
+                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/us_flag.png" width=90 height=70 alt=""/>
                   <label class="text-center">United States</label>
                   </a>
                 </div>
-                <div class="col-xs-3 ">
-                  <a href="#"><img src="<?php echo base_url(); ?>assets/media/uk_flag.png" width=90 height=70 alt=""/>
+                <div class="col-md-3 col-sm-3 col-xs-6 ">
+                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/uk_flag.png" width="90" height="70" alt=""/>
                   <label class="text-center">United Kingdom</label>
                   </a>
                 </div>
-               <div class="col-xs-3 ">
-                 <a href="#"><img src="<?php echo base_url(); ?>assets/media/Australia_flag.png" width=90 height=70 alt=""/>
+               <div class="col-md-3 col-sm-3 col-xs-6 ">
+                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/Australia_flag.png" width=90 height=70 alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
-                <div class="col-xs-3 ">
-                 <a href="#"><img src="<?php echo base_url(); ?>assets/media/world-map.png" width=90 height=70 alt=""/>
+                <div class=" col-md-3 col-sm-3 col-xs-6 ">
+                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/world-map.png" width="90" height="70" alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
@@ -355,7 +355,7 @@
                           <div id="divtotal">
                             
                           </div>
-                            <input type="text" name="total" id="totalamount" value="" style ="color:#000;"/>
+                            <input class="form-control" type="text" name="total" id="totalamount" value="" style ="color:#000;"/>
                             
                           </div>
 
