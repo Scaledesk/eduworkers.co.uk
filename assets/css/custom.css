@@ -392,6 +392,7 @@
 .edu_payment_section{
 	background-color: #f7f7f7;
 	padding-bottom: 30px;
+
 }
 
 .edu_payment_title{
@@ -400,16 +401,15 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	word-spacing: 5px;
-	border-bottom: 1px solid #000 !important;
 	margin-top: 40px;
 
 }
 
-.edu_payment_title span{
+/*.edu_payment_title span{
 	background-color: #f7f7f7;
 	padding:  20px!important;
 
-}
+}*/
 
 .edu_payment_title_2{
 	font-size: 35px;
@@ -417,14 +417,15 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	word-spacing: 5px;
-	margin: 50px 0;
-	border-bottom: 1px solid #000 !important;
+	margin-top: 10px;
+	
+	
 }
-.edu_payment_title_2  span{
+/*.edu_payment_title_2  span{
 	background-color: #f7f7f7;
 	padding: 20px;
 
-}
+}*/
 
 .edu_subheading{
 	font-size: 25px;
@@ -476,18 +477,19 @@
 
 .edu_subheading_2{
 	font-size: 30px;
-	margin: 10px 0;
+	margin: 50px 0 30px 0;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .edu_service_details_1{
 	font-weight: bolder;
-	font-size: 15px;
+	font-size: 17px;
 
 }
 
 .edu_service_details_2{
-	font-size: 15px;
+	font-size: 17px;
 }
 .section_for_order_details{
 	border-bottom: 1px solid #000;
@@ -654,3 +656,10 @@ display:none;
     padding: 15px;
 }
 
+.custom_size{
+	margin-top: 50px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
+	background-color: #fff;
+	padding: 30px 40px 40px 50px;
+
+}
