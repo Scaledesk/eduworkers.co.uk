@@ -178,14 +178,14 @@ public function login()
         $this->Mdl_users->setData('register',$data['email'],$data['password'],$role,$data['name']);
         if($this->Mdl_users->register('normal_registration')){
             
-            if($this->sendMail()){
+            if($this->sendMail()){  
                 $this->Mdl_users->insertToken();
                  setInformUser('success','your account successfully created and  Active link on your Email');
-                redirect(base_url('users'));
+                redirect(base_url('users/signup'));
             }else{
                  setInformUser('error','Account registered but email not send.');
                
-                redirect(base_url('users'));
+                redirect(base_url('users/signup'));
             }
         }
     }
