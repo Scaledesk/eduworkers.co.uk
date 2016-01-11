@@ -22,47 +22,46 @@
               <div class="width"></div>
               <div class="row flags_edu">
                 <div class="col-md-3 col-sm-3 col-xs-6 ">
-                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/us_flag.png" width=90 height=70 alt=""/>
+                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/us_flag.png" alt=""/>
                   <label class="text-center">United States</label>
                   </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6 ">
-                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/uk_flag.png" width="90" height="70" alt=""/>
+                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/uk_flag.png"  alt=""/>
                   <label class="text-center">United Kingdom</label>
                   </a>
                 </div>
                <div class="col-md-3 col-sm-3 col-xs-6 ">
-                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/Australia_flag.png" width=90 height=70 alt=""/>
+                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/Australia_flag.png"  alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
                 <div class=" col-md-3 col-sm-3 col-xs-6 ">
-                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/world-map.png" width="90" height="70" alt=""/>
+                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/world-map.png"  alt=""/>
                  <label class="text-center">Other Country</label>
                 </a>
                 </div>
-              </div>
+             
               
               <p>lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
                   lorem ipsum lorem ipsum is a dummy text</p>
               
              
-             <!--  <form class="find-course__form" action="get">
-                    <div class="form-group"> -->
+             </div>
 
                       
                       
                        <div class="row">
                           <form action="<?php echo base_url().'users/order'; ?>"method="post">
-                           <div class="col-xs-6">
+                           <div class="col-md-4">
                               <h2>Choose Your Product</h2>
                            
                          </div>
-                       <div class="col-xs-6">
+                       <div class="col-md-8">
                       <!-- end jelect -->
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div class="jelect-current">Essay Writing Service</div>
+                      <div class="order_now_custom">
+                    
+                      
 
                         <select name="services" class="form-control"id="services"   onchange="loadamount(this)" >
                           <option >Essay Writing Service</option>
@@ -87,13 +86,7 @@
 
                         </select>
 
-                        <!-- <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Engineering Assignments</li>
-                          <li class="jelect-option">Engineering Projects</li>
-                          <li class="jelect-option">Essay Writing</li>
-                          <li class="jelect-option">DIssertation Writing</li>
-                        </ul> -->
-
+                      
                       </div>
                       </div>
                       </div>
@@ -106,24 +99,23 @@
                     <!-- end form-group -->
                    
                 <!--   </form> -->
-                
-                <h1>Choose Your Product Option</h1>
-              <p>Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum</p>
-              <div class="row">
-                <div class="col-xs-4 custom_labels">
-                  <h3>Subject</h3>
-                   <h3>Grade Required</h3>
-                   <h3>Length</h3>
-                    <h3>Delivery Time</h3>
-                  
-                </div>
 
-                <div class="col-xs-8">
-                  <div class="form-group">
+                <div class="row">
+                  <div class="col-md-12">
+                
+                <h1 class="text-center">Choose Your Product Option</h1>
+              <p>Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum</p>
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <h3>Subject</h3>
+              </div>
+
+                <div class="col-md-8">
                       <div class="custom_class">
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
+                      
                           <select class="form-control" id="subjects" name="subjects" onchange="loadamount(this)">
                             <option>Accounting</option>
                             <option>Aeronautics Engineering</option>
@@ -191,23 +183,18 @@
                             <option>Chemistry </option>
                             <option>Construction Engineering</option>
                           </select>
-                        <!-- <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul> -->
                       </div>
                       </div>
-
+                    </div>
+                      
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h3>Grade Required</h3>
+                        </div>
+                      
+                      <div class="col-md-8">
                       <div class="custom_class">
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                        <!-- <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul> -->
+                    
                         <select class="form-control" id="grade" name="grade" onchange="loadamount(this)">
                             <option>gcse A</option>  
                             <option>A grade A</option>
@@ -216,28 +203,32 @@
                           </select>
                       </div>
                       </div>
+                    </div>
 
+                     
+                     <div class="row">
+                       <div class="col-md-4">
+                           <h3>Length</h3>
+                       </div>
+                     
+                     <div class="col-md-8">
                       <div class="custom_class">
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                        <!-- <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul> -->
                         <select class="form-control" id="length" name="lenght" onchange="loadamount(this)">
                             <option>1000</option>
                             <option>2000</option>
                             <option>3000</option> 
                           </select>
                       </div>
+                    </div>
                       </div>
 
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h3>Delivery Time</h3>
+                        </div>
+                      
+                        <div class="col-md-8">
                         <div class="custom_class">
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
                         <select class="form-control" id="date" name="date" onchange="loadamount(this)">
                             <option>1</option>
                             <option>2</option>
@@ -250,98 +241,45 @@
                             <option>9</option>
                             <option>10</option> 
                           </select>
-                        <!-- <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul> -->
+                       
                       </div>
                       </div>
-                  
-                </div>
-              </div>
-           </div> 
-                      
+                    </div>
 
-              <h1>Choose Your Upgrade option</h1>
+            
+                      
+            <div class="row">
+              <div class="col-md-12">
+              <h1 class="text-center">Choose Your Upgrade option</h1>
               <p>Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum</p>
+              </div>
+              </div>
+
               <div class="row">
-                <div class="col-xs-4">
-                  <h3>Upgrade to our elite Service</h3>
+                <div class="col-md-4">
+                  <h3 class="text-center">Upgrade to our elite Service</h3>
                   
                 </div>
-                <div class="col-xs-8">
-                  <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                        <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul>
+                <div class="col-md-8">
+                       <select class="form-control">
+                          <option>Categorie 1</option>
+                          <option>Categorie 2</option>
+                          <option>Categorie 3</option>
+                        </select>
                       </div>
                     </div>
                   </div>
-<!--  
-              <h1>About You</h1>
-              <div class="width"></div>
-              <div class="row">
-                <div class="col-xs-4 custom_labels">
-                  <h3>Name</h3>
-                  <h3>Phone</h3>
-                  <h3>Email</h3>
-                  <h3>Confirm Email</h3>
-
                 </div>
 
-                <div class="col-xs-8">
-                  <div class="custom_class">
-                  
-  
-                  <input type="text" class="form-custom-class" placeholder="Name" aria-describedby="sizing-addon1">
 
-            </div>
-            
-
-            <div class="custom_class">
              
-  
-            <input type="Text" class="form-custom-class" placeholder="Phone" aria-describedby="sizing-addon1">
-  
-            </div>
-           
-
-            <div class="custom_class">
-            
-  
-              <input type="text" class="form-custom-class" placeholder="Email" aria-describedby="sizing-addon1">
-  
-            
-            </div>
-
-            <div class="custom_class">
-             
-  
-            <input type="text" class="form-custom-class" placeholder="Confirm Email" aria-describedby="sizing-addon1">
-  
-            
-          </div>
-          <div class="pull-right">
-            <a class="main-slider__btn btn btn-warning btn-effect custom_button-class" href="#">Next Step</a> 
-                  </div>
-                </div>
-              </div>
- -->
-</div>
-  </div>
-             
-
+                    
                       <div class="col-md-4">
                         <div class="section-1">
                         <h2 class="text-center">Total Price</h2>
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
-                          <div class="col-xs-6">
+                          <div class="col-md-6">
                             <select class="form-control" id="currency" name="currency" onchange="loadamount(this)">
                               <option>GBP&nbsp;&#8356;</option>
                               <option>USD&nbsp;&#36;</option>
@@ -351,7 +289,7 @@
                             </select> 
                             
                           </div>
-                          <div class="col-xs-6">
+                          <div class="col-md-6">
                           <div id="divtotal">
                             
                           </div>
@@ -370,8 +308,10 @@
                        
                         </form>
                       
-                        </div>
                       </div>
+                    </div>
+
+                 
 
               
 

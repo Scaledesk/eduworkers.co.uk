@@ -630,9 +630,9 @@ display:none;
 
 
 .flags_edu .img-responsive, .flags_edu img {
-    height:100px !important;
-    width: 50px;
-    color: aqua;
+    height:90px !important;
+    width: 80%;
+   
 }
 
 .notification{
@@ -653,3 +653,4 @@ display:none;
 .notification > h2 {
     padding: 15px;
 }
+
