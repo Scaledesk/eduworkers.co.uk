@@ -12,7 +12,7 @@
         <section id="main-content">
           <section class="wrapper">
 
-          <?php/* print_r($product);*/ ?>
+        
   <div style="overflow: auto; padding: 10px 15px 10px 15px; border:2px solid #bbbbbb; border-radius: 5px; margin: 20px;">
 
   <table id="example" class="display" cellspacing="0" width="100%">
