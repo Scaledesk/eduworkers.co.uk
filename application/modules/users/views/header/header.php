@@ -149,7 +149,7 @@ setTimeout(function() {
       ?>
        <div class="notification" id="notification1">
                
-              <p> you are successfully logged out</p>
+              <h3> You are successfully logged out.</h3>
               </div>
        
 
@@ -158,8 +158,8 @@ setTimeout(function() {
     }else if (getInformUser()){ 
       ?>
        <div class="notification" id="notification" >
-                <h2>Welcome User</h2>
-               <?php  echo getInformUser(); ?>
+                <h3>Welcome User</h3>
+            <p>   <?php  echo getInformUser(); ?> </p>
               </div>
        
 
