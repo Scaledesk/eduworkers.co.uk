@@ -142,6 +142,8 @@ setTimeout(function() {
 
       <?php
 
+
+
     $logout=$this->input->get('logout');
     if($logout){
       ?>
@@ -153,11 +155,11 @@ setTimeout(function() {
 
         <?php
       
-    }else if (islogin()){ 
+    }else if (getInformUser()){ 
       ?>
        <div class="notification" id="notification" >
                 <h2>Welcome User</h2>
-               <?php  getInformUser(); ?>
+               <?php  echo getInformUser(); ?>
               </div>
        
 

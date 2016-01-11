@@ -68,7 +68,7 @@ function setInformUser(){
 function getInformUser(){
     $ci=CI::get_instance();
     if($ci->session->flashdata('message')){
-        echo $ci->session->flashdata('message');
+        return $ci->session->flashdata('message');
     }
 }
 
