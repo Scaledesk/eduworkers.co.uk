@@ -23,7 +23,7 @@
     <link href="<?php echo asset_url(); ?>admin/assets/css/style.css" rel="stylesheet">
     <link href="<?php echo asset_url(); ?>admin/assets/css/style-responsive.css" rel="stylesheet">
 
-   
+    <script type="text/javascript" src="<?php echo asset_url(); ?>admin/assets/js/jquery-1.11.3.min.js"></script>
   </head>
 
   <body>
@@ -44,7 +44,7 @@
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
-                    <li class="dropdown">
+<!--                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme">4</span>
@@ -110,10 +110,10 @@
                                 <a href="#">See All Tasks</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <!-- settings end -->
                     <!-- inbox dropdown start-->
-                    <li id="header_inbox_bar" class="dropdown">
+<!--                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-theme">5</span>
@@ -175,7 +175,7 @@
                                 <a href="index.html#">See all messages</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <!-- inbox dropdown end -->
                 </ul>
                 <!--  notification end -->
@@ -197,11 +197,11 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              	  <p class="centered"><a href="<?php echo base_url(); ?>"><img src="<?php echo asset_url(); ?>admin/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Admin</h5>
               	  	
                   <li class="mt">
-                      <a href="index.html">
+                      <a href="<?php echo base_url(); ?>">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -220,13 +220,11 @@
                   </li>
                   
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a class="active" href="<?php echo  base_url().'admin/product';?>" >
                           <i class="fa fa-tasks"></i>
-                          <span>Inbox</span>
+                          <span> Product</span>
                       </a>
-                      <ul class="sub">
-                          <li class="active"><a  href="inbox.html">Go to Inbox</a></li>
-                      </ul>
+                    
                   </li>
 
                   <li class="sub-menu">
@@ -235,13 +233,13 @@
                           <span>Components</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?php echo  base_url().'Email_settings' ?>">Smtp Setting</a></li>
+                          <li><a  href="<?php echo  base_url().'Email_settings'; ?>">Smtp Setting</a></li>
                           <li><a  href="calendar.html">Calendar</a></li>
                           <li><a  href="gallery.html">Gallery</a></li>
                           <li><a  href="todo_list.html">Todo List</a></li>
                       </ul>
                   </li>
-                  <li class="sub-menu">
+                  <!-- <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-book"></i>
                           <span>Extra Pages</span>
@@ -281,7 +279,7 @@
                           <li><a  href="chartjs.html">Chartjs</a></li>
                       </ul>
                   </li>
-
+ -->
               </ul>
               <!-- sidebar menu end-->
           </div>

@@ -8,6 +8,7 @@
   <link href="<?php echo  asset_url();?>img/favicon.png" type="image/x-icon" rel="shortcut icon">
   <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet">
   <!-- SWITCHER -->
+  <link href="<?php echo  asset_url();?>css/custom1.css" rel="stylesheet" id="switcher-css" media="all">
   <link href="<?php echo  asset_url();?>plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all">
   <link href="<?php echo  asset_url();?>plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all">
   <link href="<?php echo  asset_url();?>pluginsswitcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all">
@@ -126,13 +127,40 @@
       </header>
       <!-- end header -->
 
+        <script type="text/javascript">
+setTimeout(function() {
+    $('#notification1').fadeOut('fast');
+}, 5000); 
 
+        </script>         
+
+ <script type="text/javascript">
+setTimeout(function() {
+    $('#notification').fadeOut('fast');
+}, 5000); 
+        </script> 
 
       <?php
+
     $logout=$this->input->get('logout');
     if($logout){
-        echo "<div style='text-align:center;' class=' container alert alert-success'>".'you are successfully logged out'."</div>";
-    }else{
-        getInformUser();
+      ?>
+       <div class="notification" id="notification1">
+               
+              <p> you are successfully logged out</p>
+              </div>
+       
+
+        <?php
+      
+    }else if (islogin()){ 
+      ?>
+       <div class="notification" id="notification" >
+                <h2>Welcome User</h2>
+               <?php  getInformUser(); ?>
+              </div>
+       
+
+        <?php
     }
     ?>

@@ -1,17 +1,18 @@
  <!--footer start-->
       <footer class="site-footer navbar-fixed-bottom">
           <div class="text-center">
-              2016 - Webo Services pvt. Ltd. 
-              <a href="form_component.html#" class="go-top">
+          Copyright © 2016 - Webo Services Pvt. Ltd. All rights reserved
+              . 
+              <!-- <a href="form_component.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
-              </a>
+              </a> -->
           </div>
       </footer>
       <!--footer end-->
   </section>
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="<?php echo asset_url(); ?>admin/assets/js/jquery.js"></script>
+    <!-- js placed at the end of the document so the pages load faster 
+   <script src="<?php echo asset_url(); ?>admin/assets/js/jquery.js"></script>-->
     <script src="<?php echo asset_url(); ?>admin/assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="<?php echo asset_url(); ?>admin/assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="<?php echo asset_url(); ?>admin/assets/js/jquery.scrollTo.min.js"></script>
