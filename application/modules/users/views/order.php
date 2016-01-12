@@ -63,7 +63,7 @@
                     
                       
 
-                        <select name="services" class="form-control"id="services" required  onchange="loadamount(this)" >
+                        <select name="services" class="form-control"id="services" required  onchange="ShowHideDiv(this)" >
                          <option value="" >Select</option>
                           <option >Essay Writing Service</option>
                            <option>Dissertation writing service</option>
@@ -77,7 +77,7 @@
                              <option>Dissertation topic with titles</option>
                              <option>Legal Practice Course (LPC) Coursework</option>
                              <option>Bar Professional Training Course (BPTC) Coursework</option>
-                             <option>Powerpoint presentation</option>
+                             <option >Powerpoint presentation</option>
                              <option>Report</option>
                              <option>Reflective Practice</option>
                              <option>Portfolio</option>
@@ -199,17 +199,39 @@
                     
                         <select class="form-control" id="grade" required name="grade" onchange="loadamount(this)">
                             <option value="" >Select</option>
-                            <option>gcse A</option>  
-                            <option>A grade A</option>
-                            <option>gcse B</option> 
-                            <option>BPTC Competent</option>
+                            <option value="gcse A">GCSE A Grade</option>  
+                            <option  value="A grade A">A grade A</option>
+                            <option value="gcse B ">GCSE B Grade</option> 
+                            <option value="nvq"> NVQ level 2 (Pass)</option>
+
+                            <option value="merit"> NVQ level 2 (Merit)</option>
+                            <option value="A grade b">A Level B Grade</option>
+                            <option value="A grade A">A Level A Grade</option>
+                            <option value="diploma pass"> Diploma pass</option>
+                            <option value="diploma merit">Diploma merit</option>
+                            <option value="Undergraduate 2:2">Undergraduate 2:2 (50-59%)</option>
+                            <option value="Undergraduate 2:1">Undergraduate 2:1 (60-69%)</option>
+                            <option value="postgraduate Diploma 2:2">postgraduate Diploma 2:2 (50-59%)</option>
+                            <option value="postgraduate Diploma 2:1">Postgraduate Diploma 2:1 (60-69%)</option>
+                            <option value="Masters 2:1">Masters 2:1</option>
+                            <option value="Masters 2:2">Masters 2:2</option>
+                            <option value="Mphil Pass">Mphil Pass</option>
+                            <option value="PhD">PhD</option>
+                            <option value="GDL Pass">GDL Pass (Graduate Diploma in Law)</option>
+                            <option value="GDL commendation">GDL commendation</option>
+                            <option value="LPC Pass" >LPC Pass (Legal Practice Course)</option>
+                            <option value="LPC Pass 1" >LPC Pass</option>
+                            <option value="BPTC Competent">BPTC Competent (Bar Professional Training Course)</option>
+                            <option value="BPTC very Competent">BPTC very Competent</option>
+                           
+                           
                           </select>
                       </div>
                       </div>
                     </div>
 
                      
-                     <div class="row">
+                     <div class="row" id="lengthshow">
                        <div class="col-md-4">
                            <h3>Length</h3>
                        </div>
@@ -221,6 +243,30 @@
                             <option>1000</option>
                             <option>2000</option>
                             <option>3000</option> 
+                          </select>
+                      </div>
+                    </div>
+                      </div>
+
+                     <div class="row" style="display:none" id="slideshow">
+                       <div class="col-md-4">
+                           <h3>Number Of Slide </h3>
+                       </div>
+                     
+                     <div class="col-md-8">
+                      <div class="custom_class">
+                        <select class="form-control" id="slide" required name="slide" onchange="loadamount(this)">
+                           <option value="" >Select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option> 
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
                           </select>
                       </div>
                     </div>
@@ -366,10 +412,13 @@
                 var currency=document.getElementById("currency");
                 var currency1 = currency.options[currency.selectedIndex].value;
 
-               /* alert(grade1);*/
+                 var slide=document.getElementById("slide");
+                var slide1 = slide.options[slide.selectedIndex].value;
+
+                /*alert(slide1);*/ 
                 /* alert(obj.value);*/
 
-                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"currency":currency1,"date":date1};
+                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"currency":currency1,"date":date1,"slide":slide1};
                 /* alert(dd);*/
                    $.ajax({
                   'url' : "<?php echo base_url().'users/doOrder'; ?>",
@@ -378,7 +427,7 @@
                   'data':dd,
                  /* 'data' : {'date' :date1, 'services' :services1, 'subjects' :subjects1, 'grade' :grade1, 'length' :length1, 'currency' :currency1},
                  */ 'success' : function(data){
-                    /*alert(data);*/
+                   /* alert(data);*/
                     var amount=data;
                     
                    /* console.log(amount);*/
@@ -397,7 +446,7 @@
                    'error': function(data){
                      /* console.log(data);*/
                      /* alert(data);*/
-                      alert('Some Error Occurred');
+                     /* alert('Some Error Occurred');*/
                   }
                   });
               }
@@ -411,3 +460,40 @@
 </script>
 
 
+<script type="text/javascript">
+    function ShowHideDiv(obj) { services
+    
+        var services= document.getElementById("services").value;
+        /*alert(services);*/
+
+          if ( services == 'Powerpoint presentation')
+      {
+        $("#slideshow").show();
+         $("#lengthshow").hide();
+      }
+      else
+      {
+        $("#lengthshow").show();
+         $("#slideshow").hide();
+      }
+        /*var lengthshow = document.getElementById("lengthshow");
+        var slideshow = document.getElementById("slideshow");
+        slideshow.style.display = lengthshow.presentation ? "block" : "none";*/
+    }
+</script>
+
+
+<script type="text/javascript">
+/*$(document).ready(function(){
+
+    $('.').hide();
+
+$('#dropDown').change(function () {
+    $(this).find("option").each(function () {
+        $('#' + this.value).hide();
+    });
+    $('#' + this.value).show();
+
+});
+});*/
+</script>

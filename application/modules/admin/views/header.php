@@ -285,4 +285,38 @@
           </div>
       </aside>
       <!--sidebar end-->
+     </script>         
+
+
+
+ <script type="text/javascript">
+setTimeout(function() {
+    $('#notification').fadeOut('fast');
+}, 5000); 
+        </script>  
+
+ <?php
+
+
+
+    $logout=$this->input->get('logout');
+    if($logout){
+      ?>
+       <div class="notification" id="notification1">
+               
+              <h3> You are successfully logged out.</h3>
+              </div>
+       
+
+        <?php
       
+    }else if (getInformUser()){ 
+      ?>
+       <div class="notification" id="notification" >
+                <h3>Welcome User</h3>
+            <p>   <?php  echo getInformUser(); ?> </p>
+              </div>
+       
+
+        <?php
+    }

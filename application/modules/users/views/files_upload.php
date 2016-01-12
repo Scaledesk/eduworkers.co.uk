@@ -101,7 +101,7 @@
                              
              <label class="btn btn-primary btn-effect"> 
                  
-                  <input type="file" name="userfile[]" multiple  />
+                  <input type="file" name="userfile[]" multiple id="userfile" onchange="modalval(this)" />
                  
                  Upload File 
              
@@ -117,8 +117,8 @@
                 <div class="row">
                     
                     <div class="col-md-12">
-                    
-                     <p> Uploaded file name here </p>
+                    <input style="color:#000" type="text"  readonly="" id="userfileshow" value="">
+                     
                         
                 </div>
                  
@@ -153,3 +153,17 @@
       <!-- end section-default -->
     
       </div>
+
+      <script type="text/javascript">
+function modalval(){
+
+
+
+var val1 = document.getElementById('userfile').value;
+
+document.getElementById('userfileshow').value = val1;
+
+
+
+}
+</script>

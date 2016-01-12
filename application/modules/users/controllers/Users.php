@@ -483,47 +483,61 @@ public function doOrder(){
      $subjects=$this->input->post('subjects');
      $words=$this->input->post('length');
      $currency=$this->input->post('currency');
-/*echo json_encode($date);*/
+     $slide=$this->input->post('slide');
+     $services=$this->input->post('services');
+/*echo json_encode($services);*/
 /* echo json_encode($grade);*/
-/* die;*/
+/* die;*/ 
 
- if($grade=='gcse A'){
+if($services=='Powerpoint presentation'){
+
+
+      $pl=15;
+           
+        $total=$pl* $slide;
+        echo json_encode($total);
+}
+
+
+
+
+ else if($grade=='gcse A'){
      $pl=0.075;
   
 
-   if ($date==1 and $words==1000) {
+   if ($date==1 ) {
      
       $pl2=2.5;
         $total=$pl* $words*$pl2;
         echo json_encode($total);
    }
-  elseif ($date==2 and $words==1000) {
+  elseif ($date==2 ) {
      
        $pl2=1.75;
       $total=$pl* $words*$pl2;
         echo json_encode($total);
   }
-elseif ($date==3 and $words==1000) {
+elseif ($date==3 ) {
     
       $pl2=1.5;
       $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($date==4 and $words==1000) {
+  }elseif ($date==4 ) {
      
       $pl2=1.35;
       $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($date==5 and $words==1000) {
+  }elseif ($date==5 ) {
      
       $pl2=1.20;
       $total=$pl*$words*$pl2;
         echo json_encode($total);
-  }elseif ($words==1000 and $date==6 or $date==7 or $date==8 or $date==9) {
+  }elseif ( $date==6 or $date==7 or $date==8 or $date==9) {
     
       $pl2=1.15;
       $total=$pl* $words*$pl2;
         echo json_encode($total);
-  }elseif ($date==10 and $words==1000) {
+  }elseif ($date==10 ) {
     
       $pl2=1;
       $total=$pl* $words*$pl2;
@@ -548,7 +562,7 @@ else if ($grade=='merit') {
         echo json_encode($total);
    }
 
-else if ($grade=='A grade A') {
+else if ($grade=='A grade b') {
  
          $pl=0.075;
          $pl2=1;   
@@ -652,14 +666,14 @@ else if ($grade=='A grade A') {
         $total=$pl* $words*$pl2;
         echo json_encode($total);
    } 
-   else if ($grade=='Presentation') {
+   /*else if ($services=='Powerpoint presentation') {
  
          $pl=15;
          $pl2=1;   
-        $total=$pl* $words*$pl2;
+        $total=$pl* $slide*$pl2;
         echo json_encode($total);
-   }
-   else if ($grade=='Undergraduate Dissertation/project') {
+   }*/
+   /*else if ($grade=='Undergraduate Dissertation/project') {
  
          $pl=0.095;
          $pl2=1;   
@@ -672,7 +686,7 @@ else if ($grade=='A grade A') {
          $pl2=1;   
         $total=$pl* $words*$pl2;
         echo json_encode($total);
-   }
+   }*/
 }
 
 

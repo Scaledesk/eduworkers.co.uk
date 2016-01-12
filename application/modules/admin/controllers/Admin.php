@@ -66,11 +66,11 @@ public function password(){
       die;*/
       $this->Mdl_admin->setData('password',$data['new_pass'],$data['old_pass']);
       if ($this->Mdl_admin->password()) {
-         setInformUser('success','your password has been successfully updated.');
-                    redirect(base_url('users'));
+                setInformUser('success','your password has been successfully updated.');
+                    redirect(base_url('admin'));
       }else{
         setInformUser('error','Some error Occurred! Kindly retry');
-                    redirect(base_url('users'));
+                    redirect(base_url('admin'));
       }
 
 
