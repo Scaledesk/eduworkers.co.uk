@@ -56,4 +56,39 @@ force_download($file, $data);
 
 }
 
+public function password(){
+
+  if (isAdmin()) {
+    
+  if (strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
+      $data=$this->input->post();
+/*print_r($data);
+      die;*/
+      $this->Mdl_admin->setData('password',$data['new_pass'],$data['old_pass']);
+      if ($this->Mdl_admin->password()) {
+         setInformUser('success','your password has been successfully updated.');
+                    redirect(base_url('users'));
+      }else{
+        setInformUser('error','Some error Occurred! Kindly retry');
+                    redirect(base_url('users'));
+      }
+
+
+
+    
+    }
+    else{ 
+          $this->load->view('header');
+          $this->load->view('password');
+          $this->load->view('footer');
+    }
+  }
+  else{
+
+    redirect(base_url('users'));
+  }
+}
+
+
+
 }

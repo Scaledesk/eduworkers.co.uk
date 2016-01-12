@@ -234,7 +234,7 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="<?php echo  base_url().'email_settings'; ?>">Smtp Setting</a></li>
-                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="<?php echo  base_url().'admin/password'; ?>">Update Password</a></li>
                           <li><a  href="gallery.html">Gallery</a></li>
                           <li><a  href="todo_list.html">Todo List</a></li>
                       </ul>
