@@ -238,7 +238,7 @@
                      
                      <div class="col-md-8">
                       <div class="custom_class">
-                        <select class="form-control" id="length" required name="lenght" onchange="loadamount(this)">
+                        <select class="form-control" id="length" name="lenght" onchange="loadamount(this)">
                            <option value="" >Select</option>
                             <option>1000</option>
                             <option>2000</option>
@@ -255,7 +255,7 @@
                      
                      <div class="col-md-8">
                       <div class="custom_class">
-                        <select class="form-control" id="slide" required name="slide" onchange="loadamount(this)">
+                        <select class="form-control" id="slide"  name="slide" onchange="loadamount(this)">
                            <option value="" >Select</option>
                             <option>1</option>
                             <option>2</option>
@@ -279,7 +279,7 @@
                       
                         <div class="col-md-8">
                         <div class="custom_class">
-                        <select class="form-control" id="date" name="date" onchange="loadamount(this)">
+                        <select class="form-control" id="date" required name="date" onchange="loadamount(this)">
                           <option value="" >Select</option>
                             <option>1</option>
                             <option>2</option>
@@ -468,11 +468,13 @@
 
           if ( services == 'Powerpoint presentation')
       {
+        $("#slide")[0].setAttribute('required',true);
         $("#slideshow").show();
          $("#lengthshow").hide();
       }
       else
       {
+        $("#length")[0].setAttribute('required',true);
         $("#lengthshow").show();
          $("#slideshow").hide();
       }

@@ -161,7 +161,9 @@ function modalval(){
 
 var val1 = document.getElementById('userfile').value;
 
-document.getElementById('userfileshow').value = val1;
+var filename = val1.replace(/^.*\\/, "");
+
+document.getElementById('userfileshow').value = filename;
 
 
 
