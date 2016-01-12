@@ -468,15 +468,19 @@
 
           if ( services == 'Powerpoint presentation')
       {
+
         $("#slide")[0].setAttribute('required',true);
         $("#slideshow").show();
          $("#lengthshow").hide();
+          $("#length").removeAttr('required',true);
       }
       else
       {
+       
         $("#length")[0].setAttribute('required',true);
         $("#lengthshow").show();
          $("#slideshow").hide();
+          $("#slide").removeAttr('required',true);
       }
         /*var lengthshow = document.getElementById("lengthshow");
         var slideshow = document.getElementById("slideshow");

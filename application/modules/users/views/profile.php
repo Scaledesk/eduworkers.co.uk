@@ -44,60 +44,24 @@
         <table class="table" id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Product Id</th>
+                <th>Service Name </th>
+                <th>Total Price</th>
+                <th>Action</th>
+                
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
+        
         <tbody>
+        <?php foreach ($products as $row) {
+         ?> 
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td><?php echo $row['eduworkers_products_id'];  ?></td>
+                <td><?php echo $row['eduworkers_products_services'];  ?></td>
+                <td><?php echo $row['eduworkers_products_total'];  ?></td>
+                <td><a href="">Cancel</a></td>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-           
-           
-            <tr>
-                <td>Angelica Ramos</td>
-                <td>Chief Executive Officer (CEO)</td>
-                <td>London</td>
-                <td>47</td>
-                <td>2009/10/09</td>
-                <td>$1,200,000</td>
-            </tr>
-          
-            <tr>
-                <td>Donna Snider</td>
-                <td>Customer Support</td>
-                <td>New York</td>
-                <td>27</td>
-                <td>2011/01/25</td>
-                <td>$112,000</td>
-            </tr>
+            <?php } ?>
         </tbody>
     </table>
     </div>

@@ -650,4 +650,8 @@ if (password_verify($this->password, $data[0]['eduworkers_users_password'])){
 }
 
 
+public function showProduct(){
+   return $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_products')->result_array();
+}
+
 }

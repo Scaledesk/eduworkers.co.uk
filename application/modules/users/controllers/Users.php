@@ -391,7 +391,7 @@ public function login()
 
          }
                 else{
-
+                     $data['products']=$this->Mdl_users->showProduct();
                     $data['profile']=$this->Mdl_users->getProfile();
                    /* print_r( $data['profile']);
                     die;*/
@@ -915,6 +915,8 @@ public function singleServices (){
   $this->load->view('single_services');
   $this->load->view('header/footer');
 }
+
+
 
 
 }
