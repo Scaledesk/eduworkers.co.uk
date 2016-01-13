@@ -89,6 +89,47 @@ public function password(){
   }
 }
 
+public function inprogress($id){
+  if(islogin()){
+  if($this->Mdl_admin->inprogress($id)){
+
+     
+
+       setInformUser('success', 'Product successfully Inprogress ');
+      redirect(base_url('users/admin'));
+  }else{
+
+       
+       setInformUser('error', 'Some error Occurred ');
+        redirect(base_url('users/admin'));
+
+  }
+}
+else{
+  redirect(base_url('users'));
+}
+
+}
+public function completed($id){
+  if(islogin()){
+  if($this->Mdl_admin->completed($id)){
+    setInformUser('success', ' Product successfully Completed ');
+
+      redirect(base_url('users/admin'));
+
+      
+  }else{
+
+      
+       setInformUser('error', 'Some error Occurred ');
+        redirect(base_url('users/admin'));
+  }
+}
+else{
+  redirect(base_url('users'));
+}
+
+}
 
 
 }

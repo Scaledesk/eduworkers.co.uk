@@ -67,7 +67,7 @@
                 <td><?php echo $row['eduworkers_products_id'];  ?></td>
                 <td><?php echo $row['eduworkers_products_services'];  ?></td>
                 <td><?php echo $row['eduworkers_products_total'];  ?></td>
-                <td><a href="">Cancel</a></td>
+                <td><a href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a></td>
             </tr>
             <?php } ?>
         </tbody>

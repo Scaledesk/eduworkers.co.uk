@@ -18,6 +18,7 @@
   <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
+                <th>Action</th>
                 <th>Service</th>
                 <th>Grade</th>
                 <th>Length</th>
@@ -39,6 +40,7 @@
         <tbody><?php foreach ($product as  $row) {
         ?>
             <tr>
+               <td><?php if($row['eduworkers_products_status']=='pending') {?> <a onclick="return confirm('are you sure you want to confirm Product InProgress')" href="<?php echo base_url().'admin/inprogress/'.$row['eduworkers_products_id']; ?>">Inprogress</a><?php }else if($row['eduworkers_products_status']=='completed') { ?>   <a onclick="return confirm('Are you sure you want to Completed Products?')" href="<?php echo base_url().'admin/completed /'.$row['eduworkers_products_id']?>">Completed </a> <?php } else{ ?> Cancelled <?php } ?></td>
                 <td><?php echo $row['eduworkers_products_services']; ?></td>
                 <td><?php echo $row['eduworkers_products_grade']; ?></td>
                

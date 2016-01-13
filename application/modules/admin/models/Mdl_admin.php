@@ -139,4 +139,35 @@ if (password_verify($this->old_pass, $data[0]['eduworkers_users_password'])){
 }
 
 
+public function inprogress($id){
+
+
+  $data = [ 'eduworkers_products_status' => 'inprogress' ];
+    
+                
+                $this->db->where('eduworkers_products_id',$id); 
+                 if($this->db->update('eduworkers_products',$data)){
+                    return true;
+                 }else{
+                    return false;
+                 }
+                 
+}
+
+
+public function completed($id){
+
+
+  $data = [ 'eduworkers_products_status' => 'completed' ];
+    
+               
+                $this->db->where('eduworkers_products_id',$id); 
+                 if($this->db->update('eduworkers_products',$data)){
+                    return true;
+                 }else{
+                    return false;
+                 }
+                 
+}
+
 }
