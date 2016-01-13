@@ -1,4 +1,12 @@
 
+<script>  
+  /*$(document).ready(function() {
+    $('#example').DataTable();
+
+});*/
+
+</script>
+
  <section class="section-default bg_custom-2">
           <div class="container">
             <div class="row">

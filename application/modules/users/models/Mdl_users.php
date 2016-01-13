@@ -574,24 +574,10 @@ public function hasUser(){
 
 
 public function payment(){
-$data['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_temp_files')->result_array();
+$file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_temp_files')->result_array();
 
 
- foreach ($data['data_files'] as $row) {
-
-/*echo $row['eduworkers_temp_files_name'];die;*/
-            $data1=['eduworkers_products_files_buyer_id' => $this->session->userdata['user_data']['user_id'],
-
-                    'eduworkers_products_files_name' => $row['eduworkers_temp_files_name']
-                   
-            ];
-
-              $this->db->insert('eduworkers_products_files',$data1);
-
-              $this->db->where('eduworkers_temp_files_name',$row['eduworkers_temp_files_name']);  
-              $this->db->delete('eduworkers_temp_files'); 
-
-        }
+ 
    
   
     $data=[
@@ -603,11 +589,58 @@ $data['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
     'eduworkers_products_grade'=>$this->session->userdata['user_products']['grade'],
     'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
     'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
-    'eduworkers_products_message'=>$this->session->userdata['user_order']['message']
+    'eduworkers_products_message'=>$this->session->userdata['user_order']['message'],
+    'eduworkers_products_status'=>'pending'
    
     ];
     if($this->db->insert('eduworkers_products',$data)){
-        return true;
+
+       $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])
+       ->select('eduworkers_products_id')
+       ->order_by("eduworkers_products_id","desc")
+        ->get('eduworkers_products')
+        ->result_array();
+        /* print_r($file['data_files']); die;*/
+
+        foreach ($file['data_files'] as $row) {
+
+/*echo $row['eduworkers_temp_files_name'];die;*/
+                $data1=['eduworkers_products_files_buyer_id' => $this->session->userdata['user_data']['user_id'],
+
+                    'eduworkers_products_files_name' => $row['eduworkers_temp_files_name'],
+                    'eduworkers_products_files_product_id'=>$data['product_id'][0]['eduworkers_products_id']
+                   
+            ];
+
+              $this->db->insert('eduworkers_products_files',$data1);
+
+              $this->db->where('eduworkers_temp_files_name',$row['eduworkers_temp_files_name']);  
+              $this->db->delete('eduworkers_temp_files'); 
+
+        }
+    $this->db->select ( '*' ); 
+    $this->db->from ( 'eduworkers_products' );
+    $this->db->join ( 'eduworkers_products_files', 'eduworkers_products_files.eduworkers_products_files_product_id = eduworkers_products.eduworkers_products_id' , 'inner' );
+    $this->db->where ( 'eduworkers_products.eduworkers_products_users_id', $this->session->userdata['user_data']['user_id']);
+    $query = $this->db->get ()->result_array();
+
+
+ /*$data=$this->db->query("select * from  left join  on eduworkers_products.eduworkers_products_id = eduworkers_products_files. ")->where('eduworkers_products_users_id',)->result_array();
+*/
+
+            if(!empty($query)){
+
+            return ['data'=>$query,
+            "has_attachment"=>1];
+            }else{
+
+                $file=$this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_products')->result_array();
+             return ['data'=> $file,
+            "has_attachment"=>0];
+                
+            }
+
+        
     }
     else{
         return false;

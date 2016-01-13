@@ -857,11 +857,58 @@ else{
 
 public function payment(){
 
-  if($this->Mdl_users->payment()){
-   redirect(base_url('users'));
-    setInformUser('success',' successfully Payment');
-  }
-  else{
+  if($data['file']=$this->Mdl_users->payment()){
+
+       $products_service= $data['file']['data'][0]['eduworkers_products_services'];
+       $products_subject= $data['file']['data'][0]['eduworkers_products_subjects'];
+ /*echo "<pre/>";
+    print_r($data['file']);
+die;*/
+  if ($data['file']['has_attachment']==0) {
+    /*echo "<pre/>";
+    print_r($data['file']);
+die;*/
+        $admin_mail='nkscoder@gmail.com';
+        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        
+        $this->email->to($admin_mail);
+     
+        $this->email->subject('');
+        $this->email->message('<div id="abcd" style="text-align:justify;font-size:18px;">'. $products_service.'<br/>'.$products_subject.'<br/></div>');
+
+      $this->email->send();
+       redirect(base_url('users'));
+       setInformUser('success',' successfully Payment');
+   
+  }else{
+     /* echo "string"; die;*/
+
+        $admin_mail='nkscoder@gmail.com';
+        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        
+        $this->email->to($admin_mail);
+        $path =  set_realpath('uploads'); 
+        $this->email->subject('Product Details');
+        $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">'. $products_service.'<br/>'.$products_subject.'<br/></div>');
+        foreach ($data['file'] as $files) {
+         /* print_r($files);die;*/
+        /*  ;die;*/
+        $this->email->attach('uploads/'.$files[0]['eduworkers_products_files_name']);
+        }
+       if($this->email->send()){
+         redirect(base_url('users'));
+       setInformUser('success',' successfully Payment');
+       }
+else{
+      redirect(base_url('users'));
+       setInformUser('success','Some Error Occurred');
+}
+
+ 
+ }
+}
+  else{ 
+   
      redirect(base_url('users'));
       setInformUser('error', 'Some error Occurred ');
   }
