@@ -964,6 +964,67 @@ public function singleServices (){
 }
 
 
+public function cancelled($id){
+  if(islogin()){
+  if($this->Mdl_users->cancelled($id)){
+
+     redirect(base_url('users'));
+
+       setInformUser('success', 'Your Product successfully Cancelled ');
+
+  }else{
+
+       redirect(base_url('users'));
+       setInformUser('error', 'Some error Occurred ');
+
+  }
+}
+else{
+  redirect(base_url('users'));
+}
+
+}
+
+public function inprogress($id){
+  if(islogin()){
+  if($this->Mdl_users->inprogress($id)){
+
+     redirect(base_url('users'));
+
+       setInformUser('success', 'Your Product successfully Cancelled ');
+
+  }else{
+
+       redirect(base_url('users'));
+       setInformUser('error', 'Some error Occurred ');
+
+  }
+}
+else{
+  redirect(base_url('users'));
+}
+
+}
+public function completed($id){
+  if(islogin()){
+  if($this->Mdl_users->completed($id)){
+
+     redirect(base_url('users'));
+
+       setInformUser('success', 'Your Product successfully Cancelled ');
+
+  }else{
+
+       redirect(base_url('users'));
+       setInformUser('error', 'Some error Occurred ');
+
+  }
+}
+else{
+  redirect(base_url('users'));
+}
+
+}
 
 
 }

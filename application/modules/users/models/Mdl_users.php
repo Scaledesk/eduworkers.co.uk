@@ -687,4 +687,50 @@ public function showProduct(){
    return $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_products')->result_array();
 }
 
+
+
+public function cancelled($id){
+
+
+  $data = [ 'eduworkers_products_status' => 'cancelled' ];
+    
+                $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+                $this->db->where('eduworkers_products_id',$id); 
+                 if($this->db->update('eduworkers_products',$data)){
+                    return true;
+                 }else{
+                    return false;
+                 }
+                 
+}
+public function inprogress($id){
+
+
+  $data = [ 'eduworkers_products_status' => 'inprogress' ];
+    
+                $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+                $this->db->where('eduworkers_products_id',$id); 
+                 if($this->db->update('eduworkers_products',$data)){
+                    return true;
+                 }else{
+                    return false;
+                 }
+                 
+}
+
+
+public function completed($id){
+
+
+  $data = [ 'eduworkers_products_status' => 'completed' ];
+    
+                $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+                $this->db->where('eduworkers_products_id',$id); 
+                 if($this->db->update('eduworkers_products',$data)){
+                    return true;
+                 }else{
+                    return false;
+                 }
+                 
+}
 }
