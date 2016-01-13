@@ -68,6 +68,20 @@
                         <li><a href="#">Engineering Projects</a></li>
                         <li><a href="#">Essay Writing</a></li>
                         <li><a href="#">Dissertation Writing</a></li>
+                        <li><a href="#">Exam Revision</a></li>
+                        <li><a href="#">Marking and Proofreading service</a></li>
+                        <li><a href="#">Dissertation proposal</a></li>
+                        <li><a href="#">Literature review</a></li>
+                        <li><a href="#">Coursework</a></li>
+                        <li><a href="#">Assignment</a></li>
+                        <li><a href="#">Dissertation topic with titles</a></li>
+                        <li><a href="#">Legal Practice Course (LPC) Coursework</a></li>
+                        <li><a href="#">Bar Professional Training Course (BPTC) Coursework</a></li>
+                        <li><a href="#">presentation Powerpoint </a></li>
+                        <li><a href="#">Report</a></li>
+                        <li><a href="#">Reflective Practice</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">PhD Thesis</a></li>
                       </ul>
                     </li>
                     <li class="active-custom"> <a href="<?php echo base_url().'users/order'; ?>">Order Now</a>
