@@ -574,10 +574,10 @@ public function hasUser(){
 
 
 public function payment(){
+
 $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_temp_files')->result_array();
 
-
- 
+$product_rand=rand(999,9999);
    
   
     $data=[
@@ -590,17 +590,16 @@ $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
     'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
     'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
     'eduworkers_products_message'=>$this->session->userdata['user_order']['message'],
-    'eduworkers_products_status'=>'pending'
+    'eduworkers_products_status'=>'pending',
+    'eduworkers_products_rand_no'=>$product_rand
    
     ];
     if($this->db->insert('eduworkers_products',$data)){
 
-       $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])
-       ->select('eduworkers_products_id')
-       ->order_by("eduworkers_products_id","desc")
-        ->get('eduworkers_products')
-        ->result_array();
-        /* print_r($file['data_files']); die;*/
+       $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])->select('eduworkers_products_id')->order_by("eduworkers_products_id","desc")->get('eduworkers_products')->result_array();
+
+
+   /*    echo $data['product_id'][0]['eduworkers_products_id'];*/  /*print_r($data['product_id']); *//*die;*/
 
         foreach ($file['data_files'] as $row) {
 
@@ -608,7 +607,8 @@ $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
                 $data1=['eduworkers_products_files_buyer_id' => $this->session->userdata['user_data']['user_id'],
 
                     'eduworkers_products_files_name' => $row['eduworkers_temp_files_name'],
-                    'eduworkers_products_files_product_id'=>$data['product_id'][0]['eduworkers_products_id']
+                    'eduworkers_products_files_product_id'=>$data['product_id'][0]['eduworkers_products_id'],
+                    'eduworkers_products_files_rand_no'=>$product_rand
                    
             ];
 
@@ -618,12 +618,14 @@ $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
               $this->db->delete('eduworkers_temp_files'); 
 
         }
-    $this->db->select ( '*' ); 
+     
     $this->db->from ( 'eduworkers_products' );
-    $this->db->join ( 'eduworkers_products_files', 'eduworkers_products_files.eduworkers_products_files_product_id = eduworkers_products.eduworkers_products_id' , 'inner' );
+    $this->db->join ( 'eduworkers_products_files', 'eduworkers_products_files.eduworkers_products_files_rand_no = eduworkers_products.eduworkers_products_rand_no' , 'inner' );
     $this->db->where ( 'eduworkers_products.eduworkers_products_users_id', $this->session->userdata['user_data']['user_id']);
+    $this->db->where('eduworkers_products_id',$data['product_id'][0]['eduworkers_products_id']);
     $query = $this->db->get ()->result_array();
 
+/*print_r($query);die;*/
 
  /*$data=$this->db->query("select * from  left join  on eduworkers_products.eduworkers_products_id = eduworkers_products_files. ")->where('eduworkers_products_users_id',)->result_array();
 */
@@ -634,7 +636,12 @@ $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
             "has_attachment"=>1];
             }else{
 
-                $file=$this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_products')->result_array();
+                $file=$this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])
+                  ->where('eduworkers_products_id',$data['product_id'][0]['eduworkers_products_id'])
+                  ->order_by("eduworkers_products_id","desc")
+                  ->get('eduworkers_products')->result_array();
+
+
              return ['data'=> $file,
             "has_attachment"=>0];
                 

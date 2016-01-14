@@ -82,7 +82,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr>
                     <td width="20%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h1>YOUR ORDER SUMMARY</h1>
+                        <h2>YOUR ORDER SUMMARY</h2>
                     </td>
 
                    

@@ -181,7 +181,7 @@ public function login()
             if($this->sendMail()){  
                 $this->Mdl_users->insertToken();
                  setInformUser('success','your account successfully created and  Active link on your Email');
-                redirect(base_url('users/signup'));
+                redirect(base_url('users'));
             }else{
                  setInformUser('error','Account registered but email not send.');
                
@@ -214,14 +214,6 @@ public function login()
         redirect(base_url('users?logout=1'));
     }
 
-    private function _getFacebookLoginUrl(){
-        $fb = $this->_facebookAppConf();
-
-        $helper = $fb->getRedirectLoginHelper();
-
-        $permissions = ['email']; // Optional permissions
-        return $helper->getLoginUrl(base_url().'users/doFacebookLogin', $permissions);
-    }
    
 
     
@@ -236,15 +228,26 @@ public function login()
             $token = password_hash($token, PASSWORD_DEFAULT);
             $email = $_POST['email'];
             $this->Mdl_users->setData('get_email', $email,$token);
+                   $data['message1']='Forgot ';
+                   $data['message']='Password';
+                   $data['action_url']=base_url().'index.php/users/recallMail?tqwertyuiasdfghjzxcvbn='. $token;
+                  /* print_r($data['action_url']); die;*/
+
+            $message=$this->load->view('message',$data,true);
+    /*         $this->load->view('report',$data);
+            /* die;*/
             if ($this->Mdl_users->forgotPwd('get_email',$email)) {
 
                 $this->email->from('nitesh@weboforce.com', 'Edu Workers');
                 $this->email->to($email);
 
-                $this->email->subject('Forgot Password');
-                $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">Reset Password</div>
+                $this->email->subject('Forgot Password'); 
+                /*$this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">Reset Password</div>
                            <br/>
                            <a href="'.base_url().'index.php/users/recallMail?tqwertyuiasdfghjzxcvbn=' . $token . '">Click here</a>');
+               
+*/
+            $this->email->message($message);
                 if ($this->email->send()) {
 
                     if($this->Mdl_users->forgotPwd('forgot',$email,$token)){
@@ -331,10 +334,18 @@ public function login()
         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
         $this->email->to($this->Mdl_users->getUserName());
 
+                  $data['message1']='Please confirm your email address by clicking the link below ';
+                   $data['message']='We may need to send you critical information about our service and it is important that we have an accurate email address.';
+                   $data['action_url']=base_url().'users/verifyEmail?tqwertyuiasdfghjzxcvbn='. $token;
+                  /* print_r($data['action_url']); die;*/
+
+            $message=$this->load->view('message',$data,true);
+
         $this->email->subject('Email Activation');
-        $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">Please Activate your account</div>
+        $this->email->message($message);
+        /*$this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">Please Activate your account</div>
                            <br/>
-                           <a href="'.base_url().'users/verifyEmail?tqwertyuiasdfghjzxcvbn=' . $token . '">Click here</a>');
+                           <a href="'.base_url().'users/verifyEmail?tqwertyuiasdfghjzxcvbn=' . $token . '">Click here</a>');*/
         $this->Mdl_users->setData('token',$token);
         return $this->email->send()?true:false;
     }
@@ -358,19 +369,7 @@ public function login()
         return $data;
 
     }
-    private function _callCreateOffers()
-    {
-        $this->load->Model('offers/Mdl_offers');
-        if(offerCredit($this->Mdl_users->getUserId(),'add 100 keys to user wallet on sign up',strtolower(Wallet_transaction_type::CREDIT),100)){
-            $this->Mdl_offers->setData('create_offer',[
-                'id'=>$this->Mdl_users->getUserId(),
-                'sign_up'=>'1'
-            ]);
-            return $this->Mdl_offers->insert();
-        }else{
-            return false;
-        }
-    }
+   
     public  function usersViews(){
 
         $data['user']=$this->Mdl_users->usersViews();
@@ -803,7 +802,8 @@ die;*/
     
 }
     else{
-      echo "10 Files Only uploads";
+         setInformUser('error',' 10 Files Only uploads');
+        redirect(base_url('users/orderSummary'));
 
     }
 
@@ -861,6 +861,9 @@ public function payment(){
 
        $products_service= $data['file']['data'][0]['eduworkers_products_services'];
        $products_subject= $data['file']['data'][0]['eduworkers_products_subjects'];
+  
+ /* echo "<pre/>";
+print_r($data['file']);die;*/
    /*$this->load->view('report',$data);
 die;*/
  $message=$this->load->view('report',$data,TRUE);
@@ -873,16 +876,16 @@ die;*/
         
         $this->email->to($admin_mail);
      
-        $this->email->subject('');
+        $this->email->subject('Product Details');
 
        
 
         $this->email->message($message);
 
       $this->email->send();
-       redirect(base_url('users'));
+      
        setInformUser('success',' successfully Payment');
-   
+        redirect(base_url('users'));
   }else{
      
 
@@ -898,12 +901,14 @@ die;*/
         $this->email->attach('uploads/'.$files[0]['eduworkers_products_files_name']);
         }
        if($this->email->send()){
-         redirect(base_url('users'));
+        
        setInformUser('success',' successfully Payment');
+        redirect(base_url('users'));
        }
 else{
-      redirect(base_url('users'));
+      
        setInformUser('success','Some Error Occurred');
+       redirect(base_url('users'));
 }
 
  
@@ -912,8 +917,9 @@ else{
 
   else{ 
    
-     redirect(base_url('users'));
+    
       setInformUser('error', 'Some error Occurred ');
+       redirect(base_url('users'));
   }
 }
 
