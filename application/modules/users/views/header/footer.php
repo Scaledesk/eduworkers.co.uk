@@ -82,7 +82,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
         <div class="col-xs-12">
           <div class="footer-bottom">
             <div class="copyright">Copyright © 2016 <a href="javascript:void(0);">Eduworkers</a>, Created by <a href="javascript:void(0);">Webo Services Pvt. Ltd. </a></div>
-            <ul class="social-links list-unstyled">
+<!--             <ul class="social-links list-unstyled">
               <li>
                 <a class="icon fa fa-facebook" href="javascript:void(0);"></a>
               </li>
@@ -101,7 +101,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
               <li>
                 <a class="icon fa fa-youtube-play" href="javascript:void(0);"></a>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <!-- end footer-bottom -->
         </div>
