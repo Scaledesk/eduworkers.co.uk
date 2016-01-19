@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
 
-    <title>Edu Workers Admin</title>
+    <title>EduWorkers Admin</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo asset_url(); ?>admin/assets/css/bootstrap.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="<?php echo base_url(); ?>" class="logo"><b>Edu Workers </b></a>
+            <a href="<?php echo base_url(); ?>" class="logo"><b>EduWorkers </b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->

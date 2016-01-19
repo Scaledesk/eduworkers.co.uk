@@ -865,19 +865,22 @@ public function payment(){
 
   if($data['file']=$this->Mdl_users->payment()){
 
-       $products_service= $data['file']['data'][0]['eduworkers_products_services'];
-       $products_subject= $data['file']['data'][0]['eduworkers_products_subjects'];
+       $products_service=$data['file']['data'][0]['eduworkers_products_services'];
+       $products_subject=$data['file']['data'][0]['eduworkers_products_subjects'];
   
  /* echo "<pre/>";
 print_r($data['file']);die;*/
    /*$this->load->view('report',$data);
 die;*/
  $message=$this->load->view('report',$data,TRUE);
-       
+  $message_admin=$this->load->view('admin_message',$data,TRUE);
+   $user_email=$this->session->userdata['user_data']['user_name'];
+    /* print_r($this->session->userdata['user_products']);
+      print_r($this->session->userdata['user_order']);die;*/
 
   if ($data['file']['has_attachment']==0) {
-   
-        $admin_mail='nkscoder@gmail.com';
+       
+        $admin_mail='nkscoder@yahoo.in';
         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -886,30 +889,61 @@ die;*/
 
        
 
-        $this->email->message($message);
+        $this->email->message($message_admin);
 
-      $this->email->send();
+     if($this->email->send()){
+
+
+         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+         $this->email->to($user_email);
+         $this->email->subject('Product Details');
+         $this->email->message($message);
+         if($this->email->send()){
+
+             setInformUser('success',' successfully Payment');
+             redirect(base_url('users'));
+         }
+         else{
+             setInformUser('error',' Some Error Occured !');
+             redirect(base_url('users'));
+         }
+     }
       
-       setInformUser('success',' successfully Payment');
-        redirect(base_url('users'));
+
   }else{
      
 
-        $admin_mail='nkscoder@gmail.com';
+        $admin_mail='nkscoder@yahoo.in';
         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
         
         $this->email->to($admin_mail);
         $path =  set_realpath('uploads'); 
         $this->email->subject('Product Details');
-       $this->email->message($message);
+       $this->email->message($message_admin);
         foreach ($data['file'] as $files) {
          
         $this->email->attach('uploads/'.$files[0]['eduworkers_products_files_name']);
         }
        if($this->email->send()){
-        
-       setInformUser('success',' successfully Payment');
-        redirect(base_url('users'));
+
+
+           $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+
+           $this->email->to($user_email);
+           $this->email->subject('Product Details');
+           $this->email->message($message);
+
+           if($this->email->send()){
+
+               
+               setInformUser('success',' successfully Payment');
+               redirect(base_url('users'));
+           }
+           else{
+               setInformUser('error',' Some Error Occured !');
+               redirect(base_url('users'));
+           }
+
        }
 else{
       

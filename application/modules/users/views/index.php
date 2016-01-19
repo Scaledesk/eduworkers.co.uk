@@ -11,7 +11,7 @@
                 <div class="main-slider__inner">
                   <div class="main-slider__title">Stuck with Engineering Assignemnt and project</div>
                   <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                  <a class="main-slider__btn btn btn-warning btn-effect" href="#">GET QUOTE</a> </div>
+                  <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
               </div>
             </div>
             <div class="sp-slide"> <img class="sp-image" src="assets\media\main-slider\22.jpg" data-src="assets/media/main-slider/22.jpg" data-retina="assets/media/main-slider/22.jpg"
@@ -21,7 +21,7 @@
                 <div class="main-slider__inner">
                   <div class="main-slider__title">Your one stop academic writing solution </div>
                   <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                  <a class="main-slider__btn btn btn-warning btn-effect" href="#">GET QUOTE</a> </div>
+                  <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="main-slider__inner">
                 <div class="main-slider__title">Essay and Dissertation Help </div>
                 <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                <a class="main-slider__btn btn btn-warning btn-effect" href="#">GET QUOTE</a> </div>
+                <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
             </div>
           </div>
         </div>
