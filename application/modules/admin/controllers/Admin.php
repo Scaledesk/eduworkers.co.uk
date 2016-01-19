@@ -98,12 +98,12 @@ public function inprogress($id){
      
 
        setInformUser('success', 'Product successfully Inprogress ');
-      redirect(base_url('users/admin'));
+      redirect(base_url('admin/product'));
   }else{
 
        
        setInformUser('error', 'Some error Occurred ');
-        redirect(base_url('users/admin'));
+        redirect(base_url('admin/product'));
 
   }
 }
@@ -117,14 +117,14 @@ public function completed($id){
   if($this->Mdl_admin->completed($id)){
     setInformUser('success', ' Product successfully Completed ');
 
-      redirect(base_url('users/admin'));
+      redirect(base_url('admin/product'));
 
       
   }else{
 
       
        setInformUser('error', 'Some error Occurred ');
-        redirect(base_url('users/admin'));
+        redirect(base_url('admin/product'));
   }
 }
 else{
