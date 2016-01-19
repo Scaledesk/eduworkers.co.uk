@@ -327,7 +327,7 @@ public function hasUser(){
  if ($this->db->where(array('eduworkers_users_username' => $this->user_name))->select('eduworkers_users_username')->get('eduworkers_users')->result_array()) {
              return true;
      
-    }return false;
+    }else{return false;}
 
 }
     /**

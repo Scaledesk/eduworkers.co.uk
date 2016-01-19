@@ -176,6 +176,7 @@ public function login()
     {
         $role=10;
         $this->Mdl_users->setData('register',$data['email'],$data['password'],$role,$data['name']);
+        if(!hasUser()){
         if($this->Mdl_users->register('normal_registration')){
             
             if($this->sendMail()){  
@@ -187,6 +188,11 @@ public function login()
                
                 redirect(base_url('users/signup'));
             }
+        }
+        }else{
+            setInformUser('error','Email Allready  registered .');
+
+            redirect(base_url('users/signup'));
         }
     }
 

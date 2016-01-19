@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
     <title>Edu Workers Admin</title>
 
@@ -201,42 +199,42 @@
               	  <h5 class="centered">Admin</h5>
               	  	
                   <li class="mt">
-                      <a href="<?php echo base_url(); ?>">
+                      <a  <?php  if($active==0){ ?> class="active"<?php }?> href="<?php echo base_url(); ?>">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a   href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>UI Elements</span>
                       </a>
                       <ul class="sub">
                           <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
+                          <li><a   href="buttons.html">Buttons</a></li>
+                          <li><a   href="panels.html">Panels</a></li>
                       </ul>
                   </li>
                   
                   <li class="sub-menu">
-                      <a class="active" href="<?php echo  base_url().'admin/product';?>" >
+                      <a <?php  if($active==1){ ?> class="active"<?php }?> href="<?php echo  base_url().'admin/product';?>" >
                           <i class="fa fa-tasks"></i>
                           <span> Product</span>
                       </a>
                     
                   </li>
 
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
+                  <li  class="sub-menu">
+                      <a <?php  if($active==3 or $active==2 ){ ?> class="active"<?php }?>  href="javascript:;" >
                           <i class="fa fa-cogs"></i>
-                          <span>Components</span>
+                          <span  >Components</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?php echo  base_url().'email_settings'; ?>">Smtp Setting</a></li>
-                          <li><a  href="<?php echo  base_url().'admin/password'; ?>">Update Password</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
+                          <li  <?php  if($active==2){ ?> class="active"<?php }?>><a   href="<?php echo  base_url().'email_settings'; ?>">Smtp Setting</a></li>
+                          <li <?php  if($active==3){ ?> class="active"<?php }?> ><a    href="<?php echo  base_url().'admin/password'; ?>">Update Password</a></li>
+                          <li><a   href="gallery.html">Gallery</a></li>
+                          <li><a   href="todo_list.html">Todo List</a></li>
                       </ul>
                   </li>
                   <!-- <li class="sub-menu">
@@ -285,38 +283,47 @@
           </div>
       </aside>
       <!--sidebar end-->
-     </script>         
 
 
 
- <script type="text/javascript">
-setTimeout(function() {
-    $('#notification').fadeOut('fast');
-}, 5000); 
-        </script>  
 
- <?php
+      <script type="text/javascript">
+          setTimeout(function() {
+              $('#notification1').fadeOut('fast');
+          }, 5000);
+
+      </script>
+
+      <script type="text/javascript">
+          setTimeout(function() {
+              $('#notification').fadeOut('fast');
+          }, 5000);
+      </script>
+
+      <?php
 
 
 
-    $logout=$this->input->get('logout');
-    if($logout){
-      ?>
-       <div class="notification" id="notification1">
-               
+      $logout=$this->input->get('logout');
+      if($logout){
+          ?>
+          <div class="notification" id="notification1">
+
               <h3> You are successfully logged out.</h3>
-              </div>
-       
+          </div>
 
-        <?php
-      
-    }else if (getInformUser()){ 
+
+          <?php
+
+      }else if(getInformUser()){
+          ?>
+          <div class="notification" id="notification" >
+              <h3>Welcome Admin</h3>
+              <p>   <?php  echo getInformUser(); ?> </p>
+          </div>
+
+
+          <?php
+      }
       ?>
-       <div class="notification" id="notification" >
-                <h3>Welcome User</h3>
-            <p>   <?php  echo getInformUser(); ?> </p>
-              </div>
-       
 
-        <?php
-    }
