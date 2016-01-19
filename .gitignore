@@ -50,3 +50,4 @@ __MACOSX
 
 # temp files
 *~
+.idea/workspace.xml
