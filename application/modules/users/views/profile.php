@@ -1,22 +1,20 @@
 
 <script>  
-  /*$(document).ready(function() {
-    $('#example').DataTable();
+//   $(document).ready(function() {
+//     $('#example').DataTable();
 
-});*/
+// });
 
 </script>
 
  <section class="section-default bg_custom-2">
+          <div class="wrap-title-page">
           <div class="container">
             <div class="row">
-              <div class="col-md-12">
-              <h1 class="text-center edu-profile-heading">Profile</h1>
-             
-
-              </div>
+              <div class="col-xs-12"><h1 class="ui-title-page">Profile</h1></div>
             </div>
-          </div>
+          </div><!-- end container-->
+        </div><!-- end wrap-title-page -->
           <div class="container">
             <div class="row">
            
@@ -24,7 +22,7 @@
             
       <!-- tabs left -->
       
-      <div class="tabbable tabs-left ">
+      <div class="tabbable tabs-left profile_sidebar">
         <ul class="nav nav-tabs edu-side-box">
           <li><a href="#a" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
           <li class="active"><a href="#b" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Setting</a></li>
