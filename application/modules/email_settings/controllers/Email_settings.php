@@ -30,8 +30,9 @@ class Email_settings extends MX_Controller{
             }
 
         }else{
+            $data['active']=2;
             $data['email_settings']=$this->Mdl_email_settings->toArray();
-            $this->load->view('admin/header');
+            $this->load->view('admin/header',$data);
             $this->load->view('index',$data);
             $this->load->view('admin/footer');
         }

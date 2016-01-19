@@ -20,8 +20,8 @@ class Admin extends MX_Controller{
      */
     public function index(){
         if (isAdmin()) {
-          
-            $this->load->view('header');
+            $data['active']=0;
+            $this->load->view('header',$data);
            
            $this->load->view('footer');
         }
@@ -32,8 +32,9 @@ class Admin extends MX_Controller{
 
  public function product(){
   if (isAdmin()) {
+         $data['active']=1;
            $data['product']=$this->Mdl_admin->showProduct();
-            $this->load->view('header');
+            $this->load->view('header',$data);
             $this->load->view('table',$data);
            $this->load->view('footer');
         }
@@ -65,20 +66,21 @@ public function password(){
 /*print_r($data);
       die;*/
       $this->Mdl_admin->setData('password',$data['new_pass'],$data['old_pass']);
+
       if ($this->Mdl_admin->password()) {
-                setInformUser('success','your password has been successfully updated.');
+                    setInformUser('success','your password has been successfully updated.');
                     redirect(base_url('admin'));
       }else{
-        setInformUser('error','Some error Occurred! Kindly retry');
-                    redirect(base_url('admin'));
+        setInformUser('error','password does not match old password');
+                    redirect(base_url('admin/password'));
       }
 
 
 
     
     }
-    else{ 
-          $this->load->view('header');
+    else{  $data['active']=3;
+          $this->load->view('header',$data);
           $this->load->view('password');
           $this->load->view('footer');
     }
