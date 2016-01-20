@@ -1,7 +1,37 @@
+<style>
+  #selectedFiles img {
+    max-width: 125px;
+    max-height: 125px;
+    float: left;
+    margin-bottom:10px;
+  }
+</style>
+<script>
+  var selDiv = "";
+    
+  document.addEventListener("DOMContentLoaded", init, false);
+  
+  function init() {
+    document.querySelector('#userfile').addEventListener('change', handleFileSelect, false);
+    selDiv = document.querySelector("#selectedFiles");
+  }
+    
+  function handleFileSelect(e) {
+    
+    if(!e.target.files) return;
+    
+    selDiv.innerHTML = "";
+    
+    var files = e.target.files;
+    for(var i=0; i<files.length; i++) {
+      var f = files[i];
+      
+      selDiv.innerHTML += f.name + "<br/>";
 
-
-
-
+    }
+    
+  }
+  </script>
 
 <!-- Loader -->
 <!-- Loader end -->
@@ -9,7 +39,8 @@
 <div class="layout-theme animated-css" data-header="sticky" data-header-top="200"> 
        
       <section class="section-default bg_custom">
-       <?php echo form_open_multipart('users/do_upload');?>
+     <!--   <?php echo form_open_multipart('');?> -->
+       <form id="myForm" method="post" enctype="multipart/form-data" action="<?php base_url().'users/do_upload' ?>">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -89,7 +120,11 @@
              <div class="progress">
   <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
     <span class="sr-only">60% Complete (warning)</span>
+   
+
+
   </div>
+
 </div>
           
           </div>
@@ -101,7 +136,8 @@
                              
              <label class="btn btn-primary btn-effect"> 
                  
-                  <input type="file" name="userfile[]" multiple id="userfile" onchange="modalval(this)" />
+                  <input type="file" name="userfile[]" multiple id="userfile"/>
+                 <!--  <input type="file" name="files[]" multiple id="files" onchange="modalval(this)" /> -->
                  
                  Upload File 
              
@@ -117,7 +153,12 @@
                 <div class="row">
                     
                     <div class="col-md-12">
-                    <input style="color:#000" type="text"  readonly="" id="userfileshow" value="">
+
+                    <div id="selectedFiles"></div>
+                     <!-- <div id="mulitplefileuploader">Upload</div>
+
+                    <div id="status"></div> -->
+                 <!--    <input style="color:#000" type="text"  readonly="" id="userfileshow" value=""> -->
                      
                         
                 </div>
@@ -161,8 +202,10 @@ function modalval(){
 
 var val1 = document.getElementById('userfile').value;
 
+vallength=val1.length;
+alert(vallength);
 var filename = val1.replace(/^.*\\/, "");
-
+ 
 document.getElementById('userfileshow').value = filename;
 
 
