@@ -901,11 +901,15 @@ die;*/
          if($this->email->send()){
 
              setInformUser('success',' successfully Payment');
-             redirect(base_url('users'));
+            
+             $this->success($data);
+             redirect(base_url('users/success'));
          }
          else{
+
              setInformUser('error',' Some Error Occured !');
-             redirect(base_url('users'));
+             redirect(base_url('users/error'));
+
          }
      }
       
@@ -937,18 +941,18 @@ die;*/
 
                
                setInformUser('success',' successfully Payment');
-               redirect(base_url('users'));
+               redirect(base_url('users/success'));
            }
            else{
                setInformUser('error',' Some Error Occured !');
-               redirect(base_url('users'));
+               redirect(base_url('users/error'));
            }
 
        }
 else{
       
        setInformUser('success','Some Error Occurred');
-       redirect(base_url('users'));
+       redirect(base_url('users/error'));
 }
 
  
@@ -959,10 +963,21 @@ else{
    
     
       setInformUser('error', 'Some error Occurred ');
-       redirect(base_url('users'));
+       redirect(base_url('users/error'));
   }
 }
 
+
+public function success(){
+   $this->load->view('header/header');
+   $this->load->view('success');
+    $this->load->view('header/footer');
+}
+public function error(){
+   $this->load->view('header/header');
+   $this->load->view('error');
+    $this->load->view('header/footer');
+}
 
 public function table(){
    if($this->Mdl_users->table()){

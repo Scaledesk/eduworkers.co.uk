@@ -352,7 +352,7 @@
                         </div>
 
                         <span>Estimated Delivery Date &nbsp;&nbsp;<a href="#">Find out more</span></a>
-                        <p style="color: #C8C8C8;">23 December -25 December</p>
+                        <p style="color: #C8C8C8;" id="dateshow"></p>
                         <div class="text-center">
                         
 
@@ -391,7 +391,16 @@
                 
                 var date=document.getElementById("date");
                 var date1 = date.options[date.selectedIndex].value;
-               
+                    /* alert(date1);
+                  var date = new Date('2016', '01', '01');
+                     var newdate = new Date(date);
+                    newdate.setDate(newdate.getDate() + date1);
+                    var nd = new Date(newdate);*/
+                  /* d.setDate(d.getDate() + date1);*/
+                 /*  alert(nd);*/
+                   // alert("xe" + xe);
+                    /* document.getElementById("dateshow").innerHTML = someFormattedDate;
+                    */
 
      
                 var services=document.getElementById("services");
@@ -502,4 +511,24 @@ $('#dropDown').change(function () {
 
 });
 });*/
+</script>
+
+
+<script >
+function showdate(obj){
+ alert(32435);
+                var date=document.getElementById("date");
+                var date1 = date.options[date.selectedIndex].value;
+
+         var currentDate = new Date();
+    
+         document.getElementById('dateshow').innerHTML=currentDate.addDays(date1); 
+
+         return true;  
+
+}
+
+
+
+
 </script>
