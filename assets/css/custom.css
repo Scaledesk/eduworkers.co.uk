@@ -668,6 +668,11 @@ display:none;
 	/*background-color: tomato !important;*/
 	box-sizing: border-box;
 }
+.edu_custom_thead{
+	text-align: center;
+	font-weight: bold;
+	border-right: 1px solid #aaa; 
+}
 
 
 

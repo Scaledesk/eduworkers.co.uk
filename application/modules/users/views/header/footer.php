@@ -135,9 +135,10 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
   <script src="<?php echo  asset_url();?>js/wow.min.js"></script>
   <script src="<?php echo  asset_url();?>js/custom.min.js"></script>
 
-  <!--COLOR SWITCHER -->
-  <script src="<?php echo  asset_url();?>plugins/switcher/js/bootstrap-select.js"></script>
-  <script src="<?php echo  asset_url();?>plugins/switcher/js/dmss.js"></script>
+ 
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.0.0/js/dataTables.fixedHeader.min.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,14 @@
 
 <script>  
-//   $(document).ready(function() {
-//     $('#example').DataTable();
+  $(document).ready(function() {
+    $('#example').DataTable();
 
-// });
+});
 
 </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.0.0/js/dataTables.fixedHeader.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
 
  <section class="section-default bg_custom-2">
           <div class="wrap-title-page">
@@ -15,7 +18,7 @@
             </div>
           </div><!-- end container-->
         </div><!-- end wrap-title-page -->
-          <div class="container">
+          <div class="container" style="margin-top: 40px;">
             <div class="row">
            
             <div class="col-md-3 custom_bg_color">
@@ -50,10 +53,10 @@
         <table class="table" id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>Product Id</th>
-                <th>Service Name </th>
-                <th>Total Price</th>
-                <th>Action</th>
+                <th class="edu_custom_thead">Product Id</th>
+                <th class="edu_custom_thead">Service Name </th>
+                <th class="edu_custom_thead">Total Price</th>
+                <th class="edu_custom_thead">Action</th>
                 
             </tr>
         </thead>

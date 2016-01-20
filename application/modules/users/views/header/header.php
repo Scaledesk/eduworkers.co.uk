@@ -7,15 +7,9 @@
   <title>Eduworkers, - Essay and Dissertation Writing Service</title>
   <link href="<?php echo  asset_url();?>img/favicon.png" type="image/x-icon" rel="shortcut icon">
   <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet">
-  <!-- SWITCHER -->
-  <link href="<?php echo  asset_url();?>css/custom1.css" rel="stylesheet" id="switcher-css" media="all">
-  <link href="<?php echo  asset_url();?>plugins/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" media="all">
-  <link href="<?php echo  asset_url();?>plugins/switcher/css/color1.css" rel="alternate stylesheet" title="color1" media="all">
-  <link href="<?php echo  asset_url();?>pluginsswitcher/css/color2.css" rel="alternate stylesheet" title="color2" media="all">
-  <link href="<?php echo  asset_url();?>plugins/switcher/css/color3.css" rel="alternate stylesheet" title="color3" media="all">
-  <link href="<?php echo  asset_url();?>plugins/switcher/css/color4.css" rel="alternate stylesheet" title="color4" media="all">
-  <link href="<?php echo  asset_url();?>plugins/switcher/css/color5.css" rel="alternate stylesheet" title="color5" media="all">
+  
   <script src="<?php echo  asset_url();?>/plugins/jquery/jquery-1.11.3.min.js"></script>
+   
 </head>
 
 <body>
