@@ -674,6 +674,16 @@ display:none;
 	border-right: 1px solid #aaa; 
 }
 
+.edu_success_payment{
+	padding: 100px 0;
+	background-color: #F7F7F7;
+	margin: 0 !important;
+}
+
+.edu_success_payment_link{
+	font-size: 18px;
+}
+
 
 
 
