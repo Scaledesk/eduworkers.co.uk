@@ -78,15 +78,30 @@
                     </div>
                     </div>
                     <hr>
+                    <?php if ($this->session->userdata('user_products')['services']=='Powerpoint presentation') {
+                    ?>
                     <div class="row">
+                    <div class="col-md-3">
+                     <div class="edu_service_details_1"> Number Of Slide</div>
+                    </div>
+
+                    <div class="col-md-9">
+                   
+                      <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['slide']; ?> Slide </div>
+                    </div>
+                    </div>
+                    <?php }else{ ?>
+                     <div class="row">
                     <div class="col-md-3">
                      <div class="edu_service_details_1"> Length:</div>
                     </div>
 
                     <div class="col-md-9">
+                   
                       <div class="edu_service_details_2"><?php echo $this->session->userdata('user_products')['lenght']; ?> Words (Estimated 2-3 pages)</div>
                     </div>
                     </div>
+                    <?php } ?>
 <hr>
                     <div class="row">
                     <div class="col-md-3">

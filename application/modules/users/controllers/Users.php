@@ -887,8 +887,6 @@ die;*/
      
         $this->email->subject('Product Details');
 
-       
-
         $this->email->message($message_admin);
 
      if($this->email->send()){
@@ -916,6 +914,13 @@ die;*/
 
   }else{
      
+           $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+
+           $this->email->to($user_email);
+           $this->email->subject('Product Details');
+           $this->email->message($message);
+        
+       if($this->email->send()){
 
         $admin_mail='nkscoder@yahoo.in';
         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
@@ -928,14 +933,6 @@ die;*/
          
         $this->email->attach('uploads/'.$files[0]['eduworkers_products_files_name']);
         }
-       if($this->email->send()){
-
-
-           $this->email->from('nitesh@weboforce.com', 'Edu Workers');
-
-           $this->email->to($user_email);
-           $this->email->subject('Product Details');
-           $this->email->message($message);
 
            if($this->email->send()){
 

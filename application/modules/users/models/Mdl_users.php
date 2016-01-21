@@ -577,6 +577,15 @@ public function payment(){
 
 $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->session->userdata['user_data']['user_id'])->get('eduworkers_temp_files')->result_array();
 
+  if($this->session->userdata['user_products']['lenght']){
+
+    $lenght=$this->session->userdata['user_products']['lenght'];
+  }
+  else{
+    $lenght=$this->session->userdata['user_products']['slide'];
+  }
+
+
 $product_rand=rand(999,9999);
    
   
@@ -584,7 +593,7 @@ $product_rand=rand(999,9999);
     'eduworkers_products_users_id'=> $this->session->userdata['user_data']['user_id'],
     'eduworkers_products_services'=>$this->session->userdata['user_products']['services'],
     'eduworkers_products_subjects'=>$this->session->userdata['user_products']['subjects'],
-    'eduworkers_products_length'=>$this->session->userdata['user_products']['lenght'],
+    'eduworkers_products_length'=>$lenght,
     'eduworkers_products_delivery_date'=>$this->session->userdata['user_products']['date'],
     'eduworkers_products_grade'=>$this->session->userdata['user_products']['grade'],
     'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
