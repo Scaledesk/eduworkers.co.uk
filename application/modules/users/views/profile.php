@@ -56,6 +56,7 @@
                 <th class="edu_custom_thead">Product Id</th>
                 <th class="edu_custom_thead">Service Name </th>
                 <th class="edu_custom_thead">Total Price</th>
+                <th class="edu_custom_thead">Status</th>
                 <th class="edu_custom_thead">Action</th>
                 
             </tr>
@@ -68,6 +69,7 @@
                 <td><?php echo $row['eduworkers_products_id'];  ?></td>
                 <td><?php echo $row['eduworkers_products_services'];  ?></td>
                 <td><?php echo $row['eduworkers_products_total'];  ?></td>
+                <td><?php echo $row['eduworkers_products_status'];  ?></td>
                 <td><a href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a></td>
             </tr>
             <?php } ?>
