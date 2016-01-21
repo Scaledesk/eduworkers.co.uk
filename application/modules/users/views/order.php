@@ -391,16 +391,27 @@
                 
                 var date=document.getElementById("date");
                 var date1 = date.options[date.selectedIndex].value;
-                    /* alert(date1);
-                  var date = new Date('2016', '01', '01');
-                     var newdate = new Date(date);
-                    newdate.setDate(newdate.getDate() + date1);
-                    var nd = new Date(newdate);*/
-                  /* d.setDate(d.getDate() + date1);*/
-                 /*  alert(nd);*/
-                   // alert("xe" + xe);
-                    /* document.getElementById("dateshow").innerHTML = someFormattedDate;
-                    */
+
+                 
+                   var newDate = new Date(Date.now() + date1 * 24*60*60*1000);
+                    var month = new Array();
+                  month[0] = "January";
+                  month[1] = "February";
+                  month[2] = "March";
+                  month[3] = "April";
+                  month[4] = "May";
+                  month[5] = "June";
+                  month[6] = "July";
+                  month[7] = "August";
+                  month[8] = "September";
+                  month[9] = "October";
+                  month[10] = "November";
+                  month[11] = "December";
+
+                 
+
+               var d=month[newDate.getMonth()] + " - " + newDate.getDate() + " - " + newDate.getFullYear();
+               document.getElementById("dateshow").innerHTML = d;
 
      
                 var services=document.getElementById("services");
