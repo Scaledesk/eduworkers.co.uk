@@ -173,7 +173,8 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Length</h3>
+                        <h3>Length/Slide</h3>
+                        
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
