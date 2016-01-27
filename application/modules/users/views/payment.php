@@ -42,7 +42,6 @@
                   <div class="col-md-12">
                      <h1 class="edu_payment_title_2">Your Order Summary</h1>
                      <hr>
-                    <h2 class="edu_subheading_2">Order Details</h2>
                   </div>
 <hr>
                     <div class="row">
