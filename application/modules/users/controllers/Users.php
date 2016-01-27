@@ -1048,23 +1048,31 @@ else{
 }
 
 public function getQuote(){
+       
 
    $data=$this->input->post();
-    $phone=$data['phone'];
+   /* $phone=$data['phone'];
     $name=$data['name'];
     $email=$data['email'];
-    $query=$data['message'];
-  
+    $date=$data['date'];
+     $country=$data['country'];
+      $services=$data['services'];
+       $subject=$data['subject']; 
+       $grade=$data['grade'];
+       $level=$data['level'];
+       $word_count=$data['word_count'];*/
+
+        $message=$this->load->view('quote',$data,TRUE);
         $admin_mail='nkscoder@gmail.com';
        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
         
         $this->email->to($admin_mail);
      
-        $this->email->subject('Notifiction');
-        $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">'. $name.'<br/>'. $phone.'<br/>'.$email.'<br/>'.$query.'</div>');
+        $this->email->subject('Get Quote');
+        $this->email->message($message);
 
       if($this->email->send()){
-         setInformUser('success',"Send Query successfully");
+         setInformUser('success',"Send Get Quote successfully");
         redirect(base_url('users'));
       }else{
          setInformUser('error',"Some Error Occurred.");

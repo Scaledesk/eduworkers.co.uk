@@ -154,10 +154,10 @@ services at stress-free prices in delivering the most reliable Academic Assignme
               <div class="col-sm-4">
                 <section class="find-course find-course_mod-a ">
                   <h2 class="find-course__title"><i class="icon stroke icon-Search"></i>Get Quote</h2>
-                  <form class="find-course__form" action="get">
+                  <form class="find-course__form" action="<?php echo base_url().'users/getQuote'; ?>" method="post">
                     <div class="form-group edu_custom_space_for_input">
                       
-                          <select name="Country" class="form-control" id="Country">
+                          <select name="country" class="form-control" id="Country">
                             <option>Country</option>
                             <option>United States</option>
                             <option>United Kingdom</option>
@@ -167,8 +167,8 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         </select>
                       
                       <!-- end jelect -->
-                      <input class="form-control" type="text" placeholder="Phone Number ">
-                      <input class="form-control" type="text" placeholder="Email ">
+                      <input class="form-control" type="text" name="phone" placeholder="Phone Number "> 
+                      <input class="form-control" type="email" placeholder="Email " name="email">
                       
 
                         <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">
@@ -196,8 +196,8 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         </select>
                         
                         
-                          <select class="form-control" id="subjects" required="" name="subjects" onchange="loadamount(this)">
-                           <option value="">Subject</option>
+                          <select class="form-control" id="subjects" required="" name="subject" name="subjects" onchange="loadamount(this)">
+                           <option value="">Subject</option> 
                             <option>Accounting</option>
                             <option>Aeronautics Engineering</option>
                             <option>Law</option> 
@@ -267,7 +267,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         
                         
                         
-                         <select class="form-control">
+                         <select class="form-control" name="grade"> 
                             <option>Grade</option>
                             <option>Biotechnology</option>
                             <option>Medical </option>
@@ -279,7 +279,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
 
 
 
-                           <select class="form-control">
+                           <select class="form-control" name="level">
                             <option>Level</option>
                             <option>Medical </option>
                             <option>Science</option>
@@ -290,18 +290,18 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                          
               
                          
-                          <select class="form-control">
+                          <select class="form-control" name="word_count">
                             <option>Word Count</option>
                             <option>Medical </option>
                             <option>Science</option>
                             <option>Physics </option>
                             <option>Chemistry </option>
-                            <option>Construction Engineering</option>
+                            <option>Construction Engineering</option> 
                           </select>
 
 
 
-                          <select class="form-control">
+                          <select class="form-control" name="date">
                             <option>Delivery time</option>
                             <option>Medical </option>
                             <option>Science</option>
@@ -314,7 +314,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                          
                    
                     <!-- end form-group -->
-                    <div class="find-course__wrap-btn edu_custom_space">
+                    <div class="find-course__wrap-btn edu_custom_space">  
                       <button class="btn btn-info btn-effect">SEARCH COURSE</button>
                     </div>
                   </form>
