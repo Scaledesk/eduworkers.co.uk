@@ -1047,6 +1047,31 @@ else{
 
 }
 
+public function getQuote(){
+
+   $data=$this->input->post();
+    $phone=$data['phone'];
+    $name=$data['name'];
+    $email=$data['email'];
+    $query=$data['message'];
+  
+        $admin_mail='nkscoder@gmail.com';
+       $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        
+        $this->email->to($admin_mail);
+     
+        $this->email->subject('Notifiction');
+        $this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">'. $name.'<br/>'. $phone.'<br/>'.$email.'<br/>'.$query.'</div>');
+
+      if($this->email->send()){
+         setInformUser('success',"Send Query successfully");
+        redirect(base_url('users'));
+      }else{
+         setInformUser('error',"Some Error Occurred.");
+        redirect(base_url('users'));
+      }
+}
+
 
 
 }
