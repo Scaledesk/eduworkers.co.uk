@@ -41,7 +41,7 @@
 
     <!-- end main-slider -->
 
-    <div class="section_mod-a">
+    <!-- <div class="section_mod-a">
       <div class="container">
         <div class="section_mod-a__inner">
           <div class="row">
@@ -57,7 +57,7 @@ acclaim. The very reason for this acclaim is due to the fact that we have offere
 services at stress-free prices in delivering the most reliable Academic Assignment Service.
 <a style="margin-left: 10px;" href="#">READ MORE</a> </h2>
                 <div class="ui-subtitle-block ui-subtitle-block_mod-a">
-                  <!-- Having over 9 million students worldwide and more than 50,000 online courses available. -->
+                 
                 </div>
                 <ul class="advantages advantages_mod-a list-unstyled">
                   <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
@@ -97,9 +97,243 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                     </div>
                   </li>
                 </ul>
-              </section>
+              </section> -->
               <!-- end section-advantages -->
             </div>
+
+
+
+             <div class="section_mod-a">
+        <div class="container">
+          <div class="section_mod-a__inner">
+            <div class="row">
+              <div class="col-sm-8">
+                <section class="section-advantages">
+                  <h2 class="ui-title-block ui-title-block_mod-a">“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. 
+                    Since the inception of the company in 2009, we have achieved great heights in receiving international recognition and
+                     acclaim. <a style="margin-left: 10px;" href="#">READ MORE</a> </h2>
+                  <!-- <div class="ui-subtitle-block ui-subtitle-block_mod-a">Having over 9 million students worldwide and more than 50,000 online courses available.</div> -->
+                  <ul class="advantages advantages_mod-a list-unstyled">
+                    <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
+                      <div class="advantages__inner">
+                        <h3 class="ui-title-inner decor decor_mod-a">HIGHest RATED</h3>
+                        <div class="advantages__info">
+                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-DesktopMonitor"></i></span>
+                      <div class="advantages__inner">
+                        <h3 class="ui-title-inner decor decor_mod-a">ONLINE TRAINING</h3>
+                        <div class="advantages__info">
+                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-WorldGlobe"></i></span>
+                      <div class="advantages__inner">
+                        <h3 class="ui-title-inner decor decor_mod-a">we are GLOBAL</h3>
+                        <div class="advantages__info">
+                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Users"></i></span>
+                      <div class="advantages__inner">
+                        <h3 class="ui-title-inner decor decor_mod-a">SKILLED FACULTY</h3>
+                        <div class="advantages__info">
+                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <!-- end section-advantages --> 
+              </div>
+              <!-- end col -->
+              <div class="col-sm-4">
+                <section class="find-course find-course_mod-a ">
+                  <h2 class="find-course__title"><i class="icon stroke icon-Search"></i>Get Quote</h2>
+                  <form class="find-course__form" action="get">
+                    <div class="form-group edu_custom_space_for_input">
+                      
+                          <select name="Country" class="form-control" id="Country">
+                            <option>Country</option>
+                            <option>United States</option>
+                            <option>United Kingdom</option>
+                            <option>Other Country</option>
+                            <option>Other Country</option>
+
+                        </select>
+                      
+                      <!-- end jelect -->
+                      <input class="form-control" type="text" placeholder="Phone Number ">
+                      <input class="form-control" type="text" placeholder="Email ">
+                      
+
+                        <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">
+                         <option value="">Product</option>
+                          <option>Essay Writing Service</option>
+                           <option>Dissertation writing service</option>
+                            <option>Engineering Assignment</option>
+                             <option>Exam Revision</option> 
+                             <option>Marking and Proofreading service</option>
+                             <option>Dissertation proposal</option>
+                             <option>Literature review</option>
+                             <option>Coursework</option>
+                             <option>Assignment</option>
+                             <option>Dissertation topic with titles</option>
+                             <option>Legal Practice Course (LPC) Coursework</option>
+                             <option>Bar Professional Training Course (BPTC) Coursework</option>
+                             <option>Powerpoint presentation</option>
+                             <option>Report</option>
+                             <option>Reflective Practice</option>
+                             <option>Portfolio</option>
+                             <option>PhD Thesis</option>
+
+
+
+                        </select>
+                        
+                        
+                          <select class="form-control" id="subjects" required="" name="subjects" onchange="loadamount(this)">
+                           <option value="">Subject</option>
+                            <option>Accounting</option>
+                            <option>Aeronautics Engineering</option>
+                            <option>Law</option> 
+                            <option>Finance</option>
+                            <option>Electrical Engineering</option>
+                            <option>International Law</option>
+                            <option>Human Resource</option>
+                            <option>Electronics Engineering </option>
+                            <option>Islamic Law</option>
+                            <option>Marketing</option>
+                            <option>Computer Engineering</option>
+                            <option>Law and legal Studies</option>
+                            <option>Operations</option>
+                            <option>Mechanical Engineering </option>
+                            <option>Philosophy of Law</option>
+                            <option>Economics</option>
+                            <option>Automotive Engineering </option>
+                            <option>Intellectual Property Law</option>
+                            <option>Tourism </option>
+                            <option>Civil Engineering  </option>
+                            <option>European Law</option>
+                            <option>E-commerce</option>
+                            <option>FEA Analsys </option>
+                            <option>Civil litigation Law</option>
+                            <option>Total Quality Managment </option>
+                            <option>2D and 3D Modelling/Drawings  </option>
+                            <option>Commercial Law</option>
+                            <option>International Business </option>
+                            <option>CFD Analysis </option>
+                            <option>Commercial property law</option>
+                            <option>Information Technology</option>
+                            <option>Engineering Simulation </option>
+                            <option>Company law</option>
+                            <option>Business Management</option>
+                            <option>Hyperworks </option>
+                            <option>Business Law</option>
+                            <option>Foreign Investment</option>
+                            <option>Ansys </option>
+                            <option>Partnership law</option>
+                            <option>Psychology </option>
+                            <option>AutoCAD  </option>
+                            <option>comparative/conflict of law</option>
+                            <option>Portfolio Management </option>
+                            <option>Solidworks  </option>
+                            <option>Construction Law</option>
+                            <option>Mass Communication</option>
+                            <option>Material Selection  </option>
+                            <option>Contract Law</option>
+                            <option>Research Methodology</option>
+                            <option>Mathematics</option>
+                            <option>Criminal Law</option>
+                            <option>Information Systems</option>
+                            <option>Engineering Calculations </option>
+                            <option>Employment law</option>
+                            <option>Calculations </option>
+                            <option>Property Law</option>
+                            <option>Geological Engineering</option>
+                            <option>Environment  </option>
+                            <option>Biology  </option>
+                            <option>Biotechnology</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
+                          </select>
+                        
+                        
+                        
+                         <select class="form-control">
+                            <option>Grade</option>
+                            <option>Biotechnology</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
+                          </select>
+
+
+
+                           <select class="form-control">
+                            <option>Level</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
+                          </select>
+                         
+              
+                         
+                          <select class="form-control">
+                            <option>Word Count</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
+                          </select>
+
+
+
+                          <select class="form-control">
+                            <option>Delivery time</option>
+                            <option>Medical </option>
+                            <option>Science</option>
+                            <option>Physics </option>
+                            <option>Chemistry </option>
+                            <option>Construction Engineering</option>
+                          </select>
+                        
+                          
+                         
+                   
+                    <!-- end form-group -->
+                    <div class="find-course__wrap-btn edu_custom_space">
+                      <button class="btn btn-info btn-effect">SEARCH COURSE</button>
+                    </div>
+                  </form>
+                </section>
+                <!-- end find-course --> 
+              </div>
+              <!-- end col --> 
+            </div>
+            <!-- end row --> 
+          </div>
+          <!-- end section_mod-a__inner --> 
+        </div>
+        <!-- end container --> 
+      </div>
+      <!-- end section_mod-a -->
+
+
+
+
             <!-- end col -->
             <!--  <div class="col-md-4">
                 <section class="find-course find-course_mod-a wow bounceInRight" data-wow-duration="2s">

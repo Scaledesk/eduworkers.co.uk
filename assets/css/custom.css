@@ -684,8 +684,13 @@ display:none;
 	font-size: 18px;
 }
 
-
-
+.edu_custom_space{
+	padding-top: 30px !important;
+	padding-bottom: 0 !important;
+}
+.edu_custom_space_for_input{
+	padding-top: 15px !important;
+}
 
 
 
