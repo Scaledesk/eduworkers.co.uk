@@ -56,11 +56,12 @@
                     </li>
                     <li class="dropdown"> <a href="<?php echo base_url().'users/services'; ?>">Services&nbsp;<i class="fa fa-angle-down"></i></a>
                       <ul role="menu" class="dropdown-menu">
+                         <li><a href="<?php echo base_url().'users/services'; ?>">All</a>
                         <li><a href="#">Engineering Assignments</a>
 
                         </li>
                         <li><a href="#">Engineering Projects</a></li>
-                        <li><a href="#">Essay Writing</a></li>
+                        <li><a href="<?php echo base_url().'users/singleServices'; ?>">Essay Writing</a></li>
                         <li><a href="#">Dissertation Writing</a></li>
                         <li><a href="#">Exam Revision</a></li>
                         <li><a href="#">Marking and Proofreading service</a></li>
