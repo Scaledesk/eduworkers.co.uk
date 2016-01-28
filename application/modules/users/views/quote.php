@@ -118,7 +118,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Phone:  </h3>
+                        <h3>Phone:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
@@ -139,7 +139,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Email :</h3>
+                        <h3>Email:</h3>
                         
                     </td>
 
@@ -171,7 +171,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Date</h3>
+                        <h3>Date:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
@@ -213,7 +213,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Subject :</h3>
+                        <h3>Subject:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
@@ -233,7 +233,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Services :</h3>
+                        <h3>Services:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
@@ -255,7 +255,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3>Grade :</h3>
+                        <h3>Grade:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
@@ -275,7 +275,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3> Level : </h3>
+                        <h3> Level:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
@@ -296,11 +296,11 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr style="border-top: 1px solid #aaa;">
                     <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h3> Word Count : </h3>
+                        <h3> Word Count/Slide No.:</h3>
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
-                       <p style=""><?php echo $word_count; ?></p>
+                       <p style=""><?php if($word_count){echo $word_count ;}else{ echo $slide;} ?></p>
                     </td>
                 </tr>
             </table>

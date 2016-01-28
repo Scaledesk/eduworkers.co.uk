@@ -157,8 +157,8 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                   <form class="find-course__form" action="<?php echo base_url().'users/getQuote'; ?>" method="post">
                     <div class="form-group edu_custom_space_for_input">
                       
-                          <select name="country" class="form-control" id="Country">
-                            <option>Country</option>
+                          <select name="country" class="form-control" id="Country" required="">
+                            <option value="">Country</option>
                             <option>United States</option>
                             <option>United Kingdom</option>
                             <option>Other Country</option>
@@ -167,13 +167,13 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         </select>
                       
                       <!-- end jelect -->
-                      <input class="form-control" type="text" name="phone" placeholder="Phone Number "> 
-                      <input class="form-control" type="email" placeholder="Email " name="email">
+                      <input class="form-control" type="text" required="" name="phone" placeholder="Phone Number "> 
+                      <input class="form-control" type="email" required="" placeholder="Email " name="email">
                       
 
                         <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">
-                         <option value="">Product</option>
-                          <option>Essay Writing Service</option>
+                         <option value="">Services</option>
+                         <option >Essay Writing Service</option>
                            <option>Dissertation writing service</option>
                             <option>Engineering Assignment</option>
                              <option>Exam Revision</option> 
@@ -185,7 +185,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                              <option>Dissertation topic with titles</option>
                              <option>Legal Practice Course (LPC) Coursework</option>
                              <option>Bar Professional Training Course (BPTC) Coursework</option>
-                             <option>Powerpoint presentation</option>
+                             <option >Powerpoint presentation</option>
                              <option>Report</option>
                              <option>Reflective Practice</option>
                              <option>Portfolio</option>
@@ -198,7 +198,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         
                           <select class="form-control" id="subjects" required="" name="subject" name="subjects" onchange="loadamount(this)">
                            <option value="">Subject</option> 
-                            <option>Accounting</option>
+                           <option>Accounting</option>
                             <option>Aeronautics Engineering</option>
                             <option>Law</option> 
                             <option>Finance</option>
@@ -267,19 +267,37 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                         
                         
                         
-                         <select class="form-control" name="grade"> 
-                            <option>Grade</option>
-                            <option>Biotechnology</option>
-                            <option>Medical </option>
-                            <option>Science</option>
-                            <option>Physics </option>
-                            <option>Chemistry </option>
-                            <option>Construction Engineering</option>
+                         <select class="form-control" name="grade" required=""> 
+                            <option value="">Grade</option>
+                            <option>GCSE A Grade</option>  
+                            <option >A grade A</option>
+                            <option >GCSE B Grade</option> 
+                            <option > NVQ level 2 (Pass)</option>
+
+                            <option > NVQ level 2 (Merit)</option>
+                            <option >A Level B Grade</option>
+                            <option >A Level A Grade</option>
+                            <option > Diploma pass</option>
+                            <option >Diploma merit</option>
+                            <option >Undergraduate 2:2 (50-59%)</option>
+                            <option >Undergraduate 2:1 (60-69%)</option>
+                            <option >postgraduate Diploma 2:2 (50-59%)</option>
+                            <option >Postgraduate Diploma 2:1 (60-69%)</option>
+                            <option >Masters 2:1</option>
+                            <option >Masters 2:2</option>
+                            <option >Mphil Pass</option>
+                            <option >PhD</option>
+                            <option >GDL Pass (Graduate Diploma in Law)</option>
+                            <option >GDL commendation</option>
+                            <option >LPC Pass (Legal Practice Course)</option>
+                            <option >LPC Pass</option>
+                            <option >BPTC Competent (Bar Professional Training Course)</option>
+                            <option >BPTC very Competent</option>
                           </select>
 
 
 
-                           <select class="form-control" name="level">
+                           <select class="form-control" name="level" required="">
                             <option>Level</option>
                             <option>Medical </option>
                             <option>Science</option>
@@ -288,26 +306,45 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                             <option>Construction Engineering</option>
                           </select>
                          
-              
-                         
-                          <select class="form-control" name="word_count">
-                            <option>Word Count</option>
-                            <option>Medical </option>
-                            <option>Science</option>
-                            <option>Physics </option>
-                            <option>Chemistry </option>
-                            <option>Construction Engineering</option> 
+                       <div id="lengthshow">
+                        <select class="form-control" name="word_count" id="length" required="">
+                            <option value="">Word Count</option>
+                             <option>1000</option>
+                            <option>2000</option>
+                            <option>3000</option>  
                           </select>
+                       </div>
 
 
+                         <div style="display:none" id="slideshow">
+                          <select class="form-control" name="slide"  id="slide" required="">
+                            <option value="">Slide No.</option>
+                             <option>1</option>
+                            <option>2</option>
+                            <option>3</option> 
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>  
+                          </select>
+                            </div>
 
-                          <select class="form-control" name="date">
-                            <option>Delivery time</option>
-                            <option>Medical </option>
-                            <option>Science</option>
-                            <option>Physics </option>
-                            <option>Chemistry </option>
-                            <option>Construction Engineering</option>
+
+                          <select class="form-control" name="date" required="">
+                          <option value="">Date</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option> 
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
                           </select>
                         
                           
@@ -329,56 +366,8 @@ services at stress-free prices in delivering the most reliable Academic Assignme
         </div>
         <!-- end container --> 
       </div>
-      <!-- end section_mod-a -->
+    
 
-
-
-
-            <!-- end col -->
-            <!--  <div class="col-md-4">
-                <section class="find-course find-course_mod-a wow bounceInRight" data-wow-duration="2s">
-                  <h2 class="find-course__title"><i class="icon stroke icon-Search"></i>FIND YOUR COURSE</h2>
-                  <form class="find-course__form" action="get">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Course Keyword ...">
-                      <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">All Categories</div>
-                        <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Categorie 1</li>
-                          <li class="jelect-option">Categorie 2</li>
-                          <li class="jelect-option">Categorie 3</li>
-                        </ul>
-                      </div> -->
-            <!-- end jelect -->
-            <!-- <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div class="jelect-current">Select A Level</div>
-                        <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Level 1</li>
-                          <li class="jelect-option">Level 2</li>
-                          <li class="jelect-option">Level 3</li>
-                        </ul>
-                      </div> -->
-            <!-- end jelect -->
-            <!-- <div class="jelect">
-                        <input value="0" type="text" class="jelect-input">
-                        <div tabindex="0" role="button" class="jelect-current">Course Length</div>
-                        <ul class="jelect-options">
-                          <li class="jelect-option jelect-option_state_active">Length 1</li>
-                          <li class="jelect-option">Length 2</li>
-                          <li class="jelect-option">Length 3</li>
-                        </ul>
-                      </div> -->
-            <!-- end jelect -->
-            <!--   </div> -->
-            <!-- end form-group -->
-            <!--  <div class="find-course__wrap-btn">
-                      <button class="btn btn-effect btn-info">SEARCH COURSE</button>
-                    </div>
-                  </form>
-                </section> -->
-            <!-- end find-course -->
           </div>
           <!-- end col -->
         </div>
@@ -751,3 +740,33 @@ services at stress-free prices in delivering the most reliable Academic Assignme
   <!-- end section-clients -->
 
   <!-- end main-content -->
+
+
+
+<script type="text/javascript">
+    function ShowHideDiv(obj) {
+    
+        var services= document.getElementById("services").value;
+       /* alert(services);*/
+
+          if ( services == 'Powerpoint presentation')
+      {
+
+        $("#slide")[0].setAttribute('required',true);
+        $("#slideshow").show();
+         $("#lengthshow").hide();
+          $("#length").removeAttr('required',true);
+      }
+      else
+      {
+       
+        $("#length")[0].setAttribute('required',true);
+        $("#lengthshow").show();
+         $("#slideshow").hide();
+          $("#slide").removeAttr('required',true);
+      }
+        /*var lengthshow = document.getElementById("lengthshow");
+        var slideshow = document.getElementById("slideshow");
+        slideshow.style.display = lengthshow.presentation ? "block" : "none";*/
+    }
+</script>
