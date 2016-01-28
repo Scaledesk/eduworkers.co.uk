@@ -334,7 +334,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
 
 
                           <select class="form-control" name="date" required="">
-                          <option value="">Date</option>
+                          <option value="">Delivery Date</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option> 
@@ -765,8 +765,6 @@ services at stress-free prices in delivering the most reliable Academic Assignme
          $("#slideshow").hide();
           $("#slide").removeAttr('required',true);
       }
-        /*var lengthshow = document.getElementById("lengthshow");
-        var slideshow = document.getElementById("slideshow");
-        slideshow.style.display = lengthshow.presentation ? "block" : "none";*/
+       
     }
 </script>
