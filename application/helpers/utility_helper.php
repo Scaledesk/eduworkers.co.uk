@@ -115,3 +115,12 @@ function hasUser(){
     $ci->load->Model('users/Mdl_users');
     return $ci->Mdl_users->hasUser()?true:false;
 }
+
+function setEmail(){
+    $ci=CI::get_instance();
+    $ci->load->Model('users/Mdl_users');
+   $email['set_email']=$ci->Mdl_users->setEmail();
+
+   $email=$email['set_email'][0]['eduworkers_email_settings_smtp_user'];
+   return$email; 
+}

@@ -7,13 +7,16 @@
  */
 
 class Users extends MX_Controller{
-
+   
+   
     function __construct()
     {
         date_default_timezone_set('Asia/Calcutta');
         parent::__construct();
        
         $this->load->Model('Mdl_users');
+        
+      
     }
     /**
      * this is the index method the landing page for all operations
@@ -226,7 +229,8 @@ public function login()
 
     Public function forgetPwd()
     {
-
+  
+     
         if (strtolower($_SERVER['REQUEST_METHOD']) == 'post') {
 
             $a=rand(999999999999,9999999999999999);
@@ -244,7 +248,7 @@ public function login()
             /* die;*/
             if ($this->Mdl_users->forgotPwd('get_email',$email)) {
 
-                $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+                $this->email->from(setEmail(), 'Edu Workers');
                 $this->email->to($email);
 
                 $this->email->subject('Forgot Password'); 
@@ -337,7 +341,7 @@ public function login()
         /*echo $this->Mdl_users->getUserName();
         die();*/
         $token = $this->createToken();
-        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        $this->email->from(setEmail(), 'Edu Workers');
         $this->email->to($this->Mdl_users->getUserName());
 
                   $data['message1']='Please confirm your email address by clicking the link below ';
@@ -424,7 +428,7 @@ public function login()
     $query=$data['message'];
   
         $admin_mail='nkscoder@gmail.com';
-       $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+       $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
      
@@ -882,7 +886,7 @@ die;*/
   if ($data['file']['has_attachment']==0) {
        
         $admin_mail='nkscoder@yahoo.in';
-        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
      
@@ -893,7 +897,7 @@ die;*/
      if($this->email->send()){
 
 
-         $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+         $this->email->from(setEmail(), 'Edu Workers');
          $this->email->to($user_email);
          $this->email->subject('Product Details');
          $this->email->message($message);
@@ -915,7 +919,7 @@ die;*/
 
   }else{
      
-           $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+           $this->email->from(setEmail(), 'Edu Workers');
 
            $this->email->to($user_email);
            $this->email->subject('Product Details');
@@ -924,7 +928,7 @@ die;*/
        if($this->email->send()){
 
         $admin_mail='nkscoder@yahoo.in';
-        $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
         $path =  set_realpath('uploads'); 
@@ -1064,7 +1068,7 @@ public function getQuote(){
 
         $message=$this->load->view('quote',$data,TRUE);
         $admin_mail='nkscoder@gmail.com';
-       $this->email->from('nitesh@weboforce.com', 'Edu Workers');
+       $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
      

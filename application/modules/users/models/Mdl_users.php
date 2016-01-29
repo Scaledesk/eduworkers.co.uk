@@ -707,7 +707,6 @@ public function showProduct(){
 
 public function cancelled($id){
 
-
   $data = [ 'eduworkers_products_status' => 'cancelled' ];
     
                 $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
@@ -719,5 +718,12 @@ public function cancelled($id){
                  }
                  
 }
+
+public function setEmail(){
+
+    return $this->db->select('eduworkers_email_settings_smtp_user')->get('eduworkers_email_settings')->result_array();
+}
+
+
 
 }
