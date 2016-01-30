@@ -639,7 +639,7 @@ display:none;
 
 .notification{
 	width: 25%;
-
+	height: 90px;
 	/*display: none;*/
 	position: absolute;
 	background-color: rgba(45, 62, 80, 0.77);

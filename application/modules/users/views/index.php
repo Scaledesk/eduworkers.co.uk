@@ -116,7 +116,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                   <ul class="advantages advantages_mod-a list-unstyled">
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">HIGHest RATED</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">PLAGIARISM FREE WORK</h3>
                         <div class="advantages__info">
                           <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
                         </div>
@@ -124,7 +124,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                     </li>
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-DesktopMonitor"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">ONLINE TRAINING</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">GUARANTEEING THE BEST QUALITY</h3>
                         <div class="advantages__info">
                           <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
                         </div>
@@ -132,7 +132,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                     </li>
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-WorldGlobe"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">we are GLOBAL</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">RESPONSE TIME OF 12 HOURS</h3>
                         <div class="advantages__info">
                           <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
                         </div>
