@@ -715,3 +715,17 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 	text-align: center;
 
 }
+
+#edu_team{
+	background-color: #2d3e50;
+	color: #fff;
+	padding: 50px 0;
+	font-size: 18px;
+	word-spacing: 3px;
+}
+.team_title{
+	color: #fff;
+	font-size: 42px;
+	text-align: center;
+	margin: 40px 0;
+}

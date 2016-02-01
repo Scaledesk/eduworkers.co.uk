@@ -93,6 +93,33 @@
 							</div><!-- end row -->
 						</div><!-- end container -->
 					</div><!-- end section-advantages -->
+
+
+
+					<section id="edu_team">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<h2 class= "team_title"><strong>Team And Experience</strong></h2>
+									<p>Our Professional Team is made up of 5 Managing
+									 Partners, 9 Team Managers and 65 Writers. Our team 
+									 consists of expert lecturers and professors who are 
+									 highly proficient in their domain of expertise. <br><br>
+
+									 Our team of experts is available 24/7 across the globe for assistance with any level of assignment(s), College or University. ‘Eduworkers’ is the ONLY Academic Service Provider offering assistance with over 40 subjects. Our expert writers hold degrees from various Universities spanning from the U.S.A, Canada, U.K., India, et. al.
+
+									With ‘Eduworkers’ working for you, you need look no further. Eduworkers delivers its promises with high-quality services, within the allotted timeframe. Whether it’s writing from scratch or editing what has already been written, we offer Academic Paper Writing services in over 40 fields of study. With such a vast repertoire, we apply a multi-level approach in dealing with each order and assignment.
+
+									For queries, clarifications and comments, kindly contact us at the Toll-Free Number or the U.K. Landline provided below. Also, feel free to visit our office(s) in any of our locations. We would be honored to discuss your requirements over a cup of tea or coffee!</p>
+
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+
+					
  
 
 					<div class="container">
@@ -180,14 +207,19 @@
 
 							<div class="col-md-6">
 								<section class="section-default">
+
 									<h2 class="ui-title-block">Why <strong>It Works</strong></h2>
 									<ul class="nav nav-tabs nav-tabs_mod-a">
-										<li class="active"><a class="ui-title-inner decor decor_mod-d" href="#tab-1" data-toggle="tab">Learning Community</a></li>
-										<li><a class="ui-title-inner decor decor_mod-d" href="#tab-2" data-toggle="tab">Skills & Knowledge</a></li>
+
+										<li class="active"><a class="ui-title-inner decor decor_mod-d" href="#tab-1" data-toggle="tab" style="padding: 10px 0px; background-color:transparent; color:#444444;">Learning Community</a></li>
+
+										<li><a class="ui-title-inner decor decor_mod-d" 
+										style="padding: 10px 0px; background-color:transparent; color:#444444; " href="#tab-2" data-toggle="tab">Skills & Knowledge</a></li>
+
 									</ul>
 
 									<div class="tab-content">
-										<div class="tab-pane active" id="tab-1">
+										<div class="tab-pane " id="tab-1">
 											<img class="pull-left img-responsive" src="<?php echo  asset_url();?>media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
 											<p>Phasellus luctus nibhay pulvinar bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
 											<p>Bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ips um dolor sit amet consectetur adipisicing elit sed do eiusmod.</p>
@@ -210,20 +242,20 @@
 								<div class="col-xs-12">
 									<ul class="list-progress list-unstyled">
 										<li class="list-progress__item">
-											<span class="chart label-chart decor decor_mod-c" data-percent="190"><i class="icon stroke icon-WorldWide"></i><span class="percent"></span> </span>
-											<span class="list-progress__name">COUNTRIES REACHED</span>
+											<span class="chart label-chart decor decor_mod-c" data-percent="3500"><i class="icon stroke icon-WorldWide"></i><span class="percent"></span> </span>
+											<span class="list-progress__name">Essay Completed</span>
 										</li>
 										<li class="list-progress__item">
-											<span class="chart label-chart decor decor_mod-c" data-percent="250000"><i class="icon stroke icon-Book"></i><span class="percent"></span> </span>
-											<span class="list-progress__name">PASSED GRADUATES</span>
+											<span class="chart label-chart decor decor_mod-c" data-percent="2200"><i class="icon stroke icon-Book"></i><span class="percent"></span> </span>
+											<span class="list-progress__name">ENGINEERING ASSIGNNMENTS</span>
 										</li>
 										<li class="list-progress__item">
-											<span class="chart label-chart decor decor_mod-c" data-percent="824"><i class="icon stroke icon-User"></i><span class="percent"></span> </span>
-											<span class="list-progress__name">QUALIFIED STAFF</span>
+											<span class="chart label-chart decor decor_mod-c" data-percent="300"><i class="icon stroke icon-User"></i><span class="percent"></span> </span>
+											<span class="list-progress__name">PROJECTS AND DISSERTATIONS</span>
 										</li>
 										<li class="list-progress__item">
-											<span class="chart label-chart decor decor_mod-c" data-percent="1500"><i class="icon stroke icon-Edit"></i><span class="percent"></span> </span>
-											<span class="list-progress__name">COURSES PUBLISHED</span>
+											<span class="chart label-chart decor decor_mod-c" data-percent="50"><i class="icon stroke icon-Edit"></i><span class="percent"></span> </span>
+											<span class="list-progress__name">WRITERS ON BOARD</span>
 										</li>
 									</ul><!-- end list-progress -->
 								</div><!-- end col  -->
@@ -257,29 +289,7 @@
 					</div><!-- end container -->
 
 
-					<section class="section-subscribe">
-						<div class="subscribe">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="subscribe__icon-wrap">
-											<i class="icon_bg stroke icon-Imbox"></i><i class="icon stroke icon-Imbox"></i>
-										</div>
-										<div class="subscribe__inner">
-											<h2 class="subscribe__title">STAY UPDATED WITH ACADEMICA</h2>
-											<div class="subscribe__description">Nulla feugiat nibh placerat fermentum rutrum ante risus euismod</div>
-										</div>
-									</div><!-- end col -->
-									<div class="col-sm-6">
-										<form class="subscribe__form" action="get">
-											<input class="subscribe__input form-control" type="text" placeholder="Your Email address ...">
-											<button class="subscribe__btn btn btn-success btn-effect">SUBSCRIBE</button>
-										</form>
-									</div><!-- end col -->
-								</div><!-- end row -->
-							</div><!-- end container -->
-						</div>
-					</section><!-- end section-subscribe -->
+					
 
 				</main><!-- end main-content -->
 
