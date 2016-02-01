@@ -1086,4 +1086,12 @@ public function getQuote(){
 
 
 
+public function about(){
+
+  $this->load->view('header/header');
+  $this->load->view('about');
+  $this->load->view('header/footer');
+}
+
+
 }
