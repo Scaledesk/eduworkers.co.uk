@@ -630,12 +630,12 @@ input[type='file']
 display:none;
 }
 
-
+/*
 .flags_edu .img-responsive, .flags_edu img {
     height:90px !important;
     width: 80%;
    
-}
+}*/
 
 .notification{
 	width: 25%;
@@ -692,7 +692,26 @@ display:none;
 	padding-top: 15px !important;
 }
 
+label > input{ /* HIDE RADIO */
+  display:none;
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:7px solid transparent;
+}
+label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
+  border:7px solid #CE980B;
+}
+
+.space{
+	margin: 40px 0;
+}
 
 
+#c_text {
+	color: orange;
+	margin-left: 20px;
+	font-size: 20px;
+	text-align: center;
 
-
+}

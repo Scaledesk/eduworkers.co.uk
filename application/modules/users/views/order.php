@@ -21,35 +21,65 @@
               <img src="assets/media/australia.jpeg" alt=""/> -->
               <div class="width"></div>
               <div class="row flags_edu">
-                <div class="col-md-3 col-sm-3 col-xs-6 ">
-                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/us_flag.png" alt=""/>
-                  <label class="text-center">United States</label>
-                  </a>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 ">
-                  <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/uk_flag.png"  alt=""/>
-                  <label class="text-center">United Kingdom</label>
-                  </a>
-                </div>
-               <div class="col-md-3 col-sm-3 col-xs-6 ">
-                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/Australia_flag.png"  alt=""/>
-                 <label class="text-center">Other Country</label>
-                </a>
-                </div>
-                <div class=" col-md-3 col-sm-3 col-xs-6 ">
-                 <a href="#"><img class="img-responsive" src="<?php echo base_url(); ?>assets/media/world-map.png"  alt=""/>
-                 <label class="text-center">Other Country</label>
-                </a>
-                </div>
-             
+                <div class="col-xs-6 col-md-3 col-sm-3">
+                 <label style="text-align:center;">
+                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="1"/>
+                <img src="<?php echo base_url();?>assets/media/us_flag.png" width=120 height=80 >
+                <br>
+                <span style="margin-bottom: 5px;">United States</span>
+              </label>
+
+              </div>
               
-              <p>lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
-                  lorem ipsum lorem ipsum is a dummy text</p>
+              <div class="col-xs-6 col-md-3 col-sm-3">
+                <label style="text-align:center;">
+                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="2"/>
+                <img src="<?php echo base_url();?>assets/media/australia.jpeg" width=120 height=80 >
+                <br>
+                <span style="margin-bottom: 5px;">United Kingdom</span>
+              </label>
+
+              </div>
+              
+              <div class="col-xs-6 col-md-3 col-sm-3">
+                <label style="text-align:center;">
+                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="3"/>
+                <img src="<?php echo base_url();?>assets/media/uk_flag.png" width=120 height=80 >
+                <br>
+                <span style="margin-bottom: 5px;">Australia</span>
+              </label>
+
+              </div>
+              
+              <div class="col-xs-6 col-md-3 col-sm-3">
+                <label style="text-align:center;">
+                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="4"/>
+                <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80 >
+                <br>
+                <span style="margin-bottom: 5px;">Other Country</span>
+              </label>
+
+              </div>
+
+               <div class="row" id="c_text"> <p>please choose your country</p> </div>
+
+              <!--   <span>lorem ipsum</span>
+
+              <div id="test_2">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
+                  </div>
+
+                   <div id="test_3">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
+                  lorem ipsum lorem ipsum is a dummy text lorem ipsum lorem ipsum</div>
+              
+              <div id="test_4">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
+                 dummy text lorem ipsum lorem ipsum is a dummy text lorem ipsum is a dummy text </div> -->
+
+                  
               
              
              </div>
 
-                      
+                      <div class="space"></div> 
                       
                        <div class="row">
                           <form action="<?php echo base_url().'users/order'; ?>"method="post">
@@ -540,6 +570,33 @@ function showdate(obj){
 }
 
 
+</script>
 
 
+<script>
+$(document).ready(function(){
+    $("#1").click(function(){
+        $("#c_text").html("You Have selected USA.");
+
+
+    });
+
+    $("#2").click(function(){
+        $("#c_text").html("You Have selected United Kingdom");
+
+
+    });
+
+    $("#3").click(function(){
+        $("#c_text").html("You Have selected Australia");
+
+
+    });
+
+   $("#4").click(function(){
+        $("#c_text").html("You Have selected Other Country");
+
+
+    });
+});
 </script>
