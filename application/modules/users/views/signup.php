@@ -7,7 +7,7 @@
             <div class="col-md-4"></div>
                     <div class="col-md-4 login_form-custom">
                     <h1 class="text-center custom_title">Sign up</h1>
-                    <form action="<?php echo base_url().'users'; ?>" method="post">
+                    <form action="<?php echo base_url().'users'; ?>" method="post" onSubmit="return myFunction()">
 
                       <div class="form-group form-group-icon-left">
                             <!-- <label>Username or email</label> -->
@@ -25,10 +25,10 @@
 
                         <div class="form-group form-group-icon-left">
                             <!-- <label>Password</label> -->
-                            <input class="custom-input_class" type="password" id="passcof" onchange="myFunction()" required name="passcof" placeholder="Retype-Password" />
+                            <input class="custom-input_class" type="password" id="passcof"  required name="passcof" placeholder="Retype-Password" />
                         </div>
                          <div id="lengthPass" style="color:red"> </div>
-                        <input class="btn btn-primary custom-button_class" type="submit" value="Sign Up" />
+                        <input class="btn btn-primary custom-button_class" type="submit" value="Sign Up"  />
                         <?php echo form_hidden('todo', 'register'); ?>
                         <div class=" already_member">
 
