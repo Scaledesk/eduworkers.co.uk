@@ -1,4 +1,7 @@
 
+
+
+
 				<div class="wrap-title-page">
 					<div class="container">
 						<div class="row">
@@ -8,60 +11,35 @@
 				</div><!-- end wrap-title-page -->
 
 
-				<div class="section-breadcrumb">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="wrap-breadcrumb clearfix">
-									<ol class="breadcrumb">
-										<li><a href="javascript:void(0);"><i class="icon stroke icon-House"></i></a></li>
-										<li class="active">About Us</li>
-									</ol>
-								</div>
-							</div>
-						</div><!-- end row -->
-					</div><!-- end container -->
-				</div><!-- end section-breadcrumb -->
 
 
 				<main class="main-content">
 
-					<section class="about rtd">
+					<section class="about rtd" style="margin-top: 50px;">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-5">
 									<h2 class="about__title">welcome to <strong>EDUWORKERS</strong></h2>
 									<p>“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. Since the inception
 
-the company in 2009, we have achieved great heights in receiving international recognition and 
+						the company in 2009, we have achieved great heights in receiving international recognition and 
+						acclaim. The very reason for this acclaim is due to the fact that we have offered unassailable 
+						services at stress-free prices in delivering the most reliable Academic Assignment Service.
+						Since day one, we have strived to assist students, <P>who are struggling with their Academic 
+						Writing Projects, and facilitate them with an excellent staff of writers in various fields of 
+						expertise, who always produce the finest quality of written assignments. All of our writers are 
+						well-qualified, highly-talented and tempered in their core areas. They are committed to 
+						Research and Development and constantly write and submit articles to journals, both nationally 
+						and internationally.</P> This gives them the edge over other writers by keeping them sharp in their 
+						writing skills and subject knowledge. They are well-disciplined and committed in adhering to 
+						strict deadlines, regardless of the pressure.
+						Our motto is “Customer Satisfaction First!” Thus, we go to great lengths in keeping our clients
 
-acclaim. The very reason for this acclaim is due to the fact that we have offered unassailable 
+						content and happy. From keeping deadlines to delivering quality writing, our word is as good as 
 
-services at stress-free prices in delivering the most reliable Academic Assignment Service.
+						gold. You will find that our writers are the best-fit for any Academic Writing related assignment, 
 
-Since day one, we have strived to assist students, <P>who are struggling with their Academic 
-
-Writing Projects, and facilitate them with an excellent staff of writers in various fields of 
-
-expertise, who always produce the finest quality of written assignments. All of our writers are 
-
-well-qualified, highly-talented and tempered in their core areas. They are committed to 
-
-Research and Development and constantly write and submit articles to journals, both nationally 
-
-and internationally.</P> This gives them the edge over other writers by keeping them sharp in their 
-
-writing skills and subject knowledge. They are well-disciplined and committed in adhering to 
-
-strict deadlines, regardless of the pressure.
-
-Our motto is “Customer Satisfaction First!” Thus, we go to great lengths in keeping our clients
-
-content and happy. From keeping deadlines to delivering quality writing, our word is as good as 
-
-gold. You will find that our writers are the best-fit for any Academic Writing related assignment, 
-
-who deliver 100% premium quality and assignments that are totally free from plagiarism.</p>
+						who deliver 100% premium quality and assignments that are totally free from plagiarism.</p>
 									<!-- <h3 class="about__title-inner">We Offer Everyone <strong>FREE Online Courses !</strong></h3>
 									<ul class="list-mark">
 										<li>Pellentesque lacus vamus lorem arcu semper duiac</li>
@@ -73,13 +51,13 @@ who deliver 100% premium quality and assignments that are totally free from plag
 									<p>Reprehenderit in voluptate velit esse cillum dolo reu fugiat nulla pariatu excp teur sint occa ecated cupidatat non pried ent sunla.</p> -->
 								</div><!-- end col -->
 								<div class="col-md-7">
-									<img class="img-responsive" src="assets\media\about\670x350\1.jpg" height="350" width="670" alt="Foto">
+									<img class="img-responsive" src="<?php echo  asset_url();?>media\about\670x350\1.jpg" height="350" width="670" alt="Foto">
 									<div class="row">
 										<div class="col-xs-6">
-											<img class="img-responsive" src="assets\media\about\320x200\1.jpg" height="200" width="320" alt="Foto">
+											<img class="img-responsive" src="<?php echo  asset_url();?>media\about\320x200\1.jpg" height="200" width="320" alt="Foto">
 										</div>
 										<div class="col-xs-6">
-											<img class="img-responsive" src="assets\media\about\320x200\2.jpg" height="200" width="320" alt="Foto">
+											<img class="img-responsive" src="<?php echo  asset_url();?>media\about\320x200\2.jpg" height="200" width="320" alt="Foto">
 										</div><!-- end col -->
 									</div><!-- end row -->
 
@@ -111,11 +89,11 @@ who deliver 100% premium quality and assignments that are totally free from plag
 											<span class="advantages__title ui-title-inner">ONLINE TRAINING</span>
 										</li>
 									</ul>
-								</div><!-- end col -->
+								</div><!- end col -->
 							</div><!-- end row -->
 						</div><!-- end container -->
 					</div><!-- end section-advantages -->
- -->
+ 
 
 					<div class="container">
 						<div class="row">
@@ -210,12 +188,12 @@ who deliver 100% premium quality and assignments that are totally free from plag
 
 									<div class="tab-content">
 										<div class="tab-pane active" id="tab-1">
-											<img class="pull-left img-responsive" src="assets\media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
+											<img class="pull-left img-responsive" src="<?php echo  asset_url();?>media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
 											<p>Phasellus luctus nibhay pulvinar bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
 											<p>Bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ips um dolor sit amet consectetur adipisicing elit sed do eiusmod.</p>
 										</div>
 										<div class="tab-pane" id="tab-2">
-											<img class="pull-right img-responsive" src="assets\media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
+											<img class="pull-right img-responsive" src="<?php echo  asset_url();?>media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
 											<p>Phasellus luctus nibhay pulvinar bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
 											<p>Bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ips um dolor sit amet consectetur adipisicing elit sed do eiusmod.</p></div>
 									</div>
@@ -265,11 +243,11 @@ who deliver 100% premium quality and assignments that are totally free from plag
 											<div class="ui-subtitle-block ui-subtitle-block_mod-b">Having over 9 million students worldwide and more than 50,000 online courses available.</div>
 										</div>
 										<ul class="list-clients list-unstyled clearfix">
-											<li class="list-clients__item"><img class="img-responsive" src="assets\media\clients\1.jpg" height="100" width="200" alt="Partners"></li>
-											<li class="list-clients__item"><img class="img-responsive" src="assets\media\clients\2.jpg" height="100" width="200" alt="Partners"></li>
-											<li class="list-clients__item"><img class="img-responsive" src="assets\media\clients\3.jpg" height="100" width="200" alt="Partners"></li>
-											<li class="list-clients__item"><img class="img-responsive" src="assets\media\clients\4.jpg" height="100" width="200" alt="Partners"></li>
-											<li class="list-clients__item"><img class="img-responsive" src="assets\media\clients\5.jpg" height="100" width="200" alt="Partners"></li>
+											<li class="list-clients__item"><img class="img-responsive" src="<?php echo  asset_url();?>media\clients\1.jpg" height="100" width="200" alt="Partners"></li>
+											<li class="list-clients__item"><img class="img-responsive" src="<?php echo  asset_url();?>media\clients\2.jpg" height="100" width="200" alt="Partners"></li>
+											<li class="list-clients__item"><img class="img-responsive" src="<?php echo  asset_url();?>media\clients\3.jpg" height="100" width="200" alt="Partners"></li>
+											<li class="list-clients__item"><img class="img-responsive" src="<?php echo  asset_url();?>media\clients\4.jpg" height="100" width="200" alt="Partners"></li>
+											<li class="list-clients__item"><img class="img-responsive" src="<?php echo  asset_url();?>media\clients\5.jpg" height="100" width="200" alt="Partners"></li>
 										</ul>
 										<div class="list-clients__description text-center">Nulla feugiat nibh placerat fermentum rutrum ante risus euismod eros pharetra felis justo ac tortor Maecenas odio sit amet odio euismod eaculis. Donec ac tellus nullam risus turpis rhoncus</div>
 									</section><!-- end section-clients -->
@@ -304,3 +282,4 @@ who deliver 100% premium quality and assignments that are totally free from plag
 					</section><!-- end section-subscribe -->
 
 				</main><!-- end main-content -->
+
