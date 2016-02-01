@@ -170,4 +170,8 @@ public function completed($id){
                  
 }
 
+public function getUsers(){
+    return $this->db->get('eduworkers_users')->result_array();
+}
+
 }

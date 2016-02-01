@@ -22,7 +22,7 @@ class Admin extends MX_Controller{
         if (isAdmin()) {
             $data['active']=0;
             $this->load->view('header',$data);
-           
+           $this->load->view('index');
            $this->load->view('footer');
         }
        else {
@@ -133,5 +133,18 @@ else{
 
 }
 
+public function getUsers(){
+
+  if(isAdmin()){
+      $data['users']=$this->Mdl_admin->getUsers();
+      $data['active']=4;
+          $this->load->view('header',$data);
+          $this->load->view('users_details',$data);
+          $this->load->view('footer');
+  }
+  else{
+    redirect(base_url('users'));
+  }
+}
 
 }

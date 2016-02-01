@@ -62,7 +62,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="<?php echo base_url(); ?>"><img src="<?php echo asset_url(); ?>admin/assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="<?php echo base_url(); ?>"><img src="<?php echo  asset_url();?>/img/final_logo.png" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Admin</h5>
               	  	
                   <li class="mt">
@@ -77,7 +77,15 @@
                   <li class="sub-menu">
                       <a <?php  if($active==1){ ?> class="active"<?php }?> href="<?php echo  base_url().'admin/product';?>" >
                           <i class="fa fa-tasks"></i>
-                          <span> Product</span>
+                          <span> Order Management</span>
+                      </a>
+                    
+                  </li>
+
+                  <li class="sub-menu">
+                      <a <?php  if($active==4){ ?> class="active"<?php }?> href="<?php echo  base_url().'admin/getUsers';?>" >
+                          <i class="fa fa-tasks"></i>
+                          <span> Users Details</span>
                       </a>
                     
                   </li>
@@ -85,12 +93,12 @@
                   <li  class="sub-menu">
                       <a <?php  if($active==3 or $active==2 ){ ?> class="active"<?php }?>  href="javascript:;" >
                           <i class="fa fa-cogs"></i>
-                          <span  >Components</span>
+                          <span  >Setting</span>
                       </a>
                       <ul class="sub">
                           <li  <?php  if($active==2){ ?> class="active"<?php }?>><a   href="<?php echo  base_url().'email_settings'; ?>">Smtp Setting</a></li>
                           <li <?php  if($active==3){ ?> class="active"<?php }?> ><a    href="<?php echo  base_url().'admin/password'; ?>">Update Password</a></li>
-                         
+                        <!--  <li <?php  if($active==4){ ?> class="active"<?php }?> ><a    href="<?php echo  base_url().''; ?>"></a></li> -->
                       </ul>
                   </li>
                  
