@@ -167,7 +167,9 @@ setTimeout(function() {
     }else if (getInformUser()){ 
       ?>
        <div class="notification" id="notification" >
-                <h3>Welcome User</h3>
+               <?php if (islogin()) {
+                 ?><h3>Welcome User</h3>
+             <?php } ?> 
             <p>   <?php  echo getInformUser(); ?> </p>
               </div>
        

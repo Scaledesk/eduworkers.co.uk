@@ -492,7 +492,7 @@ public function doOrder(){
      $grade=$this->input->post('grade');
      $subjects=$this->input->post('subjects');
      $words=$this->input->post('length');
-     $currency=$this->input->post('currency');
+     // $currency=$this->input->post('currency');
      $slide=$this->input->post('slide');
      $services=$this->input->post('services');
 /*echo json_encode($services);*/

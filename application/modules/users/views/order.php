@@ -8,7 +8,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="wrap-title">
-                
+                <form action="<?php echo base_url().'users/order'; ?>"method="post">
+
                 <h1>Place Your Order Below</h1>
               <!-- end posts-wrap --> 
             </div>
@@ -21,9 +22,9 @@
               <img src="assets/media/australia.jpeg" alt=""/> -->
               <div class="width"></div>
               <div class="row flags_edu">
-                <div class="col-xs-6 col-md-3 col-sm-3">
+                <div class="col-xs-6 col-md-3 col-sm-3">     
                  <label style="text-align:center;">
-                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="1"/>
+                <input type="radio"  name="flag" value="USD" onClick="getResults()" id="1"/>
                 <img src="<?php echo base_url();?>assets/media/us_flag.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">United States</span>
@@ -33,7 +34,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="2"/>
+                <input type="radio"  name="flag" value="GBP" onClick="getResults()" id="2"/>
                 <img src="<?php echo base_url();?>assets/media/australia.jpeg" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">United Kingdom</span>
@@ -43,7 +44,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="3"/>
+                <input type="radio"  name="flag" value="AUD" onClick="getResults()" id="3"/>
                 <img src="<?php echo base_url();?>assets/media/uk_flag.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Australia</span>
@@ -53,7 +54,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="Show" onClick="getResults()" id="4"/>
+                <input type="radio"  name="flag" value="EUR" onClick="getResults()" id="4"/>
                 <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Other Country</span>
@@ -362,15 +363,14 @@
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
                           <div class="col-md-6">
-                            <select class="form-control" id="currency" name="currency" onchange="loadamount(this)">
-                              <option>GBP&nbsp;&#8356;</option>
-                              <option>USD&nbsp;&#36;</option>
-                              <option>AUD&nbsp;&#36;</option>
-                              <option>EUR&nbsp;&#128;</option>
-                              
-                            </select> 
+                            <div id="usd" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> --> USD $</div> 
+
+                            <div id="aud" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->GBP ₤</div>
+                            <div id="eur" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD" -->AUD $ </div>
+                            <div id="usa" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->EUR €</div>
+                             
                             
-                          </div>
+                          </div> 
                           <div class="col-md-6">
                           <div id="divtotal">
                             
@@ -459,8 +459,8 @@
                  var length1 = length.options[length.selectedIndex].value;
                
 
-                var currency=document.getElementById("currency");
-                var currency1 = currency.options[currency.selectedIndex].value;
+                // var currency=document.getElementById("currency");
+                // var currency1 = currency.options[currency.selectedIndex].value;
 
                  var slide=document.getElementById("slide");
                 var slide1 = slide.options[slide.selectedIndex].value;
@@ -468,7 +468,7 @@
                 /*alert(slide1);*/ 
                 /* alert(obj.value);*/
 
-                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"currency":currency1,"date":date1,"slide":slide1};
+                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"date":date1,"slide":slide1};
                 /* alert(dd);*/
                    $.ajax({
                   'url' : "<?php echo base_url().'users/doOrder'; ?>",
@@ -576,26 +576,37 @@ function showdate(obj){
 <script>
 $(document).ready(function(){
     $("#1").click(function(){
-        $("#c_text").html("You Have selected USA.");
-
-
+        $("#c_text").html("You Have selected USA.");    
+          $("#usd").show();
+          $("#aud").hide(); 
+          $("#eur").hide();
+          $("#usa").hide();
     });
 
     $("#2").click(function(){
         $("#c_text").html("You Have selected United Kingdom");
 
-
+         $("#usd").hide();
+          $("#aud").show(); 
+          $("#eur").hide();
+          $("#usa").hide();
     });
 
     $("#3").click(function(){
         $("#c_text").html("You Have selected Australia");
-
+           $("#usd").hide();
+          $("#aud").hide(); 
+          $("#eur").show();
+          $("#usa").hide();
 
     });
 
    $("#4").click(function(){
         $("#c_text").html("You Have selected Other Country");
-
+         $("#usd").hide();
+          $("#aud").hide(); 
+          $("#eur").hide();
+          $("#usa").show();
 
     });
 });
