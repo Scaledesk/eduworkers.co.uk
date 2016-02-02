@@ -18,7 +18,6 @@
               <h1 class="service_main_subheading"><a href="#edu_services_section_2"style="color:#000;">ESSAY WRITING</a></h1>
               <p>We offer a range of essay writing and marking services, all delivered to our exacting standards.</p>
               <div class="edu_list_group">
-
                 <div class="edu_service_custom_links col-md-12">
                 <a href="#Critical_essay">Critical essay</a> 
               </div>
@@ -32,21 +31,6 @@
               </div>
               <div class="edu_service_custom_links col-md-12">
                 <a href="#Outline/Skeleton_Answer_Writing_Service">Outline/Skeleton Answer Writing Service</a>
-                
-
-                <div class="edu_service_custom_links col-md-12">
-                <a href="<?php echo base_url().'users/engineeringAssignments'; ?>">Engineering Assignments</a>
-              </div>
-
-              <div class="edu_service_custom_links col-md-12">
-                <a href="<?php echo base_url().'users/dissertationWriting'; ?>">Dissertation Writing</a>
-              </div>
-              <div class="edu_service_custom_links col-md-12"> 
-                <a href="<?php echo base_url().'users/engineeringProjects'; ?>">Engineering Projects</a> 
-              </div>
-              <div class="edu_service_custom_links col-md-12">
-                <a href="<?php echo base_url().'users/singleServices'; ?>">Essay Writing Service</a>
-
               </div>
 
               <div class="edu_service_custom_links col-md-12">
@@ -66,10 +50,7 @@
               <p>Our dissertation writing services offer the highest possible levels of quality and accuracy.</p>
                <div class="edu_list_group">
                 <div class="edu_service_custom_links col-md-12">
-
                 <a href="#Thesis">Thesis</a>
-
-                <a href="<?php echo base_url().'users/singleServices'; ?>">Essay Writing Service</a>
               </div>
 
                 <div class="edu_service_custom_links col-md-12">
@@ -108,11 +89,7 @@
               <p>In addition to our core services we offer a range of dedicated services for other assignments</p>
                <div class="edu_list_group">
                 <div class="edu_service_custom_links">
-
                 <a href="#Technical_Reports">Technical Reports</a>
-
-                <a href="<?php echo base_url().'users/singleServices'; ?>">Essay Writing Service</a>
-
               </div>
 
                 <div class="edu_service_custom_links col-md-12">
