@@ -1093,5 +1093,25 @@ public function about(){
   $this->load->view('header/footer');
 }
 
+public function engineeringAssignments(){
 
+   $this->load->view('header/header');
+  $this->load->view('engineering_assignments');
+  $this->load->view('header/footer');
+}
+
+public function dissertationWriting(){
+
+   $this->load->view('header/header');
+  $this->load->view('dissertation_writing');
+  $this->load->view('header/footer');
+}
+
+
+public function engineeringProjects(){
+
+   $this->load->view('header/header');
+  $this->load->view('engineering_projects');
+  $this->load->view('header/footer');
+}
 }

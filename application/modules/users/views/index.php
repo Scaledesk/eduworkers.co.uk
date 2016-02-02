@@ -39,66 +39,6 @@
       </div>
     </div>
 
-    <!-- end main-slider -->
-
-    <!-- <div class="section_mod-a">
-      <div class="container">
-        <div class="section_mod-a__inner">
-          <div class="row">
-            <div class="col-md-12">
-              <section class="section-advantages wow bounceInLeft" data-wow-duration="2s">
-                <h2 class="ui-title-block text-center"><strong>ABOUT US</strong></h2>
-                <h2 class="ui-title-block ui-title-block_mod-a">“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. Since the inception of 
-
-the company in 2009, we have achieved great heights in receiving international recognition and 
-
-acclaim. The very reason for this acclaim is due to the fact that we have offered unassailable 
-
-services at stress-free prices in delivering the most reliable Academic Assignment Service.
-<a style="margin-left: 10px;" href="#">READ MORE</a> </h2>
-                <div class="ui-subtitle-block ui-subtitle-block_mod-a">
-                 
-                </div>
-                <ul class="advantages advantages_mod-a list-unstyled">
-                  <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
-                    <div class="advantages__inner">
-                      <h3 class="ui-title-inner decor decor_mod-a">PLAGIARISM FREE WORK</h3>
-                      <div class="advantages__info">
-                        <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper
-                          duiac.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-DesktopMonitor"></i></span>
-                    <div class="advantages__inner">
-                      <h3 class="ui-title-inner decor decor_mod-a">GUARANTEEING THE BEST QUALITY</h3>
-                      <div class="advantages__info">
-                        <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper
-                          duiac.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-WorldGlobe"></i></span>
-                    <div class="advantages__inner">
-                      <h3 class="ui-title-inner decor decor_mod-a">RESPONSE TIME OF 12 HOURS</h3>
-                      <div class="advantages__info">
-                        <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper
-                          duiac.</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Users"></i></span>
-                    <div class="advantages__inner">
-                      <h3 class="ui-title-inner decor decor_mod-a">SKILLED FACULTY</h3>
-                      <div class="advantages__info">
-                        <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper
-                          duiac.</p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </section> -->
-              <!-- end section-advantages -->
             </div>
 
 
@@ -111,7 +51,7 @@ services at stress-free prices in delivering the most reliable Academic Assignme
                 <section class="section-advantages">
                   <h2 class="ui-title-block ui-title-block_mod-a">“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. 
                     Since the inception of the company in 2009, we have achieved great heights in receiving international recognition and
-                     acclaim. <a style="margin-left: 10px;" href="#">READ MORE</a> </h2>
+                     acclaim. <a style="margin-left: 10px;" href="<?php echo base_url().'users/services';?>">READ MORE</a> </h2>
                   <!-- <div class="ui-subtitle-block ui-subtitle-block_mod-a">Having over 9 million students worldwide and more than 50,000 online courses available.</div> -->
                   <ul class="advantages advantages_mod-a list-unstyled">
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
