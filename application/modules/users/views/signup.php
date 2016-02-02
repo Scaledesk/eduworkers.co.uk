@@ -17,6 +17,10 @@
                             <!-- <label>Username or email</label> -->
                             <input class="custom-input_class" placeholder="Your Email" required name="email" type="email" />
                         </div>
+                         <div class="form-group form-group-icon-left">
+                            <!-- <label>Username or email</label> -->
+                            <input class="custom-input_class" placeholder="Phone No." required name="phone" type="text" maxlength="10"/>
+                        </div>
                         <div class="form-group form-group-icon-left">
                             <!-- <label>Password</label> -->
                             <input class="custom-input_class" type="password" id="password" name="password" required  placeholder="Password" />

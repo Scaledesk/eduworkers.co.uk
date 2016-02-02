@@ -19,30 +19,21 @@
         <thead>
             <tr>
                  <th>Order Id</th>
-                <th>Action</th>
+               
                 <th>Service</th>
                 <th>Grade</th>
                 <th>Length/Slide</th>
                 <th>Delivery Days</th>
-                <th> Order Date</th>
+                <th>Order Date</th>
                 <th>Total Price </th>
             </tr>
         </thead>
-       <!--  <tfoot>
-            <tr>
-                <th>Service</th>
-                <th>Grade</th>
-                <th>Length</th>
-                <th>Delivery Date</th>
-                <th>Date</th>
-                <th>Total Price</th>
-            </tr>
-        </tfoot> -->
-        <tbody><?php foreach ($product as  $row) {
+       
+        <tbody><?php foreach ($order as  $row) {
         ?>
             <tr>
                <td><?php echo $row['eduworkers_products_id']; ?></td>
-               <td><?php if($row['eduworkers_products_status']=='pending') {?> <a onclick="return confirm('are you sure you want to confirm Product InProgress')" href="<?php echo base_url().'admin/inprogress/'.$row['eduworkers_products_id']; ?>">Inprogress</a><?php }else if($row['eduworkers_products_status']=='inprogress') { ?>   <a onclick="return confirm('Are you sure you want to Completed Products?')" href="<?php echo base_url().'admin/completed/'.$row['eduworkers_products_id']?>">Completed </a>  <?php } else if($row['eduworkers_products_status']=='completed'){ ?> Completed <?php }  else{ ?> Cancelled <?php } ?></td>
+               
                 <td><?php echo $row['eduworkers_products_services']; ?></td>
                 <td><?php echo $row['eduworkers_products_grade']; ?></td>
                

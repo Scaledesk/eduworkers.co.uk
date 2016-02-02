@@ -174,4 +174,13 @@ public function getUsers(){
     return $this->db->get('eduworkers_users')->result_array();
 }
 
+public function orderDetails($id){
+
+               
+                $this->db->where('eduworkers_products_id',$id); 
+                 return $this->db->get('eduworkers_products')->result_array();
+                          
+                 
+}
+
 }
