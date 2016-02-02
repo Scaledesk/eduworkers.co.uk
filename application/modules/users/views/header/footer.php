@@ -116,6 +116,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
   <!-- end wrapper -->
   </div>
   <!-- end layout-theme -->
+ 
 
   <!-- SCRIPTS -->
   <script src="<?php echo  asset_url();?>js/jquery-migrate-1.2.1.js"></script>
@@ -135,6 +136,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
   <script src="<?php echo  asset_url();?>js/cssua.min.js"></script>
   <script src="<?php echo  asset_url();?>js/wow.min.js"></script>
   <script src="<?php echo  asset_url();?>js/custom.min.js"></script>
+
 
  
 

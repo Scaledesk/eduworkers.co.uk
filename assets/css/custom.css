@@ -523,6 +523,7 @@
 .service_main_subheading{
 	text-align: center;
 	padding: 20px 0;
+	text-transform: uppercase;
 }
 
 .service_main_heading_2{
@@ -572,7 +573,8 @@
 
 .service_help_box{
 	background-color: rgba(0, 0, 0, 0.28);
-	padding: 50px;
+	padding: 30px;
+	margin: 30px 0;
 	
 }
 
@@ -729,3 +731,64 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 	text-align: center;
 	margin: 40px 0;
 }
+
+#edu_services_section_2{
+	color: #fff !important;
+	padding: 40px 0 !important;
+	background-color: #2D3E50
+}
+.service_custom_heading{
+	font-size: 48px !important;
+	color: #fff !important;
+	
+}
+
+.service_custom_heading_sub-heading{
+	color: #fff !important;
+}
+
+.service_custom_heading_sub-heading ~p{
+	color: #fff !important;
+	font-size: 16px;
+	word-spacing: 3px;
+	margin: 15px 0 !important;
+
+}
+
+.edu_services_section >h4{
+	color: #aaa !important;
+	margin: 10px 0 !important;
+}
+
+#edu_services_section_3{
+	color: #fff !important;
+	padding: 40px 0 !important;
+	background-color: chocolate;
+}
+
+
+#edu_services_section_4{
+	color: #fff !important;
+	padding: 40px 0 !important;
+	background-color: #467CB5;
+}
+.hr{
+	border-bottom: 2px solid #fff;
+	margin: 10px 0;
+}
+
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
+}
+
+.centered_custom{
+	float: none;
+	margin: 0 auto !important; 
+}
+
+
+

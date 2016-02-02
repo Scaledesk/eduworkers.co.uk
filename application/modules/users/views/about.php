@@ -224,6 +224,7 @@
 											<p>Phasellus luctus nibhay pulvinar bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
 											<p>Bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ips um dolor sit amet consectetur adipisicing elit sed do eiusmod.</p>
 										</div>
+										
 										<div class="tab-pane" id="tab-2">
 											<img class="pull-right img-responsive" src="<?php echo  asset_url();?>media\posts\113x113\1.jpg" height="113" width="113" alt="foto">
 											<p>Phasellus luctus nibhay pulvinar bibend um aliquam ligula sapien condimen tum magna eu adipiscing risu Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
