@@ -21,7 +21,7 @@
                 
                 <th>Name</th>
                 <th>Email</th>
-               
+               <th>Phone No.</th>
                 
             </tr>
         </thead>
@@ -34,8 +34,9 @@
              ?>
             <tr>
               
-                <td><?php echo $row['eduworkers_users_userfname']; ?></td>
+                <td><a href="<?php echo base_url().'admin/orderDetails/'. $row['eduworkers_users_id']; ?>"><?php echo $row['eduworkers_users_userfname']; ?></a></td>
                 <td><?php echo $row['eduworkers_users_username']; ?></td>
+                 <td><?php echo $row['eduworkers_users_phone']; ?></td>
                
                 
                 

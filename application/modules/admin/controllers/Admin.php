@@ -147,4 +147,19 @@ public function getUsers(){
   }
 }
 
+public function orderDetails($id){
+
+  if(isAdmin()){
+      $data['order']=$this->Mdl_admin->orderDetails($id);
+    $data['active']=5;
+
+          $this->load->view('header',$data);
+          $this->load->view('single_users_order_details',$data);
+          $this->load->view('footer');
+  }
+  else{
+    redirect(base_url('users'));
+  }
+}
+
 }

@@ -178,7 +178,7 @@ public function login()
     private function _register($data)
     {
         $role=10;
-        $this->Mdl_users->setData('register',$data['email'],$data['password'],$role,$data['name']);
+        $this->Mdl_users->setData('register',$data['email'],$data['password'],$role,$data['name'],$data['phone']);
         if(!hasUser()){
         if($this->Mdl_users->register('normal_registration')){
             
@@ -472,8 +472,8 @@ die;*/
               }
             else{
 
-                 setInformUser('error',"Please login at first.");
-                redirect(base_url('users/login'));
+                 setInformUser('error',"Please Login/Signup first.");
+                redirect(base_url('users/signup'));
             }  
    }
     else{

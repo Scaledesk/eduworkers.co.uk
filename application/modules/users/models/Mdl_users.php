@@ -20,9 +20,22 @@ class Mdl_users extends CI_Model
     private $provider;
     private $status;
     private $user_fname;
+    private $phone;
         /**
      * @return mixed
      */
+        public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param mixed $user_fname
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
     public function getUserFname()
     {
         return $this->user_fname;
@@ -93,6 +106,7 @@ class Mdl_users extends CI_Model
                 $this->setPassword(func_get_arg(2));
                 $this->setRoleId(func_get_arg(3));
                 $this->setUserFname(func_get_arg(4));
+                $this->setPhone(func_get_arg(5));
                 break;
             case "checkUser":
                 $this->setUserName(func_get_arg(1));
@@ -106,6 +120,7 @@ class Mdl_users extends CI_Model
                     $this->setUserName($data[0]['eduworkers_users_username']);
                     $this->setUserFname($data[0]['eduworkers_users_userfname']);
                     $this->setRoleId($data[0]['eduworkers_users_roles_id']);
+                    $this->setPhone($data[0]['eduworkers_users_phone']);
                     $role_name = $this->db->where(array('eduworkers_roles_id' => $this->role_id))->select('eduworkers_roles_name')->get('eduworkers_roles')->result_array();
                     $this->setRolesName($role_name[0]['eduworkers_roles_name']);
                     $this->permissions_name = array();
@@ -261,7 +276,8 @@ class Mdl_users extends CI_Model
                     'eduworkers_users_userfname' => $this->user_fname,
                     'eduworkers_users_username' => $this->user_name,
                     'eduworkers_users_password' => $this->password,
-                    'eduworkers_users_roles_id' => $this->role_id
+                    'eduworkers_users_roles_id' => $this->role_id,
+                    'eduworkers_users_phone'    => $this->phone
                 ];
                 if ($this->db->insert('eduworkers_users', $data)) {
                     return true;
