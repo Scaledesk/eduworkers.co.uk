@@ -142,14 +142,14 @@
         <script type="text/javascript">
 setTimeout(function() {
     $('#notification1').fadeOut('fast');
-}, 5000); 
+}, 3500); 
 
         </script>         
 
  <script type="text/javascript">
 setTimeout(function() {
     $('#notification').fadeOut('fast');
-}, 5000); 
+}, 3500); 
         </script> 
 
       <?php

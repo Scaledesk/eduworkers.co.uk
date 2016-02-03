@@ -54,7 +54,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="EUR €" onClick="getResults()" id="4"/>
+                <input type="radio"  name="flag" value="GBP ₤" onClick="getResults()" id="4"/>
                 <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Other Country</span>
@@ -328,6 +328,15 @@
                       </div>
                     </div>
 
+<!-- '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' -->
+                   <div class="row"> 
+                    <div class="text-center" style="margin-left: 5.2%;">
+                        
+
+                            <button class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price">Next Step Order-Details</button>
+                             </div>
+                   </div>
+<!-- ......................................................................................................... -->
             
 
                   </div>
@@ -346,7 +355,7 @@
 
                             <div id="aud" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->GBP ₤</div>
                             <div id="eur" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD" -->AUD $ </div>
-                            <div id="usa" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->EUR €</div>
+                            <div id="usa" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->GBP ₤</div>
                              
                             
                           </div> 

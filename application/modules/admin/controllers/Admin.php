@@ -151,6 +151,7 @@ public function orderDetails($id){
 
   if(isAdmin()){
       $data['order']=$this->Mdl_admin->orderDetails($id);
+      
     $data['active']=5;
 
           $this->load->view('header',$data);

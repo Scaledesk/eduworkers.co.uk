@@ -178,9 +178,12 @@ public function getUsers(){
 public function orderDetails($id){
 
                
-                $this->db->where('eduworkers_products_id',$id); 
-                 return $this->db->get('eduworkers_products')->result_array();
-                          
+                $this->db->where('eduworkers_products_users_id',$id); 
+                  $data=$this->db->get('eduworkers_products')->result_array();
+                  /*echo "<pre/>";
+                print_r($data);die;
+*/
+                return $data;          
                  
 }
 
