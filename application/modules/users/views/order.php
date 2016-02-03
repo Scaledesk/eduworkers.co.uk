@@ -24,17 +24,17 @@
               <div class="row flags_edu">
                 <div class="col-xs-6 col-md-3 col-sm-3">     
                  <label style="text-align:center;">
-                <input type="radio"  name="flag" value="USD" onClick="getResults()" id="1"/>
+                <input type="radio"  name="flag" value="USD $" onClick="getResults()" id="1"/>
                 <img src="<?php echo base_url();?>assets/media/us_flag.png" width=120 height=80 >
                 <br>
-                <span style="margin-bottom: 5px;">United States</span>
+                <span style="margin-bottom: 5px;">United States</span>   
               </label>
 
               </div>
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="GBP" onClick="getResults()" id="2"/>
+                <input type="radio"  name="flag" value="GBP ₤" onClick="getResults()" id="2"/>
                 <img src="<?php echo base_url();?>assets/media/australia.jpeg" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">United Kingdom</span>
@@ -44,7 +44,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="AUD" onClick="getResults()" id="3"/>
+                <input type="radio"  name="flag" value="AUD $" onClick="getResults()" id="3"/>
                 <img src="<?php echo base_url();?>assets/media/uk_flag.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Australia</span>
@@ -54,7 +54,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="EUR" onClick="getResults()" id="4"/>
+                <input type="radio"  name="flag" value="EUR €" onClick="getResults()" id="4"/>
                 <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Other Country</span>
@@ -342,7 +342,7 @@
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
                           <div class="col-md-6">
-                            <div id="usd" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> --> USD $</div> 
+                            <div id="usd"  class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> --> USD $</div> 
 
                             <div id="aud" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD"> -->GBP ₤</div>
                             <div id="eur" style="display:none" class="form-control"><!-- <input class="form-control" type="text" readonly name="currency" placeholder="USD" -->AUD $ </div>

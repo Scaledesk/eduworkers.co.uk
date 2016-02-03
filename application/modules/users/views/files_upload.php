@@ -77,13 +77,8 @@
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
                           <div class="col-xs-6">
-                            <select class="form-control">
-                              <option>GBP&nbsp;&#8356;</option>
-                              <option>USD&nbsp;&#36;</option>
-                              <option>AUD&nbsp;&#36;</option>
-                              <option>EUR&nbsp;&#128;</option>
-                              
-                            </select>
+                            
+                            <input type="text" readonly class="form-control" value="<?php echo $this->session->userdata('user_products')['flag'];?>">
                             
                           </div>
                           <div class="col-xs-6">
