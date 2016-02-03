@@ -169,9 +169,9 @@ class Mdl_users extends CI_Model
 
             }
              case'update_profile':{
-                $this->setUserName(func_get_arg(1));
+               
+                $this->setPhone(func_get_arg(1));
                 $this->setUserFname(func_get_arg(2));
-                $this->setPassword(func_get_arg(3));
 
 
                 break;
@@ -305,10 +305,11 @@ class Mdl_users extends CI_Model
                  case 'update_profile':
                 $this->_validate('update_profile');
                 $data = [
-                    'eduworkers_users_username' => $this->user_name,
+                    'eduworkers_users_phone' => $this->phone,
                     'eduworkers_users_userfname' => $this->user_fname
                    
                 ];
+                // print_r($data);die;
                  $this->db->where('eduworkers_users_id',$this->session->userdata['user_data']['user_id']);
 
                 if ($this->db->update('eduworkers_users', $data)) {
@@ -395,7 +396,7 @@ public function hasUser(){
             }
                 break;
                  case'update_profile': {
-                $this->setUserName($this->security->xss_clean($this->getUserName()));
+                $this->setPhone($this->security->xss_clean($this->getPhone()));
                 $this->setUserFname($this->security->xss_clean($this->getUserFname()));
             }
                 break;

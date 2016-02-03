@@ -112,16 +112,17 @@ public function setData(){
 
 public function password(){
 $data = $this->db->where(array('eduworkers_users_id' =>$this->session->userdata['user_data']['user_id']))->select('eduworkers_users_password')->get('eduworkers_users')->result_array();
-/*echo $this->db->last_query();
-print_r($data);die;*/
+// echo $this->db->last_query();
+// print_r($data);die; 
 if($data) {
- /*print_r($data);die;*/
+ //    echo $this->new_pass;
+ // print_r($data);die;
 if (password_verify($this->old_pass, $data[0]['eduworkers_users_password'])){
  $this->setNewPass(password_hash($this->new_pass, PASSWORD_DEFAULT));
 
   $data=['eduworkers_users_password'=>$this->new_pass] ;     
   
-  /*print_r($data);die;*/
+  // print_r($data);die;
  $this->db->where('eduworkers_users_id',$this->session->userdata['user_data']['user_id'])->update('eduworkers_users',$data);
 
   if ($this->db->affected_rows('eduworkers_users')) {

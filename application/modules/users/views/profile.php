@@ -27,9 +27,10 @@
       
       <div class="tabbable tabs-left profile_sidebar">
         <ul class="nav nav-tabs edu-side-box">
-          <li><a href="#a" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
-          <li class="active"><a href="#b" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Setting</a></li>
-          <li><a href="#c" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;&nbsp;&nbsp;&nbsp;History</a></li>
+          <li class="active"><a href="#a" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
+          <li ><a href="#b" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Setting</a></li>
+          <li ><a href="#c" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Password Update</a></li>
+          <li><a href="#d" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;&nbsp;&nbsp;&nbsp;History</a></li>
         </ul>
         </div>
       </div>
@@ -44,11 +45,39 @@
              
                
              </div>
+             <div class="col-md-6 edu-half">
+              <input class="form-control" type="text" readonly placeholder="Phone"  value="<?php echo $profile[0]['eduworkers_users_phone']; ?>"required="">
+               
+
+             </div>
            </div>
          </div>
-         <div class="tab-pane col-md-12" id="b">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
-         Aliquam in felis sit amet augue.</div>
-         <div class="tab-pane col-md-12" id="c">
+         <div class="tab-pane col-md-12" id="b">
+
+
+                <form action="<?php echo base_url().'users/profile' ?>" method="post">
+                <input class="form-control" type="text"  name="fname" placeholder="Usser Name" value="<?php echo $profile[0]['eduworkers_users_userfname']; ?>" required="">
+              
+      
+               <input class="form-control" type="text"  name="phone" placeholder="Phone"  value="<?php echo $profile[0]['eduworkers_users_phone']; ?>"required="">
+               <input class="btn btn-info" type="submit" value="update">
+               </form>
+
+       </div>
+       <div class="tab-pane col-md-12" id="c">
+
+
+                <form action="<?php echo base_url().'users/passwordUpdate' ?>" method="post">
+                <input class="form-control" type="text"  name="old_pass" placeholder="Old Password" required="" >
+              
+                <input class="form-control" type="text"  name="new_pass" placeholder="New Password" id="pass" required="">
+              
+               <input class="form-control" type="text"  name="c_pass" placeholder="Conform Password" id="passcof" onchange="myFunction()" required="">
+               <input class="btn btn-info" type="submit" value="update">
+               </form>
+
+       </div>
+         <div class="tab-pane col-md-12" id="d">
           <div class="table-responsive">
         <table class="table" id="example" class="display" cellspacing="0" width="100%">
         <thead>
@@ -90,3 +119,25 @@
             </div> <!--end of row-->
           </div> <!--end container-->
         </section> <!--section end-->
+
+
+        <script>
+function myFunction() {
+
+    var pass = document.getElementById('pass').value;
+     var cpass = document.getElementById('passcof').value;
+     /*alert(cpass);
+     alert(pass);*/
+     if(pass==cpass){
+
+return true;
+
+     }
+     else{
+       alert('password not match ');
+       document.getElementById("passcof").focus();
+     }
+
+   // x.value = xx.value.toUpperCase();
+}
+</script>

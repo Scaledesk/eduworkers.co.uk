@@ -16,7 +16,7 @@ class Users extends MX_Controller{
        
         $this->load->Model('Mdl_users');
         
-      
+        $this->load->Model('admin/Mdl_admin');
     }
     /**
      * this is the index method the landing page for all operations
@@ -396,10 +396,17 @@ public function login()
 
             if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
            $data=$this->input->post();
-           $this->Mdl_users->setData('update_profile',$data['email'],$data['fname']);
+           $this->Mdl_users->setData('update_profile',$data['phone'],$data['fname']);
+
+           $this->Mdl_users->register('update_profile')?setInformUser('success',"updated successfully"):setInformUser('error',"Some Error Occurred");
+           redirect(base_url('users/profile/'));
+
+
+
+           
 
          }
-                else{
+          else{
                      $data['products']=$this->Mdl_users->showProduct();
                     $data['profile']=$this->Mdl_users->getProfile();
                    /* print_r( $data['profile']);
@@ -1114,4 +1121,25 @@ public function engineeringProjects(){
   $this->load->view('engineering_projects');
   $this->load->view('header/footer');
 }
+
+
+
+public function passwordUpdate(){
+
+ 
+     $data=$this->input->post();
+      $this->Mdl_admin->setData('password',$data['new_pass'],$data['old_pass']);
+
+      if ($this->Mdl_admin->password()) {
+                    setInformUser('success','your password has been successfully updated.');
+                    redirect(base_url('users/profile/'));
+      }else{
+        setInformUser('error','password does not match old password');
+                    redirect(base_url('users/profile/'));
+      }
+
+
+
+}
+
 }
