@@ -790,5 +790,11 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 	margin: 0 auto !important; 
 }
 
+.error_msg{
 
+	color:  orange;
+	font-size: 16px;
+	margin-bottom: 10px;
+
+}
 

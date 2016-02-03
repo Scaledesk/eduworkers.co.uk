@@ -8,7 +8,7 @@
                     <h1 class="text-center custom_title">Login In</h1>
                     <form action="<?php echo base_url().'users'; ?>" method="post">
 
-                      
+                      <div class="row error_msg">  <?php  echo getInformUser(); ?>  </div>
                         <div class="form-group form-group-icon-left">
                             <!-- <label>Username or email</label> -->
                             <input class="custom-input_class" name="email"  required placeholder="Your Email" type="email" />

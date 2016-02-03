@@ -159,16 +159,16 @@ public function login()
                
             }else{
                 //set flash message that his username and password do not match try again.
-                setInformUser('error','your Username and password do not match');
+                setInformUser('error','Your Username and password do not match. Please try again.');
                 redirect(base_url('users/login'));
             }
         }else{
-            setInformUser('error','Your Account in not activated. Kindly verify your email to logon.');
+            setInformUser('error','Your Account in not activated. Kindly verify your email to login.');
             redirect(base_url('users/login'));
         }
       }
       else{
-            setInformUser('error','Your email not register.Please at first  register email .');
+            setInformUser('error','Your email is not registered with us. <br> Please register email using the Signup process.');
             redirect(base_url('users/login'));
         }
 
@@ -184,16 +184,16 @@ public function login()
             
             if($this->sendMail()){  
                 $this->Mdl_users->insertToken();
-                 setInformUser('success','your account successfully created and  Active link on your Email');
+                 setInformUser('success','Your account is created successfully.<br> Please check your mail for account activation/');
                 redirect(base_url('users'));
             }else{
-                 setInformUser('error','Account registered but email not send.');
+                 setInformUser('error','Account registered but email not sent. Please try again.');
                
                 redirect(base_url('users/signup'));
             }
         }
         }else{
-            setInformUser('error','Email Allready  registered .');
+            setInformUser('error','Email Allready registered. Please Login. ');
 
             redirect(base_url('users/signup'));
         }
@@ -266,7 +266,7 @@ public function login()
 
                         redirect(base_url('users'));
                     }else{
-                        setInformUser('error','Some error Occurred! Kindly retry');
+                        setInformUser('error','Some error Occurred ! Kindly retry. ');
                         redirect(base_url('users'));
                     }
                 } else {
@@ -275,7 +275,7 @@ public function login()
                     
                 }
             }else{
-                setInformUser('error','No such email found in our records. Kindly register with us');
+                setInformUser('error','No such email found in our records. Kindly register with us.');
                   redirect(base_url('users'));
             }
         }
@@ -297,7 +297,7 @@ public function login()
                 $this->Mdl_users->setData('pass', $pass);
                 if($this->Mdl_users->forgotPwd('update_pass', $pass)){
                     $this->removeToken();
-                    setInformUser('success','Your password updated successfully! kindly login with new password to continue.');
+                    setInformUser('success','Your password updated successfully ! Please login with the new password to continue.');
                     redirect(base_url('users'));
                 };
             } else {
@@ -364,7 +364,7 @@ public function login()
 
         $token=$this->input->post_get('tqwertyuiasdfghjzxcvbn');
         $this->Mdl_users->setData('token',$token);
-        $this->Mdl_users->verifyEmail()?setInformUser('success',"email verified successfully"):setInformUser('error',"Your token has expired");
+        $this->Mdl_users->verifyEmail()?setInformUser('success',"Your email verified successfully.<br> You can now login."):setInformUser('error',"Your token has expired");
         redirect(base_url('users'));
     }
 

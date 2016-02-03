@@ -17,12 +17,12 @@
                             <!-- <label>Username or email</label> -->
                             <input class="custom-input_class" placeholder="Your Email" required name="email" type="email" />
                         </div>
-                         <div class="form-group form-group-icon-left">
+                         <div class="form-group form-group-icon-left"> 
                             <!-- <label>Username or email</label> -->
-                            <input class="custom-input_class" placeholder="Phone No." required name="phone" type="text" maxlength="10"/>
+                            <input class="custom-input_class" placeholder="Phone No." id="phone"title="Your Phone Number" required name="phone" type="text" maxlength="12"/>
                         </div>
                         <div class="form-group form-group-icon-left">
-                            <!-- <label>Password</label> -->
+                                                    <!-- <label>Password</label> -->
                             <input class="custom-input_class" type="password" id="password" name="password" required  placeholder="Password" />
                         </div>
                    
@@ -65,8 +65,13 @@ function myFunction() {
      var cpass = document.getElementById('passcof').value;
    
       var passlength = pass.length;
+
+    var phone=document.getElementById('phone');
+   
+ var phoneno = /^\(?([0-9]{3})\)?[-.+ x ]?([0-9]{3})[-.+ x ]?([0-9]{4})$/;  
+
+  if(phone.value.match(phoneno)) { 
     
-     
      if(pass==cpass){
 
     if(passlength<=4){
@@ -90,7 +95,33 @@ function myFunction() {
        document.getElementById("passcof").focus();
        return false;
      }
-
+   
+    }  
+   else  
+     {  
+       alert("Not a valid Phone Number");  
+       return false;  
+     }
+  
    // x.value = xx.value.toUpperCase();
 }
 </script>
+
+
+<!-- 
+<script type="text/javascript">
+function phonenumber()  
+{  
+ var pass=document.getElementById('phone');
+ var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+  if(pass.value.match(phoneno)) { 
+
+       return true;        
+     }  
+   else  
+     {  
+       alert("Not a valid Phone Number");  
+       return false;  
+     }  
+}  
+</script> -->
