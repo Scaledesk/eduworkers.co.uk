@@ -120,7 +120,7 @@ class Mdl_users extends CI_Model
                     $this->setUserName($data[0]['eduworkers_users_username']);
                     $this->setUserFname($data[0]['eduworkers_users_userfname']);
                     $this->setRoleId($data[0]['eduworkers_users_roles_id']);
-                    $this->setPhone($data[0]['eduworkers_users_phone']);
+                    //$this->setPhone($data[0]['eduworkers_users_phone']);
                     $role_name = $this->db->where(array('eduworkers_roles_id' => $this->role_id))->select('eduworkers_roles_name')->get('eduworkers_roles')->result_array();
                     $this->setRolesName($role_name[0]['eduworkers_roles_name']);
                     $this->permissions_name = array();
