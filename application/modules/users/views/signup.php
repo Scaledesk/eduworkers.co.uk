@@ -68,8 +68,11 @@ function myFunction() {
 
     var phone=document.getElementById('phone');
    
- var phoneno = /^\(?([0-9]{3})\)?[-.+ x ]?([0-9]{3})[-.+ x ]?([0-9]{4})$/;  
+ /*var phoneno = /^\(?([0-9]{3})\)?[-.+ x ]?([0-9]{3})[-.+ x ]?([0-9]{4})$/; */ 
+ var phoneno = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
 
+
+ 
   if(phone.value.match(phoneno)) { 
     
      if(pass==cpass){

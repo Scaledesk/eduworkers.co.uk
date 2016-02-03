@@ -30,7 +30,8 @@
           <li class="active"><a href="#a" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
           <li ><a href="#b" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Setting</a></li>
           <li ><a href="#c" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;Password Update</a></li>
-          <li><a href="#d" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;&nbsp;&nbsp;&nbsp;Order Management</a></li>
+          <li><a href="#d" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;&nbsp;&nbsp;&nbsp;Query</a></li>
+          <li><a href="#e" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-history"></i>&nbsp;&nbsp;&nbsp;&nbsp;Order Management</a></li>
         </ul>
         </div>
       </div>
@@ -77,12 +78,26 @@
                </form>
 
        </div>
-         <div class="tab-pane col-md-12" id="d">
+       <div class="tab-pane col-md-12" id="d">
+
+
+                <form action="<?php echo base_url().'users/Profile_query' ?>" method="post">
+                <input class="form-control" type="text"  name="old_pass" placeholder="Subjects" required="" >
+              
+              
+                <textarea class="form-control" name="text" required="" placeholder=" Details"></textarea>
+              
+                  <input  type="file"  name="upload">
+                 <input class="btn btn-info" type="submit" value="Query">
+               </form>
+
+       </div>
+         <div class="tab-pane col-md-12" id="e">
           <div class="table-responsive">
         <table class="table" id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th class="edu_custom_thead">Product Id</th>
+                <th class="edu_custom_thead">Order Id</th>
                 <th class="edu_custom_thead">Service Name </th>
                 <th class="edu_custom_thead">Total Price</th>
                 <th class="edu_custom_thead">Status</th>
