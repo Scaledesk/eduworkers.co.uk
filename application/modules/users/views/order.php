@@ -329,28 +329,7 @@
                     </div>
 
             
-                      
-            <div class="row">
-              <div class="col-md-12">
-              <h1 class="text-center">Choose Your Upgrade option</h1>
-              <p>Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum</p>
-              </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md-4">
-                  <h3 class="text-center">Upgrade to our elite Service</h3>
-                  
-                </div>
-                <div class="col-md-8">
-                       <select class="form-control" >
-                         <option value="" >Select</option>
-                          <option>Categorie 1</option>
-                          <option>Categorie 2</option>
-                          <option>Categorie 3</option>
-                        </select>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
