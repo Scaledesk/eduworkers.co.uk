@@ -107,8 +107,8 @@
                         </select>
                       
                       <!-- end jelect -->
-                      <input class="form-control" type="text" required="" name="phone" placeholder="Phone Number "> 
-                      <input class="form-control" type="email" required="" placeholder="Email " name="email">
+                      <input class="form-control" type="text" required="" name="phone" placeholder="Phone Number " style="color: #000;"> 
+                      <input class="form-control" type="email" required="" placeholder="Email " name="email" style="color: #000;">
                       
 
                         <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">

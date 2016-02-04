@@ -981,10 +981,13 @@ li.advantages__item {
 .accordion .panel .icon {
 	float: right;
 	width: 45px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 300;
 	background-color: transparent;
 	text-align: center;
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
 }
 .accordion .panel-heading .collapsed .btn-collapse {
 	background-color: transparent;
@@ -992,12 +995,12 @@ li.advantages__item {
 .accordion .btn-collapse .icon:before {
 	font-family: Montserrat , arial ;
 	font-style: normal;
-	content: '-';
+	content: '\25b2';
 }
 .accordion .btn-collapse.collapsed .icon:before {
 	font-family: Montserrat , arial ;
 	font-style: normal;
-	content: '+';
+	content: '\25bc';
 }
 .accordion .panel-title.panel-passive {
 	color: #222;

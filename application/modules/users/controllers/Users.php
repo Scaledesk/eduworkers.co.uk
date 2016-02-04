@@ -1142,4 +1142,11 @@ public function passwordUpdate(){
 
 }
 
+public function faq (){
+
+   $this->load->view('header/header');
+  $this->load->view('faq');
+  $this->load->view('header/footer');
+}
+
 }

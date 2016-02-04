@@ -797,4 +797,37 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 	margin-bottom: 10px;
 
 }
+.faq_heading{
+	margin: 30px 0 !important;
+}
 
+.faq_links{
+	margin: 20px 0;
+	list-style: none;
+	font-size: 18px;
+	background-color: #f7f7f7;
+}
+
+.faq_links ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+.faq_links ul li{
+	margin: 20px 0;
+	text-align: center;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	padding: 5px;
+
+}
+
+
+
+
+.section-default_custom{
+	margin: 0;
+}
+#edu_faq{
+	margin: 80px 0;
+	text-align: center;
+}

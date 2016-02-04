@@ -94,7 +94,7 @@
                         <li><a href="#">Career as a writer</a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown"> <a href="javascript:void(0);">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
+                    <li class="dropdown"> <a href="<?php echo base_url().'users/faq'; ?>">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
 
                     </li>
 
