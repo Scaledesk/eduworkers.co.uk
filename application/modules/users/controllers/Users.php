@@ -1155,8 +1155,8 @@ public function profileQuery(){
        $message=$this->load->view('profile_quote',$data,TRUE);
 
         $config ['upload_path'] = 'uploads/';
-        $config ['allowed_types'] = 'docx|pdf|ppt|doc|pptx'; 
-        $config['max_size']      = 2000;
+        $config ['allowed_types'] = 'docx|pdf|ppt|doc|pptx|pdf|jpeg|png'; 
+        $config['max_size']      = 5000;
         $config ['encrypt_name'] = TRUE;
 
       
@@ -1166,6 +1166,7 @@ public function profileQuery(){
           
                  $error = array('error' => $ci->upload->display_errors());
                 setInformUser('error', $error['error'].' please import  file formate only');
+                redirect(base_url('users/profile'));
                
 
           }else{
