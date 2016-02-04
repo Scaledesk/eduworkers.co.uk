@@ -81,13 +81,13 @@
        <div class="tab-pane col-md-12" id="d">
 
 
-                <form action="<?php echo base_url().'users/Profile_query' ?>" method="post">
-                <input class="form-control" type="text"  name="old_pass" placeholder="Subjects" required="" >
+                <form action="<?php echo base_url().'users/profileQuery' ?>" method="post" enctype="multipart/form-data">
+                <input class="form-control" type="text"  name="subject" placeholder="Subjects" required="" >
               
               
-                <textarea class="form-control" name="text" required="" placeholder=" Details"></textarea>
+                <textarea class="form-control" name="query" required="" placeholder=" Details"></textarea>
               
-                  <input  type="file"  name="upload">
+                  <input class="form-control" type="file"  name="uploadfile" > 
                  <input class="btn btn-info" type="submit" value="Query">
                </form>
 

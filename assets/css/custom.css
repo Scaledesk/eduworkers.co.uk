@@ -627,11 +627,11 @@
 	
 }
 
-input[type='file']
+/*input[type='file']
 {
 display:none;
 }
-
+*/
 /*
 .flags_edu .img-responsive, .flags_edu img {
     height:90px !important;
