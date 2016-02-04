@@ -108,7 +108,7 @@
                     <li><a href="<?php echo base_url().'users/profile'; ?>" class="edu_active">Hi <?php 
                       
                      $arr = explode(' ',trim($this->session->userdata['user_data']['user_fname']));
-                      echo $arr[0];
+                      echo substr($arr[0],0,12);
 
                     ?>&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
                       <ul role="menu" class="dropdown-menu">
@@ -175,8 +175,12 @@ setTimeout(function() {
     }else if (getInformUser()){ 
       ?>
        <div class="notification" id="notification" >
-               <?php if (islogin()) {
+               <?php if ($this->session->userdata['login_first']==1) {
+
+                      $this->session->set_userdata('login_first',0);
+
                  ?><h3>Welcome User</h3>
+
              <?php } ?> 
             <p>   <?php  echo getInformUser(); ?> </p>
               </div>

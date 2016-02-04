@@ -204,6 +204,8 @@ public function login()
         switch(func_get_arg(0)){
             case 'authorize':   $this->session->set_userdata('authorize',true);
                 $this->session->set_userdata('user_data',func_get_arg(1));
+                 $this->session->set_userdata('login_first',1);
+                
                 break;
 
                case 'products':
