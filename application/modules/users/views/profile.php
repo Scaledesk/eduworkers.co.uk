@@ -83,7 +83,7 @@
 
                 <form action="<?php echo base_url().'users/profileQuery'; ?>" method="post" enctype="multipart/form-data">
                 <select class="form-control" name="order_id">
-                    <option>0</option>
+                    <option value="0">Order Id</option>
                    <?php  foreach ($products as $row) {
                
                 ?>
@@ -95,10 +95,10 @@
                 <input class="form-control" type="text"  name="subject" placeholder="Subjects" required="" >
               
               
-                <textarea class="form-control" name="query" required="" placeholder="Details"></textarea>
+                <textarea class="form-control" name="query" required="" rows="10" placeholder="Details"></textarea>
               
                   <input class="form-control" type="file"  name="uploadfile"/> 
-                 <input class="btn btn-info" type="submit" value="Query"/>
+                 <input class="btn btn-info" type="submit" value="Submit"/>
                </form>
 
        </div>
