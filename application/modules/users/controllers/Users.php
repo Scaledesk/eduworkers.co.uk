@@ -1142,11 +1142,95 @@ public function passwordUpdate(){
 
 }
 
+
 public function faq (){
 
    $this->load->view('header/header');
   $this->load->view('faq');
   $this->load->view('header/footer');
 }
+
+public function profileQuery(){
+
+  $data=$this->input->post();
+
+
+
+
+      $ci=CI::get_instance();
+/*
+  echo $data['upload']; die();*/
+
+   /*  $this->load->view('profile_quote',$data);*/
+       $message=$this->load->view('profile_quote',$data,TRUE);
+
+        $config ['upload_path'] = 'uploads/';
+        $config ['allowed_types'] = 'docx|pdf|ppt|doc|pptx|pdf|jpeg|png'; 
+        $config['max_size']      = 5000;
+        $config ['encrypt_name'] = TRUE;
+
+         $this->upload->initialize($config);
+
+         if($_FILES['uploadfile']['name']){
+
+             if(!$this->upload->do_upload ('uploadfile')){
+          
+                 $error = array('error' => $ci->upload->display_errors());
+                setInformUser('error', $error['error'].' please import  file formate only');
+                redirect(base_url('users/profile'));
+               
+
+          }else{
+                $admin_mail='nkscoder@gmail.com';
+                $this->email->from(setEmail(), 'Eduworkers');
+         
+                 $this->email->to($admin_mail);
+               $path =set_realpath('uploads'); 
+                $file = $this->upload->data();
+
+/*         echo $file['file_name'];
+        echo $path; die;*/
+
+        $this->email->subject('Query');
+        $this->email->message($message);
+        $this->email->attach($path.$file['file_name']);
+      if($this->email->send()){
+         setInformUser('success',"Send  Quote successfully");
+        redirect(base_url('users/profile'));
+      }else{
+         setInformUser('error',"Some Error Occurred.");
+        redirect(base_url('users/profile'));
+          }
+
+       }
+
+   }
+
+          else{
+         $admin_mail='nkscoder@gmail.com';
+         $this->email->from(setEmail(), 'Eduworkers');
+         
+        $this->email->to($admin_mail);       
+        $this->email->subject('Query');
+        $this->email->message($message);
+       
+       /*  echo $data['subject']; die;
+*/
+
+       if($this->email->send()){
+         setInformUser('success',"Send  Quote successfully");
+        redirect(base_url('users/profile'));
+      }else{
+         setInformUser('error',"Some Error Occurred.");
+        redirect(base_url('users/profile'));
+      }
+
+}
+    }
+
+
+
+ 
+
 
 }
