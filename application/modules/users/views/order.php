@@ -64,18 +64,7 @@
 
                <div class="row" id="c_text"> <p>please choose your country</p> </div>
 
-              <!--   <span>lorem ipsum</span>
-
-              <div id="test_2">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
-                  </div>
-
-                   <div id="test_3">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
-                  lorem ipsum lorem ipsum is a dummy text lorem ipsum lorem ipsum</div>
-              
-              <div id="test_4">lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum lorem ipsum lorem is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text lorem ipsum is a dummy text
-                 dummy text lorem ipsum lorem ipsum is a dummy text lorem ipsum is a dummy text </div> -->
-
-                  
+             
               
              
              </div>
@@ -148,7 +137,7 @@
                 <div class="col-md-8">
                       <div class="custom_class">
                       
-                          <select class="form-control" id="subjects" required name="subjects" onchange="loadamount(this)">
+                          <select class="form-control" id="subjects" required name="subjects" >
                            <option value="" >Select</option>
                             <option>Accounting</option>
                             <option>Aeronautics Engineering</option>
@@ -215,6 +204,17 @@
                             <option>Physics </option>
                             <option>Chemistry </option>
                             <option>Construction Engineering</option>
+                             <option>VHDL</option>
+                             <option>Analogue and Digital</option>
+                             <option>Programming </option>
+                             <option>Java</option>
+                             <option>Website Development</option>
+                             <option>Mobile Applications</option>
+                             <option>Database Management</option>
+                             <option>C Programming</option>
+                             <option>C Sharp Programming</option>
+                             <option>Python programming</option>
+                             <option>Computer Networking</option>
                           </select>
                       </div>
                       </div>
@@ -228,7 +228,7 @@
                       <div class="col-md-8">
                       <div class="custom_class">
                     
-                        <select class="form-control" id="grade" required name="grade" onchange="loadamount(this)">
+                        <select class="form-control" id="grade" required name="grade" onchange="loadamount(this)" onchange="ShowHideDiv(this)">
                             <option value="" >Select</option>
                             <option value="gcse A">GCSE A Grade</option>  
                             <option  value="A grade A">A grade A</option>
@@ -247,7 +247,7 @@
                             <option value="Masters 2:1">Masters 2:1</option>
                             <option value="Masters 2:2">Masters 2:2</option>
                             <option value="Mphil Pass">Mphil Pass</option>
-                            <option value="PhD">PhD</option>
+                            <option value="PhD">PhD</option> 
                             <option value="GDL Pass">GDL Pass (Graduate Diploma in Law)</option>
                             <option value="GDL commendation">GDL commendation</option>
                             <option value="LPC Pass" >LPC Pass (Legal Practice Course)</option>
@@ -262,7 +262,7 @@
                     </div>
 
                      
-                     <div class="row" id="lengthshow">
+                     <div class="row" id="lengthshow" >
                        <div class="col-md-4">
                            <h3>Length</h3>
                        </div>
@@ -278,6 +278,59 @@
                       </div>
                     </div>
                       </div>
+
+
+
+                      <div class="row" id="lengthshow1" style="display:none" >
+                       <div class="col-md-4">
+                           <h3>Length</h3>
+                       </div>
+                     
+                     <div class="col-md-8">
+                      <div class="custom_class">
+                        <select class="form-control" id="length1" name="lenght1" onchange="loadamount(this)">
+                           <option value="" >Select</option>
+                           <?php $value=1000; for ($i=0; $i <30 ; $i++) { 
+                            
+                            ?>
+                            <option><?php echo $value;?></option>
+                            <?php $value=$value+1000; } ?>
+                            
+                          </select>
+                      </div>
+                    </div>
+                      </div>
+
+                      <div class="row" id="lengthshow2" style="display:none" >
+                       <div class="col-md-4">
+                           <h3>Length</h3>
+                       </div>
+                     
+                     <div class="col-md-8">
+                      <div class="custom_class">
+                        <select class="form-control" id="length2" name="lenght2" onchange="loadamount(this)">
+                                                      <option value="" >Select</option>
+                           <?php $value=1000; for ($i=0; $i <17 ; $i++) { 
+                            
+                            ?>
+                            <option><?php echo $value;?></option>
+                            <?php 
+                            if($value>=10000){
+                               $value=$value+10000; 
+                            }
+                           else{ $value=$value+1000; 
+                           }
+
+                          } ?>
+                             </select>
+                      </div>
+                    </div>
+                      </div>
+
+
+
+
+
 
                      <div class="row" style="display:none" id="slideshow">
                        <div class="col-md-4">
@@ -406,7 +459,8 @@
  <script>
               function loadamount(obj)
               {
-                
+               
+
                 var date=document.getElementById("date");
                 var date1 = date.options[date.selectedIndex].value;
 
@@ -426,7 +480,6 @@
                   month[10] = "November";
                   month[11] = "December";
 
-                 
 
                var d=month[newDate.getMonth()] + " - " + newDate.getDate() + " - " + newDate.getFullYear();
                document.getElementById("dateshow").innerHTML = d;
@@ -441,12 +494,32 @@
 
 
                 var grade=document.getElementById("grade");
-                 var grade1 = grade.options[grade.selectedIndex].value;
+                var grade1 = grade.options[grade.selectedIndex].value;
+ 
+              
 
                 var length=document.getElementById("length");
                  var length1 = length.options[length.selectedIndex].value;
-               
+               /*alert(32423);*/
 
+                 var lengthf=document.getElementById("length1");
+                 var lengthfr = lengthf.options[lengthf.selectedIndex].value;
+
+                 var lengthsc=document.getElementById("length2");
+                 var lengthsce = lengthsc.options[lengthsc.selectedIndex].value;
+
+                 var length6;
+                 
+                 if(length1){
+                 length6=length1;
+                 }else if(lengthfr){
+                  length6=lengthfr;
+                 }else {
+                  length6=lengthsce;
+                 }
+
+                 
+                /* alert(length6);*/
                 // var currency=document.getElementById("currency");
                 // var currency1 = currency.options[currency.selectedIndex].value;
 
@@ -456,7 +529,7 @@
                 /*alert(slide1);*/ 
                 /* alert(obj.value);*/
 
-                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length1,"date":date1,"slide":slide1};
+                var dd ={"services":services1,"grade":grade1,"subjects":subjects1,"length":length6,"date":date1,"slide":slide1};
                 /* alert(dd);*/
                    $.ajax({
                   'url' : "<?php echo base_url().'users/doOrder'; ?>",
@@ -499,48 +572,39 @@
 
 
 <script type="text/javascript">
-    function ShowHideDiv(obj) { services
+    function ShowHideDiv(obj) { 
     
         var services= document.getElementById("services").value;
-        /*alert(services);*/
-
-          if ( services == 'Powerpoint presentation')
+       
+      if ( services == 'Powerpoint presentation')
       {
 
         $("#slide")[0].setAttribute('required',true);
         $("#slideshow").show();
          $("#lengthshow").hide();
+         $("#lengthshow1").hide();
+         $("#lengthshow2").hide();
           $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#length2").removeAttr('required',true);
       }
-      else
+      else 
       {
        
         $("#length")[0].setAttribute('required',true);
         $("#lengthshow").show();
          $("#slideshow").hide();
+          $("#lengthshow1").hide();
+          $("#lengthshow2").hide();
           $("#slide").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#length2").removeAttr('required',true);
       }
-        /*var lengthshow = document.getElementById("lengthshow");
-        var slideshow = document.getElementById("slideshow");
-        slideshow.style.display = lengthshow.presentation ? "block" : "none";*/
+        
     }
 </script>
 
 
-<script type="text/javascript">
-/*$(document).ready(function(){
-
-    $('.').hide();
-
-$('#dropDown').change(function () {
-    $(this).find("option").each(function () {
-        $('#' + this.value).hide();
-    });
-    $('#' + this.value).show();
-
-});
-});*/
-</script>
 
 
 <script >
@@ -598,4 +662,150 @@ $(document).ready(function(){
 
     });
 });
+</script>
+
+
+
+<script>
+$(document).ready(function(){
+    $("#grade").change(function(){
+         var value=this.value;
+         var services = $( "#services" ).val();
+        
+         if(value=='Mphil Pass'){   
+          $("#length2")[0].setAttribute('required',true);
+          $("#lengthshow2").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+        }
+        else if(value=='PhD'){
+          $("#length2")[0].setAttribute('required',true);
+          $("#lengthshow2").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+
+        }
+        else if(services == 'Powerpoint presentation'){
+          $("#slide")[0].setAttribute('required',true);
+          $("#slideshow").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#lengthshow2").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#length2").removeAttr('required',true);
+
+        }
+        else{
+          $("#length")[0].setAttribute('required',true);
+          $("#lengthshow").show();
+          $("#lengthshow2").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length2").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+        }
+        
+    });
+
+   
+});
+</script>
+
+
+
+
+<script>
+    $(document).ready(function(){
+    $("#subjects").change(function(){
+         var value=this.value;
+
+        /* alert(1234);*/
+
+         if (value=='2D and 3D Modelling/Drawings' )
+         {
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         } 
+         else if(value=='CFD Analysis'){
+          window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Engineering Simulation'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Hyperworks'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Ansys'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='AutoCAD'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Solidworks'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }else if(value=='Material Selection'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }else if(value=='Mathematics'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Engineering Calculations'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='FEA Analsys'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='VHDL'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Analogue and Digital'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Java'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Information Technology'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Website Development' ){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Mobile Applications'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Database Management'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if( value=='C Programming'){
+             window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+          
+         }
+         else if(value=='C Sharp Programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Python programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Computer Networking'){
+          
+          window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         };
+        
+        
+    });
+
+   
+});
+
 </script>
