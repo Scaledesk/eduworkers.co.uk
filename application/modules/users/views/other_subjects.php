@@ -6,7 +6,7 @@
       <section class="section-default bg_custom">
         <div class="container">
           <div class="wrap-title">
-           <h1>Place Your Order Below</h1>
+           <h1>Get your custom quote here </h1>
          </div>
           <div class="row col-md-12" style="margin-bottom:25px;">
             <h4>
@@ -81,7 +81,7 @@
               <div class="text-center" style="margin-left: 5.2%;">
                         
 
-                  <button class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price">Order Now</button>
+                  <button class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price">Request Quote</button>
                              </div>
                    </div>
             </form>
