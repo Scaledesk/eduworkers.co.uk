@@ -175,13 +175,13 @@ setTimeout(function() {
     }else if (getInformUser()){ 
       ?>
        <div class="notification" id="notification" >
-               <?php if ($this->session->userdata['login_first']==1) {
+               <?php  if(islogin()){if  ($this->session->userdata['login_first']==1) {
 
                       $this->session->set_userdata('login_first',0);
 
                  ?><h3>Welcome User</h3>
 
-             <?php } ?> 
+             <?php }} ?> 
             <p>   <?php  echo getInformUser(); ?> </p>
               </div>
        
