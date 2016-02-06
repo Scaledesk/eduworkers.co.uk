@@ -96,8 +96,16 @@
               
               
                 <textarea class="form-control" name="query" required="" rows="10" placeholder="Details"></textarea>
-              
-                  <input class="form-control" type="file"  name="uploadfile"/> 
+                <div>
+              <label class="btn btn-primary btn-effect"> 
+                 
+                 <input class="form-control" type="file"  name="uploadfile"/> 
+                 <!--  <input type="file" name="files[]" multiple id="files" onchange="modalval(this)" /> -->
+                 
+                 Upload File 
+             
+             </label>
+                 </div> 
                  <input class="btn btn-info" type="submit" value="Submit"/>
                </form>
 

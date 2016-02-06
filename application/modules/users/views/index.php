@@ -97,7 +97,7 @@
                   <form class="find-course__form" action="<?php echo base_url().'users/getQuote'; ?>" method="post">
                     <div class="form-group edu_custom_space_for_input">
                       
-                          <select name="country" class="form-control" id="Country" required="">
+                          <select name="country" class="form-control" id="Country" required="" >
                             <option value="">Country</option>
                             <option>United States</option>
                             <option>United Kingdom</option>
@@ -107,12 +107,12 @@
                         </select>
                       
                       <!-- end jelect -->
-                      <input class="form-control" type="text" required="" name="phone" placeholder="Phone Number " style="color: #000;"> 
-                      <input class="form-control" type="email" required="" placeholder="Email " name="email" style="color: #000;">
+                      <input class="form-control" type="text" required="" name="phone"  placeholder="Phone Number " style="color: #000;"> 
+                      <input class="form-control" type="email" required=""  placeholder="Email " name="email" style="color: #000;">
                       
 
                         <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">
-                         <option value="">Services</option>
+                         <option value="">Services </option>
                          <option >Essay Writing Service</option>
                            <option>Dissertation writing service</option>
                             <option>Engineering Assignment</option>

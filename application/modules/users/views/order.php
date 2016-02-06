@@ -8,7 +8,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="wrap-title">
-                <form action="<?php echo base_url().'users/order'; ?>"method="post">
+                <form action="<?php echo base_url().'users/order'; ?>"method="post" onsubmit="return formsubmit(this)"> 
 
                 <h1>Place Your Order Below</h1>
               <!-- end posts-wrap --> 
@@ -24,7 +24,7 @@
               <div class="row flags_edu">
                 <div class="col-xs-6 col-md-3 col-sm-3">     
                  <label style="text-align:center;">
-                <input type="radio"  name="flag" value="USD $" onClick="getResults()" id="1"/>
+                <input type="radio"  name="flag" value="USD $"  onClick="getResults()" id="1"/>
                 <img src="<?php echo base_url();?>assets/media/us_flag.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">United States</span>   
@@ -34,7 +34,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="GBP ₤" onClick="getResults()" id="2"/>
+                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults()" id="2"/>
                 <img src="<?php echo base_url();?>assets/media/australia.jpeg" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">United Kingdom</span>
@@ -44,7 +44,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="AUD $" onClick="getResults()" id="3"/>
+                <input type="radio"  name="flag" value="AUD $"  onClick="getResults()" id="3"/>
                 <img src="<?php echo base_url();?>assets/media/uk_flag.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Australia</span>
@@ -54,7 +54,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="GBP ₤" onClick="getResults()" id="4"/>
+                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults()" id="4"/>
                 <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80 >
                 <br>
                 <span style="margin-bottom: 5px;">Other Country</span>
@@ -65,7 +65,7 @@
                <div class="row" id="c_text"> <p>please choose your country</p> </div>
 
              
-              
+               <div id="flagdiv"> </div>
              
              </div>
 
@@ -604,20 +604,54 @@
     }
 </script>
 
-
-
+<!-- $(document).ready(function(){
+    $("#1").click(function(){
+        $("#c_text").html("You Have selected USA.");    
+          $("#usd").show();
+          $("#aud").hide(); 
+          $("#eur").hide();
+          $("#usa").hide();
+    });
+ -->
 
 <script >
-function showdate(obj){
- alert(32435);
-                var date=document.getElementById("date");
-                var date1 = date.options[date.selectedIndex].value;
+function formsubmit(obj){
+/*alert(23424);*/
 
-         var currentDate = new Date();
+                var flag1=document.getElementById("1").checked;
+                 var flag2=document.getElementById("2").checked;
+                  var flag3=document.getElementById("3").checked;
+                   var flag4=document.getElementById("4").checked;
+                   
+           /*  alert(flag1); 
+             return false; */ 
+  if(flag1==true){
+    alert(1);
+       return true; 
+  } else if(flag2==true){
+     alert(2);
+     return true; 
+  }
+  else if(flag3==true){
+     alert(3);
+     return true; 
+  }
+  else if(flag4==true){
+     alert(4);
+     return true; 
+  }else{
+/*     alert(5);*/
+
+     
+ return false; 
+     document.getElementById("flagdiv").innerHTML("Please Select Flag........"); 
     
-         document.getElementById('dateshow').innerHTML=currentDate.addDays(date1); 
+  }
+        
+    
+         
 
-         return true;  
+         
 
 }
 
