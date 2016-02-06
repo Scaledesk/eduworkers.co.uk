@@ -292,7 +292,7 @@
                    
                     <!-- end form-group -->
                     <div class="find-course__wrap-btn edu_custom_space">  
-                      <button class="btn btn-info btn-effect">SEARCH COURSE</button>
+                      <button class="btn btn-info btn-effect">Request Quote</button>
                     </div>
                   </form>
                 </section>
