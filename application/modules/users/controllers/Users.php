@@ -111,10 +111,13 @@ class Users extends MX_Controller{
     
 public function login()
     {
-       
-            $this->load->view('header/header');
+       if (!islogin()) {
+             $this->load->view('header/header');
              $this->load->view('login');
              $this->load->view('header/footer');
+           }else{
+           redirect(base_url('users'));
+           }
     }
     /**
      *return role of currently logged in user
