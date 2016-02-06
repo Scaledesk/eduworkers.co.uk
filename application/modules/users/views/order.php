@@ -65,12 +65,13 @@
                <div class="row" id="c_text"> <p>please choose your country</p> </div>
 
              
-               <div id="flagdiv"> </div>
+               
              
              </div>
 
                       <div class="space"></div> 
-                      
+
+                      <div id="flagdiv" > </div>
                        <div class="row">
                           <form action="<?php echo base_url().'users/order'; ?>"method="post">
                            <div class="col-md-4">
@@ -626,26 +627,26 @@ function formsubmit(obj){
            /*  alert(flag1); 
              return false; */ 
   if(flag1==true){
-    alert(1);
+   
        return true; 
   } else if(flag2==true){
-     alert(2);
+    
      return true; 
   }
   else if(flag3==true){
-     alert(3);
+    
      return true; 
   }
   else if(flag4==true){
-     alert(4);
+    
      return true; 
   }else{
-/*     alert(5);*/
+    
 
      
- return false; 
-     document.getElementById("flagdiv").innerHTML("Please Select Flag........"); 
-    
+ 
+     document.getElementById("flagdiv").innerHTML = "Please Select Flag........"; 
+   return false;  
   }
         
     
