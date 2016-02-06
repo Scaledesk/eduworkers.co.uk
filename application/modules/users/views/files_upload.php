@@ -113,8 +113,8 @@
           <div class="col-md-12 upload_progress_bar"> 
               
              <div class="progress">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-    <span class="sr-only">60% Complete (warning)</span>
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+   <!--  <span class="sr-only">60% Complete (warning)</span> -->
    
 
 
@@ -131,7 +131,7 @@
                              
              <label class="btn btn-primary btn-effect"> 
                  
-                  <input type="file" name="userfile[]" multiple id="userfile"/>
+                  <input class="js-file-upload" type="file" name="userfile[]" multiple id="userfile"/>
                  <!--  <input type="file" name="files[]" multiple id="files" onchange="modalval(this)" /> -->
                  
                  Upload File 
@@ -207,3 +207,89 @@ document.getElementById('userfileshow').value = filename;
 
 }
 </script>
+
+
+<!-- ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' -->
+
+<!-- <div class="progress progress-striped active">
+   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    </div>
+</div> -->
+ 
+      <!-- <input type="checkbox" name="done" class="done" value="100">
+    -->
+
+<script>
+$(document).ready(function(){
+
+$(".js-file-upload").on("change", function(e){
+
+ var files = e.target.files.length;
+ 
+  var valeur = 0;  
+
+ 
+    var max = 100;
+        
+        function update() {
+            if(files==10){
+            valeur += 1; 
+            }
+           
+            else if(files==9){
+               valeur += 1; 
+            }
+            else if(files==8){
+               valeur +=1 ; 
+            }
+            else if(files==7){
+               valeur += 4; 
+            }
+            else if(files==8){
+              valeur += 4; 
+            }
+            else if(files==7){
+              valeur += 4; 
+            }
+            else if(files==6){
+              valeur += 4; 
+            }
+            else if(files==5){
+              valeur += 10; 
+            }
+            else if(files==4){
+              valeur += 10; 
+            }
+            else if(files==3){
+              valeur += 20; 
+            }
+            else if(files==2){
+              valeur += 20; 
+            }
+            else if(files==1){
+              valeur += 25; 
+            }
+            else{
+              valeur += 1; 
+            }
+            
+            $("progress-bar").val(valeur);
+            if (valeur >= max) clearInterval(interval);
+         $('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur); 
+            
+           };
+        
+       
+         var interval = setInterval(update, 100);  
+          
+
+
+
+
+});
+
+/*     var interval = setInterval(update, 100); */
+});
+</script>
+
+<!-- ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' -->
