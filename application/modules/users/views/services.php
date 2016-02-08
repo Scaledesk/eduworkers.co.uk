@@ -342,7 +342,8 @@
           </div>
 
           <div class="col-md-12 text-center">
-            <a class="btn btn-primary btn-effect" href="javascript:void(0);">GET QUOTE</a>
+         <!--    <a class="btn btn-primary btn-effect" href="javascript:void(0);">GET QUOTE</a> -->
+            <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          
@@ -474,7 +475,7 @@
           </div>
 
           <div class="col-md-12 text-center">
-            <a class="btn btn-primary btn-effect" href="javascript:void(0);">GET QUOTE</a>
+             <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          
@@ -611,7 +612,7 @@
           </div>
 
           <div class="col-md-12 text-center">
-            <a class="btn btn-primary btn-effect" href="javascript:void(0);">GET QUOTE</a>
+            <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          

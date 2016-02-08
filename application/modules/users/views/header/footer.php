@@ -52,7 +52,8 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
                   <span class="tweets__time">9 hours ago</span> </div>
                 <a class="tweets__link" href="javascript:void(0);">Follow @Eduworkers</a> </section> -->
               <!-- end footer-section -->
-              <a class=" btn btn-warning btn-effect footer-btn" href="#">GET STARTED</a>
+           <!--    <a class=" btn btn-warning btn-effect footer-btn" href="#">GET STARTED</a> -->
+               <a class="btn btn-warning btn-effect footer-btn" href="<?php echo base_url().'users/order'; ?>">GET STARTED</a>
             </section>
           </div>
 
