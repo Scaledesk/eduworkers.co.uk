@@ -1,6 +1,6 @@
 
 
-    
+
       <div class="main-content">
         <div id="sliderpro1" class="slider-pro main-slider">
           <div class="sp-slides">
@@ -49,7 +49,7 @@
             <div class="row">
               <div class="col-sm-8">
                 <section class="section-advantages">
-                  <h2 class="ui-title-block ui-title-block_mod-a">“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. 
+                  <h2 class="ui-title-block ui-title-block_mod-a">“Eduworkers” is a pioneer in the realm of Innovative Academic Writing.
                     Since the inception of the company in 2009, we have achieved great heights in receiving international recognition and
                      acclaim. <a style="margin-left: 10px;" href="<?php echo base_url().'users/services';?>">READ MORE</a> </h2>
                   <!-- <div class="ui-subtitle-block ui-subtitle-block_mod-a">Having over 9 million students worldwide and more than 50,000 online courses available.</div> -->
@@ -88,7 +88,7 @@
                     </li>
                   </ul>
                 </section>
-                <!-- end section-advantages --> 
+                <!-- end section-advantages -->
               </div>
               <!-- end col -->
               <div class="col-sm-4">
@@ -96,7 +96,7 @@
                   <h2 class="find-course__title"><i class="icon stroke icon-Search"></i>Get Quote</h2>
                   <form class="find-course__form" action="<?php echo base_url().'users/getQuote'; ?>" method="post">
                     <div class="form-group edu_custom_space_for_input">
-                      
+
                           <select name="country" class="form-control" id="Country" required="" >
                             <option value="">Country</option>
                             <option>United States</option>
@@ -105,18 +105,18 @@
                             <option>Other Country</option>
 
                         </select>
-                      
+
                       <!-- end jelect -->
-                      <input class="form-control" type="text" required="" name="phone"  placeholder="Phone Number " style="color: #000;"> 
+                      <input class="form-control" type="text" required="" name="phone"  placeholder="Phone Number " style="color: #000;">
                       <input class="form-control" type="email" required=""  placeholder="Email " name="email" style="color: #000;">
-                      
+
 
                         <select name="services" class="form-control" id="services" required="" onchange="ShowHideDiv(this)">
                          <option value="">Services </option>
                          <option >Essay Writing Service</option>
                            <option>Dissertation writing service</option>
                             <option>Engineering Assignment</option>
-                             <option>Exam Revision</option> 
+                             <option>Exam Revision</option>
                              <option>Marking and Proofreading service</option>
                              <option>Dissertation proposal</option>
                              <option>Literature review</option>
@@ -134,84 +134,97 @@
 
 
                         </select>
-                        
-                        
+
+
                           <select class="form-control" id="subjects" required="" name="subject" name="subjects" onchange="loadamount(this)">
-                           <option value="">Subject</option> 
+                           <option value="">Subject</option>
                            <option>Accounting</option>
-                            <option>Aeronautics Engineering</option>
-                            <option>Law</option> 
-                            <option>Finance</option>
-                            <option>Electrical Engineering</option>
-                            <option>International Law</option>
-                            <option>Human Resource</option>
-                            <option>Electronics Engineering </option>
-                            <option>Islamic Law</option>
-                            <option>Marketing</option>
-                            <option>Computer Engineering</option>
-                            <option>Law and legal Studies</option>
-                            <option>Operations</option>
-                            <option>Mechanical Engineering </option>
-                            <option>Philosophy of Law</option>
-                            <option>Economics</option>
-                            <option>Automotive Engineering </option>
-                            <option>Intellectual Property Law</option>
-                            <option>Tourism </option>
-                            <option>Civil Engineering  </option>
-                            <option>European Law</option>
-                            <option>E-commerce</option>
-                            <option>FEA Analsys </option>
-                            <option>Civil litigation Law</option>
-                            <option>Total Quality Managment </option>
-                            <option>2D and 3D Modelling/Drawings  </option>
-                            <option>Commercial Law</option>
-                            <option>International Business </option>
-                            <option>CFD Analysis </option>
-                            <option>Commercial property law</option>
-                            <option>Information Technology</option>
-                            <option>Engineering Simulation </option>
-                            <option>Company law</option>
-                            <option>Business Management</option>
-                            <option>Hyperworks </option>
-                            <option>Business Law</option>
-                            <option>Foreign Investment</option>
-                            <option>Ansys </option>
-                            <option>Partnership law</option>
-                            <option>Psychology </option>
-                            <option>AutoCAD  </option>
-                            <option>comparative/conflict of law</option>
-                            <option>Portfolio Management </option>
-                            <option>Solidworks  </option>
-                            <option>Construction Law</option>
-                            <option>Mass Communication</option>
-                            <option>Material Selection  </option>
-                            <option>Contract Law</option>
-                            <option>Research Methodology</option>
-                            <option>Mathematics</option>
-                            <option>Criminal Law</option>
-                            <option>Information Systems</option>
-                            <option>Engineering Calculations </option>
-                            <option>Employment law</option>
-                            <option>Calculations </option>
-                            <option>Property Law</option>
-                            <option>Geological Engineering</option>
-                            <option>Environment  </option>
-                            <option>Biology  </option>
-                            <option>Biotechnology</option>
-                            <option>Medical </option>
-                            <option>Science</option>
-                            <option>Physics </option>
-                            <option>Chemistry </option>
-                            <option>Construction Engineering</option>
+                           <option>Aeronautics Engineering</option>
+                           <option>Law</option>
+                           <option>Finance</option>
+                           <option>Electrical Engineering</option>
+                           <option>International Law</option>
+                           <option>Human Resource</option>
+                           <option>Electronics Engineering </option>
+                           <option>Islamic Law</option>
+                           <option>Marketing</option>
+                           <option>Computer Engineering</option>
+                           <option>Law and legal Studies</option>
+                           <option>Operations</option>
+                           <option>Mechanical Engineering </option>
+                           <option>Philosophy of Law</option>
+                           <option>Economics</option>
+                           <option>Automotive Engineering </option>
+                           <option>Intellectual Property Law</option>
+                           <option>Tourism </option>
+                           <option>Civil Engineering  </option>
+                           <option>European Law</option>
+                           <option>E-commerce</option>
+                           <option>FEA Analsys </option>
+                           <option>Civil litigation Law</option>
+                           <option>Total Quality Managment </option>
+                           <option>2D and 3D Modelling/Drawings  </option>
+                           <option>Commercial Law</option>
+                           <option>International Business </option>
+                           <option>CFD Analysis </option>
+                           <option>Commercial property law</option>
+                           <option>Information Technology</option>
+                           <option>Engineering Simulation </option>
+                           <option>Company law</option>
+                           <option>Business Management</option>
+                           <option>Hyperworks </option>
+                           <option>Business Law</option>
+                           <option>Foreign Investment</option>
+                           <option>Ansys </option>
+                           <option>Partnership law</option>
+                           <option>Psychology </option>
+                           <option>AutoCAD  </option>
+                           <option>comparative/conflict of law</option>
+                           <option>Portfolio Management </option>
+                           <option>Solidworks  </option>
+                           <option>Construction Law</option>
+                           <option>Mass Communication</option>
+                           <option>Material Selection  </option>
+                           <option>Contract Law</option>
+                           <option>Research Methodology</option>
+                           <option>Mathematics</option>
+                           <option>Criminal Law</option>
+                           <option>Information Systems</option>
+                           <option>Engineering Calculations </option>
+                           <option>Employment law</option>
+                           <option>Calculations </option>
+                           <option>Property Law</option>
+                           <option>Geological Engineering</option>
+                           <option>Environment  </option>
+                           <option>Biology  </option>
+                           <option>Biotechnology</option>
+                           <option>Medical </option>
+                           <option>Science</option>
+                           <option>Physics </option>
+                           <option>Chemistry </option>
+                           <option>Construction Engineering</option>
+                            <option>VHDL</option>
+                            <option>Analogue and Digital</option>
+                            <option>Programming </option>
+                            <option>Java</option>
+                            <option>Website Development</option>
+                            <option>Mobile Applications</option>
+                            <option>Database Management</option>
+                            <option>C Programming</option>
+                            <option>C Sharp Programming</option>
+                            <option>Python programming</option>
+                            <option>Computer Networking</option>
+
+
                           </select>
-                        
-                        
-                        
-                         <select class="form-control" name="grade" required=""> 
+
+
+
+                         <select class="form-control" name="grade" required="">
                             <option value="">Grade</option>
-                            <option>GCSE A Grade</option>  
+                            <option>GCSE A Grade</option>
                             <option >A grade A</option>
-                            <option >GCSE B Grade</option> 
+                            <option >GCSE B Grade</option>
                             <option > NVQ level 2 (Pass)</option>
 
                             <option > NVQ level 2 (Merit)</option>
@@ -245,13 +258,13 @@
                             <option>Chemistry </option>
                             <option>Construction Engineering</option>
                           </select>
-                         
+
                        <div id="lengthshow">
                         <select class="form-control" name="word_count" id="length" required="">
                             <option value="">Word Count</option>
                              <option>1000</option>
                             <option>2000</option>
-                            <option>3000</option>  
+                            <option>3000</option>
                           </select>
                        </div>
 
@@ -261,23 +274,7 @@
                             <option value="">Slide No.</option>
                              <option>1</option>
                             <option>2</option>
-                            <option>3</option> 
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>  
-                          </select>
-                            </div>
-
-
-                          <select class="form-control" name="date" required="">
-                          <option value="">Delivery Date</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option> 
+                            <option>3</option>
                             <option>4</option>
                             <option>5</option>
                             <option>6</option>
@@ -286,27 +283,43 @@
                             <option>9</option>
                             <option>10</option>
                           </select>
-                        
-                          
-                         
-                   
+                            </div>
+
+
+                          <select class="form-control" name="date" required="">
+                          <option value="">Delivery Date</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+
+
+
+
                     <!-- end form-group -->
-                    <div class="find-course__wrap-btn edu_custom_space">  
+                    <div class="find-course__wrap-btn edu_custom_space">
                       <button class="btn btn-info btn-effect">Request Quote</button>
                     </div>
                   </form>
                 </section>
-                <!-- end find-course --> 
+                <!-- end find-course -->
               </div>
-              <!-- end col --> 
+              <!-- end col -->
             </div>
-            <!-- end row --> 
+            <!-- end row -->
           </div>
-          <!-- end section_mod-a__inner --> 
+          <!-- end section_mod-a__inner -->
         </div>
-        <!-- end container --> 
+        <!-- end container -->
       </div>
-    
+
 
           </div>
           <!-- end col -->
@@ -444,7 +457,7 @@
   </div>
   <!-- end section-progress-->
 
-  
+
   <!-- end post -->
   </div>
   <!-- end posts-wrap -->
@@ -469,7 +482,7 @@
             ensure 100% confidentiality of our client’s communication and assignment</p>
           <!--  <div class="ui-subtitle-block ui-subtitle-block_mod-c">Fusce eleifend donec apien sed phase lusa pellentesque lacus vamus lorem arcu semper duiac rasorn are vamus etiam ind arcu morbi justo mauris tempus pharetra.</div> -->
           <!-- <a class="btn btn-primary btn-effect" href="javascript:void(0);">ENROLL NOW</a> --></section>
-        <!--end section-default  
+        <!--end section-default
            </div>
           <!- end col -->
       </div>
@@ -478,7 +491,7 @@
     <!-- end container -->
 
   </div>
- 
+
   <!-- end post -->
   </div>
   <!-- end posts-wrap -->
@@ -490,7 +503,7 @@
   <!-- end container -->
   </section>
 
-  
+
   <!-- end section-video -->
 
   <section class="section-subscribe wow fadeInUp" data-wow-duration="2s">
@@ -685,7 +698,7 @@
 
 <script type="text/javascript">
     function ShowHideDiv(obj) {
-    
+
         var services= document.getElementById("services").value;
        /* alert(services);*/
 
@@ -699,12 +712,99 @@
       }
       else
       {
-       
+
         $("#length")[0].setAttribute('required',true);
         $("#lengthshow").show();
          $("#slideshow").hide();
           $("#slide").removeAttr('required',true);
       }
-       
+
     }
+</script>
+
+
+<script>
+    $(document).ready(function(){
+    $("#subjects").change(function(){
+         var value=this.value;
+
+        /* alert(1234);*/
+
+         if (value=='2D and 3D Modelling/Drawings' )
+         {
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='CFD Analysis'){
+          window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Engineering Simulation'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Hyperworks'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Ansys'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='AutoCAD'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Solidworks'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }else if(value=='Material Selection'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }else if(value=='Mathematics'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Engineering Calculations'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='FEA Analsys'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='VHDL'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if( value=='Analogue and Digital'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Java'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Information Technology'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Website Development' ){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Mobile Applications'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if(value=='Database Management'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+          else if( value=='C Programming'){
+             window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+
+         }
+         else if(value=='C Sharp Programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Python programming'){
+           window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         }
+         else if(value=='Computer Networking'){
+
+          window.location.replace("<?php echo base_url().'users/subjectQuery/'; ?>");
+         };
+
+
+    });
+
+
+});
+
 </script>
