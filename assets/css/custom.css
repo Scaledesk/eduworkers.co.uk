@@ -848,3 +848,10 @@ input
 :-ms-input-placeholder { color:#f00; } 
 input:-moz-placeholder { color:#f00; }
 */
+
+
+#flagdiv{
+	color: red;
+	font-size: 18px;
+	text-align: center;
+}

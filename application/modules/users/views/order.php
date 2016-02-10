@@ -11,17 +11,21 @@
                 <form action="<?php echo base_url().'users/order'; ?>"method="post" onsubmit="return formsubmit(this)"> 
 
                 <h1>Place Your Order Below</h1>
+
+
               <!-- end posts-wrap --> 
             </div>
           </div>
             <div class="col-md-8">
               <div class="section-1">
+
               <h1>Choose Your Country of Study</h1>
               <!-- <img src="assets/media/us_flag.png" alt=""/>
               <img src="assets/media/uk_flag.png" alt=""/>
               <img src="assets/media/australia.jpeg" alt=""/> -->
               <div class="width"></div>
               <div class="row flags_edu">
+                <div id="flagdiv"></div>
                 <div class="col-xs-6 col-md-3 col-sm-3">     
                  <label style="text-align:center;">
                 <input type="radio"  name="flag" value="USD $"  onClick="getResults()" id="1"/>
@@ -71,8 +75,7 @@
 
                       <div class="space"></div> 
 
-                      <div id="flagdiv" > </div>
-                       <div class="row">
+                         <div class="row">
                           <form action="<?php echo base_url().'users/order'; ?>"method="post">
                            <div class="col-md-4">
                               <h2>Choose Your Product</h2>
@@ -645,7 +648,7 @@ function formsubmit(obj){
 
      
  
-     document.getElementById("flagdiv").innerHTML = "Please Select Flag........"; 
+     document.getElementById("flagdiv").innerHTML = "Please Select Country..."; 
    return false;  
   }
         
