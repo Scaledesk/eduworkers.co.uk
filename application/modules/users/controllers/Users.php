@@ -925,11 +925,16 @@ die;*/
          $this->email->subject('Product Details');
          $this->email->message($message);
          if($this->email->send()){
-
+             if($this->confirmation()){
              setInformUser('success',' successfully Payment');
             
              $this->success($data);
              redirect(base_url('users/success'));
+         }
+         else{
+            setInformUser('error',' Some Error Occured !');
+             redirect(base_url('users/error'));
+         }
          }
          else{
 
@@ -949,6 +954,7 @@ die;*/
            $this->email->message($message);
         
        if($this->email->send()){
+        if($this->confirmation()){
 
         $admin_mail='nkscoder@yahoo.in';
         $this->email->from(setEmail(), 'Edu Workers');
@@ -979,7 +985,12 @@ else{
        setInformUser('success','Some Error Occurred');
        redirect(base_url('users/error'));
 }
-
+  }
+else{
+      
+       setInformUser('success','Some Error Occurred');
+       redirect(base_url('users/error'));
+}
  
  }
 }
@@ -990,6 +1001,18 @@ else{
       setInformUser('error', 'Some error Occurred ');
        redirect(base_url('users/error'));
   }
+}
+
+
+public function confirmation(){
+       $message_confirmation=$this->load->view('order_confirmation',$data,TRUE);    
+         $user_email=$this->session->userdata['user_data']['user_name'];
+         $this->email->from(setEmail(), 'EduWorkers');
+         $this->email->to($user_email);
+         $this->email->subject('Order Confirmation');
+         $this->email->message($message_confirmation);
+         return $this->email->send()?true:false;
+
 }
 
 
