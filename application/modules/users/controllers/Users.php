@@ -1005,7 +1005,7 @@ else{
 
 
 public function confirmation(){
-       $message_confirmation=$this->load->view('order_confirmation',$data,TRUE);    
+         $message_confirmation=$this->load->view('order_confirmation',TRUE);    
          $user_email=$this->session->userdata['user_data']['user_name'];
          $this->email->from(setEmail(), 'EduWorkers');
          $this->email->to($user_email);
