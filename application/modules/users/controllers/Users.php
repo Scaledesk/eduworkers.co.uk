@@ -1101,16 +1101,7 @@ public function getQuote(){
        
 
    $data=$this->input->post();
-   /* $phone=$data['phone'];
-    $name=$data['name'];
-    $email=$data['email'];
-    $date=$data['date'];
-     $country=$data['country'];
-      $services=$data['services'];
-       $subject=$data['subject']; 
-       $grade=$data['grade'];
-       $level=$data['level'];
-       $word_count=$data['word_count'];*/
+   
 
         $message=$this->load->view('quote',$data,TRUE);
         $admin_mail='nkscoder@gmail.com';
