@@ -81,7 +81,14 @@ class Mdl_admin extends CI_model
 
 
  public function showProduct(){
- 	return $this->db->get('eduworkers_products')->result_array();
+  
+       $data = $this->db->query("select * from eduworkers_users   join eduworkers_products on eduworkers_users.eduworkers_users_id=eduworkers_products.eduworkers_products_users_id")->result_array();
+  /*echo"<pre/>";
+  print_r($data);*/
+        return $data;
+    
+
+ 	
  }
 
 
