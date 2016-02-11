@@ -101,8 +101,9 @@
                             <option value="">Country</option>
                             <option>United States</option>
                             <option>United Kingdom</option>
+                            <option>Australia</option>
                             <option>Other Country</option>
-                            <option>Other Country</option>
+                           
 
                         </select>
 
