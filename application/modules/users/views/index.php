@@ -858,15 +858,16 @@ $(document).ready(function(){
          var value=this.value;
          var services = $( "#services" ).val();
         
-         if(value=='Mphil Pass'){   
-          $("#length2")[0].setAttribute('required',true);
-          $("#lengthshow2").show();
+         if(services == 'Powerpoint presentation'){
+          $("#slide")[0].setAttribute('required',true);
+          $("#slideshow").show();
           $("#lengthshow").hide();
           $("#lengthshow1").hide();
-          $("#slideshow").hide();
+          $("#lengthshow2").hide();
           $("#length").removeAttr('required',true);
           $("#length1").removeAttr('required',true);
-          $("#slide").removeAttr('required',true);
+          $("#length2").removeAttr('required',true);
+         
         }
         else if(value=='PhD'){
           $("#length2")[0].setAttribute('required',true);
@@ -879,16 +880,15 @@ $(document).ready(function(){
           $("#slide").removeAttr('required',true);
 
         }
-        else if(services == 'Powerpoint presentation'){
-          $("#slide")[0].setAttribute('required',true);
-          $("#slideshow").show();
+        else if (value=='Mphil Pass'){   
+          $("#length2")[0].setAttribute('required',true);
+          $("#lengthshow2").show();
           $("#lengthshow").hide();
           $("#lengthshow1").hide();
-          $("#lengthshow2").hide();
+          $("#slideshow").hide();
           $("#length").removeAttr('required',true);
           $("#length1").removeAttr('required',true);
-          $("#length2").removeAttr('required',true);
-
+          $("#slide").removeAttr('required',true);
         }
         else{
           $("#length")[0].setAttribute('required',true);
