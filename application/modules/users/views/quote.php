@@ -300,7 +300,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
-                       <p style=""><?php if($word_count){echo $word_count ;}else{ echo $slide;} ?></p>
+                       <p style=""><?php if($word_count){echo $word_count ;}elseif($word_count1){echo $word_count1;}elseif($word_count2){echo $word_count2;}else{ echo $slide;} ?></p>
                     </td>
                 </tr>
             </table>

@@ -220,7 +220,7 @@
 
 
 
-                         <select class="form-control" name="grade" required="">
+                         <select class="form-control" name="grade" id="grade" required="">
                             <option value="">Grade</option>
                             <option>GCSE A Grade</option>
                             <option >A grade A</option>
@@ -268,6 +268,47 @@
                           </select>
                        </div>
 
+                       <div class="row" id="lengthshow1" style="display:none" >
+                      
+                     
+                     <div class="col-md-12">
+                      <div class="custom_class">
+                        <select class="form-control" id="length1" name="word_count1" onchange="loadamount(this)">
+                            <option value="">Word Count</option>
+                           <?php $value=1000; for ($i=0; $i <30 ; $i++) { 
+                            
+                            ?>
+                            <option><?php echo $value;?></option>
+                            <?php $value=$value+1000; } ?>
+                            
+                          </select>
+                      </div>
+                    </div>
+                      </div>
+
+                      <div class="row" id="lengthshow2" style="display:none" >
+                       
+                     
+                     <div class="col-md-12">
+                      <div class="custom_class">
+                        <select class="form-control" id="length2" name="word_count2" onchange="loadamount(this)">
+                                                       <option value="">Word Count</option>
+                           <?php $value=1000; for ($i=0; $i <17 ; $i++) { 
+                            
+                            ?>
+                            <option><?php echo $value;?></option>
+                            <?php 
+                            if($value>=10000){
+                               $value=$value+10000; 
+                            }
+                           else{ $value=$value+1000; 
+                           }
+
+                          } ?>
+                             </select>
+                      </div>
+                    </div>
+                      </div>
 
                          <div style="display:none" id="slideshow">
                           <select class="form-control" name="slide"  id="slide" required="">
@@ -808,3 +849,60 @@
 });
 
 </script>
+
+
+<script>
+$(document).ready(function(){
+    $("#grade").change(function(){
+         var value=this.value;
+         var services = $( "#services" ).val();
+        
+         if(value=='Mphil Pass'){   
+          $("#length2")[0].setAttribute('required',true);
+          $("#lengthshow2").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+        }
+        else if(value=='PhD'){
+          $("#length2")[0].setAttribute('required',true);
+          $("#lengthshow2").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+
+        }
+        else if(services == 'Powerpoint presentation'){
+          $("#slide")[0].setAttribute('required',true);
+          $("#slideshow").show();
+          $("#lengthshow").hide();
+          $("#lengthshow1").hide();
+          $("#lengthshow2").hide();
+          $("#length").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#length2").removeAttr('required',true);
+
+        }
+        else{
+          $("#length")[0].setAttribute('required',true);
+          $("#lengthshow").show();
+          $("#lengthshow2").hide();
+          $("#lengthshow1").hide();
+          $("#slideshow").hide();
+          $("#length2").removeAttr('required',true);
+          $("#length1").removeAttr('required',true);
+          $("#slide").removeAttr('required',true);
+        }
+        
+    });
+
+   
+});
+</script>
+
