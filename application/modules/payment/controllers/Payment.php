@@ -18,22 +18,27 @@ class Payment extends CI_Controller
 
 	 function success(){
 	    //get the transaction data
-		$paypalInfo = $this->input->get();
-		  
-		$data['item_number'] = $paypalInfo['item_number']; 
-		$data['txn_id'] = $paypalInfo["tx"];
-		$data['payment_amt'] = $paypalInfo["amt"];
-		$data['currency_code'] = $paypalInfo["cc"];
-		$data['status'] = $paypalInfo["st"];
+		/*$paypalInfo = $this->input->get();
+		  print_r($paypalInfo);die;*/
+		/*$data['item_number'] = $paypalInfo['item_number']; 
+		 $data['txn_id'] = $paypalInfo["tx"];
+		 $data['payment_amt'] = $paypalInfo["amt"];
+		 $data['currency_code'] = $paypalInfo["cc"];
+		  $data['status'] = $paypalInfo["st"];*/
 		
 		
 
 		//pass the transaction data to view
-        $this->load->view('paypal/success', $data);
+		 $this->load->view('users/header/header'); 
+         $this->load->view('users/success');
+         $this->load->view('users/header/footer');
+
 	 }
 	 
 	 function cancel(){
+	 	$this->load->view('users/header/header');
         $this->load->view('paypal/cancel');
+        $this->load->view('users/header/footer');
 	 }
 	 
 	 function ipn(){
