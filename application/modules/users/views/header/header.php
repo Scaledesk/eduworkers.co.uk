@@ -9,7 +9,7 @@
   <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet">
   
   <script src="<?php echo  asset_url();?>/plugins/jquery/jquery-1.11.3.min.js"></script>
-  <script src="<?php echo  asset_url();?>/assets/jquery.scrollUp.js"></script>
+  <script src="<?php echo  asset_url();?>assets/jquery.scrollUp.js"></script>
   
    
 </head>

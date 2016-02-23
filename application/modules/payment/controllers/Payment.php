@@ -76,7 +76,7 @@ $product_id=1;
 		$paypalID = 'info@codexworld.com'; //business email */
 		$paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; //test PayPal api url
 		$paypalID = 'team.stabilis@gmail.com';
-		$returnURL = base_url().'payment/success'; //payment success url
+		$returnURL = base_url().'users/payment'; //payment success url
 		$cancelURL = base_url().'payment/cancel'; //payment cancel url
 		$notifyURL = base_url().'payment/ipn'; //ipn url
 		//get particular product data
