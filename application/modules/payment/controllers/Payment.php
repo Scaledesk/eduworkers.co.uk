@@ -67,8 +67,10 @@ $prics=$this->session->userdata['user_products']['total'];
 $product_id=1;
 /*die;*/
 		//Set variables for paypal form
+		/*$paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; //test PayPal api url
+		$paypalID = 'info@codexworld.com'; //business email */
 		$paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; //test PayPal api url
-		$paypalID = 'info@codexworld.com'; //business email
+		$paypalID = 'team.stabilis@gmail.com';
 		$returnURL = base_url().'payment/success'; //payment success url
 		$cancelURL = base_url().'payment/cancel'; //payment cancel url
 		$notifyURL = base_url().'payment/ipn'; //ipn url
