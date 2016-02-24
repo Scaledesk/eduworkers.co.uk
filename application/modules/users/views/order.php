@@ -562,7 +562,7 @@
                   'data':dd,
                  /* 'data' : {'date' :date1, 'services' :services1, 'subjects' :subjects1, 'grade' :grade1, 'length' :length1, 'currency' :currency1},
                  */ 'success' : function(data){
-                    alert(data);
+                   /* alert(data);*/
                   
                    var amount=data;
                    $("#totalamount").val(amount);
