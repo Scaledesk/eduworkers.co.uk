@@ -566,16 +566,16 @@
                   
                    var amount=data;
                    $("#totalamount").val(amount);
-/*
-                   var decimal=/^[-+]?[0-9]+\.[0-9]+$/; 
+
+                   /*var decimal=/^[-+]?[0-9]+\.[0-9]+$/; 
 
                   if(amount.value.match(decimal){
                     $("#totalamount").val(amount);
                      }else{
                     var amount=data.replace(/<\/?span[^>]*>/g,"");
                     $("#totalamount").val(amount);
-                    }
-                    */
+                    }*/
+                    
                    /* var regex = /\d+/g;
                     var total =amount.match(regex);*/
                     /* var result= Number((total).toFixed(2))*/
