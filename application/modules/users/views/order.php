@@ -28,7 +28,7 @@
                 <div id="flagdiv"></div>
                 <div class="col-xs-6 col-md-3 col-sm-3">     
                  <label style="text-align:center;">
-                <input type="radio"  name="flag" value="USD $"  onClick="getResults(); loadamount(this);" id="1" />
+                <input type="radio"  name="flag" value="USD $"  onClick="getResults(); " onchange="loadamount(this);"  id="1" />
                 <img src="<?php echo base_url();?>assets/media/us_flag.png" width=120 height=80  >
                 <br>
                 <span style="margin-bottom: 5px;">United States</span>   
@@ -38,7 +38,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults(); loadamount(this);" id="2"  />
+                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults(); " onchange="loadamount(this);" id="2"  />
                 <img src="<?php echo base_url();?>assets/media/australia.jpeg" width=120 height=80   > 
                 <br>
                 <span style="margin-bottom: 5px;">United Kingdom</span> 
@@ -48,7 +48,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="AUD $"  onClick="getResults(); loadamount(this);" id="3" />
+                <input type="radio"  name="flag" value="AUD $"  onClick="getResults();" onchange="loadamount(this);" id="3" />
                 <img src="<?php echo base_url();?>assets/media/uk_flag.png" width=120 height=80  >
                 <br>
                 <span style="margin-bottom: 5px;">Australia</span>
@@ -58,7 +58,7 @@
               
               <div class="col-xs-6 col-md-3 col-sm-3">
                 <label style="text-align:center;">
-                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults();loadamount(this);" id="4" />
+                <input type="radio"  name="flag" value="GBP ₤"  onClick="getResults();" onchange="loadamount(this);" id="4" />
                 <img src="<?php echo base_url();?>assets/media/world-map.png" width=120 height=80  >
                 <br>
                 <span style="margin-bottom: 5px;">Other Country</span>
