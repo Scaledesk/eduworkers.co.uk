@@ -754,7 +754,9 @@ if($flag1=='USD' or $flag1=='AUD'){
     $result = $converted[0];
    /* echo json_encode($converted[0]); die;*/
    /*$total=$this->security->xss_clean($result);*/
-    echo json_encode($result); /*die;*/
+
+    echo json_encode($stat = preg_replace('/<span[^>]*>(.*?)<\/span>/i', '\1', $result)); /*die;*/
+
 }else{
    /* echo json_encode(123);die;*/
     echo json_encode($total);

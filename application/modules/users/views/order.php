@@ -562,9 +562,20 @@
                   'data':dd,
                  /* 'data' : {'date' :date1, 'services' :services1, 'subjects' :subjects1, 'grade' :grade1, 'length' :length1, 'currency' :currency1},
                  */ 'success' : function(data){
-                   /* alert(data);*/
+                    alert(data);
+                  
                    var amount=data;
+                   $("#totalamount").val(amount);
+/*
+                   var decimal=/^[-+]?[0-9]+\.[0-9]+$/; 
+
+                  if(amount.value.match(decimal){
+                    $("#totalamount").val(amount);
+                     }else{
                     var amount=data.replace(/<\/?span[^>]*>/g,"");
+                    $("#totalamount").val(amount);
+                    }
+                    */
                    /* var regex = /\d+/g;
                     var total =amount.match(regex);*/
                     /* var result= Number((total).toFixed(2))*/
@@ -574,13 +585,13 @@
                            /*var total=amount.split(" ");*/    
                     /* alert(result);*/
 
-                  /*  console.log(result);
-*/
+                    console.log(amount);
+
                      /* document.getElementById("demo").innerHTML 
                     console.log($('#total'));*/
                     // document.getElementById("divtotal").innerHTML=amount;
                     // document.getElementById('totalamount').value = amount;
-                     $("#totalamount").val(amount);
+                     
 
                      /*$("total").val(data);*/
                    /* document.getElementById("total").val(amount); */
