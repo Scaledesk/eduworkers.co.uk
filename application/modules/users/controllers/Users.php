@@ -503,6 +503,29 @@ die;*/
 }
 
 public function doOrder(){
+      
+     /* USD $ GBP ₤ AUD $ GBP ₤*/
+     /*echo json_encode($this->input->post('flags'));
+     die;*/
+     $flag1=$this->input->post('flags');
+
+        
+
+       /* $flag='';*/
+        
+                /* if($flag1=="USD $"){
+                  $flag='USD';
+                 }else if($flag1=="GBP ₤"){
+                  $flag='GBP';
+                 }else if($flag1=="AUD $") {
+
+                  $flag='AUD';
+                 }
+
+                 echo json_encode($flag);
+                 die;*/
+     $total=0;
+
 
      $date=$this->input->post('date');
      $grade=$this->input->post('grade');
@@ -521,7 +544,8 @@ if($services=='Powerpoint presentation'){
       $pl=15;
            
         $total=$pl* $slide;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
+
 }
 
 
@@ -535,39 +559,39 @@ if($services=='Powerpoint presentation'){
      
       $pl2=2.5;
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }
   elseif ($date==2 ) {
      
        $pl2=1.75;
       $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
   }
 elseif ($date==3 ) {
     
       $pl2=1.5;
       $total=$pl* $words*$pl2;
-        echo json_encode($total);
+        /*echo json_encode($total);*/
   }elseif ($date==4 ) {
      
       $pl2=1.35;
       $total=$pl* $words*$pl2;
-        echo json_encode($total);
+        /*echo json_encode($total);*/
   }elseif ($date==5 ) {
      
       $pl2=1.20;
       $total=$pl*$words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
   }elseif ( $date==6 or $date==7 or $date==8 or $date==9) {
     
       $pl2=1.15;
       $total=$pl* $words*$pl2;
-        echo json_encode($total);
+      /*  echo json_encode($total);*/
   }elseif ($date==10 ) {
     
       $pl2=1;
       $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
   }
 }
 else if ($grade=='gcse B' or $grade=='nvq') {
@@ -577,7 +601,7 @@ else if ($grade=='gcse B' or $grade=='nvq') {
      
       
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+        /*echo json_encode($total);*/
    }
 
 else if ($grade=='merit') {
@@ -585,7 +609,7 @@ else if ($grade=='merit') {
          $pl=0.075;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }
 
 else if ($grade=='A grade b') {
@@ -593,28 +617,28 @@ else if ($grade=='A grade b') {
          $pl=0.075;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+        /*echo json_encode($total);*/
    }
 else if ($grade=='A grade A') { 
  
          $pl=0.0786;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }
  else if ($grade=='diploma pass') {
  
          $pl=0.075;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  
   else if ($grade=='diploma merit') {
  
          $pl=0.093;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+        /*echo json_encode($total);*/
    }  
     
     else if ($grade=='Undergraduate 2:2') {
@@ -622,14 +646,14 @@ else if ($grade=='A grade A') {
          $pl=0.082;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  
     else if ($grade=='Undergraduate 2:1' or $grade=='postgraduate Diploma 2:2') {
  
          $pl=0.093;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  
 
 
@@ -638,14 +662,14 @@ else if ($grade=='A grade A') {
          $pl=0.129;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    } 
    else if ($grade=='Masters 2:2') {
  
          $pl=0.093;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  
    else if ($grade=='Mphil Pass' or $grade=='PhD' ) {
 
@@ -653,14 +677,14 @@ else if ($grade=='A grade A') {
 
          $pl=0.3;
          $pl2=1;   
-        $total=$pl* $words*$pl2;
-        echo json_encode($total);
+          $total=$pl* $words*$pl2;
+        /*echo json_encode($total);*/
            }else{
 
           $pl=0.2;
           $pl2=1;   
           $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
         }
 
 
@@ -670,39 +694,72 @@ else if ($grade=='A grade A') {
          $pl=0.0822;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    } 
      else if ($grade=='GDL commendation') {
  
          $pl=0.093;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  else if ($grade=='LPC Pass') {
  
          $pl=0.0858;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  else if ($grade=='LPC Pass 1') {
  
          $pl=0.1326;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+      /*  echo json_encode($total);*/
    }  else if ($grade=='BPTC Competent') {
  
          $pl=0.1428;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+       /* echo json_encode($total);*/
    }  else if ($grade=='BPTC very Competent') {
  
          $pl=0.1716;
          $pl2=1;   
         $total=$pl* $words*$pl2;
-        echo json_encode($total);
+      /*  echo json_encode($total);*/
    } 
+
+   $primeryFlag='GBP';
+ /*GBP  GBP*/
+if($flag1=='USD' or $flag1=='AUD'){
+  /*  echo json_encode($flag1); die;*/
+  /* $rawData=currencyConvert($primeryFlag,$flag1,$total);*/
+
+    $url = "http://www.google.com/finance/converter?a=$total&from=$primeryFlag&to=$flag1"; 
+   /*echo json_encode(1); die;*/
+    $req = curl_init(); 
+    $timeout = 0; 
+    curl_setopt ($req, CURLOPT_URL, $url); 
+    curl_setopt ($req, CURLOPT_RETURNTRANSFER, 1); 
+   /*echo json_encode(2); die;*/
+    curl_setopt ($req, CURLOPT_USERAGENT,"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)"); 
+    curl_setopt ($req, CURLOPT_CONNECTTIMEOUT, $timeout); 
+    $rawdata = curl_exec($req); 
+    /*echo json_encode(3); die;*/
+    curl_close($req); 
+
+   /* echo json_encode($rawdata);die;*/
+
+    $regex  = '#\<span class=bld\>(.+?)\<\/span\>#s';
+    preg_match($regex, $rawdata, $converted);
+    $result = $converted[0];
+   /* echo json_encode($converted[0]); die;*/
+   /*$total=$this->security->xss_clean($result);*/
+    echo json_encode($result); /*die;*/
+}else{
+   /* echo json_encode(123);die;*/
+    echo json_encode($total);
+}
+     
    /*else if ($services=='Powerpoint presentation') {
  
          $pl=15;
