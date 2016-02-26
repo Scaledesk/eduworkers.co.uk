@@ -97,7 +97,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
             <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
                 <tr>
                     <td width="20%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
-                        <h2>YOUR ORDER SUMMARY</h2>
+                        <h2>New Order Placed</h2>
                     </td>
 
                     <!-- <td width="80%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
@@ -128,6 +128,48 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
                     <!-- <td width="80%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
                         <h1>dolor sit amet, consectetur adipiscing elit. Curabitur quis eleifend justo, nec molestie diam. In feugiat magna dui, nec consectetur felis laoreet quis. Ut placerat elit in neque sollicitudin varius. Pellentesque tempus tempus leo a ultricies. Pro</h1>
                     </td> -->
+                </tr>
+            </table>
+            <!-- Start Container  -->                   
+                  
+        </td>
+    </tr>
+
+
+         <tr>
+        <td align="center">
+                  
+            <!-- Start Container  -->
+            <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
+                <tr style="border-top: 1px solid #aaa;">
+                    <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
+                        <h3>Name:</h3>
+                    </td>
+
+                    <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
+                       <p style=""><?php echo $this->session->userdata['user_data']['user_fname'] ?></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Start Container  -->                   
+                  
+        </td>
+    </tr>
+
+
+         <tr>
+        <td align="center">
+                  
+            <!-- Start Container  -->
+            <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
+                <tr style="border-top: 1px solid #aaa;">
+                    <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
+                        <h3>Email:</h3>
+                    </td>
+
+                    <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
+                       <p style=""><?php echo $this->session->userdata['user_data']['user_name']; ?></p>
+                    </td>
                 </tr>
             </table>
             <!-- Start Container  -->                   
@@ -171,7 +213,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
                     </td>
 
                     <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
-                       <p>   <?php echo $this->session->userdata['user_order']['message']; ?>></p>
+                       <p>   <?php echo $this->session->userdata['user_order']['message']; ?></p>
                     </td>
                 </tr>
             </table>
