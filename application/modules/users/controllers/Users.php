@@ -441,7 +441,7 @@ public function login()
   
    $message=$this->load->view('notification_mail',$data,TRUE);
 
-        $admin_mail='nkscoder@gmail.com';
+        $admin_mail='jasbir.eduworkers@gmail.com';
        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1179,7 +1179,7 @@ public function getQuote(){
    
 
         $message=$this->load->view('quote',$data,TRUE);
-        $admin_mail='nkscoder@gmail.com';
+        $admin_mail='jasbir.eduworkers@gmail.com';
        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1286,7 +1286,7 @@ public function profileQuery(){
                
 
           }else{
-                $admin_mail='nkscoder@gmail.com';
+                $admin_mail='jasbir.eduworkers@gmail.com';
                 $this->email->from(setEmail(), 'Eduworkers');
          
                  $this->email->to($admin_mail);
@@ -1312,7 +1312,7 @@ public function profileQuery(){
    }
 
           else{
-         $admin_mail='nkscoder@gmail.com';
+         $admin_mail='jasbir.eduworkers@gmail.com';
          $this->email->from(setEmail(), 'Eduworkers');
          
         $this->email->to($admin_mail);       
@@ -1376,7 +1376,7 @@ public function subjectQuerySend(){
                
 
           }else{
-                $admin_mail='nkscoder@gmail.com';
+                $admin_mail='jasbir.eduworkers@gmail.com';
                 $this->email->from(setEmail(), 'Eduworkers');
          
                  $this->email->to($admin_mail);
@@ -1402,7 +1402,7 @@ public function subjectQuerySend(){
    }
 
           else{
-         $admin_mail='nkscoder@gmail.com';
+         $admin_mail='jasbir.eduworkers@gmail.com';
          $this->email->from(setEmail(), 'Eduworkers');
          
         $this->email->to($admin_mail);       
