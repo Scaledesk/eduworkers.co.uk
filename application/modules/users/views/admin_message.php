@@ -177,6 +177,25 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
         </td>
     </tr>
 
+ <tr>
+        <td align="center">
+                  
+            <!-- Start Container  -->
+            <table width="90%" cellpadding="0" cellspacing="0" border="0" class="container" style="margin-left:5%; margin-right:5%;">
+                <tr style="border-top: 1px solid #aaa;">
+                    <td width="40%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center">
+                        <h3>Date & Time </h3>
+                    </td>
+
+                    <td width="60%" class="mobile" style="font-family:arial; font-size:12px; line-height:18px; text-align:center ">
+                       <p style=""><?php  $d=strtotime("10:30pm April 15 2014"); echo date("Y-m-d h:i:sa", $d); ?></p>
+                    </td>
+                </tr>
+            </table>
+            <!-- Start Container  -->                   
+                  
+        </td>
+    </tr>
 
 
          <tr>

@@ -976,7 +976,7 @@ die;*/
 
   if ($data['file']['has_attachment']==0) {
        
-        $admin_mail='nkscoder@yahoo.in';
+        $admin_mail='jasbir.eduworkers@gmail.com';
         $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1011,6 +1011,12 @@ die;*/
 
          }
      }
+     else{
+
+             setInformUser('error',' Some Error Occured !');
+             redirect(base_url('users/error'));
+
+         }
       
 
   }else{
@@ -1024,7 +1030,7 @@ die;*/
        if($this->email->send()){
         if($this->confirmation()){
 
-        $admin_mail='nkscoder@yahoo.in';
+        $admin_mail='jasbir.eduworkers@gmail.com';
         $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
