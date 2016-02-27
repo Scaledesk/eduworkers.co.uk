@@ -114,11 +114,34 @@ else{
 }
 public function completed($id){
   if(islogin()){
-  if($this->Mdl_admin->completed($id)){
-    setInformUser('success', ' Product successfully Completed ');
+
+  if($data['result']=$this->Mdl_admin->completed($id)){
+
+       /* $this->load->view('messageCompleted',$data); */
+
+         /* die();*/
+          $user_email=$data['result'][0]['eduworkers_users_username'];
+         /* echo $user_email;
+          die;*/
+       /*  $messageCompleted=$this->load->view('messageCompleted',$data,TRUE); */
+         $this->email->from(setEmail(), 'EduWorkers');
+         $this->email->to($user_email);
+         $this->email->subject('Order Completed');
+         $this->email->message('Your order number :'.$data['result'][0]['eduworkers_products_id'].' has been successfully completed. Thank you for using our services.');  
+
+      if($this->email->send()){
+      
+     setInformUser('success', ' Product successfully Completed ');
 
       redirect(base_url('admin/product'));
 
+
+  }else{
+     setInformUser('error', 'Some error Occurred ');
+        redirect(base_url('admin/product'));
+  }
+    
+   
       
   }else{
 
@@ -162,5 +185,27 @@ public function orderDetails($id){
     redirect(base_url('users'));
   }
 }
+
+
+
+
+public function confirmation($data){
+          /*  echo "<pre/>";
+            print_r($data);
+            echo 
+            die();*/
+           /* $this->load->view('report',$data);*/
+          $this->load->view('messageCompleted'); 
+          die();
+         /* $user_email=$data[0]['eduworkers_users_username'];
+         $message_confirmation=$this->load->view('message_completed',$data,TRUE); 
+         $this->email->from(setEmail(), 'EduWorkers');
+         $this->email->to($user_email);
+         $this->email->subject('Order Completed');
+         $this->email->message($message_completed);
+         return $this->email->send()?true:false;*/
+
+}
+
 
 }

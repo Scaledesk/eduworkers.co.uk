@@ -171,7 +171,16 @@ public function completed($id){
                
                 $this->db->where('eduworkers_products_id',$id); 
                  if($this->db->update('eduworkers_products',$data)){
-                    return true;
+
+                    $data = $this->db->query("select * from eduworkers_products   join eduworkers_users on eduworkers_products.eduworkers_products_users_id=eduworkers_users.eduworkers_users_id where eduworkers_products_id=".$id)->result_array();
+                    
+                    if($data) {
+                        return $data;
+                    }else {
+                       return false; 
+                    }
+
+                   
                  }else{
                     return false;
                  }
