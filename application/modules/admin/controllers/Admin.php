@@ -123,12 +123,12 @@ public function completed($id){
           $user_email=$data['result'][0]['eduworkers_users_username'];
          /* echo $user_email;
           die;*/
-       /*  $messageCompleted=$this->load->view('messageCompleted',$data,TRUE); */
+         $messageCompleted=$this->load->view('messageCompleted',$data,TRUE); 
          $this->email->from(setEmail(), 'EduWorkers');
          $this->email->to($user_email);
          $this->email->subject('Order Completed');
-         $this->email->message('Your order number :'.$data['result'][0]['eduworkers_products_id'].' has been successfully completed. Thank you for using our services.');  
-
+        /* $this->email->message('Your order number :'.$data['result'][0]['eduworkers_products_id'].' has been successfully completed. Thank you for using our services.');  */
+        $this->email->message($messageCompleted);
       if($this->email->send()){
       
      setInformUser('success', ' Product successfully Completed ');

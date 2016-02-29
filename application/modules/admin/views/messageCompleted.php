@@ -219,10 +219,12 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
                   
         </td>
     </tr>
+<tr>
+        <td align="center">
+ <h3>Thank you for using our services.</h3>
 
- 
-
-
+ </td>
+    </tr>
 
     
    
