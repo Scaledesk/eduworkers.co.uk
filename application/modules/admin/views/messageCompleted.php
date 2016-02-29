@@ -1,5 +1,5 @@
 
-<?php/* print_r($result);*/ ?>
+
 
 <html>
 <head>
