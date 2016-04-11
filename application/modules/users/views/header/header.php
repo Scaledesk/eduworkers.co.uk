@@ -101,8 +101,8 @@
                     <li><a href="<?php echo base_url().'users/about'; ?>">About Us&nbsp;<i class="fa fa-angle-down"></i><!-- <span class="nav-subtitle">say us hi</span> --></a>
                       <ul role="menu" class="dropdown-menu">
                         <!-- <li><a href="#">Check for the </a> </li> -->
-                        <li><a href="#">Contact</a> </li>
-                      </ul>
+                        <li><a href="<?php echo base_url().'users/contactUs'; ?>">Contact</a> </li>
+                      </ul> 
                     </li> 
                      <?php if($this->session->userdata('user_data')!=''){  ?>
                     <li><a href="<?php echo base_url().'users/profile'; ?>" class="edu_active">Hi <?php 

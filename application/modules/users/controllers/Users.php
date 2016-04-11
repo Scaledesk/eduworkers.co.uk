@@ -1424,4 +1424,11 @@ public function subjectQuerySend(){
 
 }
 
+public function contactUs(){
+
+    $this->load->view('header/header');
+    $this->load->view('contact');
+    $this->load->view('header/footer');
+}
+
 }
