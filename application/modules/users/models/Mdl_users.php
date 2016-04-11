@@ -606,20 +606,20 @@ $file['data_files']=$this->db->where('eduworkers_temp_files_buyer_id',$this->ses
 $product_rand=rand(999,9999);
    
   
-    $data=[
-    'eduworkers_products_users_id'=> $this->session->userdata['user_data']['user_id'],
-    'eduworkers_products_services'=>$this->session->userdata['user_products']['services'],
-    'eduworkers_products_subjects'=>$this->session->userdata['user_products']['subjects'],
-    'eduworkers_products_length'=>$lenght,
-    'eduworkers_products_delivery_date'=>$this->session->userdata['user_products']['date'],
-    'eduworkers_products_grade'=>$this->session->userdata['user_products']['grade'],
-    'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
-    'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
-    'eduworkers_products_message'=>$this->session->userdata['user_order']['message'],
-    'eduworkers_products_status'=>'pending',
-    'eduworkers_products_rand_no'=>$product_rand
-   
-    ];
+        $data=[
+        'eduworkers_products_users_id'=> $this->session->userdata['user_data']['user_id'],
+        'eduworkers_products_services'=>$this->session->userdata['user_products']['services'],
+        'eduworkers_products_subjects'=>$this->session->userdata['user_products']['subjects'],
+        'eduworkers_products_length'=>$lenght,
+        'eduworkers_products_delivery_date'=>$this->session->userdata['user_products']['date'],
+        'eduworkers_products_grade'=>$this->session->userdata['user_products']['grade'],
+        'eduworkers_products_total'=>$this->session->userdata['user_products']['total'],
+        'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
+        'eduworkers_products_message'=>$this->session->userdata['user_order']['message'],
+        'eduworkers_products_status'=>'pending',
+        'eduworkers_products_rand_no'=>$product_rand
+       
+        ];
     if($this->db->insert('eduworkers_products',$data)){
 
        $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])->select('eduworkers_products_id')->order_by("eduworkers_products_id","desc")->get('eduworkers_products')->result_array();
