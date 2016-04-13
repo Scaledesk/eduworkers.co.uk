@@ -855,3 +855,6 @@ input:-moz-placeholder { color:#f00; }
 	font-size: 18px;
 	text-align: center;
 }
+.footer-form{
+color:rgba(244, 248, 250, 0.95);
+}

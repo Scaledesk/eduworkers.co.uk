@@ -44,7 +44,7 @@ table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-r
     
     </style>
     <!--<![endif]-->
-    
+    </head>
     <!-- Start Wrapper  -->
     <div class="change">
 

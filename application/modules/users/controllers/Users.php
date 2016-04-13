@@ -1425,10 +1425,35 @@ public function subjectQuerySend(){
 }
 
 public function contactUs(){
+    if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
+        $data=$this->input->post();
+       /* print_r($data);die;*/
+        $message=$this->load->view('contact_us',$data,TRUE);
 
-    $this->load->view('header/header');
-    $this->load->view('contact');
-    $this->load->view('header/footer');
+        $admin_mail='nkscoder@gmail.com';
+        $this->email->from(setEmail(), 'Eduworkers');
+
+        $this->email->to($admin_mail);
+        $this->email->subject('Contact Us');
+        $this->email->message($message);
+
+        /*  echo $data['subject']; die;
+ */
+
+        if($this->email->send()){
+            setInformUser('success'," successfully Send Query");
+            redirect(base_url('users/contactUs'));
+        }else{
+            setInformUser('error',"Some Error Occurred.");
+            redirect(base_url('users/contactUs'));
+        }
+
+    }else{
+        $this->load->view('header/header');
+        $this->load->view('contact');
+        $this->load->view('header/footer');
+    }
+
 }
 
 }

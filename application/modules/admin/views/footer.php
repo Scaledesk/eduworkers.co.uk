@@ -1,7 +1,7 @@
  <!--footer start-->
       <footer class="site-footer navbar-fixed-bottom">
           <div class="text-center">
-          Copyright © 2016 - Webo Services Pvt. Ltd. All rights reserved
+          Copyright © 2016 - <a href="http://www.scaledesk.com/" target="_blank">   ScaleDesk Web Studio Private Limited</a> All rights reserved
               . 
               <!-- <a href="form_component.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>

@@ -64,10 +64,10 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
               <h3 class="footer-title">QUICK CONTACT</h3>
               <form class="form" action=" <?php echo base_url().'users/contact'; ?>" method="post">
                 <div class="form-group">
-                  <input class="form-control" type="text"  required name="name" placeholder="Your Name">
-                  <input class="form-control" type="email" required name="email" placeholder="Email address" >
-                  <input class="form-control" type="text" required name="phone" placeholder="Phone No. " maxlength="10" >
-                  <textarea class="form-control" rows="7" required name="message" placeholder="Message"></textarea>
+                  <input class="form-control footer-form" type="text"  required name="name" placeholder="Your Name">
+                  <input class="form-control footer-form" type="email" required name="email" placeholder="Email address" >
+                  <input class="form-control footer-form" type="text" required name="phone" placeholder="Phone No. " maxlength="10" >
+                  <textarea class="form-control footer-form" rows="7" required name="message" placeholder="Message"></textarea>
                   <button type="submit" class="btn btn-primary btn-effect">SEND MESSSAGE</button> 
                 </div>
               </form>
@@ -83,7 +83,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
       <div class="row">
         <div class="col-xs-12">
           <div class="footer-bottom">
-            <div class="copyright">Copyright © 2016 <a href="javascript:void(0);">Eduworkers</a>, Created by <a href="javascript:void(0);">Webo Services Pvt. Ltd. </a></div>
+            <div class="copyright">Copyright © 2016 <a href="javascript:void(0);">Eduworkers</a>, Created by <a target="_blank" href="http://www.scaledesk.com/">ScaleDesk Web Studio Private Limited. </a></div>
 <!--             <ul class="social-links list-unstyled">
               <li>
                 <a class="icon fa fa-facebook" href="javascript:void(0);"></a>
