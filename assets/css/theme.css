@@ -2246,7 +2246,7 @@ header-inner .form-control::-moz-placeholder {
     transition: all .3s ease-out;
 }
 .img-hover-effect{
-  position: relative;
+    position: relative;
     overflow: hidden;
     display: inline-block;
     height: 100%;

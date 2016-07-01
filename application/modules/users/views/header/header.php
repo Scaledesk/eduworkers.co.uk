@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
   <title>Eduworkers, - Essay and Dissertation Writing Service</title>
   <link href="<?php echo  asset_url();?>img/favicon.png" type="image/x-icon" rel="shortcut icon">
-  <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet">
-  
+
+  <link href="<?php echo  asset_url();?>css/master.css" rel="stylesheet"> 
+
+ 
+
   <script src="<?php echo  asset_url();?>/plugins/jquery/jquery-1.11.3.min.js"></script>
   <script src="<?php echo  asset_url();?>assets/jquery.scrollUp.js"></script>
   
@@ -53,55 +56,64 @@
                 </div>
                 <div id="navbar-collapse-1" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="<?php echo  base_url();?>">Home &nbsp;</a>
+                    <li class="dropdown"><a href="<?php echo  base_url();?>" class="txt-menu-style">Home &nbsp;</a>
 
                     </li>
-                    <li class="dropdown"> <a href="<?php echo base_url().'users/services'; ?>">Services&nbsp;<i class="fa fa-angle-down"></i></a>
-                      <ul role="menu" class="dropdown-menu">
-                         <li><a href="<?php echo base_url().'users/services'; ?>">All</a>
-                        <li><a href="<?php echo base_url().'users/engineeringAssignments'; ?>">Engineering Assignments</a>
+                    <li class="dropdown"> <a href="<?php echo base_url().'users/services'; ?>" class="txt-menu-style">Services&nbsp;<i class="fa fa-angle-down"></i></a>
+                      <ul role="menu" class="dropdown-menu edu-box-padding ">
+                        <div class="row">
+                       <div class="col-md-3 pading-edu">  <li><a href="<?php echo base_url().'users/services'; ?>" class="edu-submenu-style">All</a>
+                        <li><a href="<?php echo base_url().'users/engineeringAssignments'; ?>" class="edu-submenu-style">Engineering Assignments</a></li>
+                        <li><a href="<?php echo base_url().'users/dissertationWriting'; ?>" class="edu-submenu-style">Dissertation Writing</a></li>
+                        <li><a href="<?php echo base_url().'users/engineeringProjects'; ?>" class="edu-submenu-style">Engineering Projects</a></li>
+                        <li><a href="<?php echo base_url().'users/singleServices'; ?>" class="edu-submenu-style">Essay Writing</a></li>
+                       <li><a href="#" class="edu-submenu-style">Exam Revision</a></li>
+                  </div>
 
-                        </li>
-                        <li><a href="<?php echo base_url().'users/dissertationWriting'; ?>">Dissertation Writing</a></li>
-                        <li><a href="<?php echo base_url().'users/engineeringProjects'; ?>">Engineering Projects</a></li>
-                        <li><a href="<?php echo base_url().'users/singleServices'; ?>">Essay Writing</a></li>
-                        
-                        <li><a href="#">Exam Revision</a></li>
-                        <li><a href="#">Marking and Proofreading service</a></li>
-                        <li><a href="#">Dissertation proposal</a></li>
-                        <li><a href="#">Literature review</a></li>
-                        <li><a href="#">Coursework</a></li>
-                        <li><a href="#">Assignment</a></li>
-                        <li><a href="#">Dissertation topic with titles</a></li>
-                        <li><a href="#">Legal Practice Course (LPC) Coursework</a></li>
-                        <li><a href="#">Bar Professional Training Course (BPTC) Coursework</a></li>
-                        <li><a href="#">presentation Powerpoint </a></li>
-                        <li><a href="#">Report</a></li>
-                        <li><a href="#">Reflective Practice</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">PhD Thesis</a></li>
+                      <div class="col-md-3 pading-edu">  
+                           <li><a href="#" class="edu-submenu-style">Marking and Proofreading<br>service</a></li>
+                        <li><a href="#" class="edu-submenu-style">Dissertation proposal</a></li>
+                        <li><a href="#" class="edu-submenu-style">Literature review</a></li>
+                        <li><a href="#" class="edu-submenu-style">Coursework</a></li>
+                        <li><a href="#" class="edu-submenu-style">Assignment</a></li>
+                     </div>
+
+                        <div class="col-md-3 pading-edu"> 
+                           <li><a href="#" class="edu-submenu-style">Dissertation topic with titles</a></li>
+                        <li><a href="#" class="edu-submenu-style">Legal Practice Course (LPC)<br> Coursework</a></li>
+                        <li><a href="#" class="edu-submenu-style">Bar Professional Training <br>Course (BPTC) Coursework</a></li>
+                        <li><a href="#" class="edu-submenu-style">Presentation Powerpoint </a></li>
+                       
+                      </div>
+
+                         <div class="col-md-3 pading-edu">
+                       
+                         <li><a href="#" class="edu-submenu-style">Report</a></li>
+                        <li><a href="#" class="edu-submenu-style">Reflective Practice</a></li>
+                        <li><a href="#" class="edu-submenu-style">Portfolio</a></li>
+                        <li><a href="#" class="edu-submenu-style">PhD Thesis</a></li></div>
                       </ul>
                     </li>
-                    <li class="active-custom"> <a href="<?php echo base_url().'users/order'; ?>">Order Now</a>
+                    <li class="active-custom"> <a href="<?php echo base_url().'users/order'; ?>" class="txt-menu-style">Order Now</a>
 
                     </li>
                     <!-- <li class="dropdown"> <a href="javascript:void(0);">Guarantees</a>
                      
                     </li> -->
-                    <li><a href="#">WRITERS&nbsp;<i class="fa fa-angle-down"></i></a>
+                    <li><a href="#" class="txt-menu-style">WRITERS&nbsp;<i class="fa fa-angle-down"></i></a>
                       <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">How we recruit</a> </li>
-                        <li><a href="#">Career as a writer</a> </li>
+                        <li><a href="#" class="edu-submenu-style1">How we recruit</a> </li>
+                        <li><a href="#" class="edu-submenu-style1">Career as a writer</a> </li>
                       </ul>
                     </li>
-                    <li class="dropdown"> <a href="<?php echo base_url().'users/faq'; ?>">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
+                    <li class="dropdown"> <a href="<?php echo base_url().'users/faq'; ?>" class="txt-menu-style">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
 
                     </li>
 
-                    <li><a href="<?php echo base_url().'users/about'; ?>">About Us&nbsp;<i class="fa fa-angle-down"></i><!-- <span class="nav-subtitle">say us hi</span> --></a>
+                    <li><a href="<?php echo base_url().'users/about'; ?>" class="txt-menu-style">About Us&nbsp;<i class="fa fa-angle-down"></i><!-- <span class="nav-subtitle">say us hi</span> --></a>
                       <ul role="menu" class="dropdown-menu">
                         <!-- <li><a href="#">Check for the </a> </li> -->
-                        <li><a href="<?php echo base_url().'users/contactUs'; ?>">Contact</a> </li>
+                        <li><a href="<?php echo base_url().'users/contactUs'; ?>" class="edu-submenu-style">Contact</a> </li>
                       </ul> 
                     </li> 
                      <?php if($this->session->userdata('user_data')!=''){  ?>
@@ -123,7 +135,7 @@
                     
                     
                           <?php } else{ ?>
-                  <li> <a href="<?php echo base_url().'users/login'; ?>">My Account</a></li>
+                  <li> <a href="<?php echo base_url().'users/login'; ?>" class="txt-menu-style">My Account</a></li>
                                <?php } ?>
                     
 

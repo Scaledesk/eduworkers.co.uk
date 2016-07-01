@@ -29,12 +29,13 @@ Primary use:	Academica
 
 
 /* MAIN CSS */
+@import url('custom1.css');
+@import url('custom.css');
 @import url('theme.css');
 @import url('sidebar.css');
 @import url('blog.css');
 @import url('responsive.css');
 @import url('color.css');
 @import url('debugging.css');
-@import url('custom.css');
 /*@import url('dataTables.css');*/
 

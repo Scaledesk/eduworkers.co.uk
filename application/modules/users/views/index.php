@@ -11,7 +11,7 @@
                 <div class="main-slider__inner">
                   <div class="main-slider__title">Stuck with Engineering Assignemnt and project</div>
                   <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                  <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
+                  <a class="main-slider__btn btn btn-warning btn-effect txt-lg1" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
               </div>
             </div>
             <div class="sp-slide"> <img class="sp-image" src="assets\media\main-slider\22.jpg" data-src="assets/media/main-slider/22.jpg" data-retina="assets/media/main-slider/22.jpg"
@@ -21,7 +21,7 @@
                 <div class="main-slider__inner">
                   <div class="main-slider__title">Your one stop academic writing solution </div>
                   <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                  <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
+                  <a class="main-slider__btn btn btn-warning btn-effect txt-lg1" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="main-slider__inner">
                 <div class="main-slider__title">Essay and Dissertation Help </div>
                 <!-- <div class="main-slider__subtitle ">THE EASIER WAY</div> -->
-                <a class="main-slider__btn btn btn-warning btn-effect" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
+                <a class="main-slider__btn btn btn-warning btn-effect txt-lg1" href="<?php echo base_url().'users/order';?>">GET QUOTE</a> </div>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
               <!-- end col -->
               <div class="col-sm-4">
                 <section class="find-course find-course_mod-a ">
-                  <h2 class="find-course__title"><i class="icon stroke icon-Search"></i>Get Quote</h2>
+                  <h2 class="find-course__title">Get Quote</h2>
                   <form class="find-course__form" action="<?php echo base_url().'users/getQuote'; ?>" method="post">
                     <div class="form-group edu_custom_space_for_input">
 
@@ -347,7 +347,7 @@
 
                     <!-- end form-group -->
                     <div class="find-course__wrap-btn edu_custom_space">
-                      <button class="btn btn-info btn-effect">Request Quote</button>
+                      <button class="btn btn-info btn-effect txt-lg">Request Quote</button>
                     </div>
                   </form>
                 </section>
@@ -374,7 +374,7 @@
   </div>
   <!-- end section_mod-a -->
 
-  <section class="section-default">
+  <section class="section-default neeraj ">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -563,7 +563,7 @@
           <div class="col-sm-6">
             <form class="subscribe__form" action="get">
               <input class="subscribe__input form-control" type="text" placeholder="Your Email address ...">
-              <button class="subscribe__btn btn btn-success btn-effect">SUBSCRIBE</button>
+              <button class="btn-nn subscribe__btn btn btn-success btn-effect">SUBSCRIBE</button>
             </form>
           </div>
           <!-- end col -->
@@ -661,7 +661,7 @@
                 <div id="collapse-3" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p class="ui-text">Eduworkers offers client support round the clock (24/7) with minimal response time. Our experts are always
-                      on hand to rescue students in dire straits. Simply click on “Global Assessment Help” with any queries
+                      on hand to rescue students in dire straits. Simply call on “080012345” with any queries
                       or issues and you will receive timely professional help.</p>
                   </div>
                 </div>
@@ -712,7 +712,7 @@
   <!-- end container -->
 
   <section class="section-clients wow fadeInUp" data-wow-duration="2s">
-    <div class="container">
+    <div class="container neeraj">
       <div class="row">
         <div class="col-xs-12">
           <h2 class="ui-title-block ui-title-block_mod-b">Our <strong>Global Partners</strong></h2>

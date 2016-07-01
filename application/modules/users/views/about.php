@@ -19,7 +19,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-5">
-									<h2 class="about__title">welcome to <strong>EDUWORKERS</strong></h2>
+									<h2 class="about__title">welcome to <strong>EDUWORKERS.COM</strong></h2>
 									<p>“Eduworkers” is a pioneer in the realm of Innovative Academic Writing. Since the inception
 
 						the company in 2009, we have achieved great heights in receiving international recognition and 
@@ -126,7 +126,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<section class="section-default">
-									<h2 class="ui-title-block">Why <strong>Eduworkers ?</strong></h2>
+									<h2 class="ui-title-block">Why <strong>Eduworkers.Com ?</strong></h2>
 									<div class="panel-group accordion accordion" id="accordion-1">
 										<div class="panel panel-default">
 											<div class="panel-heading">
@@ -165,7 +165,7 @@
 											<div id="collapse-3" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">Eduworkers offers client support round the clock (24/7) with minimal response time. Our experts 
-													are always on hand to rescue students in dire straits. Simply click on “Global Assessment Help” with any queries or issues and you will receive timely professional help.</p>
+													are always on hand to rescue students in dire straits. Simply Call on “80012345” with any queries or issues and you will receive timely professional help.</p>
 												</div>
 											</div>
 										</div><!-- end panel -->

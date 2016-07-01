@@ -718,6 +718,18 @@ label > input:checked + img{ /* (CHECKED) IMAGE STYLES */
 
 }
 
+
+
+
+.edu-box-padding{
+	padding:15px 0px 15px 20px;
+	position: absolute!important;
+	left:-280px!important;
+
+}
+
+
+
 #edu_team{
 	background-color: #2d3e50;
 	color: #fff;
@@ -855,6 +867,50 @@ input:-moz-placeholder { color:#f00; }
 	font-size: 18px;
 	text-align: center;
 }
+
+
+.btn-nn{
+	
+	height: 39px!important;
+}
+
+.txt-lg{
+	font-size: 15px!important;
+}
+
+.txt-lg1{
+	font-size: 30px!important;
+}
+
+.txt-menu-style{
+
+	font-size: 15px!important;
+	    color: #1E4167!important;
+}
+
+
+
+
+.edu-submenu-style{
+	color:#000000!important;
+	    display: block;
+    padding: 8px 200px 8px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1;
+    color: #aaaaaa;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+.edu-submenu-style1{
+	color:#000000!important;
+}
+
+
+
 .footer-form{
 color:rgba(244, 248, 250, 0.95);
 }
+

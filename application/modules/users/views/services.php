@@ -19,16 +19,16 @@
               <p>We offer a range of essay writing and marking services, all delivered to our exacting standards.</p>
               <div class="edu_list_group">
                 <div class="edu_service_custom_links col-md-12">
-                <a href="#Critical_essay">Critical essay</a> 
+                <a href="#Critical_essay">Critical Essay</a> 
               </div>
 
                 <div class="edu_service_custom_links col-md-12">
-                <a href="#Generic_Essay">Generic Essay</a>
+               <a href="#Custom_Essay">Custom Essay</a>
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Short_essay">Short essay</a>
-              </div>
+                 <a href="#Generic_Essay">Generic Essay</a>
+               </div>
               <div class="edu_service_custom_links col-md-12">
                 <a href="#Outline/Skeleton_Answer_Writing_Service">Outline/Skeleton Answer Writing Service</a>
               </div>
@@ -38,7 +38,7 @@
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Custom_Essay">Custom Essay</a>
+               <a href="#Short_essay">Short Essay</a>
               </div>
 
               </div>
@@ -50,30 +50,33 @@
               <p>Our dissertation writing services offer the highest possible levels of quality and accuracy.</p>
                <div class="edu_list_group">
                 <div class="edu_service_custom_links col-md-12">
-                <a href="#Thesis">Thesis</a>
-              </div>
+                  <a href="#Dissertation_Conclusion">Dissertation Conclusion</a>
+               </div>
 
                 <div class="edu_service_custom_links col-md-12">
-                <a href="#Topic_and_Title_Service">Topic and Title Service</a>
+                  <a href="#Dissertation_Discussion">Dissertation Discussion</a>
+               
               </div>
 
+              <div class="edu_service_custom_links col-md-12">
+                  <a href="#Dissertation_Methodology">Dissertation Methodology</a>
+                
+              </div>
               <div class="edu_service_custom_links col-md-12">
                 <a href="#Dissertation_Proposal_Service"> Dissertation Proposal Service</a>
-              </div>
-              <div class="edu_service_custom_links col-md-12">
-                <a href="#Literature_Review_Service">Literature Review Service</a>
+               
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Dissertation_Methodology">Dissertation Methodology</a>
+             <a href="#Literature_Review_Service">Literature Review Service</a>
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Dissertation_Discussion">Dissertation Discussion</a>
+                 <a href="#Thesis">Thesis</a>
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Dissertation_Conclusion">Dissertation Conclusion</a>
+                 <a href="#Topic_and_Title_Service">Topic and Title Service</a>
               </div>
 
 
@@ -89,12 +92,16 @@
               <p>In addition to our core services we offer a range of dedicated services for other assignments</p>
                <div class="edu_list_group">
                 <div class="edu_service_custom_links">
-                <a href="#Technical_Reports">Technical Reports</a>
+                   <a href="#G2D_and_3D_Drawings">2D and 3D Drawings</a>
+                </div>
+
+                 <div class="edu_service_custom_links col-md-12">
+                <a href="#Electrical_and_Electronic_Simulations">Electrical and Electronic Simulations</a>
               </div>
 
                 <div class="edu_service_custom_links col-md-12">
-                <a href="#G2D_and_3D_Drawings">2D and 3D Drawings</a>
-              </div>
+                    <a href="#Mathematics_Assignments">Mathematics Assignments</a>
+               </div>
 
               <div class="edu_service_custom_links col-md-12">
                 <a href="#Mechanical_Simulations">Mechanical Simulations</a>
@@ -109,15 +116,15 @@
               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Mathematics_Assignments">Mathematics Assignments</a>
+               <a href="#Laboratory_Reports">Laboratory Reports</a>
               </div>
 
                <div class="edu_service_custom_links col-md-12">
-                <a href="#Laboratory_Reports">Laboratory Reports</a>
-              </div>
+                 <a href="#Product_Development">Product Development</a>
+               </div>
 
               <div class="edu_service_custom_links col-md-12">
-                <a href="#Product_Development">Product Development</a>
+              <a href="#Technical_Reports">Technical Reports</a>
               </div>
 
 
@@ -343,7 +350,7 @@
 
           <div class="col-md-12 text-center">
          <!--    <a class="btn btn-primary btn-effect" href="javascript:void(0);">GET QUOTE</a> -->
-            <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
+            <a class="btn btn-primary btn-effect txt-lg" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          
@@ -475,7 +482,7 @@
           </div>
 
           <div class="col-md-12 text-center">
-             <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
+             <a class="btn btn-primary btn-effect txt-lg" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          
@@ -612,7 +619,7 @@
           </div>
 
           <div class="col-md-12 text-center">
-            <a class="btn btn-primary btn-effect" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
+            <a class="btn btn-primary btn-effect txt-lg" href="<?php echo base_url().'users/order'; ?>">GET QUOTE</a>
           </div>
         
          
