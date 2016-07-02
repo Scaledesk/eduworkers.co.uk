@@ -56,12 +56,14 @@
            </div>
          </div>
          <div class="tab-pane col-md-12" id="b">
-
+                
+                <span><h3> Change  name and password here. </h3></span>
 
                 <form action="<?php echo base_url().'users/profile' ?>" method="post">
+               
                 <input class="form-control" type="text"  name="fname" placeholder="Usser Name" value="<?php echo $profile[0]['eduworkers_users_userfname']; ?>" required="">
               
-      
+              
                <input class="form-control" type="text"  name="phone" placeholder="Phone"  value="<?php echo $profile[0]['eduworkers_users_phone']; ?>"required="">
                <input class="btn btn-info" type="submit" value="update">
                </form>
@@ -75,7 +77,7 @@
               
                 <input class="form-control" type="text"  name="new_pass" placeholder="New Password" id="pass" required="">
               
-               <input class="form-control" type="text"  name="c_pass" placeholder="Conform Password" id="passcof" onchange="myFunction()" required="">
+               <input class="form-control" type="text"  name="c_pass" placeholder="confirm password" id="passcof" onchange="myFunction()" required="">
                <input class="btn btn-info" type="submit" value="update">
                </form>
 
