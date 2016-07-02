@@ -624,7 +624,7 @@ $product_rand=rand(999,9999);
 
        $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])->select('eduworkers_products_id')->order_by("eduworkers_products_id","desc")->get('eduworkers_products')->result_array();
 
-
+            $this->session->set_userdata('order_id',$data['product_id'][0]['eduworkers_products_id']);
    /*    echo $data['product_id'][0]['eduworkers_products_id'];*/  /*print_r($data['product_id']); *//*die;*/
 
         foreach ($file['data_files'] as $row) {
@@ -741,6 +741,44 @@ public function setEmail(){
     return $this->db->select('eduworkers_email_settings_smtp_user')->get('eduworkers_email_settings')->result_array();
 }
 
+public function getOrderSummary(){
+  
 
+      /* $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])->select('eduworkers_products_id')->order_by("eduworkers_products_id","desc")->get('eduworkers_products')->result_array();*/
+    $order_id=$this->session->userdata['order_id']; 
+   /*echo $order_id;
+    die;*/
+         $data = [ 'eduworkers_products_status' => 'completed' ];
+         $this->db->where('eduworkers_products_id',$order_id); 
+        if($this->db->update('eduworkers_products',$data)){
+                    
+   
+  $this->db->from ( 'eduworkers_products' );
+    $this->db->join ( 'eduworkers_products_files', 'eduworkers_products_files.eduworkers_products_files_rand_no = eduworkers_products.eduworkers_products_rand_no' , 'inner' );
+    $this->db->where ( 'eduworkers_products.eduworkers_products_users_id', $this->session->userdata['user_data']['user_id']);
+    $this->db->where('eduworkers_products_id',$order_id);
+    $query = $this->db->get ()->result_array();
+
+
+            if(!empty($query)){
+
+            return ['data'=>$query,
+            "has_attachment"=>1];
+            }else{
+
+                $file=$this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id'])
+                  ->where('eduworkers_products_id',$order_id)
+                  ->order_by("eduworkers_products_id","desc")
+                  ->get('eduworkers_products')->result_array();
+
+
+             return ['data'=> $file,
+            "has_attachment"=>0];
+                
+            }
+
+}
+ else return false;
+}
 
 }

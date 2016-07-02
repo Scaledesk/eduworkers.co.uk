@@ -944,12 +944,12 @@ public function orderSummary(){
 /*print_r($this->session->userdata('user_order'));
 print_r($this->session->userdata('user_products'));
 die;*/
-if (islogin()) {
+if (islogin()){
 
-$this->load->view('header/header');
+  $this->load->view('header/header');
   $this->load->view('payment');
   $this->load->view('header/footer');
-
+ 
 }
 else{
    redirect(base_url('users'));
@@ -959,7 +959,7 @@ else{
 
 public function payment(){
 
-  if($data['file']=$this->Mdl_users->payment()){
+  if($data['file']=$this->Mdl_users->getOrderSummary()){
 
        $products_service=$data['file']['data'][0]['eduworkers_products_services'];
        $products_subject=$data['file']['data'][0]['eduworkers_products_subjects'];
@@ -996,8 +996,9 @@ die;*/
              if($this->confirmation()){
              setInformUser('success',' successfully Payment');
             
-             $this->success($data);
-             redirect(base_url('users/success'));
+            /* $this->success($data);
+             redirect(base_url('users/success'));*/ 
+             return $data;
          }
          else{
             setInformUser('error',' Some Error Occured !');
@@ -1046,7 +1047,8 @@ die;*/
 
                
                setInformUser('success',' successfully Payment');
-               redirect(base_url('users/success'));
+               /*redirect(base_url('users/success'));*/
+                return $data;
            }
            else{
                setInformUser('error',' Some Error Occured !');
@@ -1092,10 +1094,39 @@ public function confirmation(){
 
 
 public function success(){
-   $this->load->view('header/header');
-   $this->load->view('success');
-    $this->load->view('header/footer');
+  
+    if($this->payment()){
+     $this->load->view('header/header');
+     $this->load->view('success');
+     $this->load->view('header/footer');
+}else {
+  redirect(base_url('users'));
 }
+
+}
+
+public function cancel(){
+
+      /*   $order_id=$this->session->userdata['order_id']; */
+         $user_email=$this->session->userdata['user_data']['user_name'];
+         $message_cancel=$this->load->view('cancel_mail',$user_email,TRUE); 
+         $this->email->from(setEmail(), 'EduWorkers');
+         $this->email->to($user_email);
+         $this->email->subject('Order Cancelled');
+         $this->email->message($message_cancel);
+         if($this->email->send()){
+
+
+          $this->load->view('header/header');
+           $this->load->view('cancel');
+           $this->load->view('header/footer');
+}
+else{
+     redirect(base_url('users'));
+}
+}
+
+
 public function error(){
    $this->load->view('header/header');
    $this->load->view('error');
@@ -1154,22 +1185,37 @@ public function singleServices (){
 public function cancelled($id){
   if(islogin()){
   if($this->Mdl_users->cancelled($id)){
+         
+         $data=['id'=>$id];
+       $user_email=$this->session->userdata['user_data']['user_name'];
+         $message_cancel=$this->load->view('cancel_mail_users',$data,TRUE); 
+         $this->email->from(setEmail(), 'EduWorkers');
+         $this->email->to($user_email);
+         $this->email->subject('Order Cancelled');
+         $this->email->message($message_cancel);
+                             if($this->email->send()){
 
-    
 
-       setInformUser('success', 'Your Product successfully Cancelled ');
-        redirect(base_url('users/profile'));
-  }else{
+                              setInformUser('success', 'Your Product successfully Cancelled ');
+                              redirect(base_url('users/profile'));
+                               }
+                                    else{
 
-       
-       setInformUser('error', 'Some error Occurred ');
-       redirect(base_url('users/profile'));
-  }
+                                          setInformUser('error', 'Some error Occurred ');
+                                           redirect(base_url('users/profile'));
+                                      }
+
+    }   
+            else{
+
+               
+               setInformUser('error', 'Some error Occurred ');
+               redirect(base_url('users/profile'));
+               }
 }
 else{
   redirect(base_url('users'));
 }
-
 }
 
 public function getQuote(){

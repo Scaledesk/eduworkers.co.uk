@@ -203,4 +203,28 @@ public function orderDetails($id){
                  
 }
 
+
+public function getCounter(){
+    
+     /*$query = "SELECT COUNT(*) FROM eduworkers_products where eduworkers_products_status='pending'";
+     $data=$this->db->get($query)->result_array();
+     /*$row = mysqli_fetch_row($result);
+      $count = $row[0];
+      echo $data;die;*/
+
+    $this->db->where('eduworkers_products_status','completed');
+    $completed=count($this->db->get('eduworkers_products')->result_array());
+
+    $this->db->where('eduworkers_products_status','pending');
+    $pending=count($this->db->get('eduworkers_products')->result_array());
+
+    $this->db->where('eduworkers_products_status','cancelled');
+    $cancelled=count($this->db->get('eduworkers_products')->result_array());
+
+     $data=['completed'=>$completed,'pending'=>$pending,'cancelled'=>$cancelled];
+
+     
+      return $data;
+   }
+
 }

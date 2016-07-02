@@ -20,9 +20,10 @@ class Admin extends MX_Controller{
      */
     public function index(){
         if (isAdmin()) {
+             $data['counter']=$this->Mdl_admin->getCounter();
             $data['active']=0;
             $this->load->view('header',$data);
-           $this->load->view('index');
+           $this->load->view('index',$data);
            $this->load->view('footer');
         }
        else {

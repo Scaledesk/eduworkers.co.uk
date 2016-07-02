@@ -6,6 +6,7 @@ class Payment extends CI_Controller
 		parent::__construct();
 		$this->load->library('paypal_lib');
 		$this->load->model('Mdl_payment');
+		$this->load->model('users/Mdl_users');
 	 }
 	 
 	 function index(){
@@ -64,7 +65,7 @@ class Payment extends CI_Controller
     }
     function buy(){
 
-
+       if($data['file']=$this->Mdl_users->payment()){
 /*    	print_r($this->session->userdata('user_order'));
 print_r($this->session->userdata('user_products'));*/
 $product_name=$this->session->userdata['user_products']['services'];
@@ -76,8 +77,8 @@ $product_id=1;
 		$paypalID = 'info@codexworld.com'; //business email */
 		$paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'; //test PayPal api url
 		$paypalID = 'team.stabilis@gmail.com';
-		$returnURL = base_url().'users/payment'; //payment success url
-		$cancelURL = base_url().'payment/cancel'; //payment cancel url
+		$returnURL = base_url().'users/success'; //payment success url
+		$cancelURL = base_url().'users/cancel'; //payment cancel url
 		$notifyURL = base_url().'payment/ipn'; //ipn url
 		//get particular product data
 		
@@ -96,4 +97,9 @@ $product_id=1;
 		
 		$this->paypal_lib->paypal_auto_form();
 	}
+	else{
+          redirect(base_url('users/do_upload'));
+	}
+}
+
 }
