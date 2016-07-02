@@ -441,7 +441,7 @@ public function login()
   
    $message=$this->load->view('notification_mail',$data,TRUE);
 
-        $admin_mail='jasbir.eduworkers@gmail.com';
+        $admin_mail='nkscoder@yahoo.in';
        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -976,7 +976,7 @@ die;*/
 
   if ($data['file']['has_attachment']==0) {
        
-        $admin_mail='jasbir.eduworkers@gmail.com';
+        $admin_mail='nkscoder@yahoo.in';
         $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1030,7 +1030,7 @@ die;*/
        if($this->email->send()){
         if($this->confirmation()){
 
-        $admin_mail='jasbir.eduworkers@gmail.com';
+        $admin_mail='nkscoder@yahoo.in';
         $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1179,7 +1179,7 @@ public function getQuote(){
    
 
         $message=$this->load->view('quote',$data,TRUE);
-        $admin_mail='jasbir.eduworkers@gmail.com';
+        $admin_mail='nkscoder@yahoo.in';
        $this->email->from(setEmail(), 'Edu Workers');
         
         $this->email->to($admin_mail);
@@ -1286,7 +1286,7 @@ public function profileQuery(){
                
 
           }else{
-                $admin_mail='jasbir.eduworkers@gmail.com';
+                $admin_mail='nkscoder@yahoo.in';
                 $this->email->from(setEmail(), 'Eduworkers');
          
                  $this->email->to($admin_mail);
@@ -1312,7 +1312,7 @@ public function profileQuery(){
    }
 
           else{
-         $admin_mail='jasbir.eduworkers@gmail.com';
+         $admin_mail='nkscoder@yahoo.in';
          $this->email->from(setEmail(), 'Eduworkers');
          
         $this->email->to($admin_mail);       
@@ -1376,7 +1376,8 @@ public function subjectQuerySend(){
                
 
           }else{
-                $admin_mail='jasbir.eduworkers@gmail.com';
+                /*$admin_mail='jasbir.eduworkers@gmail.com';*/
+                $admin_mail='nkscoder@yahoo.in';
                 $this->email->from(setEmail(), 'Eduworkers');
          
                  $this->email->to($admin_mail);
@@ -1402,7 +1403,7 @@ public function subjectQuerySend(){
    }
 
           else{
-         $admin_mail='jasbir.eduworkers@gmail.com';
+         $admin_mail='nkscoder@yahoo.in';
          $this->email->from(setEmail(), 'Eduworkers');
          
         $this->email->to($admin_mail);       

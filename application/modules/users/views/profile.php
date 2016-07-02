@@ -134,7 +134,11 @@
                 <td><?php echo $row['eduworkers_products_services'];  ?></td>
                 <td><?php echo $row['eduworkers_products_total'];  ?></td>
                 <td><?php echo $row['eduworkers_products_status'];  ?></td>
-                <td><a href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a></td>
+
+
+                <td> <?php if($row['eduworkers_products_status']=="pending"){?> <a onclick="return confirm('Are you sure you want to Cancel Order ?')" href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a><?php }?>
+                </td>
+
             </tr>
             <?php } ?>
         </tbody>
