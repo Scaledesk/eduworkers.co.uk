@@ -117,10 +117,10 @@
          <div class="tab-pane col-md-12" id="e">
           <div class="table-responsive">
           <div> <table class="table">
-          <tr>
-          <td>Completed :- <?php echo $counter['completed']; ?></td> 
-          <td>Cancelled :- <?php echo $counter['cancelled']; ?></td> 
-         <td>Payment Done :- <?php echo $counter['payment_done']; ?></td>
+          <tr style="font-size:15px;">
+          <td> Order Completed :- <?php echo $counter['completed']; ?></td> 
+          <td> Order Cancelled :- <?php echo $counter['cancelled']; ?></td> 
+         <td>  Order Payment Done :- <?php echo $counter['payment_done']; ?></td>
          </tr> 
          </table></div>
 
