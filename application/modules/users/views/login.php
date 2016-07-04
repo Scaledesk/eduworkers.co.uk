@@ -5,7 +5,7 @@
           <div class="row">
             <div class="col-md-4"></div>
                     <div class="col-md-4 login_form-custom">
-                    <h1 class="text-center custom_title">Login In</h1>
+                    <h1 class="text-center custom_title">Login</h1>
                     <form action="<?php echo base_url().'users'; ?>" method="post">
 
                       <div class="row error_msg">  <?php  echo getInformUser(); ?>  </div>
@@ -18,7 +18,7 @@
                             <input class="custom-input_class" type="password" required name="password" placeholder="Password" />
                         </div>
                         <div class="gap"></div>
-                        <input class="btn btn-primary custom-button_class" type="submit" name="login" value="Login In" />
+                        <input class="btn btn-primary custom-button_class txt-lg" type="submit" name="login" value="Login" />
                        <!--  <h4 class="text-center custom-or">Or</h4> -->
                         <!-- <div class="text-center social-custom-btn">
                         <input class="custom-button-f" type="submit" value="Facebook login" />&nbsp;&nbsp;

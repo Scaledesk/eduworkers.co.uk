@@ -108,7 +108,7 @@
 .login_form-custom{
 	background-color: rgba(54, 71, 89, 0.41);
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important;
-	margin: 40px 0 !important;
+	margin: 30px 0 !important;
 	/*border-radius: 5px;*/
 	text-align: center;
 	/*width: 35%;*/
@@ -154,7 +154,7 @@
 .custom-button_class{
 	padding: 15px !important;
     width: 40%;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .custom-input_class{
 	display: block ;
@@ -175,7 +175,7 @@
 
 }
 .custom_title{
-	padding: 35px 0;
+	padding: 8px 0;
 	color: #fff;
 	font-size: 24px;
 }

@@ -32,12 +32,12 @@
                             <input class="custom-input_class" type="password" id="passcof"  required name="passcof" placeholder="Retype-Password" />
                         </div>
                          <div id="lengthPass" style="color:red"> </div>
-                        <input class="btn btn-primary custom-button_class" type="submit" value="Sign Up"  />
+                        <input class="btn btn-primary custom-button_class txt-lg" type="submit" value="Sign Up"  />
                         <?php echo form_hidden('todo', 'register'); ?>
                         <div class=" already_member">
 
                           Already member ? &nbsp;
-                           <a href="<?php echo base_url().'users/login'; ?>"> <span>login Here</span></a>
+                           <a href="<?php echo base_url().'users/login'; ?>"> <span>Login Here</span></a>
                         </div>
                         </form>
                         </div>
