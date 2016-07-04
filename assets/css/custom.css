@@ -247,6 +247,7 @@
 
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
+	padding-top: 30px;
   display: none;
 }
 
@@ -914,3 +915,7 @@ input:-moz-placeholder { color:#f00; }
 color:rgba(244, 248, 250, 0.95);
 }
 
+.upload_button{
+position: absolute;
+    right: 318px;
+}
