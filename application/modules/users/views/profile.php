@@ -116,6 +116,14 @@
        </div>
          <div class="tab-pane col-md-12" id="e">
           <div class="table-responsive">
+          <div> <table class="table">
+          <tr>
+          <td>Completed :- <?php echo $counter['completed']; ?></td> 
+          <td>Cancelled :- <?php echo $counter['cancelled']; ?></td> 
+         <td>Payment Done :- <?php echo $counter['payment_done']; ?></td>
+         </tr> 
+         </table></div>
+
         <table class="table" id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -129,6 +137,14 @@
         </thead>
         
         <tbody>
+          
+
+         
+         
+
+
+
+
         <?php foreach ($products as $row) {
          ?> 
             <tr>
@@ -140,7 +156,7 @@
                 <td><?php echo $row['eduworkers_products_status'];  ?></td>
 
 
-                <td> <?php if($row['eduworkers_products_status']=="pending"){?> <a onclick="return confirm('Are you sure you want to Cancel Order ?')" href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a><?php }?>
+                <td> <?php if($row['eduworkers_products_status']=="payment_done"){?> <a onclick="return confirm('Are you sure you want to Cancel Order ?')" href="<?php echo base_url().'users/cancelled/'.$row['eduworkers_products_id']; ?>">Cancel</a><?php }?>
                 </td>
 
             </tr>

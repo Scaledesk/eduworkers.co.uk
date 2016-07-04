@@ -218,10 +218,13 @@ public function getCounter(){
     $this->db->where('eduworkers_products_status','pending');
     $pending=count($this->db->get('eduworkers_products')->result_array());
 
+     $this->db->where('eduworkers_products_status','payment_done');
+    $payment_done=count($this->db->get('eduworkers_products')->result_array());
+
     $this->db->where('eduworkers_products_status','cancelled');
     $cancelled=count($this->db->get('eduworkers_products')->result_array());
 
-     $data=['completed'=>$completed,'pending'=>$pending,'cancelled'=>$cancelled];
+     $data=['completed'=>$completed,'pending'=>$pending,'cancelled'=>$cancelled,'payment_done'=>$payment_done];
 
      
       return $data;

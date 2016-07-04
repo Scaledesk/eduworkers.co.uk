@@ -416,6 +416,7 @@ public function login()
                     $data['profile']=$this->Mdl_users->getProfile();
                    /* print_r( $data['profile']);
                     die;*/
+                    $data['counter']=$this->Mdl_users->getCounter();
                     $this->load->view('header/header');
                     $this->load->view('profile',$data);
                     $this->load->view('header/footer');
@@ -1506,5 +1507,10 @@ public function contactUs(){
     }
 
 }
+
+
+     
+
+
 
 }

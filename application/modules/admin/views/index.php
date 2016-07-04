@@ -8,7 +8,7 @@
                   		<a href="<?php echo base_url().'admin/getUsers/' ?>"><div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
 					  			<span class="li_heart"></span>
-					  			<h3>Users Details</h3>
+					  			<h4>Users Details</h4>
                   			</div>
 					  			
                   		</div></a>
@@ -16,7 +16,7 @@
                   		<a href="<?php echo base_url().'admin/product/' ?>"><div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
 					  			<span class="li_cloud"></span>
-								<h3>Order Management</h3>
+								<h4>Order Management</h4>
                   			</div>
 					  			
                   		</div> </a>
@@ -24,7 +24,7 @@
                          <div class="col-md-2 col-sm-2 box0" style="margin-left: 50px";>
                         <div class="box1">
                   <span class="li_cloud"></span>
-                   <h3>Completed</h3> <h4><?php echo $counter['completed']; ?></h>
+                   <h4>Completed</h4> <h5><?php echo $counter['completed']; ?></h5>
                         </div>
                   
                       </div>
@@ -32,19 +32,25 @@
                       <div class="col-md-2 col-sm-2 box0" style="margin-left: 30px";>
                         <div class="box1">
                   <span class="li_cloud"></span>
-                   <h3>Pending</h3> <h4><?php echo $counter['pending']; ?></h>
+                   <h4>Pending</h4> <h5><?php echo $counter['pending']; ?></h5>
                         </div>
                   
-                      </div>
+                      </div> 
                       <div class="col-md-2 col-sm-2 box0" style="margin-left: 50px";>
                         <div class="box1">
                   <span class="li_cloud"></span>
-                   <h3>Cancelled</h3> <h4><?php echo $counter['cancelled']; ?></h>
+                   <h4>Cancelled</h4> <h5><?php echo $counter['cancelled']; ?></h5>
                         </div>
                   
                       </div>
 
+                   <div class="col-md-2 col-sm-2 box0" style="margin-left: 50px";>
+                        <div class="box1">
+                  <span class="li_cloud"></span>
+                   <h4>Payment Done</h4> <h5><?php echo $counter['payment_done']; ?></h5>
+                        </div>
                   
+                      </div>
                   		
 
                         </div>

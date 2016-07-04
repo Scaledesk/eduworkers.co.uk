@@ -748,7 +748,7 @@ public function getOrderSummary(){
     $order_id=$this->session->userdata['order_id']; 
    /*echo $order_id;
     die;*/
-         $data = [ 'eduworkers_products_status' => 'completed' ];
+         $data = [ 'eduworkers_products_status' => 'payment_done' ];
          $this->db->where('eduworkers_products_id',$order_id); 
         if($this->db->update('eduworkers_products',$data)){
                     
@@ -780,5 +780,31 @@ public function getOrderSummary(){
 }
  else return false;
 }
+
+public function getCounter(){
+    
+    
+    $this->db->where('eduworkers_products_status','completed');
+    $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+    $completed=count($this->db->get('eduworkers_products')->result_array());
+
+    $this->db->where('eduworkers_products_status','pending');
+    $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+    $pending=count($this->db->get('eduworkers_products')->result_array());
+
+     $this->db->where('eduworkers_products_status','payment_done');
+     $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+    $payment_done=count($this->db->get('eduworkers_products')->result_array());
+
+    $this->db->where('eduworkers_products_status','cancelled');
+    $this->db->where('eduworkers_products_users_id',$this->session->userdata['user_data']['user_id']);
+    $cancelled=count($this->db->get('eduworkers_products')->result_array());
+
+     $data=['completed'=>$completed,'pending'=>$pending,'cancelled'=>$cancelled,'payment_done'=>$payment_done];
+
+     /*print_r($data);die;*/
+      return $data;
+   }
+
 
 }
