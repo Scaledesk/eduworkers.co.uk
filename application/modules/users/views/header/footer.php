@@ -68,7 +68,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
                   <input class="form-control footer-form" type="email" required name="email" placeholder="Email address" >
                   <input class="form-control footer-form" type="text" required name="phone" placeholder="Phone No. " maxlength="10" >
                   <textarea class="form-control footer-form" rows="7" required name="message" placeholder="Message"></textarea>
-                  <button type="submit" class="btn btn-primary btn-effect">SEND MESSSAGE</button> 
+                  <button type="submit" class="btn btn-primary btn-effect txt-lg">SEND MESSSAGE</button> 
                 </div>
               </form>
             </section>
