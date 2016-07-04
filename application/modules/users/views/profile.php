@@ -65,7 +65,7 @@
               
               
                <input class="form-control" type="text"  name="phone" placeholder="Phone"  value="<?php echo $profile[0]['eduworkers_users_phone']; ?>"required="">
-               <input class="btn btn-info" type="submit" value="update">
+               <input class="btn btn-info txt-lg" type="submit" value="Update">
                </form>
 
        </div>
@@ -78,7 +78,7 @@
                 <input class="form-control" type="text"  name="new_pass" placeholder="New Password" id="pass" required="">
               
                <input class="form-control" type="text"  name="c_pass" placeholder="confirm password" id="passcof" onchange="myFunction()" required="">
-               <input class="btn btn-info" type="submit" value="update">
+               <input class="btn btn-info txt-lg" type="submit" value="Update">
                </form>
 
        </div>
@@ -101,7 +101,7 @@
               
                 <textarea class="form-control" name="query" required="" rows="10" placeholder="Details"></textarea>
                 <div>
-              <label class="btn btn-primary btn-effect"> 
+              <label class="btn btn-primary btn-effect upload_button"> 
                  
                  <input class="form-control" type="file"  name="uploadfile"/> 
                  <!--  <input type="file" name="files[]" multiple id="files" onchange="modalval(this)" /> -->
@@ -110,7 +110,7 @@
              
              </label>
                  </div> 
-                 <input class="btn btn-info" type="submit" value="Submit"/>
+                 <input class="btn btn-info txt-lg" type="submit" value="Submit"/>
                </form>
 
        </div>
