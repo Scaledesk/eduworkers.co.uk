@@ -869,13 +869,15 @@ function do_upload() {
 
         $this->upload->initialize($this->set_upload_options());
 
+
         if(!$this->upload->do_upload ('userfile'))
         {
         
          $data = $this->upload->data();
-
-       /*cho  $name_array[] = $data['file_name'];
-die;*/
+/*
+           echo  $name_array[] = $data['file_name'];
+           echo $ci->upload->display_errors();
+          die;*/
 
           $error = array('error' => $ci->upload->display_errors());
            setInformUser('error', $error['error'].' please uploads  file formate only');
@@ -885,7 +887,7 @@ die;*/
         }
         
          $data = $this->upload->data();
-        $name_array[] = $data['file_name'];
+         $name_array[] = $data['file_name'];
 
 /*print_r($name_array);die;*/
     }
@@ -933,7 +935,9 @@ private function set_upload_options() {
     $config ['allowed_types'] = 'docx|pdf|ppt|doc|pptx'; 
      $config['max_size']      = 2000;
     $config ['encrypt_name'] = TRUE;
-
+   
+      /*echo $config ['upload_path'];die;
+*/
     return $config;
 }
 

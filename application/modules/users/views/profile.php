@@ -132,7 +132,9 @@
         <?php foreach ($products as $row) {
          ?> 
             <tr>
-                <td><?php echo $row['eduworkers_products_id'];  ?></td>
+                <td> <a data-toggle="modal" data-target="#myModal<?php echo $row['eduworkers_products_id'];  ?>"><?php echo $row['eduworkers_products_id'];  ?>
+                    </a>
+                </td>
                 <td><?php echo $row['eduworkers_products_services'];  ?></td>
                 <td><?php echo $row['eduworkers_products_total'];  ?></td>
                 <td><?php echo $row['eduworkers_products_status'];  ?></td>
@@ -142,7 +144,57 @@
                 </td>
 
             </tr>
+
+              <!-- Modal -->
+  <div class="modal fade" id="myModal<?php echo $row['eduworkers_products_id'];?>" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Order  Summary</h4>
+        </div>
+        <div class="modal-body">
+           <div class="row">
+
+              <div class="col-md-6"> Order Id</div> <div class="col-md-6"><?php echo $row['eduworkers_products_id'];?></div>
+
+               <div class="col-md-6"> Service</div> <div class="col-md-6"><?php echo $row['eduworkers_products_services'];?></div> 
+
+              <div class="col-md-6"> Subjects</div> <div class="col-md-6"><?php echo $row['eduworkers_products_subjects'];?></div> 
+               <div class="col-md-6"> Grade</div> <div class="col-md-6"><?php echo $row['eduworkers_products_grade'];?></div> 
+               <div class="col-md-6"> Length/Slide</div> <div class="col-md-6"><?php echo $row['eduworkers_products_length'];?></div> 
+               <div class="col-md-6"> Delivery Days</div> <div class="col-md-6"><?php echo $row['eduworkers_products_delivery_date'];?></div>
+
+               <div class="col-md-6"> Order Date</div> <div class="col-md-6"><?php echo $row['eduworkers_products_data'];?></div>
+
+               <div class="col-md-6"> Delivery Days</div> <div class="col-md-6"><?php echo $row['eduworkers_products_delivery_date'];?></div>
+
+                <div class="col-md-6"> Total Price</div> <div class="col-md-6"><?php echo $row['eduworkers_products_total'];?></div>
+
+                 <div class="col-md-6"> Status</div> <div class="col-md-6"><?php echo $row['eduworkers_products_status'];?></div>
+                 
+           </div>
+          
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
             <?php } ?>
+        
+
+
         </tbody>
     </table>
     </div>
