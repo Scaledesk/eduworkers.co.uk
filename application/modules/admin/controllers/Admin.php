@@ -209,4 +209,23 @@ public function confirmation($data){
 }
 
 
+public function priceMatrix(){
+
+if(isAdmin()){
+               
+    
+        $data['active']=5;
+         $data['price']=$this->Mdl_admin->matrixPrice();
+          $this->load->view('header',$data);
+          $this->load->view('matrixPrice',$data);
+          $this->load->view('footer');
+
+
+}
+else{
+   redirect(base_url('users'));
+}
+
+}
+
 }

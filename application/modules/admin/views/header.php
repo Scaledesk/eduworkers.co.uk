@@ -90,6 +90,15 @@
                     
                   </li>
 
+
+                  <li class="sub-menu">
+                      <a <?php  if($active==5){ ?> class="active"<?php }?> href="<?php echo  base_url().'admin/priceMatrix';?>" >
+                          <i class="fa fa-tasks"></i>
+                          <span> Price Matrix</span>
+                      </a>
+                    
+                  </li>
+
                   <li  class="sub-menu">
                       <a <?php  if($active==3 or $active==2 ){ ?> class="active"<?php }?>  href="javascript:;" >
                           <i class="fa fa-cogs"></i>

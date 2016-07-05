@@ -230,4 +230,8 @@ public function getCounter(){
       return $data;
    }
 
+public function matrixPrice(){
+     return;
+}
+
 }
