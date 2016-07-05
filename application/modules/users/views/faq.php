@@ -131,7 +131,7 @@
 											</div>
 
 											</a>
-											<div id="collapse-custom-1" class="panel-collapse collapse in">
+											<div id="collapse-custom-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">You must assure us that you will use our work as an educational research tool only. The work remains our copyright and is not yours to hand in. It is there to inspire your final piece. If we believe any other motive exists for purchasing our work then we will not supply you.</p>
 												</div>
@@ -232,7 +232,7 @@
 											</div>
 
 											</a>
-											<div id="collapse-custom1-1" class="panel-collapse collapse in">
+											<div id="collapse-custom1-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">Our telephone number is +44 7818 440786</p>
 												</div>
@@ -337,7 +337,7 @@
 											</div>
 
 											</a>
-											<div id="collapse-custom2-1" class="panel-collapse collapse in">
+											<div id="collapse-custom2-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">You simply submit your essay to us via our online order form and make your payment. We then contact all researchers who are qualified and experienced in your subject area and assign your work appropriately. This usually takes a couple of hours at most, and is quicker for urgent orders. We will then contact you to let you know that a researcher has been assigned and work has begun.</p>
 												</div>
@@ -426,7 +426,7 @@
 											</div>
 
 											</a>
-											<div id="collapse-custom3-1" class="panel-collapse collapse in">
+											<div id="collapse-custom3-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">You submit your order to us by simply going to our order page, completing the order form and making your payment. We then contact our researchers and assign your work appropriately. This process usually takes less than one working day, but we endeavour to be quicker for more urgent orders. Very rarely, it may take slightly longer to find an expert. Once we have found an expert we will inform you, and the time for the delivery of your essay then begins to run. Please keep this in mind when ordering. You are then sent your completed essay via your secure customer control panel, before midnight, on the delivery date.
 We must put your question to our experts first. We can't always guarantee that we can do all essays/dissertations, but we do undertake the vast majority of projects - even those that are particularly difficult or from unusual subject areas. If we cannot find a researcher after three working days of trying, we will e-mail you to let you know and refund any payments you have made to us. You are welcome to telephone our dedicated customer support team to check on the progress of your order at any time (______).</p>
@@ -502,7 +502,7 @@ We must put your question to our experts first. We can't always guarantee that w
 											</div>
 
 											</a>
-											<div id="collapse-custom4-1" class="panel-collapse collapse in">
+											<div id="collapse-custom4-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">Eduworkers.com is a trading name of a limited company, Eduworkers Ltd, registered at Companies House under Company No. 08096463 in the UK, our office being in 45, Green Lane, Coventry, CV3 6DH, United Kingdom. The registered office address (and address for correspondence) is ( Company UK address).  Eduworkers Limited has been trading since 2009 (this can be verified on the Companies House website).</p>
 												</div>
@@ -576,7 +576,7 @@ We must put your question to our experts first. We can't always guarantee that w
 											</div>
 
 											</a>
-											<div id="collapse-custom6-1" class="panel-collapse collapse in">
+											<div id="collapse-custom6-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">If we were defrauding people they would have said! Also our payment providers would cut off their service to us and we would go out of business very quickly! Don't forget that we are a legitimate company with a UK trading address and a UK landline number, as well as being registered at Companies House. Unlike other companies that are comprised of simply a website and an e-mail address, we have real people to speak to at a verifiable UK location. We have been in operation for 6+ years and work hard to maintain our reputation because we believe that the happier you are, the more people you will recommend us to!</p>
 												</div>
@@ -643,7 +643,7 @@ We must put your question to our experts first. We can't always guarantee that w
 											</div>
 
 											</a>
-											<div id="collapse-custom7-1" class="panel-collapse collapse in">
+											<div id="collapse-custom7-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">You submit your order to us by simply going to our order page, completing the order form and making your payment. We then contact all researchers who are qualified and experienced in your subject area and assign your work appropriately. This process usually takes less than one working day, we usually have best experts available for you straight away. We endeavour to be quicker for more urgent orders (we have one day service for really urgent cases!). Very rarely, it may take slightly longer to find an expert but we'll keep you informed of what's happening. Once we have found an expert we will inform you, and the time for the delivery of your work then begins to run. Please keep this in mind when ordering. You are then sent your completed work through your secure customer account area, before midnight, on the delivery date.</p>
 												</div>
@@ -854,7 +854,7 @@ Moreover, we are a company with truly international experience. We operate servi
 											</div>
 
 											</a>
-											<div id="collapse-custom5-1" class="panel-collapse collapse in">
+											<div id="collapse-custom5-1" class="panel-collapse collapse">
 												<div class="panel-body">
 													<p class="ui-text">We guarantee all aspects of our service.Please refer to our services page for full details of these.</p>
 												</div>

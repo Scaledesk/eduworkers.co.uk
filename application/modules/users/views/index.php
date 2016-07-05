@@ -521,7 +521,7 @@
             services in writing that are 100% free from plagiarism. We constantly endeavor to better our services and live-up
             to our client’s expectations 100% of the time. We also provide our clients with steadfast Customer Support which
             is available 24/7. Our mission is to offer services at very competitive prices, along with bulk discounts and
-            ensure 100% confidentiality of our client’s communication and assignment</p>
+            ensure 100% confidentiality of our client’s communication and assignment.</p>
           <!--  <div class="ui-subtitle-block ui-subtitle-block_mod-c">Fusce eleifend donec apien sed phase lusa pellentesque lacus vamus lorem arcu semper duiac rasorn are vamus etiam ind arcu morbi justo mauris tempus pharetra.</div> -->
           <!-- <a class="btn btn-primary btn-effect" href="javascript:void(0);">ENROLL NOW</a> --></section>
         <!--end section-default
@@ -621,11 +621,12 @@
           <section class="section-default wow bounceInRight" data-wow-duration="2s">
             <h2 class="ui-title-block">Why <strong>Eduworkers ?</strong></h2>
             <div class="panel-group accordion accordion" id="accordion-1">
-              <div class="panel panel-default">
-                <div class="panel-heading"> <a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1"><i class="icon"></i></a>
+              <div class="panel">
+                <div class="panel-heading"> 
+                  <a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-1"><i class="icon"></i></a>
                   <h3 class="panel-title">Guaranteeing the best quality</h3>
                 </div>
-                <div id="collapse-1" class="panel-collapse collapse in">
+                <div id="collapse-1" class="panel-collapse collapse">
                   <div class="panel-body">
                     <p class="ui-text">Our experts are screened and put through a rigorous interview process so that you are ensured of the
                       best quality service. It is because of such painstaking and meticulous selection of candidates that
