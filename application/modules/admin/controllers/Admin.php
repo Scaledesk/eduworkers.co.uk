@@ -214,8 +214,10 @@ public function priceMatrix(){
 if(isAdmin()){
                
     
-        $data['active']=5;
+         $data['active']=5;
          $data['price']=$this->Mdl_admin->matrixPrice();
+           /*print_r($data['price']);
+           die;*/
           $this->load->view('header',$data);
           $this->load->view('matrixPrice',$data);
           $this->load->view('footer');

@@ -231,7 +231,9 @@ public function getCounter(){
    }
 
 public function matrixPrice(){
-     return;
+
+     return $data=$this->db->get('eduworkers_matrix')->result_array();
+    
 }
 
 }
