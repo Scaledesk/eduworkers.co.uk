@@ -8,7 +8,8 @@
 
 class Users extends MX_Controller{
    
-   
+
+
     function __construct()
     {
         date_default_timezone_set('Asia/Calcutta');
@@ -17,7 +18,15 @@ class Users extends MX_Controller{
         $this->load->Model('Mdl_users');
         
         $this->load->Model('admin/Mdl_admin');
+
+       
     }
+
+      public function adminEmail(){
+        return  $adminEmail='sanchit2411@gmail.com';
+       }
+
+
     /**
      * this is the index method the landing page for all operations
      */
@@ -433,6 +442,8 @@ public function login()
 
      public  function contact()
     {
+
+        /* echo $this->adminEmail(); die;*/
    
     $data=$this->input->post();
     // $phone=$data['phone'];
@@ -441,11 +452,11 @@ public function login()
     // $query=$data['message'];
   
    $message=$this->load->view('notification_mail',$data,TRUE);
-
-        $admin_mail='nkscoder@yahoo.in';
+         
+        /*$admin_mail='nkscoder@yahoo.in';*/
        $this->email->from(setEmail(), 'Edu Workers');
         
-        $this->email->to($admin_mail);
+        $this->email->to($this->adminEmail());
      
         $this->email->subject('Notifiction');
         /*$this->email->message(' <div id="abcd" style="text-align:justify;font-size:18px;">'. $name.'<br/>'. $phone.'<br/>'.$email.'<br/>'.$query.'</div>');
@@ -981,10 +992,10 @@ die;*/
 
   if ($data['file']['has_attachment']==0) {
        
-        $admin_mail='nkscoder@yahoo.in';
+       /* $admin_mail='nkscoder@yahoo.in';*/
         $this->email->from(setEmail(), 'Edu Workers');
         
-        $this->email->to($admin_mail);
+        $this->email->to($this->adminEmail());
      
         $this->email->subject('Product Details');
 
@@ -1036,10 +1047,10 @@ die;*/
        if($this->email->send()){
         if($this->confirmation()){
 
-        $admin_mail='nkscoder@yahoo.in';
+      /*  $admin_mail='nkscoder@yahoo.in';*/
         $this->email->from(setEmail(), 'Edu Workers');
         
-        $this->email->to($admin_mail);
+        $this->email->to($this->adminEmail());
         $path =  set_realpath('uploads'); 
         $this->email->subject('Product Details');
        $this->email->message($message_admin);
@@ -1230,10 +1241,12 @@ public function getQuote(){
    
 
         $message=$this->load->view('quote',$data,TRUE);
-        $admin_mail='nkscoder@yahoo.in';
+       /* $admin_mail='nkscoder@yahoo.in';*/
+       /* echo $adminEmail(); die;*/
+
        $this->email->from(setEmail(), 'Edu Workers');
         
-        $this->email->to($admin_mail);
+        $this->email->to($this->adminEmail());
      
         $this->email->subject('Get Quote');
         $this->email->message($message);
@@ -1337,10 +1350,10 @@ public function profileQuery(){
                
 
           }else{
-                $admin_mail='nkscoder@yahoo.in';
+               /* $admin_mail='nkscoder@yahoo.in';*/
                 $this->email->from(setEmail(), 'Eduworkers');
          
-                 $this->email->to($admin_mail);
+                 $this->email->to($this->adminEmail());
                $path =set_realpath('uploads'); 
                 $file = $this->upload->data();
 
@@ -1363,10 +1376,10 @@ public function profileQuery(){
    }
 
           else{
-         $admin_mail='nkscoder@yahoo.in';
+        /* $admin_mail='nkscoder@yahoo.in';*/
          $this->email->from(setEmail(), 'Eduworkers');
          
-        $this->email->to($admin_mail);       
+        $this->email->to($this->adminEmail());       
         $this->email->subject('Query');
         $this->email->message($message);
        
@@ -1428,10 +1441,10 @@ public function subjectQuerySend(){
 
           }else{
                 /*$admin_mail='jasbir.eduworkers@gmail.com';*/
-                $admin_mail='nkscoder@yahoo.in';
+               /* $admin_mail='nkscoder@yahoo.in';*/
                 $this->email->from(setEmail(), 'Eduworkers');
          
-                 $this->email->to($admin_mail);
+                 $this->email->to($this->adminEmail());
                $path =set_realpath('uploads'); 
                 $file = $this->upload->data();
 
@@ -1454,10 +1467,10 @@ public function subjectQuerySend(){
    }
 
           else{
-         $admin_mail='nkscoder@yahoo.in';
+       /*  $admin_mail='nkscoder@yahoo.in';*/
          $this->email->from(setEmail(), 'Eduworkers');
          
-        $this->email->to($admin_mail);       
+        $this->email->to($this->adminEmail());       
         $this->email->subject('Order Query');
         $this->email->message($message);
        
@@ -1479,13 +1492,16 @@ public function subjectQuerySend(){
 public function contactUs(){
     if(strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post'){
         $data=$this->input->post();
+
+
+
        /* print_r($data);die;*/
         $message=$this->load->view('contact_us',$data,TRUE);
 
-        $admin_mail='nkscoder@gmail.com';
+        /*$admin_mail='nkscoder@gmail.com';*/
         $this->email->from(setEmail(), 'Eduworkers');
 
-        $this->email->to($admin_mail);
+        $this->email->to($this->adminEmail());
         $this->email->subject('Contact Us');
         $this->email->message($message);
 
