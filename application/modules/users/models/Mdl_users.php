@@ -806,5 +806,11 @@ public function getCounter(){
       return $data;
    }
 
+   public function pl1($row,$data){
+
+     return $query=$this->db->where($row,$data)->get('eduworkers_matrix')->result_array();
+
+   }
+
 
 }

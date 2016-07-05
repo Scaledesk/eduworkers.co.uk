@@ -236,7 +236,7 @@
                             <option value="" >Select</option>
                             <option value="gcse A">GCSE A Grade</option>  
                             <option  value="A grade A">A grade A</option>
-                            <option value="gcse B ">GCSE B Grade</option> 
+                            <option value="gcse B">GCSE B Grade</option> 
                             <option value="nvq"> NVQ level 2 (Pass)</option>
 
                             <option value="merit"> NVQ level 2 (Merit)</option>

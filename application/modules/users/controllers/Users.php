@@ -547,8 +547,12 @@ public function doOrder(){
      $slide=$this->input->post('slide');
      $services=$this->input->post('services');
 /*echo json_encode($services);*/
-/* echo json_encode($grade);*/
-/* die;*/ 
+ /*echo json_encode($grade);
+ die;*/ 
+/* echo json_encode($grade);
+       die;*/
+
+
 
 if($services=='Powerpoint presentation'){
 
@@ -563,53 +567,102 @@ if($services=='Powerpoint presentation'){
 
 
 
- else if($grade=='gcse A'){
-     $pl=0.075;
-  
+ else if($grade=='gcse A'){ 
 
+     /*$pl=0.075; gcse A*/
+    /* $pl=$this->Mdl_users->pl1();
+*/
+      /*echo json_encode($grade); die;*/
+
+      $data=$this->Mdl_users->pl1('eduworkers_matrix_level','GCSE A Grade');
+       
+       /*echo json_encode($grade); die;*/
+
+       $pl=$data['0']['eduworkers_matrix_pl1'];
+
+      /* echo json_encode($grade); die;*/
+
+      
    if ($date==1 ) {
+
+        $data= $this->Mdl_users->pl1('eduworkers_matrix_time',1);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
      
-      $pl2=2.5;
+     /* $pl2=2.5;*/
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }
   elseif ($date==2 ) {
+
+     $data= $this->Mdl_users->pl1('eduworkers_matrix_time',2);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
      
-       $pl2=1.75;
+       /*$pl2=1.75;*/
       $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
   }
 elseif ($date==3 ) {
+
+    $data= $this->Mdl_users->pl1('eduworkers_matrix_time',3);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
+
     
-      $pl2=1.5;
+      /*$pl2=1.5;*/
       $total=$pl* $words*$pl2;
         /*echo json_encode($total);*/
   }elseif ($date==4 ) {
      
-      $pl2=1.35;
+     $data= $this->Mdl_users->pl1('eduworkers_matrix_time',4);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+      /*$pl2=1.35;*/
       $total=$pl* $words*$pl2;
         /*echo json_encode($total);*/
   }elseif ($date==5 ) {
+
+       $data= $this->Mdl_users->pl1('eduworkers_matrix_time',5);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
      
-      $pl2=1.20;
+      /*$pl2=1.20;*/
       $total=$pl*$words*$pl2;
        /* echo json_encode($total);*/
   }elseif ( $date==6 or $date==7 or $date==8 or $date==9) {
     
-      $pl2=1.15;
+        $data= $this->Mdl_users->pl1('eduworkers_matrix_time',6);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
+      /*$pl2=1.15;*/
       $total=$pl* $words*$pl2;
       /*  echo json_encode($total);*/
   }elseif ($date==10 ) {
+
+        $data= $this->Mdl_users->pl1('eduworkers_matrix_time',10);
+
+       $pl2=$data['0']['eduworkers_matrix_pt2'];
     
-      $pl2=1;
+      /*$pl2=1;*/
       $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
   }
 }
-else if ($grade=='gcse B' or $grade=='nvq') {
- 
+else if ($grade=='gcse B' or $grade=='nvq') {  
+          
+          /* echo json_encode('new'.$grade);
+           die;*/
+
+           $data= $this->Mdl_users->pl1('eduworkers_matrix_level','GCSE B Grade');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+       
+/*
          $pl=0.0714;
-         $pl2=1;
+         $pl2=1;*/
      
       
         $total=$pl* $words*$pl2;
@@ -617,69 +670,115 @@ else if ($grade=='gcse B' or $grade=='nvq') {
    }
 
 else if ($grade=='merit') {
- 
-         $pl=0.075;
-         $pl2=1;   
+        
+
+         $data= $this->Mdl_users->pl1('eduworkers_matrix_level','NVQ level 2 (Merit)');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.075;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }
 
 else if ($grade=='A grade b') {
- 
-         $pl=0.075;
-         $pl2=1;   
+         
+          $data= $this->Mdl_users->pl1('eduworkers_matrix_level','A Level B Grade');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.075;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
         /*echo json_encode($total);*/
    }
 else if ($grade=='A grade A') { 
+
+          $data= $this->Mdl_users->pl1('eduworkers_matrix_level','A Level A Grade');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.0786;
-         $pl2=1;   
+        /* $pl=0.0786;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }
  else if ($grade=='diploma pass') {
- 
-         $pl=0.075;
-         $pl2=1;   
+         
+          $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Diploma pass');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.075;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  
   else if ($grade=='diploma merit') {
+
+      $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Diploma merit');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.093;
-         $pl2=1;   
+        /* $pl=0.093;
+         $pl2=1;   */
         $total=$pl* $words*$pl2;
         /*echo json_encode($total);*/
    }  
     
     else if ($grade=='Undergraduate 2:2') {
+           $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Undergraduate 2:2 (50-59%)');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.082;
-         $pl2=1;   
+          
+        /* $pl=0.082;
+         $pl2=1;   */
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  
     else if ($grade=='Undergraduate 2:1' or $grade=='postgraduate Diploma 2:2') {
- 
-         $pl=0.093;
-         $pl2=1;   
+            
+             $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Undergraduate 2:1 (60-69%)');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+         /*$pl=0.093;
+         $pl2=1; */  
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  
 
 
    else if ($grade=='postgraduate Diploma 2:1'  or $grade=='Masters 2:1' ) {
- 
-         $pl=0.129;
-         $pl2=1;   
+            
+              $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Postgraduate Diploma 2:1 (60-69%)');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.129;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    } 
    else if ($grade=='Masters 2:2') {
- 
-         $pl=0.093;
-         $pl2=1;   
+
+           $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Masters 2:2');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+       /*  $pl=0.093;
+         $pl2=1;   */
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  
@@ -687,14 +786,24 @@ else if ($grade=='A grade A') {
 
            if($length>10000){
 
-         $pl=0.3;
-         $pl2=1;   
+               $data= $this->Mdl_users->pl1('eduworkers_matrix_level','Mphil Pass');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.3;
+         $pl2=1;   */
           $total=$pl* $words*$pl2;
         /*echo json_encode($total);*/
            }else{
+            
+             $data= $this->Mdl_users->pl1('eduworkers_matrix_level','PhD');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
 
-          $pl=0.2;
-          $pl2=1;   
+         /* $pl=0.2;
+          $pl2=1;  */ 
           $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
         }
@@ -702,40 +811,68 @@ else if ($grade=='A grade A') {
 
    }
    else if ($grade=='GDL Pass') {
- 
-         $pl=0.0822;
-         $pl2=1;   
+         
+         $data= $this->Mdl_users->pl1('eduworkers_matrix_level','GDL Pass');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.0822;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    } 
      else if ($grade=='GDL commendation') {
- 
-         $pl=0.093;
-         $pl2=1;   
+            
+            $data= $this->Mdl_users->pl1('eduworkers_matrix_level','GDL commendation');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
+
+        /* $pl=0.093;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  else if ($grade=='LPC Pass') {
+
+          $data= $this->Mdl_users->pl1('eduworkers_matrix_level','LPC Pass');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.0858;
-         $pl2=1;   
+        /* $pl=0.0858;
+         $pl2=1; */  
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  else if ($grade=='LPC Pass 1') {
+              $data= $this->Mdl_users->pl1('eduworkers_matrix_level','LPC Pass 1');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.1326;
-         $pl2=1;   
+        /* $pl=0.1326;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
       /*  echo json_encode($total);*/
    }  else if ($grade=='BPTC Competent') {
+         $data= $this->Mdl_users->pl1('eduworkers_matrix_level','BPTC Competent');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.1428;
-         $pl2=1;   
+        /* $pl=0.1428;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
        /* echo json_encode($total);*/
    }  else if ($grade=='BPTC very Competent') {
+
+            $data= $this->Mdl_users->pl1('eduworkers_matrix_level','BPTC very Competent');
+           
+            $pl=$data['0']['eduworkers_matrix_pl1'];
+            $pl2=$data['0']['eduworkers_matrix_pt2'];
  
-         $pl=0.1716;
-         $pl2=1;   
+         /*$pl=0.1716;
+         $pl2=1;  */ 
         $total=$pl* $words*$pl2;
       /*  echo json_encode($total);*/
    } 
@@ -1526,7 +1663,16 @@ public function contactUs(){
 
 
      
+  public function demo(){
+   
+     
+           $data= $this->Mdl_users->pl1('eduworkers_matrix_level','GCSE B Grade');
+           
+           echo  $pl=$data['0']['eduworkers_matrix_pl1'];
+           echo $pl2=$data['0']['eduworkers_matrix_pt2'];
+     
 
+  }
 
 
 }
