@@ -198,8 +198,18 @@
               </a>
             </div>
           </div>
-        
+
+
           <div class="col-md-3">
+            <div class="service_help_box">
+              <span>To meet deadlines</span>
+              <a href="">
+              <p class="">Time management is a struggle and in keeping with deadlines, anyone can rely on Eduworkers to produce an Original, Fully Researched and Referenced document that meets client specifications and confidentiality and is delivered in as little as</p><br>
+              </a>
+            </div>
+          </div>
+        
+          <!-- <div class="col-md-3">
 
             <div class="service_help_box">
               <span>To meet deadlines</span>
@@ -210,7 +220,7 @@
               </a>
             </div>
           </div>
-
+ -->
           <div class="col-md-3">
             <div class="service_help_box">
                <span>To procure high grades</span>

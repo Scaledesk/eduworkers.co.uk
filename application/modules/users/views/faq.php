@@ -122,8 +122,8 @@
 								<section class="section-default_custom">
 									<h2 class="ui-title-block">Plagiarism and Cheating</h2>
 									<div class="panel-group accordion accordion" id="accordion-1">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-custom-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-custom-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">Can't I do what I want with the work?</h3>
@@ -223,8 +223,8 @@
 								<section class="section-default_custom">
 									<h2 class="ui-title-block"> Customer Support</h2>
 									<div class="panel-group accordion accordion" id="accordion-2">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-2" href="#collapse-custom1-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapse-custom1-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">How do I telephone you?</h3>
@@ -328,8 +328,8 @@
 								<section class="section-default_custom">
 									<h2 class="ui-title-block">Ordering</h2>
 									<div class="panel-group accordion accordion" id="accordion-3">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-custom2-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-custom2-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">How does the order process work?</h3>
@@ -417,8 +417,8 @@
 								<section class="section-default_custom">
 									<h2 class="ui-title-block">Five most frequently asked questions</h2>
 									<div class="panel-group accordion accordion" id="accordion-4">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-4" href="#collapse-custom3-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-4" href="#collapse-custom3-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">How does this work?</h3>
@@ -493,8 +493,8 @@ We must put your question to our experts first. We can't always guarantee that w
 								<section class="section-default_custom">
 									<h2 class="ui-title-block">Our Company</h2>
 									<div class="panel-group accordion accordion" id="accordion-5">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-5" href="#collapse-custom4-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-5" href="#collapse-custom4-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">Who are you?</h3>
@@ -567,8 +567,8 @@ We must put your question to our experts first. We can't always guarantee that w
 								<section class="section-default_custom">
 									<h2 class="ui-title-block">Delivery</h2>
 									<div class="panel-group accordion accordion" id="accordion-7">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-7" href="#collapse-custom6-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-7" href="#collapse-custom6-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title"> How do I know I will get the work once I have paid?</h3>
@@ -634,8 +634,8 @@ We must put your question to our experts first. We can't always guarantee that w
 								<section class="section-default_custom">
 									<h2 class="ui-title-block"> Our Service</h2>
 									<div class="panel-group accordion accordion" id="accordion-8">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-8" href="#collapse-custom7-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-8" href="#collapse-custom7-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title"> How does this work?</h3>
@@ -845,8 +845,8 @@ Moreover, we are a company with truly international experience. We operate servi
 								<section class="section-default_custom">
 									<h2 class="ui-title-block"> Guarantees</h2>
 									<div class="panel-group accordion accordion" id="accordion-6">
-										<div class="panel panel-default">
-											<a class="btn-collapse" data-toggle="collapse" data-parent="#accordion-6" href="#collapse-custom5-1">
+										<div class="panel">
+											<a class="btn-collapse collapsed" data-toggle="collapse" data-parent="#accordion-6" href="#collapse-custom5-1">
 											<div class="panel-heading">
 												
 												<h3 class="panel-title">What guarantees do you offer?</h3>

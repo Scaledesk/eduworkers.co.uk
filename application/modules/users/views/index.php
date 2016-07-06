@@ -479,7 +479,7 @@
   </section>
   <!-- end section-default -->
 
-  <div class="section-progress wow fadeInUp section-parallax" data-speed="25" data-wow-duration="2s">
+  <div class="section-progress wow fadeInUp section-parallax p-rgt" data-speed="25" data-wow-duration="2s">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -632,7 +632,7 @@
                       best quality service. It is because of such painstaking and meticulous selection of candidates that
                       we can promise you the best quality of documentation that would generally be expected from a professional
                       writing service provider. Get in touch with us for all of your Academic related needs. You will thank
-                      yourself for it</p>
+                      yourself for it.</p>
                   </div>
                 </div>
               </div>

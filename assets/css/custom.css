@@ -905,9 +905,14 @@ input:-moz-placeholder { color:#f00; }
 }
 
 
-.edu-submenu-style1{
+.edu-submenu-style:hover{
 	color:#000000!important;
+	 background-color: #F2F2F2;
+    text-decoration: none!important;
+
 }
+
+
 
 
 
@@ -919,3 +924,7 @@ color:rgba(244, 248, 250, 0.95);
 position: absolute;
     right: 318px;
 }
+.p-rgt{
+	padding-right:60px;
+}
+

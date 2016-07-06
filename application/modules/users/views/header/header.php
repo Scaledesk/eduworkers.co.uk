@@ -60,15 +60,16 @@
 
                     </li>
                     <li class="dropdown"> <a href="<?php echo base_url().'users/services'; ?>" class="txt-menu-style">Services&nbsp;<i class="fa fa-angle-down"></i></a>
-                      <ul role="menu" class="dropdown-menu edu-box-padding ">
-                        <div class="row">
+                      <div class="row">
+                      <ul role="menu" class="dropdown-menu edu-box-padding">
+                        
                        <div class="col-md-3 pading-edu">  <li><a href="<?php echo base_url().'users/services'; ?>" class="edu-submenu-style">All</a>
                         <li><a href="<?php echo base_url().'users/engineeringAssignments'; ?>" class="edu-submenu-style">Engineering Assignments</a></li>
                         <li><a href="<?php echo base_url().'users/dissertationWriting'; ?>" class="edu-submenu-style">Dissertation Writing</a></li>
                         <li><a href="<?php echo base_url().'users/engineeringProjects'; ?>" class="edu-submenu-style">Engineering Projects</a></li>
                         <li><a href="<?php echo base_url().'users/singleServices'; ?>" class="edu-submenu-style">Essay Writing</a></li>
                        <li><a href="#" class="edu-submenu-style">Exam Revision</a></li>
-                  </div>
+                      </div>
 
                       <div class="col-md-3 pading-edu">  
                            <li><a href="#" class="edu-submenu-style">Marking and Proofreading<br>service</a></li>
@@ -84,15 +85,19 @@
                         <li><a href="#" class="edu-submenu-style">Bar Professional Training <br>Course (BPTC) Coursework</a></li>
                         <li><a href="#" class="edu-submenu-style">Presentation Powerpoint </a></li>
                        
-                      </div>
+                        </div>
 
                          <div class="col-md-3 pading-edu">
                        
                          <li><a href="#" class="edu-submenu-style">Report</a></li>
                         <li><a href="#" class="edu-submenu-style">Reflective Practice</a></li>
                         <li><a href="#" class="edu-submenu-style">Portfolio</a></li>
-                        <li><a href="#" class="edu-submenu-style">PhD Thesis</a></li></div>
+                        <li><a href="#" class="edu-submenu-style">PhD Thesis</a></li>
+                      </div>
+
+                      
                       </ul>
+                    </div>
                     </li>
                     <li class="active-custom"> <a href="<?php echo base_url().'users/order'; ?>" class="txt-menu-style">Order Now</a>
 
@@ -102,8 +107,8 @@
                     </li> -->
                     <li><a href="#" class="txt-menu-style">WRITERS&nbsp;<i class="fa fa-angle-down"></i></a>
                       <ul role="menu" class="dropdown-menu">
-                        <li><a href="#" class="edu-submenu-style1">How we recruit</a> </li>
-                        <li><a href="#" class="edu-submenu-style1">Career as a writer</a> </li>
+                        <li><a href="#" class="edu-submenu-style">How we recruit</a> </li>
+                        <li><a href="#" class="edu-submenu-style">Career as a writer</a> </li>
                       </ul>
                     </li>
                     <li class="dropdown"> <a href="<?php echo base_url().'users/faq'; ?>" class="txt-menu-style">faq<!-- <span class="nav-subtitle">Latest News</span> --></a>
@@ -153,6 +158,9 @@
         <!-- end row  -->
       </div>
       <!-- end container-->
+    </div>
+      </div>
+        </div>
       </header>
       <!-- end header -->
 
