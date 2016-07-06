@@ -235,5 +235,27 @@ public function matrixPrice(){
      return $data=$this->db->get('eduworkers_matrix')->result_array();
     
 }
+ public function updateMatrixPrice($id,$data){
+                /*print_r($data); die;*/
+
+         $value=['eduworkers_matrix_pl1'=>$data['pl1'],
+                 'eduworkers_matrix_time'=>$data['time'],
+                 'eduworkers_matrix_pt2'=>$data['pt2'],
+                 'eduworkers_matrix_pt3'=>$data['pt3']
+                 ];
+                /*  print_r($value); die;*/
+
+        if($this->db->where('eduworkers_matrix_id',$id)->update('eduworkers_matrix',$value))
+                    {
+                    return true;
+
+                    }
+
+                 else{
+                    return false;
+                     }
+ }
+
+
 
 }

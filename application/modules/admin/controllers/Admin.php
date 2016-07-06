@@ -230,4 +230,26 @@ else{
 
 }
 
+public function updateMatrixPrice($id){
+   
+     $data=$this->input->post();
+     
+      /* print_r($data); die;*/
+      if($this->Mdl_admin->updateMatrixPrice($id,$data)){
+
+             setInformUser('success', ' Price Matrix  Successfully Updated.');
+             redirect(base_url('admin/priceMatrix'));
+
+       }else{
+
+            setInformUser('error', ' Some error Occurred.');
+           redirect(base_url('admin/priceMatrix'));
+       }
+
+   /* echo $id ;
+    print_r($data);*/
+
+}
+
+
 }

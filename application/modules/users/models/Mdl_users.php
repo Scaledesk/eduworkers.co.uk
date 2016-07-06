@@ -617,9 +617,10 @@ $product_rand=rand(999,9999);
         'eduworkers_products_title'=>$this->session->userdata['user_order']['title'],
         'eduworkers_products_message'=>$this->session->userdata['user_order']['message'],
         'eduworkers_products_status'=>'pending',
-        'eduworkers_products_rand_no'=>$product_rand
+        'eduworkers_products_rand_no'=>$product_rand,
+        'eduworkers_products_currency'=>$this->session->userdata('user_products')['flag']
        
-        ];
+        ];  
     if($this->db->insert('eduworkers_products',$data)){
 
        $data['product_id']=$this->db->where('eduworkers_products_users_id', $this->session->userdata['user_data']['user_id'])->select('eduworkers_products_id')->order_by("eduworkers_products_id","desc")->get('eduworkers_products')->result_array();
