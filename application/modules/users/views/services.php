@@ -464,7 +464,7 @@
               <li>Provide a critical evaluation of the pro’s and con’s of the research</li>
             </ol>
 
-            <p>Besides the presentation factor, our writers also work on:</p>
+            <p>Besides the presentation factor, our writers also work on: </p>
             <ol>
               <li>The manner in which the research data is gathered</li>
               <li>Methodical ascertaining of conclusions and results</li>
