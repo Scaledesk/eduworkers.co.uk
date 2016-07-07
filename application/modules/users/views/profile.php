@@ -185,7 +185,7 @@
 
                <div class="col-md-6"> Order Date</div> <div class="col-md-6"><?php echo $row['eduworkers_products_data'];?></div>
 
-               <div class="col-md-6"> Delivery Days</div> <div class="col-md-6"><?php echo $row['eduworkers_products_delivery_date'];?></div>
+
 
                 <div class="col-md-6"> Total Price</div> <div class="col-md-6"><?php echo $row['eduworkers_products_total'];?></div>
 

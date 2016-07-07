@@ -1455,8 +1455,22 @@ public function subjectQuerySend(){
         $this->email->message($message);
         $this->email->attach($path.$file['file_name']);
       if($this->email->send()){
-         setInformUser('success',"Send  Quote successfully");
-        redirect(base_url('users/profile'));
+
+          $this->email->from(setEmail(), 'Eduworkers');
+          $this->email->to($data['email']);
+          $this->email->subject('Order Query');
+          $this->email->message($message);
+          $this->email->attach($path.$file['file_name']);
+          if($this->email->send()){
+
+              setInformUser('success',"Send  Quote successfully");
+              redirect(base_url('users/profile'));
+          }else{
+              setInformUser('error',"Some Error Occurred.");
+              redirect(base_url('users/profile'));
+          }
+
+
       }else{
          setInformUser('error',"Some Error Occurred.");
         redirect(base_url('users/profile'));
@@ -1478,8 +1492,19 @@ public function subjectQuerySend(){
 */
 
        if($this->email->send()){
-         setInformUser('success',"Send  Quote successfully");
-        redirect(base_url('users/profile'));
+
+           $this->email->from(setEmail(), 'Eduworkers');
+
+           $this->email->to($data['email']);
+           $this->email->subject('Order Query');
+           $this->email->message($message);
+           if($this->email->send()){
+             setInformUser('success',"Send  Quote successfully");
+               redirect(base_url('users/profile'));
+           }else{
+               setInformUser('error',"Some Error Occurred.");
+               redirect(base_url('users/profile'));
+           }
       }else{
          setInformUser('error',"Some Error Occurred.");
         redirect(base_url('users/profile'));
