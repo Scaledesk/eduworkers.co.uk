@@ -56,33 +56,40 @@
                   <ul class="advantages advantages_mod-a list-unstyled">
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Cup"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">PLAGIARISM FREE WORK</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">PLAGIARISM FREE </h3>
                         <div class="advantages__info">
-                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+
+                         <!-- <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>-->
+                           <p> Eduworkers is committed to high ethics. It is our belief that no good effort should be tainted by unethical practices.
+                            Thus, plagiarism is a major pitfall that we monitor rigorously and stringently. Our Academic contributions are
+                            thoroughly screened and checked,
+                            for which reason we can assure our customers that their Academic tasks will be absolutely – PLAGIARISM-FREE!</p>
+
                         </div>
                       </div>
                     </li>
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-DesktopMonitor"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">GUARANTEEING THE BEST QUALITY</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">  FREE-REVISIONS <!-- GUARANTEEING THE BEST QUALITY--></h3>
                         <div class="advantages__info">
-                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                          <!--<p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>-->
+                           <p>Eduworkers is committed to relationships. It is our belief that our clients are more than just customers. We believe in establishing relationships thus apart from the promise of keeping assignments FREE OF PLAGIARISM, we also offer our clients the facility of having their assignments revised FOR FREE! This service is invaluable and is our way of saying ‘Thank You!’ to our clients.</p>
                         </div>
                       </div>
                     </li>
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-WorldGlobe"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">RESPONSE TIME OF 12 HOURS</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a"><!--RESPONSE TIME OF 12 HOURS-->24/7 SUPPORT</h3>
                         <div class="advantages__info">
-                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                          <p> In addition to the other services, our clients may find succor at any given time by tapping our dedicated helpline. Eduworkers is always available and prepared to answer queries or find solutions. Whatever the need or question, allow us to find the solution.<!--Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.--></p>
                         </div>
                       </div>
                     </li>
                     <li class="advantages__item"> <span class="advantages__icon"><i class="icon stroke icon-Users"></i></span>
                       <div class="advantages__inner">
-                        <h3 class="ui-title-inner decor decor_mod-a">SKILLED FACULTY</h3>
+                        <h3 class="ui-title-inner decor decor_mod-a">100% CONFIDENTIAL<!--SKILLED FACULTY--></h3>
                         <div class="advantages__info">
-                          <p>Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.</p>
+                          <p>Eduworkers reduces the stress-factor by protecting clients’ privacy. We are aware of the sensitiveness of the information that clients share with us and also the services that we offer to them in return. Thus we maintain high standards of confidentiality for all involved.<!--Fusce eleifend donec sapien phase dcua sed sa pellentesque lacus vamus lorem treb lum arcu semper duiac.--></p>
                         </div>
                       </div>
                     </li>
