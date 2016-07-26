@@ -277,8 +277,12 @@ class Mdl_users extends CI_Model
                     'eduworkers_users_username' => $this->user_name,
                     'eduworkers_users_password' => $this->password,
                     'eduworkers_users_roles_id' => $this->role_id,
-                    'eduworkers_users_phone'    => $this->phone
+                    'eduworkers_users_phone'    => $this->phone,
+                    'eduworkers_users_state'    => '1'
                 ];
+
+              /*  print_r($data);die;*/
+
                 if ($this->db->insert('eduworkers_users', $data)) {
                     return true;
                 }
@@ -347,6 +351,21 @@ public function hasUser(){
     }else{return false;}
 
 }
+
+    public function stateUser(){
+       $data= $this->db->where(array('eduworkers_users_username' => $this->user_name))->select('eduworkers_users_state')->get('eduworkers_users')->result_array();
+
+
+        if ($data[0]['eduworkers_users_state']==1) {
+            return true;
+
+        }else{return false;}
+
+    }
+
+
+
+
     /**
      * @param mixed $user_name
      */

@@ -151,30 +151,39 @@ public function login()
         $this->Mdl_users->setData('checkUser',$data['email'],$data['password']);
         if(hasUser()){
         if(isAccountActive()){
-            if($this->Mdl_users->checkUser()){
-                $this->Mdl_users->setData('setSessionData',$data['email']);
-                $user_data=$this->Mdl_users->getUserData();
-                $this->_setSessionData('authorize',$user_data);
+            if(stateUser()) {
+                if ($this->Mdl_users->checkUser()) {
+                    $this->Mdl_users->setData('setSessionData', $data['email']);
+                    $user_data = $this->Mdl_users->getUserData();
+                    $this->_setSessionData('authorize', $user_data);
 
-                /*echo $user_data['user_role_name'];die;*/
-                   if($user_data['user_role_name']=='admin'){
-                    setInformUser('success','Login successfully');
-                    redirect(base_url('admin'));
-                   } else if ($this->session->userdata('user_products')) {
+                    /*echo $user_data['user_role_name'];die;*/
+                    if ($user_data['user_role_name'] == 'admin') {
+                        setInformUser('success', 'Login successfully');
+                        redirect(base_url('admin'));
+                    } else if ($this->session->userdata('user_products')) {
 
-                       redirect(base_url('users/do_upload'));
-                       
-                   }{
-                    setInformUser('success','Login successfully');
-                    redirect(base_url('users'));
-                   }
-                
-               
-            }else{
+                        redirect(base_url('users/do_upload'));
+
+                    }
+                    {
+                        setInformUser('success', 'Login successfully');
+                        redirect(base_url('users'));
+                    }
+
+
+                } else {
+                    //set flash message that his username and password do not match try again.
+                    setInformUser('error', 'Your Username and password do not match. Please try again.');
+                    redirect(base_url('users/login'));
+                }
+            }
+            else {
                 //set flash message that his username and password do not match try again.
-                setInformUser('error','Your Username and password do not match. Please try again.');
+                setInformUser('error', ' Your account has been disabled, Contact to Administrator.');
                 redirect(base_url('users/login'));
             }
+
         }else{
             setInformUser('error','Your Account in not activated. Kindly verify your email to login.');
             redirect(base_url('users/login'));

@@ -230,4 +230,35 @@ public function getCounter(){
       return $data;
    }
 
+    public function disable($id){
+
+
+        $data = [ 'eduworkers_users_state' => '0' ];
+
+
+        $this->db->where('eduworkers_users_id',$id);
+        if($this->db->update('eduworkers_users',$data)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+
+    public function enable($id){
+
+
+        $data = [ 'eduworkers_users_state' => '1' ];
+
+
+        $this->db->where('eduworkers_users_id',$id);
+        if($this->db->update('eduworkers_users',$data)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 }

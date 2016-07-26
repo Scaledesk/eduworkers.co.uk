@@ -115,6 +115,12 @@ function hasUser(){
     $ci->load->Model('users/Mdl_users');
     return $ci->Mdl_users->hasUser()?true:false;
 }
+function stateUser(){
+    $ci=CI::get_instance();
+    $ci->load->Model('users/Mdl_users');
+    return $ci->Mdl_users->stateUser()?true:false;
+}
+
 
 function setEmail(){
     $ci=CI::get_instance();
