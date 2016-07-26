@@ -129,8 +129,7 @@
                   <div class="col-md-12">
                 
                 <h1 class="text-center">Choose Your Product Option</h1>
-              <p>Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum Lorem Ipsum Lorem Ipsum</p>
-              </div>
+                   </div>
               </div>
 
               <div class="row">
@@ -403,7 +402,7 @@
              
                     
                       <div class="col-md-4">
-                        <div class="section-1">
+                        <div class="sidebar1 section-1" >
                         <h2 class="text-center">Total Price</h2>
                         <span>Inc. VAT And Delivery</span>
                         <div class="row">
@@ -928,4 +927,21 @@ $(document).ready(function(){
    
 });
 
+</script>
+
+<script>
+
+$(function () {
+    var sidebar = $('.sidebar1');
+    var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+  
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= top) {
+        sidebar.addClass('fixed');
+      } else {
+        sidebar.removeClass('fixed');
+      }
+    });
+});
 </script>

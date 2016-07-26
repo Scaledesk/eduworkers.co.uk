@@ -178,13 +178,29 @@
             <h1 class="service_main_heading_2">WHY DO YOU NEED OUR SERVICES?</h1>
           </div>
 
+          
+
 
            <div class="col-md-3">
-            <div class="service_help_box">
-              <span>Difficulty in finding research materials</span>
+            <div class="service_help_box ">
+              <span class="title_card">Difficulty in Starting an Assignment</span>
               <a href="">
-              <p class="">A selection of free help guides for master’s students. Find overviews, proposal guides, or dissertation guides today.</p>
-              <br><br>
+              <p class="">Eduworkers’ experts can initiate any assignment by providing examples of how to go about answering the key questions of an assignment. Students can then take it to the next level, if they so desire.
+</p>
+              </a>
+            </div>
+           
+          </div>
+          
+       
+
+
+          <div class="col-md-3">
+            <div class="service_help_box">
+              <span class="title_card">Difficulty in finding research materials</span>
+              <a href="">
+              <p class="">Our experts are qualified, experienced researchers who know exactly where to find the best material. We'll even reference your work in a style of your choice!
+</p><br>
               </a>
             </div>
           </div>
@@ -192,19 +208,9 @@
 
           <div class="col-md-3">
             <div class="service_help_box">
-              <span>Difficulty in finding research materials</span>
+              <span class="title_card">To meet deadlines</span>
               <a href="">
-              <p class="">Our experts are qualified, experienced researchers who know exactly where to find the best material. We'll even reference your work in a style of your choice!</p><br>
-              </a>
-            </div>
-          </div>
-
-
-          <div class="col-md-3">
-            <div class="service_help_box">
-              <span>To meet deadlines</span>
-              <a href="">
-              <p class="">Time management is a struggle and in keeping with deadlines, anyone can rely on Eduworkers to produce an Original, Fully Researched and Referenced document that meets client specifications and confidentiality and is delivered in as little as</p><br>
+              <p class="">Time management is a struggle and in keeping with deadlines, anyone can rely on Eduworkers to produce an Original, Fully Researched and Referenced document that meets client specifications and confidentiality and is delivered in as little as 5 hours.</p><br>
               </a>
             </div>
           </div>
@@ -223,10 +229,11 @@
  -->
           <div class="col-md-3">
             <div class="service_help_box">
-               <span>To procure high grades</span>
+               <span class="title_card">To procure high grades</span>
               <a href="">
 
-              <p>With dedicated experts in each field of study and most of them having experience in lecturing, a client may rest assured of higher grades. An expert with lecturing experience can be specified, if a </p>
+              <p>With dedicated experts in each field of study and most of them having experience in lecturing, a client may rest assured of higher grades. An expert with lecturing experience can be specified, if a client deems it necessary.
+</p>
             </a>
             </div>
           </div>
@@ -235,24 +242,28 @@
 
         </div>
 
-        <div class="row ">
-          
-
-           <div class="col-md-3 col-md-offset-2">
+        <div class="row spce_35">;;;
+<div class="col-md-3">
             <div class="service_help_box ">
-              <span>Difficulty in Starting an Assignment</span>
+              <span class="title_card">Difficulty in Starting an Assignment</span>
               <a href="">
-              <p class="">Eduworkers’ experts can initiate any assignment by providing examples of how to go about answering the key questions of an assignment. Students can then take it to the next level, if they so desire.</p>
+              <p class="">Eduworkers’ experts can initiate any assignment by providing examples of how to go about answering the key questions of an assignment. Students can then take it to the next level, if they so desire.
+</p>
               </a>
             </div>
+           
           </div>
+          ;;;
+          
 
+          
 
-          <div class="col-md-3">
-            <div class="service_help_box">
-              <span>Difficulty in producing a befitting assignment</span>
+          <div class="col-md-4">
+            <div class="service_help_box service_help_box1">
+              <span class="title_card">Difficulty in producing a befitting assignment</span>
               <a href="">
-              <p class="">Eduworkers’ experts are like mentors. They facilitate learning by example so that students can avail their services and receive a great sample, which can help acquire invaluable knowledge in how to deal with producing a perfect essay, coursework or dissertation.</p>
+              <p class="">Eduworkers’ experts are like mentors. They facilitate learning by example so that students can avail their services and receive a great sample, which can help acquire invaluable knowledge in how to deal with producing a perfect essay, coursework or dissertation.
+</p>
               </a>
             </div>
           </div>
@@ -265,13 +276,14 @@
           
 
 
-           <div class="col-md-3">
-            <div class="service_help_box">
-              <span>To facilitate family and work commitments</span>
+           <div class="col-md-4">
+            <div class="service_help_box service_help_box1">
+              <span class="title_card">To facilitate family and work commitments</span>
               <a href="">
               
 
-              <p>The Eduworkers’ Advantage is to save clients their valuable time. Our writing services relive clients of assignments that demand time and extensive effort. Our experts are competent enough to create exceptionally authentic and original documents relieving clients of major stress so that they may get on with other essentials in life.</p>
+              <p>The Eduworkers’ Advantage is to save clients their valuable time. Our writing services relive clients of assignments that demand time and extensive effort. Our experts are competent enough to create exceptionally authentic and original documents relieving clients of major stress so that they may get on with other essentials in life.
+</p>
             </a>
             </div>
           </div>
