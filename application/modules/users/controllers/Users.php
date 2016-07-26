@@ -23,7 +23,8 @@ class Users extends MX_Controller{
     }
 
       public function adminEmail(){
-        return  $adminEmail='sanchit2411@gmail.com';
+        /*return  $adminEmail='sanchit2411@gmail.com';*/
+          return $adminEmail='jasbir.eduworkers@gmail.com';
        }
 
 
