@@ -834,7 +834,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 	margin-top: 80px;
 	margin-bottom: 40px;
 }
-
+.box2{
+    padding:0!important;
+}
 .box1 {
 	padding: 15px;
 	text-align: center;
