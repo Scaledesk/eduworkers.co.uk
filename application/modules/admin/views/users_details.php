@@ -22,6 +22,8 @@
                 <th>Name</th>
                 <th>Email</th>
                <th>Phone No.</th>
+                <th> Status</th>
+                <th>Action</th>
                 
             </tr>
         </thead>
@@ -37,8 +39,9 @@
                 <td><a href="<?php echo base_url().'admin/orderDetails/'. $row['eduworkers_users_id']; ?>"><?php echo $row['eduworkers_users_userfname']; ?></a></td>
                 <td><?php echo $row['eduworkers_users_username']; ?></td>
                  <td><?php echo $row['eduworkers_users_phone']; ?></td>
-               
-                
+                <td><?php  if($row['eduworkers_users_state']==1) { ?> Enabled <?php } else { ?> Disabled <?php } ?> </td>
+
+                <td><?php  if($row['eduworkers_users_state']==1) { ?> <a href="<?php echo base_url().'admin/disable/'.$row['eduworkers_users_id']; ?>"  onclick="return confirm('Are you sure you want to Disable user ?')"  >Disable </a>  <?php } else { ?> <a onclick="return confirm('Are you sure you want to Enable user ?')"  href="<?php echo base_url().'admin/enable/'.$row['eduworkers_users_id']; ?>"> Enable</a> <?php } ?> </td>
                 
                
             </tr>

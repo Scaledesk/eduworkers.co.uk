@@ -209,4 +209,34 @@ public function confirmation($data){
 }
 
 
+ public  function disable($id)
+ {
+     if (islogin()) {
+         if ($this->Mdl_admin->disable($id)) {
+             setInformUser('success', 'user successfully disabled ');
+             redirect(base_url('admin/getUsers'));
+         } else {
+             setInformUser('error', 'Some error Occurred ');
+             redirect(base_url('admin/getUsers'));
+         }
+     } else {
+         redirect(base_url('users'));
+
+     }
+ }
+    public  function enable($id){
+        if (islogin()) {
+            if ($this->Mdl_admin->enable($id)) {
+                setInformUser('success', 'user successfully enabled ');
+                redirect(base_url('admin/getUsers'));
+            } else {
+                setInformUser('error', 'Some error Occurred ');
+                redirect(base_url('admin/getUsers'));
+            }
+        } else {
+            redirect(base_url('users'));
+
+        }
+    }
+
 }

@@ -45,7 +45,7 @@
             <tr>
                <td><?php echo $row['eduworkers_products_id']; ?></td>
                <td><?php echo $row['eduworkers_products_status']; ?></td>
-               <td><?php if($row['eduworkers_products_status']=='payment_done') {?> <a onclick="return confirm('Are you sure you want to change Order Status to InProgress ?')" href="<?php echo base_url().'admin/inprogress/'.$row['eduworkers_products_id']; ?>">Inprogress</a><?php }else if($row['eduworkers_products_status']=='inprogress') { ?>   <a onclick="return confirm(' Are you sure you want to change Order Status to  Completed?')" href="<?php echo base_url().'admin/completed/'.$row['eduworkers_products_id']?>">Complete </a>  <?php } else if($row['eduworkers_products_status']=='completed'){ ?> Completed <?php }  else{ ?> Cancelled <?php } ?></td>
+               <td><?php if($row['eduworkers_products_status']=='payment_done') {?> <a onclick="return confirm('Are you sure you want to change Order Status to InProgress ?')" href="<?php echo base_url().'admin/inprogress/'.$row['eduworkers_products_id']; ?>">Inprogress</a><?php }else if($row['eduworkers_products_status']=='inprogress') { ?>   <a onclick="return confirm(' Are you sure you want to change Order Status to  Completed?')" href="<?php echo base_url().'admin/completed/'.$row['eduworkers_products_id']?>">Complete </a>  <?php } else if($row['eduworkers_products_status']=='completed'){ ?>  <?php }  else{ ?>  <?php } ?></td>
                 
                  <td><?php echo $row['eduworkers_users_userfname']; ?></td>
                 <td><?php echo $row['eduworkers_products_services']; ?></td>
