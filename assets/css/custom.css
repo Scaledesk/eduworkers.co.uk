@@ -980,3 +980,16 @@ position: absolute;
 .fixed {  position: fixed; top: 0; }
 
 /*s*/
+
+
+/*new change in footer*/
+.frm1{
+	margin-bottom: 3px!important;
+    padding-top: 6px!important; 
+    padding-bottom: 6px!important; 
+}
+.btton1{
+	    margin-top: 5px!important;
+    padding: 6px 6px!important;
+}
+

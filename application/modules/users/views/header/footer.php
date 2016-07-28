@@ -18,6 +18,8 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
               <div class="footer-contacts"> <i class="icon stroke icon-Phone2"></i> <span class="footer-contacts__inner">Call us 0800 12345</span> </div>
               <div class="footer-contacts"> <i class="icon stroke icon-Mail"></i> <a class="footer-contacts__inner" href="mailto:Info@academica.com">info@eduworkers.co.uk</a>                </div>
             </section>
+            <br>  <br>
+            <img src="<?php echo  asset_url();?>/img/final_logo.jpg" style="width:160px;height:85px;">
             <!-- end footer-section -->
           </div>
           <!-- end col -->
@@ -35,6 +37,8 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
                   <li class="footer-list__item"><a class="footer-list__link" href="javascript:void(0);">Terms & Conditions</a></li>
                   <li class="footer-list__item"><a class="footer-list__link" href="javascript:void(0);">Privacy Policy</a></li> -->
               </ul>
+            <h3 class="footer-title">Pay Securely With</h3>
+              <img src="http://www.bike-discount.de/media/k23230/k78/k23150/38412_zahlung_paypal.jpg" style="width:150px;height:60px;">
             </section>
             <!-- end footer-section -->
           </div>
@@ -64,11 +68,11 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
               <h3 class="footer-title">QUICK CONTACT</h3>
               <form class="form" action=" <?php echo base_url().'users/contact'; ?>" method="post">
                 <div class="form-group">
-                  <input class="form-control footer-form" type="text"  required name="name" placeholder="Your Name">
-                  <input class="form-control footer-form" type="email" required name="email" placeholder="Email address" >
-                  <input class="form-control footer-form" type="text" required name="phone" placeholder="Phone No. " maxlength="10" >
-                  <textarea class="form-control footer-form" rows="7" required name="message" placeholder="Message"></textarea>
-                  <button type="submit" class="btn btn-primary btn-effect txt-lg">SEND MESSSAGE</button> 
+                  <input class="form-control frm1 footer-form" type="text"  required name="name" placeholder="Your Name">
+                  <input class="form-control frm1 footer-form" type="email" required name="email" placeholder="Email address" >
+                  <input class="form-control frm1 footer-form" type="text" required name="phone" placeholder="Phone No. " maxlength="10" >
+                  <textarea class="form-control frm1 footer-form" rows="7" required name="message" placeholder="Message"></textarea>
+                  <button type="submit" class="btn btton1 btn-primary btn-effect txt-lg">SEND MESSSAGE</button> 
                 </div>
               </form>
             </section>
@@ -83,7 +87,7 @@ the company in 2009, we have <a href="#">READ MORE</a> </div> -->
       <div class="row">
         <div class="col-xs-12">
           <div class="footer-bottom">
-            <div class="copyright">Copyright © 2016 <a href="javascript:void(0);">Eduworkers</a>, Created by <a target="_blank" href="http://www.scaledesk.com/">ScaleDesk Web Studio Private Limited. </a></div>
+            <div class="copyright">Copyright © 2016 <a href="javascript:void(0);">Eduworkers</a>, Created by <a target="_blank" href="http://www.scaledesk.com/">ScaleDesk. </a></div>
 <!--             <ul class="social-links list-unstyled">
               <li>
                 <a class="icon fa fa-facebook" href="javascript:void(0);"></a>

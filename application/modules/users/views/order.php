@@ -431,12 +431,17 @@
                         <p style="color: #C8C8C8;" id="dateshow"></p>
                         <div class="text-center">
                         
+                      <h3 class="footer-title">Pay Securely With</h3>
+              <img src="http://www.bike-discount.de/media/k23230/k78/k23150/38412_zahlung_paypal.jpg" style="width:150px;height:60px;">
 
                             <button class="main-slider__btn btn btn-warning btn-effect custom_button-class-total_price">Next Step Order-Details</button></div> </div>
                        
                         </form>
+                        
                       
                       </div>
+
+
                     </div>
 
                  
